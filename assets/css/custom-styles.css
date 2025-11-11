@@ -1,0 +1,245 @@
+/* Lazy Loading Background Images */
+/* Add this class to elements that should have lazy-loaded backgrounds */
+.lazy-background {
+  background-image: none; 
+  background-color: #f0f0f0;
+}
+
+/* The actual background classes remain unchanged */
+
+
+/* Background Images */
+.cover-background-1 {
+  background-image: url("../images/demo-branding-agency-slider-01.png");
+}
+
+.cover-background-2 {
+  background-image: url("../images/demo-branding-agency-slider-02.png");
+}
+
+.cover-background-3 {
+  background-image: url("../images/19.png");
+}
+
+.background-image-4 {
+  background-image: url("../images/demo-branding-agency-home-04.png");
+}
+
+.background-image-5 {
+  background-image: url("../images/demo-branding-agency-home-05.png");
+}
+
+.background-image-6 {
+  background-image: url("../images/demo-branding-agency-home-06.png");
+}
+
+.background-image-7 {
+  background-image: url("../images/demo-branding-agency-home-07.png");
+}
+
+.footer-background {
+  background-image: url("../images/demo-branding-agency-pattern.svg");
+}
+
+.stack-box {
+  min-height: 600vh;
+}
+.stack-box .stack-item.stack-item-04 {
+  z-index: 3;
+}
+
+/* Ad Banner Section */
+.ad-banner {
+  background: linear-gradient(135deg, #e97522 0%, #d18215 100%);
+  padding: 50px 0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.ad-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/demo-branding-agency-pattern.svg") center/cover;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ad-banner-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.ad-banner-title {
+  font-size: xx-large;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.ad-banner-subtitle {
+  font-size: var(--body-font-size);
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.ad-banner-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: var(--base-color);
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+  min-width: 250px;
+}
+
+.ad-banner-button:hover {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Card section styles */
+.card-section {
+  background: linear-gradient(to bottom, var(--bg-light) 0%, var(--white) 100%);
+  padding: 80px 0;
+  margin-bottom: 0;
+  margin-top: 100px;
+}
+
+.pricing-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  height: 100%;
+  transform: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card.popular {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-card.selected {
+  border: 2px solid var(--base-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.selected:not(.popular) {
+  transform: translateY(-5px);
+}
+
+.pricing-card.popular.selected {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-action {
+  margin-top: 2rem;
+}
+
+.pricing-card .btn {
+  transition: all 0.3s ease;
+}
+.pricing-card .btn-outline-primary:hover {
+  color: #e97522;
+  border-color: #e97522;
+}
+.pricing-card.selected .btn {
+  background-color: var(--base-color);
+  border-color: var(--base-color);
+  color: white;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: var(--base-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.plan-name {
+  font-size: 1.2rem;
+}
+.price {
+  font-size: 2rem;
+}
+
+.period {
+  font-size: 0.9rem;
+}
+
+.plan-description {
+  font-size: 0.85rem;
+}
+.pricing-features li {
+  font-size: 0.85rem;
+  padding: 6px 0;
+}
+/* Footer Styles */
+.footer-logo img {
+  transform: scale(2.5);
+  margin: 1rem auto;
+  max-width: 40px;
+  height: auto;
+  display: block;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+.top-section {
+  margin-top: 100px;
+}
+
+@media (min-width: 992px) {
+  .default-logo,
+  .alt-logo {
+    transform: scale(3.5);
+    margin-left: 2rem;
+    max-width: 20px;
+    height: auto;
+  }
+  .footer-logo img {
+    transform: scale(2.2);
+    margin: 1.8rem auto;
+  }
+  .ad-banner {
+    margin-top: 0;
+  }
+}

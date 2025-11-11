@@ -1,0 +1,104 @@
+WARNING - 2025-09-18 07:23:25 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Controllers/Gfa.php on line 90.
+ 1 APPPATH/Controllers/Gfa.php(90): json_decode(null, true)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gfa->page_view_events()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gfa))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-18 08:24:10 --> Error connecting to the database: mysqli_sql_exception: Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2) in /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php(187): mysqli->real_connect()
+#1 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/getfjupm/public_html/portal/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/getfjupm/public_html/portal/app/Models/GfaModel.php(3595): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/getfjupm/public_html/portal/app/Controllers/Gfa.php(5090): App\Models\GfaModel->getLoginDetails()
+#6 /home/getfjupm/public_html/portal/system/CodeIgniter.php(933): App\Controllers\Gfa->signinAction()
+#7 /home/getfjupm/public_html/portal/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/getfjupm/public_html/portal/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/getfjupm/public_html/portal/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/getfjupm/public_html/portal/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/getfjupm/public_html/portal/index.php(58): CodeIgniter\Boot::bootWeb()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2) in /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/getfjupm/public_html/portal/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/getfjupm/public_html/portal/app/Models/GfaModel.php(3595): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/getfjupm/public_html/portal/app/Controllers/Gfa.php(5090): App\Models\GfaModel->getLoginDetails()
+#5 /home/getfjupm/public_html/portal/system/CodeIgniter.php(933): App\Controllers\Gfa->signinAction()
+#6 /home/getfjupm/public_html/portal/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /home/getfjupm/public_html/portal/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/getfjupm/public_html/portal/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /home/getfjupm/public_html/portal/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /home/getfjupm/public_html/portal/index.php(58): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2025-09-18 08:24:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2)
+[Method: POST, Route: gfa/signinAction]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Models/GfaModel.php(3595): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Controllers/Gfa.php(5090): App\Models\GfaModel->getLoginDetails()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gfa->signinAction()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(58): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-09-18 08:24:33 --> Error connecting to the database: mysqli_sql_exception: Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2) in /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php(187): mysqli->real_connect()
+#1 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/getfjupm/public_html/portal/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 /home/getfjupm/public_html/portal/app/Models/GfaModel.php(27): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/getfjupm/public_html/portal/app/Controllers/Gfa.php(125): App\Models\GfaModel->insertPageViewEvent()
+#6 /home/getfjupm/public_html/portal/system/CodeIgniter.php(933): App\Controllers\Gfa->page_view_events()
+#7 /home/getfjupm/public_html/portal/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/getfjupm/public_html/portal/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/getfjupm/public_html/portal/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/getfjupm/public_html/portal/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/getfjupm/public_html/portal/index.php(58): CodeIgniter\Boot::bootWeb()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2) in /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/getfjupm/public_html/portal/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#3 /home/getfjupm/public_html/portal/app/Models/GfaModel.php(27): CodeIgniter\Database\BaseBuilder->insert()
+#4 /home/getfjupm/public_html/portal/app/Controllers/Gfa.php(125): App\Models\GfaModel->insertPageViewEvent()
+#5 /home/getfjupm/public_html/portal/system/CodeIgniter.php(933): App\Controllers\Gfa->page_view_events()
+#6 /home/getfjupm/public_html/portal/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /home/getfjupm/public_html/portal/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/getfjupm/public_html/portal/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /home/getfjupm/public_html/portal/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /home/getfjupm/public_html/portal/index.php(58): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2025-09-18 08:24:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2)
+[Method: POST, Route: gfa/page_view_events]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Models/GfaModel.php(27): CodeIgniter\Database\BaseBuilder->insert()
+ 4 APPPATH/Controllers/Gfa.php(125): App\Models\GfaModel->insertPageViewEvent()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gfa->page_view_events()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(58): CodeIgniter\Boot::bootWeb()
+WARNING - 2025-09-18 10:27:36 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Controllers/Gfa.php on line 90.
+ 1 APPPATH/Controllers/Gfa.php(90): json_decode(null, true)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gfa->page_view_events()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gfa))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

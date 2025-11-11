@@ -1,0 +1,55 @@
+INFO - 2025-03-24 17:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-24 17:35:49 --> mysqli_sql_exception: Table 'getfjupm_gfa.Startups_Inv' doesn't exist in /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/getfjupm/public_html/portal/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/getfjupm/public_html/portal/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/getfjupm/public_html/portal/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/getfjupm/public_html/portal/app/Models/GfaModel.php(3780): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/getfjupm/public_html/portal/app/Controllers/Gfa.php(5059): App\Models\GfaModel->getStartUpDetails()
+#6 /home/getfjupm/public_html/portal/system/CodeIgniter.php(933): App\Controllers\Gfa->signinAction()
+#7 /home/getfjupm/public_html/portal/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/getfjupm/public_html/portal/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/getfjupm/public_html/portal/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/getfjupm/public_html/portal/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/getfjupm/public_html/portal/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2025-03-24 17:35:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'getfjupm_gfa.Startups_Inv' doesn't exist
+[Method: POST, Route: gfa/signinAction]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/GfaModel.php(3780): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Gfa.php(5059): App\Models\GfaModel->getStartUpDetails()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gfa->signinAction()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-24 17:35:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'getfjupm_gfa.Startups_Inv' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Models/GfaModel.php(3780): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Gfa.php(5059): App\Models\GfaModel->getStartUpDetails()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gfa->signinAction()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-24 17:35:49 --> [Caused by] mysqli_sql_exception: Table 'getfjupm_gfa.Startups_Inv' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Models/GfaModel.php(3780): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Gfa.php(5059): App\Models\GfaModel->getStartUpDetails()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gfa->signinAction()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

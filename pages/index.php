@@ -1,0 +1,447 @@
+<?php include_once("../pages/ip.php");  ?>
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>GetFundedAfrica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="ThemeZaa" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Powering innovation through connection."
+    />
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="../assets/css/vendors.min.css" />
+    <link rel="stylesheet" href="../assets/css/icon.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.min.css" />
+    <link rel="stylesheet" href="../assets/css/get-funded-africa.css" />
+    <link rel="stylesheet" href="../assets/css/feather.css" />
+    <link rel="stylesheet" href="../assets/css/custom-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body
+    data-mobile-nav-trigger-alignment="right"
+    data-mobile-nav-style="modern"
+    data-mobile-nav-bg-color="#1d1d1d"
+  >
+
+    <!-- Page Loader -->
+    <!--<div class="page-loader"></div>-->
+    <!-- start header -->
+    <header>
+      <!-- start navigation -->
+      <nav
+        class="navbar navbar-expand-lg header-light bg-white header-reverse glass-effect"
+      >
+        <div class="container-fluid">
+          <div class="col-auto col-lg-2 me-lg-0 me-auto">
+            <a class="navbar-brand" href="../index.html">
+              <img
+                src="../assets/images/get-funded-africa-logo.png"
+                data-at2x="../assets/images/get-funded-africa-logo.png"
+                alt=""
+                class="default-logo"
+              />
+              <img
+                src="../assets/images/get-funded-africa-logo.png"
+                data-at2x="../assets/images/get-funded-africa-logo.png"
+                alt=""
+                class="alt-logo"
+              />
+              <img
+                src="../assets/images/get-funded-africa-logo.png"
+                data-at2x="../assets/images/get-funded-africa-logo.png"
+                alt=""
+                class="mobile-logo"
+              />
+            </a>
+          </div>
+          <div class="col-auto ms-auto md-ms-0 menu-order position-static">
+            <button
+              class="navbar-toggler float-start"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav alt-font">
+                <li class="nav-item active">
+                  <a href="../index.html" class="nav-link inner-link"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="../index.html#entrepreneurs"
+                    class="nav-link inner-link"
+                    >Entrepreneurs</a
+                  >
+                </li>
+                <li class="nav-item dropdown dropdown-with-icon-style02">
+                  <a href="../index.html#mentors" class="nav-link inner-link"
+                    >Mentors</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="../index.html#investors" class="nav-link"
+                    >Investors</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="../index.html#organizations" class="nav-link">Organizations</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-auto text-end d-none d-sm-flex">
+            <div class="header-icon">
+              <div class="header-button">
+                <a
+                  href="https://getfundedafrica.com/portal/"
+                  class="btn border-1 btn-transparent-light-gray btn-medium left-icon btn-switch-text"
+                >
+                  <span>
+                    <span><i class="fa-solid fa-hand-point-right"></i></span>
+                    <span class="btn-double-text" data-text="Get Started Now"
+                      >Get Started Now</span
+                    >
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- end navigation -->
+    </header>
+    <!-- end header -->
+
+    <!-- Main Content -->
+     <main>
+    <div class="page-layout">
+      <!-- Pricing Cards Section -->
+      <section
+        class="card-section bg-light-gray py-5 top-section"
+
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+              <h2 class="text-dark-gray alt-font fw-600 ls-minus-2px mb-2" id="pricing">
+                Join GetFundedAfrica Today
+              </h2>
+              <p class="lead mb-0">
+                Get 75% Off All Packages – Unlock Unlimited Access to Entrepreneurs, Investors, and Organizations to Accelerate Your Business Growth.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pricing Cards Container -->
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center" 
+          >
+            <!-- Free Plan -->
+            <div class="col">
+              <div
+                class="pricing-card"
+                data-plan="free"
+                onclick="selectPlan(this)"
+              >
+                <div class="pricing-header">
+                  <h3 class="plan-name">Free</h3>
+                  <div class="price-container">
+                    <span class="price"><?php detectCurrency(); ?> 0</span>
+                    <span class="period">/forever</span>
+                  </div>
+                  <p class="plan-description">
+                    For entrepreneurs who want access to resources and the
+                    ability to sell their products.
+                  </p>
+                </div>
+                <div class="pricing-features">
+                  <ul>
+                    <li><i class="fas fa-check"></i> User account</li>
+                    <li>
+                      <i class="fas fa-check"></i> Limited number of mentors,
+                      investors, and organizations
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Access to the CIPME
+                      Marketplace
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Invitations to leading events
+                      and webinars
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Limited access to 230
+                      fundraising course videos
+                    </li>
+                  </ul>
+                </div>
+                <div class="pricing-action">
+                 
+                    <a href="https://getfundedafrica.com/portal/gfa/register">
+                         <button class="btn btn-outline-primary w-100 select-plan-btn">
+                            Get Started Free
+                  </button>
+                    </a>
+                    
+                </div>
+              </div>
+            </div>
+
+            <!-- Premium Bi-Annual Plan -->
+            <div class="col">
+              <div
+                class="pricing-card popular"
+                data-plan="premium-biannual"
+                onclick="selectPlan(this)"
+              >
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                  <h3 class="plan-name">Premium Bi-Annual</h3>
+                  <div class="price-container">
+                    <span class="price"><?php detectCurrency(); ?><?php detectCurrencyAmount(750000); ?></span>
+                    <span class="period">/ 6 months</span>
+                  </div>
+                  <p class="plan-description">
+                    For entrepreneurs seeking unlimited access to contacts and
+                    resources.
+                  </p>
+                </div>
+                <div class="pricing-features">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Save <?php detectCurrency(); ?><?php detectCurrencyAmount(1250000); ?></li>
+                    <li>
+                      <i class="fas fa-check"></i> All Free features, plus:
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Unlimited access to mentors
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Unlimited access to
+                      organizations and investors
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Lead generation tools to
+                      boost revenue
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i> Individual call with a GetFundedAfrica
+                      growth representative
+                    </li>
+                  </ul>
+                </div>
+                <?php if(getCountry()=='Nigeria'){ $gateway = "flutter";  }else{ $gateway = "stripe"; }
+                $subscription = "Premium Funding";
+                $subType = "bi-annually"; 
+                //$amount = totalAmount; 
+                ?>
+                <div class="pricing-action">
+                    <a href="https://getfundedafrica.com/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(750000); ?>/<?php echo $gateway ?>">
+                  <button class="btn btn-primary w-100 select-plan-btn">
+                    Choose Plan
+                  </button>
+                </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Premium Annual Plan -->
+            <div class="col">
+              <div
+                class="pricing-card"
+                data-plan="premium-annual"
+                onclick="selectPlan(this)"
+              >
+                <div class="pricing-header">
+                  <h3 class="plan-name">Premium Annual</h3>
+                  <div class="price-container">
+                    <span class="price"><?php detectCurrency(); ?><?php detectCurrencyAmount(1125000); ?></span>
+                    <span class="period">/ year</span>
+                  </div>
+                  <p class="plan-description">
+                    Best value for long-term growth and success.
+                  </p>
+                </div>
+                <div class="pricing-features">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Save <?php detectCurrency(); ?><?php detectCurrencyAmount(1875000); ?></li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                    <li>
+                      <i class="fas fa-check"></i> Plus all Bi-Annual Premium
+                      features
+                    </li>
+                  </ul>
+                </div>
+                 <?php if(getCountry()=='Nigeria'){ $gateway = "flutter";  }else{ $gateway = "stripe"; }
+                
+                $subscription = "Business Funding";
+                $subType = "yearly"; 
+                //$amount = totalAmount; 
+                ?>
+                <div class="pricing-action">
+                    <a href="https://getfundedafrica.com/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(1125000); ?>/<?php echo $gateway ?>">
+                  <button class="btn btn-outline-primary w-100 select-plan-btn">
+                    Choose Plan
+                  </button>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>
+
+ <!-- start footer -->
+    <footer
+      class="bg-charcoal-blue pb-4 sm-pb-50px footer-background"
+    >
+      <div class="container">
+        <div class="row mb-6">
+          <div class="col-lg-5 col-md-6 sm-mb-30px order-2 order-md-1">
+            <h3
+              class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+            >
+             Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.
+            </h3>
+            <div class="row">
+              <div class="col-lg-5 col-6">
+                <span
+                  class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24"
+                  >Call our office</span
+                >
+                <a href="tel:+234 705 721 4580">+234 705 721 4580</a>
+              </div>
+              <div class="col-lg-5 col-6">
+                <span
+                  class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24"
+                  >Send a message</span
+                >
+                <a
+                  href="mailto:info@getfundedafrica.com"
+                  >info@getfundedafrica.com
+                  <!-- <span
+                    class="__cf_email__"
+                    data-cfemail="GetFundedAfrica"
+                    >[email&#160;protected]</span
+                  > -->
+                  </a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 offset-lg-1 col-6 order-3 order-md-2">
+            <span
+              class="alt-font fs-14 text-uppercase mb-5px d-block text-white ls-1px"
+              >Company</span
+            >
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#entrepreneurs">Entrepreneurs</a></li>
+              <li><a href="#mentors">Mentors</a></li>
+              <li>
+                <a href="#investors">Investors</a>
+              </li>
+              <li><a href="#organizations">Organizations</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-6 order-3 order-md-3">
+            <span
+              class="alt-font fs-14 text-uppercase mb-5px d-block text-white ls-1px"
+              >Follow Us</span
+            >
+            <ul>
+              <!-- <li>
+                <a href="https://www.pinterest.com/" target="_blank"
+                  >Pinterest</a
+                >
+              </li> -->
+              <li>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+              </li>
+              <li>
+                <a href="http://www.linkedin.com" target="_blank">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="http://www.tiktok.com" target="_blank">TikTok</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 order-1 order-md-4 sm-mb-30px">
+            <a href="../index.html" class="footer-logo"
+              ><img
+                src="../assets/images/get-funded-africa-logo.png"
+                data-at2x="../assets/images/get-funded-africa-logo.png"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-7 last-paragraph-no-margin">
+            <p class="fs-13 lh-22 w-95 sm-w-100">
+              This site is protected by reCAPTCHA and the Google privacy policy
+              and terms of service apply. You must not use this website if you
+              disagree with any of these website standard terms and conditions.
+            </p>
+          </div>
+          <div class="col-md-5 text-md-end sm-mt-15px last-paragraph-no-margin">
+            <p class="fs-13 lh-22">
+              &copy; 2024 Crafto is Powered by
+              <a
+                href="https://www.themezaa.com/"
+                target="_blank"
+                class="text-decoration-line-bottom text-white"
+                >ThemeZaa</a
+              >
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- start scroll progress -->
+    <div class="scroll-progress d-none d-xxl-block">
+      <a href="#" class="scroll-top" aria-label="scroll">
+        <span class="scroll-text">Scroll</span
+        ><span class="scroll-line"><span class="scroll-point"></span></span>
+      </a>
+    </div>
+    <!-- end scroll progress -->
+
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/vendors.min.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+    <script type="text/javascript" src="../assets/js/custom-script.js"></script>
+  </body>
+</html>

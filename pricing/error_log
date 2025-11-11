@@ -1,0 +1,1620 @@
+[28-Mar-2025 11:47:24 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Mar-2025 11:47:24 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Mar-2025 11:47:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[28-Mar-2025 11:48:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Mar-2025 11:48:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Mar-2025 11:48:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[28-Mar-2025 14:05:51 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Mar-2025 14:05:51 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Mar-2025 14:05:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[31-Mar-2025 23:07:51 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Mar-2025 23:07:51 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Mar-2025 23:07:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[01-Apr-2025 15:11:13 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Apr-2025 15:11:13 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Apr-2025 15:11:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[03-Apr-2025 20:04:04 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Apr-2025 20:04:04 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Apr-2025 20:04:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[06-Apr-2025 15:11:38 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Apr-2025 15:11:38 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Apr-2025 15:11:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[09-Apr-2025 23:01:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Apr-2025 23:01:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Apr-2025 23:01:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[10-Apr-2025 10:13:14 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Apr-2025 10:13:14 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Apr-2025 10:13:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 03:40:32 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 03:40:32 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 03:40:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 12:08:54 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:08:54 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:08:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 12:25:03 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:25:03 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:25:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 12:38:33 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:38:33 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:38:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 12:42:04 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:42:04 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 12:42:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 14:10:12 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 14:10:12 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 14:10:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 15:23:42 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 15:23:42 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 15:23:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 19:24:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 19:24:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 19:24:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 20:32:18 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 20:32:18 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 20:32:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 20:53:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 20:53:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 20:53:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 21:36:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 21:36:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 21:36:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 23:53:09 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 23:53:09 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 23:53:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Apr-2025 23:58:01 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 23:58:01 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Apr-2025 23:58:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 01:34:34 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 01:34:34 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 01:34:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 01:45:11 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 01:45:11 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 01:45:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 05:53:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 05:53:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 05:53:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 09:13:10 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 09:13:10 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 09:13:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 09:13:33 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 09:13:33 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 09:13:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 11:47:35 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 11:47:35 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 11:47:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 12:54:54 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 12:54:54 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 12:54:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 14:43:27 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 14:43:27 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 14:43:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 14:57:26 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 14:57:26 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 14:57:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 16:09:03 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 16:09:03 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 16:09:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Apr-2025 17:53:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 17:53:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Apr-2025 17:53:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[13-Apr-2025 14:14:23 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Apr-2025 14:14:23 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Apr-2025 14:14:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[13-Apr-2025 16:54:57 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Apr-2025 16:54:57 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Apr-2025 16:54:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[14-Apr-2025 14:28:36 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Apr-2025 14:28:36 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Apr-2025 14:28:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-Apr-2025 03:49:33 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Apr-2025 03:49:33 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Apr-2025 03:49:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-Apr-2025 12:27:54 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Apr-2025 12:27:54 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Apr-2025 12:27:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-Apr-2025 15:27:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Apr-2025 15:27:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Apr-2025 15:27:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[16-Apr-2025 12:24:05 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Apr-2025 12:24:05 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Apr-2025 12:24:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[16-Apr-2025 16:45:31 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Apr-2025 16:45:31 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Apr-2025 16:45:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-Apr-2025 15:26:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 15:26:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 15:26:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-Apr-2025 21:34:41 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 21:34:41 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 21:34:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-Apr-2025 21:46:44 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 21:46:44 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 21:46:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-Apr-2025 21:46:55 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 21:46:55 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 21:46:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-Apr-2025 22:40:51 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 22:40:51 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 22:40:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-Apr-2025 23:05:28 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 23:05:28 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Apr-2025 23:05:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[18-Apr-2025 18:18:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Apr-2025 18:18:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Apr-2025 18:18:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[19-Apr-2025 12:01:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Apr-2025 12:01:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Apr-2025 12:01:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[19-Apr-2025 14:25:12 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Apr-2025 14:25:12 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Apr-2025 14:25:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[20-Apr-2025 00:23:28 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Apr-2025 00:23:28 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Apr-2025 00:23:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[20-Apr-2025 03:10:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Apr-2025 03:10:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Apr-2025 03:10:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[20-Apr-2025 19:09:49 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Apr-2025 19:09:49 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Apr-2025 19:09:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[21-Apr-2025 13:43:05 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Apr-2025 13:43:05 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Apr-2025 13:43:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[25-Apr-2025 23:43:35 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Apr-2025 23:43:35 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Apr-2025 23:43:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[27-Apr-2025 07:09:54 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Apr-2025 07:09:54 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Apr-2025 07:09:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[27-Apr-2025 13:39:12 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Apr-2025 13:39:12 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Apr-2025 13:39:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[29-Apr-2025 03:59:42 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Apr-2025 03:59:42 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Apr-2025 03:59:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[30-Apr-2025 18:08:29 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Apr-2025 18:08:29 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Apr-2025 18:08:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[01-May-2025 06:31:42 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-May-2025 06:31:42 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-May-2025 06:31:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[03-May-2025 11:13:17 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-May-2025 11:13:17 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-May-2025 11:13:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[05-May-2025 21:14:53 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-May-2025 21:14:53 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-May-2025 21:14:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[06-May-2025 10:54:12 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-May-2025 10:54:12 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-May-2025 10:54:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[06-May-2025 19:25:17 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-May-2025 19:25:17 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-May-2025 19:25:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-May-2025 02:39:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-May-2025 02:39:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-May-2025 02:39:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-May-2025 13:18:25 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-May-2025 13:18:25 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-May-2025 13:18:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-May-2025 23:50:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-May-2025 23:50:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-May-2025 23:50:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-May-2025 22:49:17 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-May-2025 22:49:17 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-May-2025 22:49:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[13-May-2025 04:28:19 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-May-2025 04:28:19 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-May-2025 04:28:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[14-May-2025 06:58:02 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-May-2025 06:58:02 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-May-2025 06:58:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-May-2025 06:30:06 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:06 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-May-2025 06:30:06 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:06 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-May-2025 06:30:07 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:07 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-May-2025 06:30:07 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:07 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 06:30:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-May-2025 23:31:50 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 23:31:50 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-May-2025 23:31:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[16-May-2025 10:54:07 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-May-2025 10:54:07 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-May-2025 10:54:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-May-2025 04:11:40 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-May-2025 04:11:40 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-May-2025 04:11:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-May-2025 10:04:45 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-May-2025 10:04:45 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-May-2025 10:04:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[18-May-2025 18:19:22 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-May-2025 18:19:22 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-May-2025 18:19:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[19-May-2025 21:04:38 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-May-2025 21:04:38 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-May-2025 21:04:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[20-May-2025 15:46:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-May-2025 15:46:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-May-2025 15:46:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[21-May-2025 06:17:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 06:17:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 06:17:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[21-May-2025 14:36:40 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 14:36:40 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 14:36:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[21-May-2025 17:42:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 17:42:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 17:42:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[21-May-2025 23:25:46 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 23:25:46 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-May-2025 23:25:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[23-May-2025 18:47:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-May-2025 18:47:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-May-2025 18:47:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[23-May-2025 19:58:21 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-May-2025 19:58:21 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-May-2025 19:58:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[23-May-2025 22:20:30 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-May-2025 22:20:30 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-May-2025 22:20:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[24-May-2025 18:14:17 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-May-2025 18:14:17 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-May-2025 18:14:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[25-May-2025 17:40:50 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-May-2025 17:40:50 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-May-2025 17:40:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[26-May-2025 00:37:56 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-May-2025 00:37:56 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-May-2025 00:37:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[26-May-2025 00:56:56 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-May-2025 00:56:56 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-May-2025 00:56:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[27-May-2025 10:21:18 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-May-2025 10:21:18 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-May-2025 10:21:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[28-May-2025 14:39:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-May-2025 14:39:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-May-2025 14:39:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[28-May-2025 19:40:12 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-May-2025 19:40:12 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-May-2025 19:40:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[29-May-2025 17:23:56 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-May-2025 17:23:56 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-May-2025 17:23:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[30-May-2025 07:45:32 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-May-2025 07:45:32 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-May-2025 07:45:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[30-May-2025 11:55:44 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-May-2025 11:55:44 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-May-2025 11:55:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[30-May-2025 14:56:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-May-2025 14:56:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-May-2025 14:56:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[31-May-2025 02:23:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-May-2025 02:23:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-May-2025 02:23:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[31-May-2025 03:37:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-May-2025 03:37:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-May-2025 03:37:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[01-Jun-2025 18:49:37 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Jun-2025 18:49:37 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Jun-2025 18:49:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[02-Jun-2025 02:55:18 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[02-Jun-2025 02:55:18 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[02-Jun-2025 02:55:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[02-Jun-2025 13:12:03 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[02-Jun-2025 13:12:03 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[02-Jun-2025 13:12:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[03-Jun-2025 02:30:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Jun-2025 02:30:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Jun-2025 02:30:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[03-Jun-2025 12:18:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Jun-2025 12:18:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Jun-2025 12:18:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[03-Jun-2025 13:56:07 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Jun-2025 13:56:07 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[03-Jun-2025 13:56:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[04-Jun-2025 14:50:25 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jun-2025 14:50:25 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jun-2025 14:50:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[04-Jun-2025 20:46:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jun-2025 20:46:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jun-2025 20:46:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[04-Jun-2025 22:00:17 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jun-2025 22:00:17 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jun-2025 22:00:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[05-Jun-2025 11:46:48 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Jun-2025 11:46:48 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Jun-2025 11:46:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[07-Jun-2025 14:10:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Jun-2025 14:10:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Jun-2025 14:10:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[07-Jun-2025 19:06:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Jun-2025 19:06:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Jun-2025 19:06:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[08-Jun-2025 00:13:30 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Jun-2025 00:13:30 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Jun-2025 00:13:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[09-Jun-2025 18:01:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Jun-2025 18:01:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Jun-2025 18:01:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[10-Jun-2025 02:53:09 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jun-2025 02:53:09 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jun-2025 02:53:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[10-Jun-2025 10:56:36 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jun-2025 10:56:36 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jun-2025 10:56:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[10-Jun-2025 11:47:10 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jun-2025 11:47:10 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jun-2025 11:47:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[11-Jun-2025 14:38:01 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Jun-2025 14:38:01 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Jun-2025 14:38:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[12-Jun-2025 16:24:40 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Jun-2025 16:24:40 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Jun-2025 16:24:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[14-Jun-2025 20:45:46 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jun-2025 20:45:46 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jun-2025 20:45:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[15-Jun-2025 14:10:33 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Jun-2025 14:10:33 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Jun-2025 14:10:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[16-Jun-2025 04:44:04 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Jun-2025 04:44:04 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Jun-2025 04:44:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[16-Jun-2025 15:48:38 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Jun-2025 15:48:38 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Jun-2025 15:48:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[17-Jun-2025 00:12:28 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Jun-2025 00:12:28 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Jun-2025 00:12:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[18-Jun-2025 14:50:27 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jun-2025 14:50:27 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jun-2025 14:50:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[18-Jun-2025 20:13:38 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jun-2025 20:13:38 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jun-2025 20:13:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[19-Jun-2025 00:04:22 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jun-2025 00:04:22 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jun-2025 00:04:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[19-Jun-2025 05:57:56 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jun-2025 05:57:56 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jun-2025 05:57:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:206
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 206
+[20-Jun-2025 22:01:23 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Jun-2025 22:01:23 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Jun-2025 22:01:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[21-Jun-2025 11:37:38 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Jun-2025 11:37:38 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Jun-2025 11:37:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[22-Jun-2025 03:14:48 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jun-2025 03:14:48 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jun-2025 03:14:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[22-Jun-2025 03:15:31 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jun-2025 03:15:31 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jun-2025 03:15:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[22-Jun-2025 15:10:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jun-2025 15:10:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jun-2025 15:10:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[24-Jun-2025 00:17:50 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jun-2025 00:17:50 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jun-2025 00:17:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[24-Jun-2025 01:25:41 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jun-2025 01:25:41 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jun-2025 01:25:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[24-Jun-2025 13:39:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jun-2025 13:39:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jun-2025 13:39:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[25-Jun-2025 14:38:23 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Jun-2025 14:38:23 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Jun-2025 14:38:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[04-Jul-2025 07:07:53 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jul-2025 07:07:53 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jul-2025 07:07:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[04-Jul-2025 07:07:53 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jul-2025 07:07:53 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Jul-2025 07:07:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[05-Jul-2025 15:58:01 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Jul-2025 15:58:01 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Jul-2025 15:58:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[05-Jul-2025 16:29:54 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Jul-2025 16:29:54 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Jul-2025 16:29:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[06-Jul-2025 05:40:55 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Jul-2025 05:40:55 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Jul-2025 05:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[06-Jul-2025 18:48:09 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Jul-2025 18:48:09 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Jul-2025 18:48:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[06-Jul-2025 23:05:13 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Jul-2025 23:05:13 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Jul-2025 23:05:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[08-Jul-2025 07:36:57 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Jul-2025 07:36:57 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Jul-2025 07:36:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[08-Jul-2025 13:48:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Jul-2025 13:48:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Jul-2025 13:48:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[09-Jul-2025 18:15:13 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Jul-2025 18:15:13 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Jul-2025 18:15:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[10-Jul-2025 02:46:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jul-2025 02:46:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jul-2025 02:46:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[10-Jul-2025 13:37:37 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jul-2025 13:37:37 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Jul-2025 13:37:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[11-Jul-2025 10:00:53 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Jul-2025 10:00:53 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Jul-2025 10:00:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[11-Jul-2025 11:26:32 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Jul-2025 11:26:32 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Jul-2025 11:26:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[13-Jul-2025 01:23:51 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Jul-2025 01:23:51 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Jul-2025 01:23:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Jul-2025 05:58:34 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 05:58:34 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 05:58:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Jul-2025 13:14:34 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 13:14:34 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 13:14:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Jul-2025 13:51:40 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 13:51:40 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 13:51:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Jul-2025 13:51:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 13:51:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 13:51:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Jul-2025 18:57:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 18:57:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Jul-2025 18:57:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Jul-2025 05:10:31 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jul-2025 05:10:31 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jul-2025 05:10:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Jul-2025 22:33:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jul-2025 22:33:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Jul-2025 22:33:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[19-Jul-2025 06:16:34 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jul-2025 06:16:34 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jul-2025 06:16:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[19-Jul-2025 09:25:08 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jul-2025 09:25:08 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jul-2025 09:25:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[19-Jul-2025 19:40:09 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jul-2025 19:40:09 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Jul-2025 19:40:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[20-Jul-2025 03:50:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Jul-2025 03:50:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Jul-2025 03:50:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[21-Jul-2025 15:04:29 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Jul-2025 15:04:29 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Jul-2025 15:04:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[22-Jul-2025 00:40:06 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jul-2025 00:40:06 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jul-2025 00:40:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[22-Jul-2025 13:56:37 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jul-2025 13:56:37 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Jul-2025 13:56:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[24-Jul-2025 17:17:32 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jul-2025 17:17:32 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Jul-2025 17:17:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[26-Jul-2025 15:16:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Jul-2025 15:16:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Jul-2025 15:16:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[28-Jul-2025 15:05:41 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Jul-2025 15:05:41 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Jul-2025 15:05:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[29-Jul-2025 22:28:30 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Jul-2025 22:28:30 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Jul-2025 22:28:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[31-Jul-2025 11:45:22 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Jul-2025 11:45:22 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Jul-2025 11:45:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[31-Jul-2025 18:06:32 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Jul-2025 18:06:32 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Jul-2025 18:06:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[04-Aug-2025 12:41:23 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Aug-2025 12:41:23 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Aug-2025 12:41:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[04-Aug-2025 15:01:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Aug-2025 15:01:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Aug-2025 15:01:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[05-Aug-2025 14:04:41 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Aug-2025 14:04:41 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Aug-2025 14:04:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[06-Aug-2025 02:07:47 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Aug-2025 02:07:47 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Aug-2025 02:07:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[09-Aug-2025 14:22:13 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Aug-2025 14:22:13 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Aug-2025 14:22:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[11-Aug-2025 14:44:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Aug-2025 14:44:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Aug-2025 14:44:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[12-Aug-2025 20:52:28 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Aug-2025 20:52:28 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Aug-2025 20:52:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Aug-2025 14:40:20 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Aug-2025 14:40:20 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Aug-2025 14:40:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Aug-2025 14:44:35 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Aug-2025 14:44:35 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Aug-2025 14:44:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[19-Aug-2025 14:14:52 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Aug-2025 14:14:52 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Aug-2025 14:14:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[22-Aug-2025 19:40:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Aug-2025 19:40:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Aug-2025 19:40:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[25-Aug-2025 14:38:45 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Aug-2025 14:38:45 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Aug-2025 14:38:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[26-Aug-2025 10:53:01 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Aug-2025 10:53:01 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Aug-2025 10:53:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[27-Aug-2025 21:36:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Aug-2025 21:36:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Aug-2025 21:36:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[28-Aug-2025 00:31:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Aug-2025 00:31:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Aug-2025 00:31:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[01-Sep-2025 14:37:20 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Sep-2025 14:37:20 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Sep-2025 14:37:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[02-Sep-2025 14:23:09 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[02-Sep-2025 14:23:09 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[02-Sep-2025 14:23:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[06-Sep-2025 07:00:18 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Sep-2025 07:00:18 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Sep-2025 07:00:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[07-Sep-2025 18:22:01 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Sep-2025 18:22:01 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Sep-2025 18:22:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[12-Sep-2025 16:41:14 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Sep-2025 16:41:14 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[12-Sep-2025 16:41:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Sep-2025 14:44:42 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Sep-2025 14:44:42 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Sep-2025 14:44:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Sep-2025 22:36:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Sep-2025 22:36:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Sep-2025 22:36:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[15-Sep-2025 08:31:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Sep-2025 08:31:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Sep-2025 08:31:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[15-Sep-2025 17:05:37 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Sep-2025 17:05:37 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Sep-2025 17:05:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[16-Sep-2025 10:09:18 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Sep-2025 10:09:18 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Sep-2025 10:09:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[16-Sep-2025 14:30:27 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Sep-2025 14:30:27 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Sep-2025 14:30:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[19-Sep-2025 00:30:29 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Sep-2025 00:30:29 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Sep-2025 00:30:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[20-Sep-2025 00:27:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Sep-2025 00:27:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Sep-2025 00:27:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[20-Sep-2025 14:56:38 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Sep-2025 14:56:38 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Sep-2025 14:56:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[26-Sep-2025 02:40:48 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Sep-2025 02:40:48 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Sep-2025 02:40:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[26-Sep-2025 02:40:49 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Sep-2025 02:40:49 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Sep-2025 02:40:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[26-Sep-2025 17:05:50 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Sep-2025 17:05:50 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Sep-2025 17:05:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[27-Sep-2025 14:46:30 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Sep-2025 14:46:30 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Sep-2025 14:46:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[27-Sep-2025 19:23:27 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Sep-2025 19:23:27 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Sep-2025 19:23:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[29-Sep-2025 13:54:04 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Sep-2025 13:54:04 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Sep-2025 13:54:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[30-Sep-2025 07:50:10 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Sep-2025 07:50:10 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Sep-2025 07:50:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[30-Sep-2025 09:51:06 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Sep-2025 09:51:06 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Sep-2025 09:51:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[30-Sep-2025 16:30:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Sep-2025 16:30:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Sep-2025 16:30:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[04-Oct-2025 14:44:50 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Oct-2025 14:44:50 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Oct-2025 14:44:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[08-Oct-2025 08:07:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Oct-2025 08:07:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Oct-2025 08:07:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[09-Oct-2025 12:43:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Oct-2025 12:43:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[09-Oct-2025 12:43:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[10-Oct-2025 09:20:33 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Oct-2025 09:20:33 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Oct-2025 09:20:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[10-Oct-2025 09:20:40 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Oct-2025 09:20:40 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Oct-2025 09:20:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[10-Oct-2025 19:51:54 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Oct-2025 19:51:54 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Oct-2025 19:51:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[11-Oct-2025 14:39:57 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Oct-2025 14:39:57 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Oct-2025 14:39:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[13-Oct-2025 07:42:23 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Oct-2025 07:42:23 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[13-Oct-2025 07:42:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Oct-2025 06:03:53 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Oct-2025 06:03:53 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Oct-2025 06:03:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Oct-2025 07:05:32 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Oct-2025 07:05:32 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Oct-2025 07:05:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[14-Oct-2025 12:07:12 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Oct-2025 12:07:12 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[14-Oct-2025 12:07:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[15-Oct-2025 09:49:01 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Oct-2025 09:49:01 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Oct-2025 09:49:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[15-Oct-2025 15:01:58 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Oct-2025 15:01:58 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[15-Oct-2025 15:01:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[16-Oct-2025 08:10:48 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Oct-2025 08:10:48 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Oct-2025 08:10:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[16-Oct-2025 11:43:34 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Oct-2025 11:43:34 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[16-Oct-2025 11:43:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[17-Oct-2025 14:40:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 14:40:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 14:40:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[17-Oct-2025 16:41:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 16:41:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 16:41:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[17-Oct-2025 17:45:00 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 17:45:00 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 17:45:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[17-Oct-2025 19:15:39 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 19:15:39 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[17-Oct-2025 19:15:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Oct-2025 03:30:48 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 03:30:48 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 03:30:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Oct-2025 14:41:50 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 14:41:50 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 14:41:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Oct-2025 17:23:20 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 17:23:20 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 17:23:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[18-Oct-2025 17:33:26 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 17:33:26 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[18-Oct-2025 17:33:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[19-Oct-2025 11:50:52 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Oct-2025 11:50:52 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[19-Oct-2025 11:50:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[20-Oct-2025 16:33:11 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Oct-2025 16:33:11 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[20-Oct-2025 16:33:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[21-Oct-2025 14:39:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Oct-2025 14:39:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Oct-2025 14:39:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[21-Oct-2025 17:41:29 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Oct-2025 17:41:29 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[21-Oct-2025 17:41:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[22-Oct-2025 06:51:01 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Oct-2025 06:51:01 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[22-Oct-2025 06:51:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[23-Oct-2025 05:28:59 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-Oct-2025 05:28:59 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-Oct-2025 05:28:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[23-Oct-2025 06:32:36 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-Oct-2025 06:32:36 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-Oct-2025 06:32:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[23-Oct-2025 14:05:53 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-Oct-2025 14:05:53 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[23-Oct-2025 14:05:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[24-Oct-2025 06:30:08 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Oct-2025 06:30:08 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Oct-2025 06:30:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[24-Oct-2025 19:14:40 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Oct-2025 19:14:40 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Oct-2025 19:14:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[24-Oct-2025 22:56:45 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Oct-2025 22:56:45 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[24-Oct-2025 22:56:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[25-Oct-2025 06:32:24 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Oct-2025 06:32:24 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Oct-2025 06:32:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[25-Oct-2025 14:38:40 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Oct-2025 14:38:40 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[25-Oct-2025 14:38:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[26-Oct-2025 06:37:37 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Oct-2025 06:37:37 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[26-Oct-2025 06:37:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[27-Oct-2025 06:30:57 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 06:30:57 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 06:30:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[27-Oct-2025 16:36:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 16:36:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 16:36:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[27-Oct-2025 19:21:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 19:21:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 19:21:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[27-Oct-2025 19:49:51 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 19:49:51 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[27-Oct-2025 19:49:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[28-Oct-2025 06:31:36 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Oct-2025 06:31:36 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[28-Oct-2025 06:31:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[29-Oct-2025 21:37:27 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Oct-2025 21:37:27 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[29-Oct-2025 21:37:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[30-Oct-2025 02:17:38 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Oct-2025 02:17:38 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[30-Oct-2025 02:17:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[31-Oct-2025 06:57:26 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Oct-2025 06:57:26 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Oct-2025 06:57:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[31-Oct-2025 16:47:17 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Oct-2025 16:47:17 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[31-Oct-2025 16:47:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[01-Nov-2025 00:07:29 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 00:07:29 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 00:07:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[01-Nov-2025 11:31:56 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 11:31:56 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 11:31:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[01-Nov-2025 12:47:28 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 12:47:28 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 12:47:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[01-Nov-2025 14:47:15 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 14:47:15 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[01-Nov-2025 14:47:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[04-Nov-2025 05:55:30 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Nov-2025 05:55:30 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[04-Nov-2025 05:55:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[05-Nov-2025 10:09:47 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Nov-2025 10:09:47 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[05-Nov-2025 10:09:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[06-Nov-2025 17:16:48 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Nov-2025 17:16:48 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[06-Nov-2025 17:16:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[07-Nov-2025 19:22:36 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Nov-2025 19:22:36 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[07-Nov-2025 19:22:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[08-Nov-2025 05:01:55 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Nov-2025 05:01:55 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Nov-2025 05:01:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[08-Nov-2025 14:47:25 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Nov-2025 14:47:25 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[08-Nov-2025 14:47:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[10-Nov-2025 06:17:18 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Nov-2025 06:17:18 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Nov-2025 06:17:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[10-Nov-2025 20:42:43 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Nov-2025 20:42:43 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[10-Nov-2025 20:42:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
+[11-Nov-2025 11:34:16 UTC] PHP Warning:  include_once(ip.php): Failed to open stream: No such file or directory in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Nov-2025 11:34:16 UTC] PHP Warning:  include_once(): Failed opening 'ip.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/getfjupm/public_html/pricing/index.php on line 1
+[11-Nov-2025 11:34:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function detectCurrency() in /home/getfjupm/public_html/pricing/index.php:205
+Stack trace:
+#0 {main}
+  thrown in /home/getfjupm/public_html/pricing/index.php on line 205
