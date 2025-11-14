@@ -2517,11 +2517,981 @@ Should I provide changes for specific files, or do you want to switch to agent m
 
 _**User (2025-11-14 16:51Z)**_
 
-Continue the rebranding on @register 
+Continue the rebranding on @register directory
 
 ---
 
 _**Assistant (default)**_
+
+
+
+---
+
+
+Searching the `register` directory for branding references:
+
+
+---
+
+Tool use: **grep**
+
+<details>
+<summary>Grep for "GetFundedAfrica|getfundedafrica|get-funded-africa|GFA|gfa-logo|GFA-Logo" in "register" • 1923 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `register\app-assets\vendors\js\tables\datatable\pdfmake.min.js` | `'AAIAAAAAAAAAALoQAQUO+vHtnHuMX0UVx2d3u/t7bXe7FlqgvB+mpQhFmhikMRAg0ZQmakMU+cPWBzZisEGNjUpoiIYCEgmGUGOEGqOVNPUZUGNA+QNIBU2KREEFFSMBUYRISMXE+B3vnPzOzp553tcWfif5ZO5jnufMzJ2ZO/eumlDqFLAWnAMuBBvBZnC5uXZeBe4WsA1sBzs8/naCXcL1G8GtYDfYA74NvgfuAfcZHmT+fwEeBb8DTwvxPQWeAavACyZvq8z9VYxXwCGglijVBcvACnA8eCM4E6wHG8BF4BLwbvA+8AHwUbAd7AA7wS5wC9gN7gR7wX5wN7gXPAAeBr8Gvwd/Ac+CF8EhoCaV6oBZsBKcAE4FZ0wWeV8P9zxwoTnfCHczuBxsAdvAx8Gnzf1r4X4B3AxuA1+bHJb9m5PzdVGW/Yjv+xXHyfmxFfd9OH8Q/Ar8Bjw1WZT3GfACeAX8N5CfqSmlZsAKsGqqCH8K3DXgbHCuuXYB3HeAd4HLpgrdarbi+EPgY+CT4HPg8ybMTcb9MtyvghtYut/A+b4pf95+ELgfw08Qx/3gADgInjDl0veehPtX8A/wsrn2KtzxDuogWNoJx38k/BzXKeI8Ee5qcBZYD9aZtDbg+AwT19uMX83F7JizCdcvBZdZ97c6/BMfMWmfzfTm88/95aLj+DDSvApcDXZ04uPfaen3TMHPLvi5BezuFPVtD4t/qUcfe3FvP7gb3Ouwo9T+H+gMy/UIjh8DfwBPm7T08d/M8WMBe1Sh3xEjXo+M2s+IESNGjBgxYsSI1wLrOsM1gRsi/P+TzV3/Zc1jvxgR/j8IM9Et1mEGcJeDFeA4cJq5/ia467uF/w1wzwdvB+80998LdwvYZs63w90Bdnbd6Wp/uzz3R4wYMWJEvZzTMm2Xf8SIEfVQd/v+EsaPt3eL90J3wP2WMJ78Trd4t6+P77Hu37cIxp9/ny6YXqrUJeCR6 [... omitted end of long line]` | L34458 |
+| `register\app-assets\vendors\js\file-uploaders\dropzone.min.js` | `(o = n.getExistingFallback()) && o.parentNode && o.parentNode.removeChild(o),` | L5273 |
+| `register\app-assets\vendors\js\file-uploaders\dropzone.min.js` | `if ((e = this.getExistingFallback())) return e;` | L5582 |
+| `register\app-assets\vendors\js\file-uploaders\dropzone.min.js` | `key: 'getExistingFallback',` | L5607 |
+| `register\app-assets\app-assets\vendors\js\tables\datatable\pdfmake.min.js` | `'AAIAAAAAAAAAALoQAQUO+vHtnHuMX0UVx2d3u/t7bXe7FlqgvB+mpQhFmhikMRAg0ZQmakMU+cPWBzZisEGNjUpoiIYCEgmGUGOEGqOVNPUZUGNA+QNIBU2KREEFFSMBUYRISMXE+B3vnPzOzp553tcWfif5ZO5jnufMzJ2ZO/eumlDqFLAWnAMuBBvBZnC5uXZeBe4WsA1sBzs8/naCXcL1G8GtYDfYA74NvgfuAfcZHmT+fwEeBb8DTwvxPQWeAavACyZvq8z9VYxXwCGglijVBcvACnA8eCM4E6wHG8BF4BLwbvA+8AHwUbAd7AA7wS5wC9gN7gR7wX5wN7gXPAAeBr8Gvwd/Ac+CF8EhoCaV6oBZsBKcAE4FZ0wWeV8P9zxwoTnfCHczuBxsAdvAx8Gnzf1r4X4B3AxuA1+bHJb9m5PzdVGW/Yjv+xXHyfmxFfd9OH8Q/Ar8Bjw1WZT3GfACeAX8N5CfqSmlZsAKsGqqCH8K3DXgbHCuuXYB3HeAd4HLpgrdarbi+EPgY+CT4HPg8ybMTcb9MtyvghtYut/A+b4pf95+ELgfw08Qx/3gADgInjDl0veehPtX8A/wsrn2KtzxDuogWNoJx38k/BzXKeI8Ee5qcBZYD9aZtDbg+AwT19uMX83F7JizCdcvBZdZ97c6/BMfMWmfzfTm88/95aLj+DDSvApcDXZ04uPfaen3TMHPLvi5BezuFPVtD4t/qUcfe3FvP7gb3Ouwo9T+H+gMy/UIjh8DfwBPm7T08d/M8WMBe1Sh3xEjXo+M2s+IESNGjBgxYsSI1wLrOsM1gRsi/P+TzV3/Zc1jvxgR/j8IM9Et1mEGcJeDFeA4cJq5/ia467uF/w1wzwdvB+80998LdwvYZs63w90Bdnbd6Wp/uzz3R4wYMWJEvZzTMm2Xf8SIEfVQd/v+EsaPt3eL90J3wP2WMJ78Trd4t6+P77Hu37cIxp9/ny6YXqrUJeCR6 [... omitted end of long line]` | L34458 |
+| `register\app-assets\app-assets\vendors\js\file-uploaders\dropzone.min.js` | `(o = n.getExistingFallback()) && o.parentNode && o.parentNode.removeChild(o),` | L5273 |
+| `register\app-assets\app-assets\vendors\js\file-uploaders\dropzone.min.js` | `if ((e = this.getExistingFallback())) return e;` | L5582 |
+| `register\app-assets\app-assets\vendors\js\file-uploaders\dropzone.min.js` | `key: 'getExistingFallback',` | L5607 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1') \{` | L11 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa2') \{` | L42 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa3') \{` | L73 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa4') \{` | L104 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa5') \{` | L135 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa6') \{` | L166 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa7') \{` | L198 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1au') \{` | L241 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1bu') \{` | L272 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1cu') \{` | L303 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1du') \{` | L334 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1eu') \{` | L365 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1fu') \{` | L397 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa2aw') \{` | L439 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa2bw') \{` | L470 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa2cw') \{` | L501 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa2dw') \{` | L532 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa2ew') \{` | L563 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa2fw') \{` | L594 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa3ax') \{` | L637 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa3bx') \{` | L669 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa3cx') \{` | L701 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa3dx') \{` | L733 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa3ex') \{` | L765 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa3ex6') \{` | L798 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa4ay') \{` | L812 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa4by') \{` | L844 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa4cy') \{` | L876 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa4dy') \{` | L908 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa4ey') \{` | L940 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa5az') \{` | L986 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa5bz') \{` | L1018 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa5cz') \{` | L1050 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa5dz') \{` | L1082 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa5ez') \{` | L1114 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa6az') \{` | L1154 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa6bz') \{` | L1187 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa6cz') \{` | L1219 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa6dz') \{` | L1251 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa6ez') \{` | L1283 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa6ezz') \{` | L1316 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1a2') \{` | L1360 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1b2') \{` | L1391 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1c2') \{` | L1422 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1d2') \{` | L1453 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1e2') \{` | L1484 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1f2') \{` | L1516 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1a3') \{` | L1551 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1b3') \{` | L1582 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1c3') \{` | L1613 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1d3') \{` | L1644 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1e3') \{` | L1675 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1f3') \{` | L1707 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1a4') \{` | L1742 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1b4') \{` | L1773 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1c4') \{` | L1804 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1d4') \{` | L1835 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1e4') \{` | L1866 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1f4') \{` | L1898 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1a5') \{` | L1933 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1b5') \{` | L1964 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1c5') \{` | L1995 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1d5') \{` | L2026 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1e5') \{` | L2057 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1f5') \{` | L2089 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1a6') \{` | L2124 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1b6') \{` | L2155 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1c6') \{` | L2186 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1d6') \{` | L2217 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1e6') \{` | L2248 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1f6') \{` | L2280 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1a7') \{` | L2315 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1b7') \{` | L2346 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1c7') \{` | L2377 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1d7') \{` | L2408 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1e7') \{` | L2439 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1f7') \{` | L2471 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1ainv') \{` | L2506 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1binv') \{` | L2540 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1cinv') \{` | L2574 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1dinv') \{` | L2608 |
+| `register\api\v0\js\core.js` | `value == 'gfa1einv' \|\|` | L2643 |
+| `register\api\v0\js\core.js` | `value == 'gfa1finv' \|\|` | L2644 |
+| `register\api\v0\js\core.js` | `value == 'gfa1ginv' \|\|` | L2645 |
+| `register\api\v0\js\core.js` | `value == 'gfa1hinv' \|\|` | L2646 |
+| `register\api\v0\js\core.js` | `value == 'gfa1iinv'` | L2647 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1aacc') \{` | L2686 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1bacc') \{` | L2720 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1cacc') \{` | L2754 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1dacc') \{` | L2788 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1eacc') \{` | L2822 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1agov') \{` | L2860 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1bgov') \{` | L2894 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1cgov') \{` | L2928 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1dgov') \{` | L2962 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1egov') \{` | L2996 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1agov6') \{` | L3037 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-current-stage').val(cur_stage);` | L3060 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-interest').val('Every Week');` | L3061 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1bgov6') \{` | L3071 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-current-stage').val(cur_stage);` | L3094 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-interest').val('Every 2 Week');` | L3095 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1cgov6') \{` | L3105 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-current-stage').val(cur_stage);` | L3128 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-interest').val('Every Month');` | L3129 |
+| `register\api\v0\js\core.js` | `if (value == 'gfa1dgov6') \{` | L3139 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-current-stage').val(cur_stage);` | L3162 |
+| `register\api\v0\js\core.js` | `$('.gfa1aigov6-interest').val('Every Quarter');` | L3163 |
+| `register\api\v0\js\core.js` | `const gfa_subscribe = (classname) => \{` | L3175 |
+| `register\api\v0\js\core.js` | `const gfa_reg_news = (classname) => \{` | L3196 |
+| `register\api\v0\js\core.js` | `const gfa_funding = (classname) => \{` | L3219 |
+| `register\api\v0\js\core.js` | `const gfa_report = (classname) => \{` | L3250 |
+| `register\api\v0\js\core.js` | `const gfa_learning = (classname) => \{` | L3281 |
+| `register\api\v0\js\core.js` | `const gfa_streaming = (classname) => \{` | L3311 |
+| `register\api\v0\js\core.js` | `const gfa_form = (classname) => \{` | L3375 |
+| `register\api\v0\js\core.js` | `const gfa_prelaunch = (classname) => \{` | L3409 |
+| `register\api\v0\js\core.js` | `const gfa_venture = (classname) => \{` | L3443 |
+| `register\api\v0\js\core.js` | `const gfa_venture_pro = (classname) => \{` | L3468 |
+| `register\api\v0\js\core.js` | `const gfa_reg_mentor = (classname) => \{` | L3500 |
+| `register\ticket.php` | `// ACMail('CIPME', 'Support Ticket', $mesg, 'promise@gfa-tech.com');` | L77 |
+| `register\ticket.php` | `// ACMail('CIPME', 'Support Ticket', $mesg, 'oluwatoyin@gfa-tech.com');` | L78 |
+| `register\ticket.php` | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-32x32.png"` | L107 |
+| `register\ticket.php` | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-192x192.png"` | L112 |
+| `register\ticket.php` | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-180x180.png"` | L117 |
+| `register\partnership\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=venture-building';` | L2 |
+| `register\operations\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=operations';` | L2 |
+| `register\news\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=news';` | L2 |
+| `register\learning\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=learning';` | L2 |
+| `register\investors\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=investors';` | L2 |
+| `register\insight\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=insight';` | L2 |
+| `register\indexx.php` | `background-image: url('https://fr.getfundedafrica.com/images/bg.jpg');` | L41 |
+| `register\indexx.php` | `<div class="col-md-4" onclick="myForma('gfa1')">` | L122 |
+| `register\indexx.php` | `value="gfa1" />` | L125 |
+| `register\indexx.php` | `<div class="col-md-4" onclick="myForma('gfa2')">` | L135 |
+| `register\indexx.php` | `value="gfa2" />` | L138 |
+| `register\indexx.php` | `<div class="col-md-4" onclick="myForma('gfa3')">` | L148 |
+| `register\indexx.php` | `value="gfa3" />` | L151 |
+| `register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa6')">` | L162 |
+| `register\indexx.php` | `value="gfa6" />` | L165 |
+| `register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa4')">` | L175 |
+| `register\indexx.php` | `value="gfa4" />` | L178 |
+| `register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa5')">` | L188 |
+| `register\indexx.php` | `value="gfa5" />` | L191 |
+| `register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa7')">` | L200 |
+| `register\indexx.php` | `value="gfa7" />` | L203 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L272 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L274 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L284 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L286 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L296 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L298 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L308 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L310 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L320 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L322 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L332 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L334 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L356 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L358 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L368 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L370 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L380 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L382 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L392 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L394 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L404 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L406 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L416 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L418 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L440 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L442 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L452 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L454 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L464 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L466 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L476 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L478 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L488 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L490 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L500 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L502 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L524 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L526 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L536 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L538 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L548 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L550 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L560 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L562 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L572 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L574 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L584 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L586 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L608 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L610 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L620 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L622 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L632 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L634 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L644 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L646 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L656 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L658 |
+| `register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L668 |
+| `register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L670 |
+| `register\index.php` | `<title>GetfundedAfrica</title>` | L5 |
+| `register\index.php` | `window.location.href = "https://getfundedafrica.com/portal/gfa/register";` | L58 |
+| `register\includes\head.php` | `href="https://gfa-tech.com/assets/css/style.css"` | L112 |
+| `register\includes\head.php` | `href="https://getfundedafrica.com/portal/assets/images/fav.png"` | L120 |
+| `register\gfa-max\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=gfa-max';` | L2 |
+| `register\funding\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=funding';` | L2 |
+| `register\events\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=events';` | L2 |
+| `register\error_log` | `[05-Jan-2024 03:56:24 UTC] PHP Parse error:  syntax error, unexpected ''sub-head-1'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/getfylig/fr.getfundedafrica.com/register/translation/french/main.php on line 7` | L1 |
+| `register\error_log` | `[05-Jan-2024 03:56:28 UTC] PHP Parse error:  syntax error, unexpected ''sub-head-1'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/getfylig/fr.getfundedafrica.com/register/translation/french/main.php on line 7` | L2 |
+| `register\api\v0\php\startups.php` | `if($startup_type == 'gfa2aw')\{` | L10 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormb2('gfa1a2')" style="display:none;">` | L21 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a2" value="gfa1a2" />` | L23 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a2">` | L24 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1b2')">` | L31 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b2" value="gfa1b2" />` | L33 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b2">` | L34 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1c2')">` | L41 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c2" value="gfa1c2" />` | L43 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c2">` | L44 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1d2')" style="display:none;">` | L51 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d2" value="gfa1d2" />` | L53 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d2">` | L54 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1e2')" style="display:none;">` | L61 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e2" value="gfa1e2" />` | L63 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e2">` | L64 |
+| `register\api\v0\php\startups.php` | `if($startup_type == 'gfa2bw')\{` | L81 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormc2('gfa1a3')" style="display:none">` | L92 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a3" value="gfa1a3" />` | L94 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a3">` | L95 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1b3')">` | L102 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b3" value="gfa1b3" />` | L104 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b3">` | L105 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1c3')">` | L112 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c3" value="gfa1c3" />` | L114 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c3">` | L115 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1d3')" style="display:none;">` | L122 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d3" value="gfa1d3" />` | L124 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d3">` | L125 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1e3')" style="display:none;">` | L132 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e3" value="gfa1e3" />` | L134 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e3">` | L135 |
+| `register\api\v0\php\startups.php` | `if($startup_type == 'gfa2cw')\{` | L152 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormd2('gfa1a4')" style="display:none">` | L163 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a4" value="gfa1a4" />` | L165 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a4">` | L166 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1b4')">` | L173 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b4" value="gfa1b4" />` | L175 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b4">` | L176 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1c4')">` | L183 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c4" value="gfa1c4" />` | L185 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c4">` | L186 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1d4')" style="display:none;">` | L193 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d4" value="gfa1d4" />` | L195 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d4">` | L196 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1e4')" style="display:none;">` | L203 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e4" value="gfa1e4" />` | L205 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e4">` | L206 |
+| `register\api\v0\php\startups.php` | `if($startup_type == 'gfa2dw')\{` | L223 |
+| `register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myForme2('gfa1a5')" style="display:none">` | L234 |
+| `register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a5" value="gfa1a5" />` | L236 |
+| `register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a5">` | L237 |
+
+
+</details>
+
+---
+
+Tool use: **list_dir**
+
+<details>
+            <summary>Listed directory undefined • **0** results</summary>
+        
+No results found
+</details>
+
+---
+
+Tool use: **read_file**
+
+Read file: register/index.php
+
+---
+
+Tool use: **read_file**
+
+Read file: register/indexx.php
+
+---
+
+Tool use: **read_file**
+
+Read file: register/ticket.php
+
+---
+
+
+
+---
+
+
+Reading key files to identify branding references:
+
+
+---
+
+Tool use: **read_file**
+
+Read file: register/includes/head.php
+
+---
+
+Tool use: **grep**
+
+<details>
+<summary>Grep for "GetFundedAfrica|getfundedafrica|get-funded-africa" in "register/includes" • 1 match</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `register/includes\head.php` | `href="https://getfundedafrica.com/portal/assets/images/fav.png"` | L120 |
+
+
+</details>
+
+---
+
+Tool use: **grep**
+
+<details>
+<summary>Grep for "GetFundedAfrica|getfundedafrica|get-funded-africa" in "register/indexx.php" • 1 match</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `register/indexx.php` | `background-image: url('https://fr.getfundedafrica.com/images/bg.jpg');` | L41 |
+
+
+</details>
+
+---
+
+Tool use: **read_file**
+
+Read file: register/ticket.php
+
+---
+
+Tool use: **list_dir**
+
+<details>
+            <summary>Listed directory undefined • **0** results</summary>
+        
+No results found
+</details>
+
+---
+
+
+
+---
+
+
+Reading `register/includes/head.php` in sections:
+
+
+---
+
+Tool use: **read_file**
+
+Read file: register/includes/head.php
+
+---
+
+Tool use: **grep**
+
+<details>
+<summary>Grep for "title|GetFundedAfrica|getfundedafrica" in "register/includes/head.php" • 166 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `register/includes/head.php` | `<title>Customer Onboarding by Cote d'Ivoire Pme</title>` | L5 |
+| `register/includes/head.php` | `href="https://getfundedafrica.com/portal/assets/images/fav.png"` | L120 |
+| `register/includes/head.php` | `.formify-form__banner--title \{` | L1616 |
+| `register/includes/head.php` | `.formify-form__title \{` | L1639 |
+| `register/includes/head.php` | `.formify-form__title \{` | L1739 |
+| `register/includes/head.php` | `.formify-form__title \{` | L1786 |
+| `register/includes/head.php` | `.formify-form__banner--title \{` | L1793 |
+| `register/includes/head.php` | `.formify-form__titlev2 \{` | L1820 |
+| `register/includes/head.php` | `.formify-form__titlev3 \{` | L1930 |
+| `register/includes/head.php` | `.formify-form__titlev3 \{` | L2032 |
+| `register/includes/head.php` | `.formify-form__titlev4 \{` | L2047 |
+| `register/includes/head.php` | `.formify-form__heading--v5 .formify-form__title \{` | L2179 |
+| `register/includes/head.php` | `.formify-form__title--v6 \{` | L2239 |
+| `register/includes/head.php` | `.formify-form__title.formify-form__title--v7 \{` | L2346 |
+| `register/includes/head.php` | `.formify-form__title.formify-form__title--v7 \{` | L2403 |
+| `register/includes/head.php` | `.formify-form__form-box--v10 .formify-form__title \{` | L2548 |
+| `register/includes/head.php` | `.formify-forms__title \{` | L2584 |
+| `register/includes/head.php` | `.formify-forms__title.formify-forms__title--small \{` | L2592 |
+| `register/includes/head.php` | `.formify-form__banner--title.formify-form__banner--title-v2 \{` | L2618 |
+| `register/includes/head.php` | `.formify-form__btitle \{` | L2681 |
+| `register/includes/head.php` | `.formify-form__banner--title.formify-form__banner--title-v2 \{` | L2707 |
+| `register/includes/head.php` | `.formify-form__banner--title.formify-form__banner--title-v2 \{` | L2725 |
+| `register/includes/head.php` | `.formify-forms__head-title \{` | L2765 |
+| `register/includes/head.php` | `.formify-forms__body-title \{` | L2774 |
+| `register/includes/head.php` | `.formify-form__banner--v12 .formify-form__banner--title \{` | L2894 |
+| `register/includes/head.php` | `.formify-form__banner--v12 .formify-form__banner--title span \{` | L2899 |
+| `register/includes/head.php` | `.formify-form__banner--v12 .formify-form__banner--title \{` | L2914 |
+| `register/includes/head.php` | `.formify-form__banner--v12 .formify-form__banner--title span \{` | L2917 |
+| `register/includes/head.php` | `.formify-form__banner--v12 .formify-form__banner--title \{` | L2935 |
+| `register/includes/head.php` | `.formify-form__banner--v12 .formify-form__banner--title span \{` | L2938 |
+| `register/includes/head.php` | `.formify-form__contact-title \{` | L2958 |
+| `register/includes/head.php` | `.formify-form__contact-title span \{` | L2964 |
+| `register/includes/head.php` | `.formify-form__ctitle \{` | L3009 |
+| `register/includes/head.php` | `.formify-form__contact-title \{` | L3110 |
+| `register/includes/head.php` | `.formify-form__ctitle \{` | L3120 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3136 |
+| `register/includes/head.php` | `.formify-form__ctitle--v2 \{` | L3181 |
+| `register/includes/head.php` | `.formify-forms__ititle \{` | L3234 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3299 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3313 |
+| `register/includes/head.php` | `.formify-form__ctitle--v2 \{` | L3316 |
+| `register/includes/head.php` | `.formify-form__ctitle--v3 \{` | L3333 |
+| `register/includes/head.php` | `.formify-form__ctitle--v3 \{` | L3397 |
+| `register/includes/head.php` | `.formify-form__ctitle--v3 \{` | L3409 |
+| `register/includes/head.php` | `.formify-form__ctitle--v3 \{` | L3415 |
+| `register/includes/head.php` | `.formify-form__contact-title--v4 \{` | L3424 |
+| `register/includes/head.php` | `.formify-form__contact-title--v5 \{` | L3531 |
+| `register/includes/head.php` | `.formify-form__contact-title--v5 span \{` | L3534 |
+| `register/includes/head.php` | `.formify-form__contact-title--v5 \{` | L3560 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3647 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 span \{` | L3652 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3680 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3698 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3707 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3715 |
+| `register/includes/head.php` | `.formify-form__contact-title--v2 \{` | L3718 |
+| `register/includes/head.php` | `.formify-form__contact-title--v7 \{` | L3786 |
+| `register/includes/head.php` | `.formify-form__contact-title--v7 span \{` | L3790 |
+| `register/includes/head.php` | `.formify-form__contact-title--v7 \{` | L3810 |
+| `register/includes/head.php` | `.formify-form__contact-title--v7 \{` | L3827 |
+| `register/includes/head.php` | `.formify-form__banner--title-contact8 \{` | L3859 |
+| `register/includes/head.php` | `.formify-form__banner--title-contact8 \{` | L3929 |
+| `register/includes/head.php` | `.formify-form__banner--title-contact8 \{` | L3951 |
+| `register/includes/head.php` | `.formify-form__ctitle \{` | L4041 |
+| `register/includes/head.php` | `.formify-forms__quiz-title \{` | L4132 |
+| `register/includes/head.php` | `.formify-forms__quiz-title \{` | L4195 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v2 \{` | L4255 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v2 \{` | L4288 |
+| `register/includes/head.php` | `.formify-forms__head-title--v3 \{` | L4323 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v3 \{` | L4330 |
+| `register/includes/head.php` | `.formify-forms__head-title--v3 \{` | L4496 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v3 \{` | L4503 |
+| `register/includes/head.php` | `.formify-form__qztiming-title \{` | L4548 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v4 \{` | L4572 |
+| `register/includes/head.php` | `.formify-form__qztiming-title \{` | L4663 |
+| `register/includes/head.php` | `.formify-form__qztiming-title \{` | L4693 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v4 \{` | L4703 |
+| `register/includes/head.php` | `.formify-form__quiz-banner--title \{` | L4754 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v5 \{` | L4793 |
+| `register/includes/head.php` | `.formify-forms__role-title \{` | L4814 |
+| `register/includes/head.php` | `.formify-forms__group-title \{` | L4918 |
+| `register/includes/head.php` | `.formify-form__quiz-banner--title \{` | L4947 |
+| `register/includes/head.php` | `.formify-form__quiz-banner--title \{` | L4968 |
+| `register/includes/head.php` | `.formify-forms__quiz-title--v5 \{` | L5004 |
+| `register/includes/head.php` | `.formify-forms__role-title \{` | L5020 |
+| `register/includes/head.php` | `.formify-form__quiz-banner--title \{` | L5028 |
+| `register/includes/head.php` | `.formify-forms__quiz-title.formify-forms__quiz-title--v6 \{` | L5036 |
+| `register/includes/head.php` | `.formify-forms__quiz-title.formify-forms__quiz-title--v6 \{` | L5168 |
+| `register/includes/head.php` | `.formify-form__dside-title \{` | L5210 |
+| `register/includes/head.php` | `.formify-form__dside-support-title \{` | L5233 |
+| `register/includes/head.php` | `.formify-form__dside-support-title span \{` | L5239 |
+| `register/includes/head.php` | `.formify-steps-progress__title \{` | L5366 |
+| `register/includes/head.php` | `.formify-steps-progress__title span \{` | L5373 |
+| `register/includes/head.php` | `.formify-form__dside-title \{` | L5402 |
+| `register/includes/head.php` | `.formify-form__dside-title \{` | L5423 |
+| `register/includes/head.php` | `.formify-steps-progress__title \{` | L5430 |
+| `register/includes/head.php` | `.formify-steps-progress__title span \{` | L5434 |
+| `register/includes/head.php` | `.formify-forms-shape-head--title \{` | L5456 |
+| `register/includes/head.php` | `.formify-forms-shape-question--title \{` | L5478 |
+| `register/includes/head.php` | `.formify-forms-shape-question--title \{` | L5585 |
+| `register/includes/head.php` | `.formify-forms-shape-question--title \{` | L5612 |
+| `register/includes/head.php` | `.formify-forms-shape-head--title \{` | L5623 |
+| `register/includes/head.php` | `.formify-forms-shape-question--title \{` | L5626 |
+| `register/includes/head.php` | `.formify-coming-soon__title \{` | L5664 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v1 \{` | L5671 |
+| `register/includes/head.php` | `.formify-coming-soon__title \{` | L5750 |
+| `register/includes/head.php` | `.formify-coming-soon__title \{` | L5779 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v3 \{` | L5826 |
+| `register/includes/head.php` | `.formify-coming-soon__subtitle \{` | L5833 |
+| `register/includes/head.php` | `.fc-title \{` | L5871 |
+| `register/includes/head.php` | `.formify-coming-soon__subtitle \{` | L5890 |
+| `register/includes/head.php` | `.fc-title \{` | L5902 |
+| `register/includes/head.php` | `.formify-coming-soon__subtitle \{` | L5919 |
+| `register/includes/head.php` | `.fc-title \{` | L5925 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v3 \{` | L5929 |
+| `register/includes/head.php` | `.formify-coming-soon__subtitle \{` | L5932 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v4 \{` | L5936 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v4 .fc-title \{` | L5966 |
+| `register/includes/head.php` | `.formify-coming-soon__title \{` | L6005 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v6 .fc-title \{` | L6008 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v6 .fc-title \{` | L6026 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v6 \{` | L6046 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v6 \{` | L6051 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v6 span \{` | L6059 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v6 span \{` | L6062 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v6 .fc-title \{` | L6108 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v7 \{` | L6112 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v7 .fc-title \{` | L6158 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v8 \{` | L6253 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v8 .fc-title \{` | L6280 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v8 \{` | L6333 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v8 \{` | L6361 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v9 .fc-title \{` | L6405 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v9 \{` | L6437 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v9 span \{` | L6443 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v9 .fc-title \{` | L6485 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v9 .fc-title \{` | L6493 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v10 \{` | L6523 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v10 .fc-title \{` | L6545 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v10 \{` | L6607 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v11 .formify-countodwn-single .fc-title \{` | L6637 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v11 \{` | L6640 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v11 \{` | L6698 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v11 \{` | L6709 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v12 \{` | L6723 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v1 \{` | L6732 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title \{` | L6742 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v2 \{` | L6754 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title \{` | L6791 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v2 \{` | L6794 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title \{` | L6799 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v1 \{` | L6803 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v2 \{` | L6807 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v12 \{` | L6811 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title,` | L6831 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v2,` | L6832 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v12 \{` | L6833 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v2 \{` | L6837 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v12 \{` | L6840 |
+| `register/includes/head.php` | `.formify-coming-soon__sheadings-title.sheadings-title--v1 \{` | L6843 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v13 \{` | L6848 |
+| `register/includes/head.php` | `.formify-countdown.formify-countdown--v13 .fc-title \{` | L6896 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v13 \{` | L6927 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v13 br \{` | L6932 |
+| `register/includes/head.php` | `.formify-coming-soon__title.formify-coming-soon__title--v14 \{` | L6947 |
+| `register/includes/head.php` | `.formify-coming-soon__text.formify-coming-soon__title--v14 \{` | L6953 |
+
+
+</details>
+
+---
+
+Tool use: **read_file**
+
+Read file: register/events/index.php
+
+---
+
+Tool use: **read_file**
+
+Read file: register/funding/index.php
+
+---
+
+Tool use: **read_file**
+
+Read file: register/gfa-max/index.php
+
+---
+
+
+
+---
+
+
+Exact code changes for the `register` directory:
+
+## **Register Directory Rebranding - Exact Code Changes**
+
+### **PHASE 1: Main Files**
+
+#### **File 1: `register/index.php`**
+
+**Change 1: Page Title (Line 5)**
+```php
+// FROM:
+<title>GetfundedAfrica</title>
+
+// TO:
+<title>Communified</title>
+```
+
+**Change 2: Redirect URL (Line 58)**
+```php
+// FROM:
+window.location.href = "https://getfundedafrica.com/portal/gfa/register";
+
+// TO:
+window.location.href = "https://communified.com/portal/gfa/register";
+```
+(Note: Update domain if changing)
+
+---
+
+#### **File 2: `register/indexx.php`**
+
+**Change 1: Background Image URL (Line 41)**
+```php
+// FROM:
+background-image: url('https://fr.getfundedafrica.com/images/bg.jpg');
+
+// TO:
+background-image: url('https://fr.communified.com/images/bg.jpg');
+```
+(Note: Update domain if changing)
+
+**Note:** The `gfa1`, `gfa2`, `gfa3`, etc. values in this file appear to be form identifiers/class names used in JavaScript. These may be functional identifiers rather than branding, so evaluate whether they need to change. If they're purely internal, you can leave them. If they're user-facing or part of the branding, consider renaming them to `communified1`, `communified2`, etc.
+
+---
+
+#### **File 3: `register/ticket.php`**
+
+**Change 1: Favicon URLs (Lines 107, 112, 117)**
+```php
+// FROM:
+<link
+  rel="icon"
+  href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-32x32.png"
+  sizes="32x32"
+/>
+<link
+  rel="icon"
+  href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-192x192.png"
+  sizes="192x192"
+/>
+<link
+  rel="apple-touch-icon"
+  href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-180x180.png"
+/>
+
+// TO:
+<link
+  rel="icon"
+  href="https://communified.com/gfa/upload/cropped-TG-Thumb-32x32.png"
+  sizes="32x32"
+/>
+<link
+  rel="icon"
+  href="https://communified.com/gfa/upload/cropped-TG-Thumb-192x192.png"
+  sizes="192x192"
+/>
+<link
+  rel="apple-touch-icon"
+  href="https://communified.com/gfa/upload/cropped-TG-Thumb-180x180.png"
+/>
+```
+(Note: Update domain if changing, and consider updating favicon files)
+
+**Change 2: Email Comments (Lines 77-78)**
+```php
+// FROM:
+// ACMail('CIPME', 'Support Ticket', $mesg, 'promise@gfa-tech.com');
+// ACMail('CIPME', 'Support Ticket', $mesg, 'oluwatoyin@gfa-tech.com');
+
+// TO:
+// ACMail('CIPME', 'Support Ticket', $mesg, 'promise@communified.com');
+// ACMail('CIPME', 'Support Ticket', $mesg, 'oluwatoyin@communified.com');
+```
+(Note: Update email addresses if changing)
+
+---
+
+### **PHASE 2: Include Files**
+
+#### **File 4: `register/includes/head.php`**
+
+**Change 1: Page Title (Line 5)**
+```php
+// FROM:
+<title>Customer Onboarding by Cote d'Ivoire Pme</title>
+
+// TO:
+<title>Customer Onboarding by Communified</title>
+```
+(Note: Adjust title as needed for your branding)
+
+**Change 2: Favicon URL (Line 120)**
+```php
+// FROM:
+<link
+  rel="icon"
+  href="https://getfundedafrica.com/portal/assets/images/fav.png"
+  sizes="16x16"
+  type="image/png"
+/>
+
+// TO:
+<link
+  rel="icon"
+  href="https://communified.com/portal/assets/images/fav.png"
+  sizes="16x16"
+  type="image/png"
+/>
+```
+(Note: Update domain if changing)
+
+---
+
+### **PHASE 3: Subdirectory Redirect Files**
+
+#### **File 5: `register/events/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=events';
+
+// TO:
+$url = 'https://communified.com/register/?ref=events';
+```
+
+---
+
+#### **File 6: `register/funding/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=funding';
+
+// TO:
+$url = 'https://communified.com/register/?ref=funding';
+```
+
+---
+
+#### **File 7: `register/gfa-max/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=gfa-max';
+
+// TO:
+$url = 'https://communified.com/register/?ref=gfa-max';
+```
+(Note: Consider renaming `gfa-max` to `communified-max` if this is part of the branding)
+
+---
+
+#### **File 8: `register/partnership/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=venture-building';
+
+// TO:
+$url = 'https://communified.com/register/?ref=venture-building';
+```
+
+---
+
+#### **File 9: `register/operations/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=operations';
+
+// TO:
+$url = 'https://communified.com/register/?ref=operations';
+```
+
+---
+
+#### **File 10: `register/news/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=news';
+
+// TO:
+$url = 'https://communified.com/register/?ref=news';
+```
+
+---
+
+#### **File 11: `register/learning/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=learning';
+
+// TO:
+$url = 'https://communified.com/register/?ref=learning';
+```
+
+---
+
+#### **File 12: `register/investors/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=investors';
+
+// TO:
+$url = 'https://communified.com/register/?ref=investors';
+```
+
+---
+
+#### **File 13: `register/insight/index.php`**
+
+**Change: Redirect URL (Line 2)**
+```php
+// FROM:
+$url = 'https://getfundedafrica.com/register/?ref=insight';
+
+// TO:
+$url = 'https://communified.com/register/?ref=insight';
+```
+
+---
+
+### **PHASE 4: API/JavaScript Files (Optional)**
+
+#### **File 14: `register/api/v0/js/core.js`**
+
+**Note:** This file contains many references to `gfa1`, `gfa2`, `gfa3`, etc. These appear to be form identifiers used in JavaScript logic. Evaluate whether these need to change:
+
+- If they're internal identifiers only: leave them as-is
+- If they're user-facing or part of branding: consider renaming
+
+If you decide to rename them, you'll need to:
+1. Update all `gfa1`, `gfa2`, etc. references to `communified1`, `communified2`, etc.
+2. Update corresponding form values in `indexx.php`
+3. Update any backend PHP files that reference these values
+
+**Example change pattern (if needed):**
+```javascript
+// FROM:
+if (value == 'gfa1') {
+
+// TO:
+if (value == 'communified1') {
+```
+
+Apply this pattern to all instances (gfa1, gfa2, gfa3, gfa4, gfa5, gfa6, gfa7, and all variations like gfa1a, gfa1b, gfa1ainv, etc.).
+
+---
+
+### **PHASE 5: Image Assets (Manual)**
+
+Review and update image files in `register/app-assets/images/` that contain branding:
+
+- Files with "gfa" in the name:
+  - `cohortgfa.webp`
+  - `event-gfa.jpg`
+  - `eventgfa.jpg`
+  - `fgn-alat-gfa-logo.png`
+  - `fwgfa-bg.jpg`
+  - `gfa-bg--.jpg`
+  - `gfa-bg.jpg`
+  - `gfa-bg.png`
+  - `gfa-bg2.jpg`
+  - `gfa-bg3.jpg`
+  - `gfacohort-.jpg`
+  - `gfacohort.jpg`
+  - `sterling_bank_gfa.jpg`
+  - `GetFundedAfrica-2019--deals-disrtibutions-for-startups-investors.jpg`
+  - `GetFundedAfrica-2019--deals-disrtibutions-for-startups-investors.png`
+
+**Action:** Replace these images with Communified-branded versions, or rename them if they're still used.
+
+---
+
+## **Summary Checklist for Register Directory:**
+
+1. ✅ Update `index.php` (2 changes: title, redirect URL)
+2. ✅ Update `indexx.php` (1 change: background image URL)
+3. ✅ Update `ticket.php` (3 changes: favicon URLs, email comments)
+4. ✅ Update `includes/head.php` (2 changes: title, favicon URL)
+5. ✅ Update all subdirectory `index.php` files (8 files: events, funding, gfa-max, partnership, operations, news, learning, investors, insight)
+6. ⚠️ Evaluate `api/v0/js/core.js` (decide if form identifiers need renaming)
+7. 📁 Review and replace image assets with GFA branding
+
+**Total files to modify:** 13+ files
+
+**Note:** If you're keeping the domain `getfundedafrica.com` but only changing branding text, you can skip the URL changes. If you're changing the domain to `communified.com`, update all URL references accordingly.
+
+Should I provide more specific changes for any file, or help with the JavaScript identifier renaming strategy?
+
+---
+
+_**User (2025-11-14 16:51Z)**_
+
+continue the rebranding on @pricing directory
+
+---
+
+_**Assistant (default)**_
+
+
+
+---
+
+
+
+---
+
+Tool use: **grep**
+
+---
+
+
+
+---
+
+
+
+---
+
+
+
+---
 
 
 
