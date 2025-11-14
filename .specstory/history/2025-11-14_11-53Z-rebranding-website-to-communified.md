@@ -6,7 +6,7 @@
 
 _**User (2025-11-14 11:53Z)**_
 
-I want to rebrand the entire website from get funded africa to communified. the logo to be used to replace the existing logo is: @communified-logo.png .
+I want to rebrand the entire website from get funded africa to communified. the  logo to be used to replace the existing logo is:  @communified-logo.png .
 
 Help me achieve that in a sequential process
 
@@ -14,9 +14,12 @@ Help me achieve that in a sequential process
 
 _**Assistant (default)**_
 
+
+
 ---
 
 Exploring the codebase to identify all branding references and logo usage.
+
 
 ---
 
@@ -37,216 +40,218 @@ Tool use: **grep**
 
 Output mode: content
 
-| File                                           | Content                                                                                                                                                          | Line |
-| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| `.\register\ticket.php`                        | `// ACMail('CIPME', 'Support Ticket', $mesg, 'promise@gfa-tech.com');`                                                                                           | L77  |
-| `.\register\ticket.php`                        | `// ACMail('CIPME', 'Support Ticket', $mesg, 'oluwatoyin@gfa-tech.com');`                                                                                        | L78  |
-| `.\register\ticket.php`                        | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-32x32.png"`                                                                                       | L107 |
-| `.\register\ticket.php`                        | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-192x192.png"`                                                                                     | L112 |
-| `.\register\ticket.php`                        | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-180x180.png"`                                                                                     | L117 |
-| `.\register\indexx.php`                        | `<div class="col-md-4" onclick="myForma('gfa1')">`                                                                                                               | L122 |
-| `.\register\indexx.php`                        | `value="gfa1" />`                                                                                                                                                | L125 |
-| `.\register\indexx.php`                        | `<div class="col-md-4" onclick="myForma('gfa2')">`                                                                                                               | L135 |
-| `.\register\indexx.php`                        | `value="gfa2" />`                                                                                                                                                | L138 |
-| `.\register\indexx.php`                        | `<div class="col-md-4" onclick="myForma('gfa3')">`                                                                                                               | L148 |
-| `.\register\indexx.php`                        | `value="gfa3" />`                                                                                                                                                | L151 |
-| `.\register\indexx.php`                        | `<div class="col-md-6" onclick="myForma('gfa6')">`                                                                                                               | L162 |
-| `.\register\indexx.php`                        | `value="gfa6" />`                                                                                                                                                | L165 |
-| `.\register\indexx.php`                        | `<div class="col-md-6" onclick="myForma('gfa4')">`                                                                                                               | L175 |
-| `.\register\indexx.php`                        | `value="gfa4" />`                                                                                                                                                | L178 |
-| `.\register\indexx.php`                        | `<div class="col-md-6" onclick="myForma('gfa5')">`                                                                                                               | L188 |
-| `.\register\indexx.php`                        | `value="gfa5" />`                                                                                                                                                | L191 |
-| `.\register\indexx.php`                        | `<div class="col-md-6" onclick="myForma('gfa7')">`                                                                                                               | L200 |
-| `.\register\indexx.php`                        | `value="gfa7" />`                                                                                                                                                | L203 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />`                                                                                                | L272 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1a">`                                                                                                               | L274 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />`                                                                                                | L284 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1b">`                                                                                                               | L286 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />`                                                                                                | L296 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1c">`                                                                                                               | L298 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />`                                                                                                | L308 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1d">`                                                                                                               | L310 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />`                                                                                                | L320 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1e">`                                                                                                               | L322 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />`                                                                                                | L332 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1f">`                                                                                                               | L334 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />`                                                                                                | L356 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1a">`                                                                                                               | L358 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />`                                                                                                | L368 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1b">`                                                                                                               | L370 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />`                                                                                                | L380 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1c">`                                                                                                               | L382 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />`                                                                                                | L392 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1d">`                                                                                                               | L394 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />`                                                                                                | L404 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1e">`                                                                                                               | L406 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />`                                                                                                | L416 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1f">`                                                                                                               | L418 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />`                                                                                                | L440 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1a">`                                                                                                               | L442 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />`                                                                                                | L452 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1b">`                                                                                                               | L454 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />`                                                                                                | L464 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1c">`                                                                                                               | L466 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />`                                                                                                | L476 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1d">`                                                                                                               | L478 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />`                                                                                                | L488 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1e">`                                                                                                               | L490 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />`                                                                                                | L500 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1f">`                                                                                                               | L502 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />`                                                                                                | L524 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1a">`                                                                                                               | L526 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />`                                                                                                | L536 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1b">`                                                                                                               | L538 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />`                                                                                                | L548 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1c">`                                                                                                               | L550 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />`                                                                                                | L560 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1d">`                                                                                                               | L562 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />`                                                                                                | L572 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1e">`                                                                                                               | L574 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />`                                                                                                | L584 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1f">`                                                                                                               | L586 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />`                                                                                                | L608 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1a">`                                                                                                               | L610 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />`                                                                                                | L620 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1b">`                                                                                                               | L622 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />`                                                                                                | L632 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1c">`                                                                                                               | L634 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />`                                                                                                | L644 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1d">`                                                                                                               | L646 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />`                                                                                                | L656 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1e">`                                                                                                               | L658 |
-| `.\register\indexx.php`                        | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />`                                                                                                | L668 |
-| `.\register\indexx.php`                        | `for="customOptionsCheckableRadiosWithIcongfa1f">`                                                                                                               | L670 |
-| `.\register\index.php`                         | `window.location.href = "https://getfundedafrica.com/portal/gfa/register";`                                                                                      | L58  |
-| `.\register\includes\head.php`                 | `href="https://gfa-tech.com/assets/css/style.css"`                                                                                                               | L112 |
-| `.\register\gfa-max\index.php`                 | `$url = 'https://getfundedafrica.com/register/?ref=gfa-max';`                                                                                                    | L2   |
-| `.\register\api\v0\php\startups.php`           | `if($startup_type == 'gfa2aw')\{`                                                                                                                                | L10  |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-4" onclick="myFormb2('gfa1a2')" style="display:none;">`                                                                                      | L21  |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1a2" value="gfa1a2" />`                                                                                              | L23  |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a2">`                                                            | L24  |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormb2('gfa1b2')">`                                                                                                            | L31  |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1b2" value="gfa1b2" />`                                                                                              | L33  |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b2">`                                                            | L34  |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormb2('gfa1c2')">`                                                                                                            | L41  |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1c2" value="gfa1c2" />`                                                                                              | L43  |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c2">`                                                            | L44  |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormb2('gfa1d2')" style="display:none;">`                                                                                      | L51  |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1d2" value="gfa1d2" />`                                                                                              | L53  |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d2">`                                                            | L54  |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormb2('gfa1e2')" style="display:none;">`                                                                                      | L61  |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1e2" value="gfa1e2" />`                                                                                              | L63  |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e2">`                                                            | L64  |
-| `.\register\api\v0\php\startups.php`           | `if($startup_type == 'gfa2bw')\{`                                                                                                                                | L81  |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-4" onclick="myFormc2('gfa1a3')" style="display:none">`                                                                                       | L92  |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1a3" value="gfa1a3" />`                                                                                              | L94  |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a3">`                                                            | L95  |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormc2('gfa1b3')">`                                                                                                            | L102 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1b3" value="gfa1b3" />`                                                                                              | L104 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b3">`                                                            | L105 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormc2('gfa1c3')">`                                                                                                            | L112 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1c3" value="gfa1c3" />`                                                                                              | L114 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c3">`                                                            | L115 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormc2('gfa1d3')" style="display:none;">`                                                                                      | L122 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1d3" value="gfa1d3" />`                                                                                              | L124 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d3">`                                                            | L125 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormc2('gfa1e3')" style="display:none;">`                                                                                      | L132 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1e3" value="gfa1e3" />`                                                                                              | L134 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e3">`                                                            | L135 |
-| `.\register\api\v0\php\startups.php`           | `if($startup_type == 'gfa2cw')\{`                                                                                                                                | L152 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-4" onclick="myFormd2('gfa1a4')" style="display:none">`                                                                                       | L163 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1a4" value="gfa1a4" />`                                                                                              | L165 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a4">`                                                            | L166 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormd2('gfa1b4')">`                                                                                                            | L173 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1b4" value="gfa1b4" />`                                                                                              | L175 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b4">`                                                            | L176 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormd2('gfa1c4')">`                                                                                                            | L183 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1c4" value="gfa1c4" />`                                                                                              | L185 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c4">`                                                            | L186 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormd2('gfa1d4')" style="display:none;">`                                                                                      | L193 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1d4" value="gfa1d4" />`                                                                                              | L195 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d4">`                                                            | L196 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormd2('gfa1e4')" style="display:none;">`                                                                                      | L203 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1e4" value="gfa1e4" />`                                                                                              | L205 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e4">`                                                            | L206 |
-| `.\register\api\v0\php\startups.php`           | `if($startup_type == 'gfa2dw')\{`                                                                                                                                | L223 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-4" onclick="myForme2('gfa1a5')" style="display:none">`                                                                                       | L234 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1a5" value="gfa1a5" />`                                                                                              | L236 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a5">`                                                            | L237 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myForme2('gfa1b5')">`                                                                                                            | L244 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1b5" value="gfa1b5" />`                                                                                              | L246 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b5">`                                                            | L247 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myForme2('gfa1c5')">`                                                                                                            | L254 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1c5" value="gfa1c5" />`                                                                                              | L256 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c5">`                                                            | L257 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myForme2('gfa1d5')" style="display:none;">`                                                                                      | L264 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1d5" value="gfa1d5" />`                                                                                              | L266 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d5">`                                                            | L267 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myForme2('gfa1e5')" style="display:none;">`                                                                                      | L274 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1e5" value="gfa1e5" />`                                                                                              | L276 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e5">`                                                            | L277 |
-| `.\register\api\v0\php\startups.php`           | `if($startup_type == 'gfa2ew')\{`                                                                                                                                | L294 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-4" onclick="myFormf2('gfa1a6')" style="display:none">`                                                                                       | L305 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1a6" value="gfa1a6" />`                                                                                              | L307 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a6">`                                                            | L308 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormf2('gfa1b6')">`                                                                                                            | L315 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1b6" value="gfa1b6" />`                                                                                              | L317 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b6">`                                                            | L318 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormf2('gfa1c6')">`                                                                                                            | L325 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1c6" value="gfa1c6" />`                                                                                              | L327 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c6">`                                                            | L328 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormf2('gfa1d6')" style="display:none;">`                                                                                      | L335 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1d6" value="gfa1d6" />`                                                                                              | L337 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d6">`                                                            | L338 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormf2('gfa1e6')" style="display:none;">`                                                                                      | L345 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1e6" value="gfa1e6" />`                                                                                              | L347 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e6">`                                                            | L348 |
-| `.\register\api\v0\php\startups.php`           | `if($startup_type == 'gfa2fw')\{`                                                                                                                                | L365 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-4" onclick="myFormg2('gfa1a7')" style="display:none">`                                                                                       | L376 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1a7" value="gfa1a7" />`                                                                                              | L378 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a7">`                                                            | L379 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormg2('gfa1b7')" >`                                                                                                           | L386 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1b7" value="gfa1b7" />`                                                                                              | L388 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b7">`                                                            | L389 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormg2('gfa1c7')">`                                                                                                            | L396 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1c7" value="gfa1c7" />`                                                                                              | L398 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c7">`                                                            | L399 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormg2('gfa1d7')" style="display:none;">`                                                                                      | L406 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1d7" value="gfa1d7" />`                                                                                              | L408 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d7">`                                                            | L409 |
-| `.\register\api\v0\php\startups.php`           | `<div class="col-md-6" onclick="myFormg2('gfa1e7')" style="display:none;">`                                                                                      | L416 |
-| `.\register\api\v0\php\startups.php`           | `id="customOptionsCheckableRadiosWithIcongfa1e7" value="gfa1e7" />`                                                                                              | L418 |
-| `.\register\api\v0\php\startups.php`           | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e7">`                                                            | L419 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `if($discovery_type == 'gfa1a5')\{`                                                                                                                              | L10  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<div class="col-md-12 col-12 gfa1ai5">`                                                                                                                         | L13  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<form class="form form-vertical gfa1ai5-subscribe" name="gfa1ai5" onsubmit="gfa_subscribe('gfa1ai5'); return false;" action="#">`                               | L21  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="first-name-icon" class="form-control" name="gfa1ai5-fname"`                                                                              | L28  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="last-name-icon" class="form-control" name="gfa1ai5-lname"`                                                                               | L31  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-organisation-type" class="gfa1ai5-organisation-type" value="startup" />`                                                     | L36  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-interest" class="gfa1ai5-interest" value="Get Update" />`                                                                    | L37  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-current-stage" class="gfa1ai5-current-stage" value="Pre-Launch" />`                                                          | L38  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="email" id="email-id-icon" class="form-control gfa1ai5-checkEmail"`                                                                                 | L44  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `name="gfa1ai5-email" placeholder="Email" onkeydown="checkEmail('gfa1ai5', '4')" required />`                                                                    | L45  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<span class="gfa1ai5-showData"></span>`                                                                                                                         | L48  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<button class="btn btn-success gfa1ai5-subscribeBtn">`                                                                                                          | L52  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `if($discovery_type == 'gfa1b5')\{`                                                                                                                              | L66  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<div class="col-md-12 col-12 gfa1bi5">`                                                                                                                         | L69  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<form class="form form-vertical gfa1ai5-prelaunch" name="gfa1ai5" onsubmit="gfa_prelaunch('gfa1ai5'); return false;" action="#" enctype="multipart/form-data">` | L77  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="vertical-modern-first-name" class="form-control" name="gfa1ai5-sname"`                                                                   | L83  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<select name="gfa1ai5-industry" class="form-select" id="basicSelect" >`                                                                                         | L92  |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<span class="input-group-text"><i data-feather="gfa1ai5-year-founded"></i></span>`                                                                              | L112 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-organisation-type" class="gfa1ai5-organisation-type" value="startup" />`                                                     | L119 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-interest" class="gfa1ai5-interest" value="Fund Raising" />`                                                                  | L120 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-current-stage" class="gfa1ai5-current-stage" value="Pre-Launch" />`                                                          | L121 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<select class="form-select" id="basicSelect" required name="gfa1ai5-fundraise">`                                                                                | L127 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<select name="gfa1ai5-revenue" class="form-select" id="basicSelect" required>`                                                                                  | L146 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `name="gfa1ai5-website" placeholder="<?php echo $translations['startup']['form-2']['website']; ?>"`                                                              | L164 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="first-name-icon" class="form-control" name="gfa1ai5-fname"`                                                                              | L174 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="last-name-icon" class="form-control" name="gfa1ai5-lname"`                                                                               | L177 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="email" id="email-id-icon" class="form-control gfa1ai5-checkEmail"`                                                                                 | L187 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `name="gfa1ai5-email" placeholder="<?php echo $translations['startup']['form-2']['email']; ?>" onkeydown="checkEmail('gfa1ai5', '4')" required />`               | L188 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<span class="gfa1ai5-showData"></span>`                                                                                                                         | L191 |
-| `.\register\api\v0\php\startup-pre-launch.php` | `<!--        name="gfa1ai5-pass"-->`                                                                                                                             | L203 |
+
+| File | Content | Line |
+|------|------|------|
+| `.\register\ticket.php` | `// ACMail('CIPME', 'Support Ticket', $mesg, 'promise@gfa-tech.com');` | L77 |
+| `.\register\ticket.php` | `// ACMail('CIPME', 'Support Ticket', $mesg, 'oluwatoyin@gfa-tech.com');` | L78 |
+| `.\register\ticket.php` | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-32x32.png"` | L107 |
+| `.\register\ticket.php` | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-192x192.png"` | L112 |
+| `.\register\ticket.php` | `href="https://getfundedafrica.com/gfa/upload/cropped-TG-Thumb-180x180.png"` | L117 |
+| `.\register\indexx.php` | `<div class="col-md-4" onclick="myForma('gfa1')">` | L122 |
+| `.\register\indexx.php` | `value="gfa1" />` | L125 |
+| `.\register\indexx.php` | `<div class="col-md-4" onclick="myForma('gfa2')">` | L135 |
+| `.\register\indexx.php` | `value="gfa2" />` | L138 |
+| `.\register\indexx.php` | `<div class="col-md-4" onclick="myForma('gfa3')">` | L148 |
+| `.\register\indexx.php` | `value="gfa3" />` | L151 |
+| `.\register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa6')">` | L162 |
+| `.\register\indexx.php` | `value="gfa6" />` | L165 |
+| `.\register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa4')">` | L175 |
+| `.\register\indexx.php` | `value="gfa4" />` | L178 |
+| `.\register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa5')">` | L188 |
+| `.\register\indexx.php` | `value="gfa5" />` | L191 |
+| `.\register\indexx.php` | `<div class="col-md-6" onclick="myForma('gfa7')">` | L200 |
+| `.\register\indexx.php` | `value="gfa7" />` | L203 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L272 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L274 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L284 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L286 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L296 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L298 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L308 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L310 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L320 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L322 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L332 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L334 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L356 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L358 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L368 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L370 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L380 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L382 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L392 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L394 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L404 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L406 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L416 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L418 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L440 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L442 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L452 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L454 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L464 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L466 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L476 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L478 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L488 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L490 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L500 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L502 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L524 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L526 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L536 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L538 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L548 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L550 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L560 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L562 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L572 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L574 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L584 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L586 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1a" value="gfa1a" />` | L608 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1a">` | L610 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1b" value="gfa1b" />` | L620 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1b">` | L622 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1c" value="gfa1c" />` | L632 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1c">` | L634 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1d" value="gfa1d" />` | L644 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1d">` | L646 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1e" value="gfa1e" />` | L656 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1e">` | L658 |
+| `.\register\indexx.php` | `id="customOptionsCheckableRadiosWithIcongfa1f" value="gfa1f" />` | L668 |
+| `.\register\indexx.php` | `for="customOptionsCheckableRadiosWithIcongfa1f">` | L670 |
+| `.\register\index.php` | `window.location.href = "https://getfundedafrica.com/portal/gfa/register";` | L58 |
+| `.\register\includes\head.php` | `href="https://gfa-tech.com/assets/css/style.css"` | L112 |
+| `.\register\gfa-max\index.php` | `$url = 'https://getfundedafrica.com/register/?ref=gfa-max';` | L2 |
+| `.\register\api\v0\php\startups.php` | `if($startup_type == 'gfa2aw')\{` | L10 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormb2('gfa1a2')" style="display:none;">` | L21 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a2" value="gfa1a2" />` | L23 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a2">` | L24 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1b2')">` | L31 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b2" value="gfa1b2" />` | L33 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b2">` | L34 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1c2')">` | L41 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c2" value="gfa1c2" />` | L43 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c2">` | L44 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1d2')" style="display:none;">` | L51 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d2" value="gfa1d2" />` | L53 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d2">` | L54 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormb2('gfa1e2')" style="display:none;">` | L61 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e2" value="gfa1e2" />` | L63 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e2">` | L64 |
+| `.\register\api\v0\php\startups.php` | `if($startup_type == 'gfa2bw')\{` | L81 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormc2('gfa1a3')" style="display:none">` | L92 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a3" value="gfa1a3" />` | L94 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a3">` | L95 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1b3')">` | L102 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b3" value="gfa1b3" />` | L104 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b3">` | L105 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1c3')">` | L112 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c3" value="gfa1c3" />` | L114 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c3">` | L115 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1d3')" style="display:none;">` | L122 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d3" value="gfa1d3" />` | L124 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d3">` | L125 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormc2('gfa1e3')" style="display:none;">` | L132 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e3" value="gfa1e3" />` | L134 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e3">` | L135 |
+| `.\register\api\v0\php\startups.php` | `if($startup_type == 'gfa2cw')\{` | L152 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormd2('gfa1a4')" style="display:none">` | L163 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a4" value="gfa1a4" />` | L165 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a4">` | L166 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1b4')">` | L173 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b4" value="gfa1b4" />` | L175 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b4">` | L176 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1c4')">` | L183 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c4" value="gfa1c4" />` | L185 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c4">` | L186 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1d4')" style="display:none;">` | L193 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d4" value="gfa1d4" />` | L195 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d4">` | L196 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormd2('gfa1e4')" style="display:none;">` | L203 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e4" value="gfa1e4" />` | L205 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e4">` | L206 |
+| `.\register\api\v0\php\startups.php` | `if($startup_type == 'gfa2dw')\{` | L223 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myForme2('gfa1a5')" style="display:none">` | L234 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a5" value="gfa1a5" />` | L236 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a5">` | L237 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myForme2('gfa1b5')">` | L244 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b5" value="gfa1b5" />` | L246 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b5">` | L247 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myForme2('gfa1c5')">` | L254 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c5" value="gfa1c5" />` | L256 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c5">` | L257 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myForme2('gfa1d5')" style="display:none;">` | L264 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d5" value="gfa1d5" />` | L266 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d5">` | L267 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myForme2('gfa1e5')" style="display:none;">` | L274 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e5" value="gfa1e5" />` | L276 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e5">` | L277 |
+| `.\register\api\v0\php\startups.php` | `if($startup_type == 'gfa2ew')\{` | L294 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormf2('gfa1a6')" style="display:none">` | L305 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a6" value="gfa1a6" />` | L307 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a6">` | L308 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormf2('gfa1b6')">` | L315 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b6" value="gfa1b6" />` | L317 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b6">` | L318 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormf2('gfa1c6')">` | L325 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c6" value="gfa1c6" />` | L327 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c6">` | L328 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormf2('gfa1d6')" style="display:none;">` | L335 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d6" value="gfa1d6" />` | L337 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d6">` | L338 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormf2('gfa1e6')" style="display:none;">` | L345 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e6" value="gfa1e6" />` | L347 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e6">` | L348 |
+| `.\register\api\v0\php\startups.php` | `if($startup_type == 'gfa2fw')\{` | L365 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-4" onclick="myFormg2('gfa1a7')" style="display:none">` | L376 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1a7" value="gfa1a7" />` | L378 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1a7">` | L379 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormg2('gfa1b7')" >` | L386 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1b7" value="gfa1b7" />` | L388 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1b7">` | L389 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormg2('gfa1c7')">` | L396 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1c7" value="gfa1c7" />` | L398 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1c7">` | L399 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormg2('gfa1d7')" style="display:none;">` | L406 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1d7" value="gfa1d7" />` | L408 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1d7">` | L409 |
+| `.\register\api\v0\php\startups.php` | `<div class="col-md-6" onclick="myFormg2('gfa1e7')" style="display:none;">` | L416 |
+| `.\register\api\v0\php\startups.php` | `id="customOptionsCheckableRadiosWithIcongfa1e7" value="gfa1e7" />` | L418 |
+| `.\register\api\v0\php\startups.php` | `<label class="custom-option-item text-center p-1" for="customOptionsCheckableRadiosWithIcongfa1e7">` | L419 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `if($discovery_type == 'gfa1a5')\{` | L10 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<div class="col-md-12 col-12 gfa1ai5">` | L13 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<form class="form form-vertical gfa1ai5-subscribe" name="gfa1ai5" onsubmit="gfa_subscribe('gfa1ai5'); return false;" action="#">` | L21 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="first-name-icon" class="form-control" name="gfa1ai5-fname"` | L28 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="last-name-icon" class="form-control" name="gfa1ai5-lname"` | L31 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-organisation-type" class="gfa1ai5-organisation-type" value="startup" />` | L36 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-interest" class="gfa1ai5-interest" value="Get Update" />` | L37 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-current-stage" class="gfa1ai5-current-stage" value="Pre-Launch" />` | L38 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="email" id="email-id-icon" class="form-control gfa1ai5-checkEmail"` | L44 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `name="gfa1ai5-email" placeholder="Email" onkeydown="checkEmail('gfa1ai5', '4')" required />` | L45 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<span class="gfa1ai5-showData"></span>` | L48 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<button class="btn btn-success gfa1ai5-subscribeBtn">` | L52 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `if($discovery_type == 'gfa1b5')\{` | L66 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<div class="col-md-12 col-12 gfa1bi5">` | L69 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<form class="form form-vertical gfa1ai5-prelaunch" name="gfa1ai5" onsubmit="gfa_prelaunch('gfa1ai5'); return false;" action="#" enctype="multipart/form-data">` | L77 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="vertical-modern-first-name" class="form-control" name="gfa1ai5-sname"` | L83 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<select name="gfa1ai5-industry" class="form-select" id="basicSelect" >` | L92 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<span class="input-group-text"><i data-feather="gfa1ai5-year-founded"></i></span>` | L112 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-organisation-type" class="gfa1ai5-organisation-type" value="startup" />` | L119 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-interest" class="gfa1ai5-interest" value="Fund Raising" />` | L120 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="hidden" name="gfa1ai5-current-stage" class="gfa1ai5-current-stage" value="Pre-Launch" />` | L121 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<select class="form-select" id="basicSelect" required name="gfa1ai5-fundraise">` | L127 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<select name="gfa1ai5-revenue" class="form-select" id="basicSelect" required>` | L146 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `name="gfa1ai5-website" placeholder="<?php echo $translations['startup']['form-2']['website']; ?>"` | L164 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="first-name-icon" class="form-control" name="gfa1ai5-fname"` | L174 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="text" id="last-name-icon" class="form-control" name="gfa1ai5-lname"` | L177 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<input type="email" id="email-id-icon" class="form-control gfa1ai5-checkEmail"` | L187 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `name="gfa1ai5-email" placeholder="<?php echo $translations['startup']['form-2']['email']; ?>" onkeydown="checkEmail('gfa1ai5', '4')" required />` | L188 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<span class="gfa1ai5-showData"></span>` | L191 |
+| `.\register\api\v0\php\startup-pre-launch.php` | `<!--        name="gfa1ai5-pass"-->` | L203 |
+
 
 </details>
 
@@ -278,9 +283,12 @@ Error calling tool 'codebase_search'.
 
 ---
 
+
+
 ---
 
 Searching more specifically for branding references:
+
 
 ---
 
@@ -297,38 +305,40 @@ Tool use: **grep**
 
 Output mode: content
 
-| File                                  | Content                                                                                                                                           | Line   |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| `.\pricing\index.php`                 | `<link rel="shortcut icon" href="../images/get-funded-africa-logo.png" />`                                                                        | L17    |
-| `.\pricing\index.php`                 | `<link rel="stylesheet" href="../css/get-funded-africa.css" />`                                                                                   | L34    |
-| `.\pricing\index.php`                 | `src="../images/get-funded-africa-logo.png"`                                                                                                      | L78    |
-| `.\pricing\index.php`                 | `data-at2x="../images/get-funded-africa-logo.png"`                                                                                                | L79    |
-| `.\pricing\index.php`                 | `src="../images/get-funded-africa-logo.png"`                                                                                                      | L84    |
-| `.\pricing\index.php`                 | `data-at2x="../get-funded-africa-logo.png"`                                                                                                       | L85    |
-| `.\pricing\index.php`                 | `src="../images/get-funded-africa-logo.png"`                                                                                                      | L419   |
-| `.\pricing\index.php`                 | `data-at2x="../images/get-funded-africa-logo.png"`                                                                                                | L420   |
-| `.\portal\app\Views\register_sub.php` | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">`                                   | L11    |
-| `.\portal\app\Views\register.php`     | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">`                                   | L11    |
-| `.\portal\app\Views\login.php`        | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">`                                   | L16    |
-| `.\portal\app\Views\header_new.php`   | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">`                    | L13    |
-| `.\portal\app\Views\header_home.php`  | `<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">`                                       | L8     |
-| `.\portal\app\Views\header_home.php`  | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">`                    | L9     |
-| `.\portal\app\Views\header_ext.php`   | `<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">`                                       | L11    |
-| `.\portal\app\Views\header_ext.php`   | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">`                    | L12    |
-| `.\portal\app\Views\header.php`       | `<link rel="shortcut icon" type="image/x-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">`                      | L11    |
-| `.\portal\app\Controllers\Gfa.php`    | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L5847  |
-| `.\portal\app\Controllers\Gfa.php`    | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L10355 |
-| `.\portal\app\Controllers\Gfa.php`    | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L10494 |
-| `.\pages\pricing.html`                | `<link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />`                                                                 | L14    |
-| `.\pages\pricing.html`                | `<link rel="stylesheet" href="../assets/css/get-funded-africa.css" />`                                                                            | L25    |
-| `.\pages\pricing.html`                | `src="../assets/images/get-funded-africa-logo.png"`                                                                                               | L54    |
-| `.\pages\pricing.html`                | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                         | L55    |
-| `.\pages\pricing.html`                | `src="../assets/images/get-funded-africa-logo.png"`                                                                                               | L60    |
-| `.\pages\pricing.html`                | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                         | L61    |
-| `.\pages\pricing.html`                | `src="../assets/images/get-funded-africa-logo.png"`                                                                                               | L66    |
-| `.\pages\pricing.html`                | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                         | L67    |
-| `.\pages\pricing.html`                | `src="../assets/images/get-funded-africa-logo.png"`                                                                                               | L385   |
-| `.\pages\pricing.html`                | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                         | L386   |
+
+| File | Content | Line |
+|------|------|------|
+| `.\pricing\index.php` | `<link rel="shortcut icon" href="../images/get-funded-africa-logo.png" />` | L17 |
+| `.\pricing\index.php` | `<link rel="stylesheet" href="../css/get-funded-africa.css" />` | L34 |
+| `.\pricing\index.php` | `src="../images/get-funded-africa-logo.png"` | L78 |
+| `.\pricing\index.php` | `data-at2x="../images/get-funded-africa-logo.png"` | L79 |
+| `.\pricing\index.php` | `src="../images/get-funded-africa-logo.png"` | L84 |
+| `.\pricing\index.php` | `data-at2x="../get-funded-africa-logo.png"` | L85 |
+| `.\pricing\index.php` | `src="../images/get-funded-africa-logo.png"` | L419 |
+| `.\pricing\index.php` | `data-at2x="../images/get-funded-africa-logo.png"` | L420 |
+| `.\portal\app\Views\register_sub.php` | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">` | L11 |
+| `.\portal\app\Views\register.php` | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">` | L11 |
+| `.\portal\app\Views\login.php` | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">` | L16 |
+| `.\portal\app\Views\header_new.php` | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">` | L13 |
+| `.\portal\app\Views\header_home.php` | `<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">` | L8 |
+| `.\portal\app\Views\header_home.php` | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">` | L9 |
+| `.\portal\app\Views\header_ext.php` | `<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">` | L11 |
+| `.\portal\app\Views\header_ext.php` | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">` | L12 |
+| `.\portal\app\Views\header.php` | `<link rel="shortcut icon" type="image/x-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">` | L11 |
+| `.\portal\app\Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L5847 |
+| `.\portal\app\Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L10355 |
+| `.\portal\app\Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L10494 |
+| `.\pages\pricing.html` | `<link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />` | L14 |
+| `.\pages\pricing.html` | `<link rel="stylesheet" href="../assets/css/get-funded-africa.css" />` | L25 |
+| `.\pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L54 |
+| `.\pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L55 |
+| `.\pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L60 |
+| `.\pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L61 |
+| `.\pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L66 |
+| `.\pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L67 |
+| `.\pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L385 |
+| `.\pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L386 |
+
 
 </details>
 
@@ -347,17 +357,22 @@ Tool use: **grep**
 
 Output mode: content
 
-| File         | Content                                                           | Line  |
-| ------------ | ----------------------------------------------------------------- | ----- |
+
+| File | Content | Line |
+|------|------|------|
 | `index.html` | `url: 'https://getfundedafrica.com/portal/gfa/page_view_events',` | L1506 |
+
 
 </details>
 
 ---
 
+
+
 ---
 
 Searching for additional branding references in other files:
+
 
 ---
 
@@ -368,43 +383,45 @@ Tool use: **grep**
 
 Output mode: content
 
-| File                 | Content                                                                                                                                                                              | Line |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
-| `pages\pricing.html` | `<title>GetFundedAfrica</title>`                                                                                                                                                     | L4   |
-| `pages\pricing.html` | `<link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />`                                                                                                    | L14  |
-| `pages\pricing.html` | `<link rel="stylesheet" href="../assets/css/get-funded-africa.css" />`                                                                                                               | L25  |
-| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L54  |
-| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L55  |
-| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L60  |
-| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L61  |
-| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L66  |
-| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L67  |
-| `pages\pricing.html` | `Join GetFundedAfrica Today`                                                                                                                                                         | L156 |
-| `pages\pricing.html` | `Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.`                                                                                  | L314 |
-| `pages\pricing.html` | `data-cfemail="GetFundedAfrica"`                                                                                                                                                     | L333 |
-| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L385 |
-| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L386 |
-| `pages\index.php`    | `<title>GetFundedAfrica</title>`                                                                                                                                                     | L6   |
-| `pages\index.php`    | `<link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />`                                                                                                    | L16  |
-| `pages\index.php`    | `<link rel="stylesheet" href="../assets/css/get-funded-africa.css" />`                                                                                                               | L26  |
-| `pages\index.php`    | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L52  |
-| `pages\index.php`    | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L53  |
-| `pages\index.php`    | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L58  |
-| `pages\index.php`    | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L59  |
-| `pages\index.php`    | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L64  |
-| `pages\index.php`    | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L65  |
-| `pages\index.php`    | `href="https://getfundedafrica.com/portal/"`                                                                                                                                         | L122 |
-| `pages\index.php`    | `Join GetFundedAfrica Today`                                                                                                                                                         | L154 |
-| `pages\index.php`    | `<a href="https://getfundedafrica.com/portal/gfa/register">`                                                                                                                         | L207 |
-| `pages\index.php`    | `<i class="fas fa-check"></i> Individual call with a GetFundedAfrica`                                                                                                                | L254 |
-| `pages\index.php`    | `<a href="https://getfundedafrica.com/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(750000); ?>/<?php echo $gateway ?>">`  | L265 |
-| `pages\index.php`    | `<a href="https://getfundedafrica.com/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(1125000); ?>/<?php echo $gateway ?>">` | L308 |
-| `pages\index.php`    | `Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.`                                                                                  | L331 |
-| `pages\index.php`    | `href="mailto:info@getfundedafrica.com"`                                                                                                                                             | L347 |
-| `pages\index.php`    | `>info@getfundedafrica.com`                                                                                                                                                          | L348 |
-| `pages\index.php`    | `data-cfemail="GetFundedAfrica"`                                                                                                                                                     | L351 |
-| `pages\index.php`    | `src="../assets/images/get-funded-africa-logo.png"`                                                                                                                                  | L404 |
-| `pages\index.php`    | `data-at2x="../assets/images/get-funded-africa-logo.png"`                                                                                                                            | L405 |
+
+| File | Content | Line |
+|------|------|------|
+| `pages\pricing.html` | `<title>GetFundedAfrica</title>` | L4 |
+| `pages\pricing.html` | `<link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />` | L14 |
+| `pages\pricing.html` | `<link rel="stylesheet" href="../assets/css/get-funded-africa.css" />` | L25 |
+| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L54 |
+| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L55 |
+| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L60 |
+| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L61 |
+| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L66 |
+| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L67 |
+| `pages\pricing.html` | `Join GetFundedAfrica Today` | L156 |
+| `pages\pricing.html` | `Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.` | L314 |
+| `pages\pricing.html` | `data-cfemail="GetFundedAfrica"` | L333 |
+| `pages\pricing.html` | `src="../assets/images/get-funded-africa-logo.png"` | L385 |
+| `pages\pricing.html` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L386 |
+| `pages\index.php` | `<title>GetFundedAfrica</title>` | L6 |
+| `pages\index.php` | `<link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />` | L16 |
+| `pages\index.php` | `<link rel="stylesheet" href="../assets/css/get-funded-africa.css" />` | L26 |
+| `pages\index.php` | `src="../assets/images/get-funded-africa-logo.png"` | L52 |
+| `pages\index.php` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L53 |
+| `pages\index.php` | `src="../assets/images/get-funded-africa-logo.png"` | L58 |
+| `pages\index.php` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L59 |
+| `pages\index.php` | `src="../assets/images/get-funded-africa-logo.png"` | L64 |
+| `pages\index.php` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L65 |
+| `pages\index.php` | `href="https://getfundedafrica.com/portal/"` | L122 |
+| `pages\index.php` | `Join GetFundedAfrica Today` | L154 |
+| `pages\index.php` | `<a href="https://getfundedafrica.com/portal/gfa/register">` | L207 |
+| `pages\index.php` | `<i class="fas fa-check"></i> Individual call with a GetFundedAfrica` | L254 |
+| `pages\index.php` | `<a href="https://getfundedafrica.com/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(750000); ?>/<?php echo $gateway ?>">` | L265 |
+| `pages\index.php` | `<a href="https://getfundedafrica.com/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(1125000); ?>/<?php echo $gateway ?>">` | L308 |
+| `pages\index.php` | `Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.` | L331 |
+| `pages\index.php` | `href="mailto:info@getfundedafrica.com"` | L347 |
+| `pages\index.php` | `>info@getfundedafrica.com` | L348 |
+| `pages\index.php` | `data-cfemail="GetFundedAfrica"` | L351 |
+| `pages\index.php` | `src="../assets/images/get-funded-africa-logo.png"` | L404 |
+| `pages\index.php` | `data-at2x="../assets/images/get-funded-africa-logo.png"` | L405 |
+
 
 </details>
 
@@ -417,18 +434,20 @@ Tool use: **grep**
 
 Output mode: content
 
-| File                                                                 | Content                                                                                                                                                                                                                                                                                                                          | Line |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| `portal\writable\session\ci_sessionvimu9pv40mhmk4ie39au1g930j9g59ls` | `__ci_last_regenerate\|i:1752831622;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";`                                                                                                                                                                                                                      | L1   |
-| `portal\writable\session\ci_sessionurjbn199m1pgob6k3oaf2ksadkc6aj7v` | `__ci_last_regenerate\|i:1752831681;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";`                                                                                                                                                                                                                      | L1   |
-| `portal\writable\session\ci_sessiontaf0ptrbqoe4fid2j64nej9bg0vhr8kf` | `__ci_last_regenerate\|i:1742988663;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:46:"https://getfundedafrica.com/portal/gfa/profile";get_investor_id\|s:15:"get_investor_id";get_mentor_id\|s:13:"get_mentor_id";`  | L1   |
-| `portal\writable\session\ci_sessionsnapduoru3nhul1e15ckji3eeqbj61nh` | `__ci_last_regenerate\|i:1742988135;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:47:"https://getfundedafrica.com/portal/gfa/dealroom";get_investor_id\|s:15:"get_investor_id";get_mentor_id\|s:13:"get_mentor_id";` | L1   |
-| `portal\writable\session\ci_sessions1flvbrtgaae0vse09nv8uith2nqik0h` | `__ci_last_regenerate\|i:1742987759;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:47:"https://getfundedafrica.com/portal/gfa/dealroom";get_investor_id\|s:15:"get_investor_id";get_mentor_id\|s:13:"get_mentor_id";` | L1   |
-| `portal\writable\session\ci_sessionrlqndscc8ljnc39btgopqrlqikil2tie` | `__ci_last_regenerate\|i:1752831810;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";`                                                                                                                                                                                                                      | L1   |
-| `portal\writable\session\ci_sessionr2tc2m94tclovdan9k0n3k8ti97ni73f` | `__ci_last_regenerate\|i:1752831612;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";`                                                                                                                                                                                                                      | L1   |
-| `portal\writable\session\ci_sessionqibt1iggsgdnmjusic2cj7290gnard8b` | `__ci_last_regenerate\|i:1742997810;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:47:"https://getfundedafrica.com/portal/gfa/resource";`                                                                             | L1   |
-| `portal\writable\session\ci_sessionmsi1972a22uqndgvt0p2lh76jpvkq13c` | `__ci_last_regenerate\|i:1742986252;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:48:"https://getfundedafrica.com/portal/gfa/dashboard";`                                                                            | L1   |
-| `portal\writable\session\ci_sessionkf6f1p7i43ovs3amr2v7pq4oiebgr270` | `__ci_last_regenerate\|i:1752831678;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";`                                                                                                                                                                                                                      | L1   |
+
+| File | Content | Line |
+|------|------|------|
+| `portal\writable\session\ci_sessionvimu9pv40mhmk4ie39au1g930j9g59ls` | `__ci_last_regenerate\|i:1752831622;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";` | L1 |
+| `portal\writable\session\ci_sessionurjbn199m1pgob6k3oaf2ksadkc6aj7v` | `__ci_last_regenerate\|i:1752831681;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";` | L1 |
+| `portal\writable\session\ci_sessiontaf0ptrbqoe4fid2j64nej9bg0vhr8kf` | `__ci_last_regenerate\|i:1742988663;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:46:"https://getfundedafrica.com/portal/gfa/profile";get_investor_id\|s:15:"get_investor_id";get_mentor_id\|s:13:"get_mentor_id";` | L1 |
+| `portal\writable\session\ci_sessionsnapduoru3nhul1e15ckji3eeqbj61nh` | `__ci_last_regenerate\|i:1742988135;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:47:"https://getfundedafrica.com/portal/gfa/dealroom";get_investor_id\|s:15:"get_investor_id";get_mentor_id\|s:13:"get_mentor_id";` | L1 |
+| `portal\writable\session\ci_sessions1flvbrtgaae0vse09nv8uith2nqik0h` | `__ci_last_regenerate\|i:1742987759;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:47:"https://getfundedafrica.com/portal/gfa/dealroom";get_investor_id\|s:15:"get_investor_id";get_mentor_id\|s:13:"get_mentor_id";` | L1 |
+| `portal\writable\session\ci_sessionrlqndscc8ljnc39btgopqrlqikil2tie` | `__ci_last_regenerate\|i:1752831810;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";` | L1 |
+| `portal\writable\session\ci_sessionr2tc2m94tclovdan9k0n3k8ti97ni73f` | `__ci_last_regenerate\|i:1752831612;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";` | L1 |
+| `portal\writable\session\ci_sessionqibt1iggsgdnmjusic2cj7290gnard8b` | `__ci_last_regenerate\|i:1742997810;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:47:"https://getfundedafrica.com/portal/gfa/resource";` | L1 |
+| `portal\writable\session\ci_sessionmsi1972a22uqndgvt0p2lh76jpvkq13c` | `__ci_last_regenerate\|i:1742986252;email\|s:19:"web20foru@gmail.com";account_type\|s:7:"startup";subscription_status\|N;username\|N;invite_email\|N;admin_access\|s:0:"";_ci_previous_url\|s:48:"https://getfundedafrica.com/portal/gfa/dashboard";` | L1 |
+| `portal\writable\session\ci_sessionkf6f1p7i43ovs3amr2v7pq4oiebgr270` | `__ci_last_regenerate\|i:1752831678;_ci_previous_url\|s:44:"https://getfundedafrica.com/portal/gfa/login";` | L1 |
+
 
 </details>
 
@@ -450,9 +469,12 @@ No results found
 
 ---
 
+
+
 ---
 
 Checking portal view files for branding references:
+
 
 ---
 
@@ -463,19 +485,21 @@ Tool use: **grep**
 
 Output mode: content
 
-| File                                              | Content                                                                                                                                                                                                                                                                                                                                            | Line |
-| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| `portal/app/Views\subscribedf.php`                | `<a href="https://getfundedafrica.com/contact-us.php" target="_blank" class="btn btn-primary w-100" tabindex="4">Contact</a>`                                                                                                                                                                                                                      | L488 |
-| `portal/app/Views\startups_profile.php`           | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">`                                                                                                                                                                                                                                                                            | L14  |
-| `portal/app/Views\startup_webinar.php`            | `<img src="https://getfundedafrica.com/portal/assets/images/adcreative.jpg">`                                                                                                                                                                                                                                                                      | L12  |
-| `portal/app/Views\startup_profile_freshworks.php` | `<img src="https://getfundedafrica.com/portal/assets/images/roundtable_with_funke.png">`                                                                                                                                                                                                                                                           | L14  |
-| `portal/app/Views\startup_profile.php`            | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">`                                                                                                                                                                                                                                                                            | L14  |
-| `portal/app/Views\startup_investor_details.php`   | `<br>1. Upload maximum of five minutes video pitch introducing your Startup/SME in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@getfundedafrica.com">media@getfundedafrica.com</a> to tell your story.`                                                      | L346 |
-| `portal/app/Views\startup_investor_details.php`   | `<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.getfundedafrica.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.getfundedafrica.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.` | L348 |
-| `portal/app/Views\startup_connect.php`            | `<img src="https://getfundedafrica.com/portal/assets/images/uploads/default-avatar.jpg" alt="Toolbar svg" height="40" width="40"/>`                                                                                                                                                                                                                | L59  |
-| `portal/app/Views\startup-investor.php`           | `It seems you don't have an active subscripion, pls <a href="https://getfundedafrica.com/portal/gfa/subscribe">click here</a> to subscribe to view all investors.`                                                                                                                                                                                 | L122 |
-| `portal/app/Views\sme_register.php`               | `<img src="https://getfundedafrica.com/images/logo-1.png">`                                                                                                                                                                                                                                                                                        | L14  |
-| `portal/app/Views\schedule.php`                   | `<img style="height:50px; width:auto;" src="https://getfundedafrica.com/microsoft/wp-content/uploads/2021/10/h5-logo-dark.png">`                                                                                                                                                                                                                   | L19  |
+
+| File | Content | Line |
+|------|------|------|
+| `portal/app/Views\subscribedf.php` | `<a href="https://getfundedafrica.com/contact-us.php" target="_blank" class="btn btn-primary w-100" tabindex="4">Contact</a>` | L488 |
+| `portal/app/Views\startups_profile.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal/app/Views\startup_webinar.php` | `<img src="https://getfundedafrica.com/portal/assets/images/adcreative.jpg">` | L12 |
+| `portal/app/Views\startup_profile_freshworks.php` | `<img src="https://getfundedafrica.com/portal/assets/images/roundtable_with_funke.png">` | L14 |
+| `portal/app/Views\startup_profile.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal/app/Views\startup_investor_details.php` | `<br>1. Upload maximum of five minutes video pitch introducing your Startup/SME in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@getfundedafrica.com">media@getfundedafrica.com</a> to tell your story.` | L346 |
+| `portal/app/Views\startup_investor_details.php` | `<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.getfundedafrica.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.getfundedafrica.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.` | L348 |
+| `portal/app/Views\startup_connect.php` | `<img src="https://getfundedafrica.com/portal/assets/images/uploads/default-avatar.jpg" alt="Toolbar svg" height="40" width="40"/>` | L59 |
+| `portal/app/Views\startup-investor.php` | `It seems you don't have an active subscripion, pls <a href="https://getfundedafrica.com/portal/gfa/subscribe">click here</a> to subscribe to view all investors.` | L122 |
+| `portal/app/Views\sme_register.php` | `<img src="https://getfundedafrica.com/images/logo-1.png">` | L14 |
+| `portal/app/Views\schedule.php` | `<img style="height:50px; width:auto;" src="https://getfundedafrica.com/microsoft/wp-content/uploads/2021/10/h5-logo-dark.png">` | L19 |
+
 
 </details>
 
@@ -484,6 +508,8 @@ Output mode: content
 Tool use: **codebase_search**
 
 ---
+
+
 
 ---
 
@@ -576,21 +602,17 @@ Here’s a sequential rebranding plan. Since you’re in ask mode, I’ll provid
 ## Summary of Files to Modify:
 
 **Root Level:**
-
 - `index.html` (multiple changes)
 
 **Pages Directory:**
-
 - `pages/pricing.html`
 - `pages/index.php`
 
 **Assets Directory:**
-
 - `assets/css/get-funded-africa.css` (rename to `communified.css`)
 - `assets/images/` (add new logo, optionally remove old one)
 
 **Portal Views:**
-
 - `portal/app/Views/startups_profile.php`
 - `portal/app/Views/startup_profile.php`
 - `portal/app/Views/subscribedf.php`
@@ -614,9 +636,12 @@ Provide the exact code changes
 
 _**Assistant (default)**_
 
+
+
 ---
 
 Providing exact code changes. Reading the key files to identify the specific updates:
+
 
 ---
 
@@ -644,6 +669,8 @@ Read file: portal/app/Views/startup_investor_details.php
 
 ---
 
+
+
 ---
 
 Exact code changes for each file:
@@ -651,7 +678,6 @@ Exact code changes for each file:
 ## **File 1: `index.html`**
 
 ### Change 1: Page Title (Line 4)
-
 ```html
 <!-- FROM: -->
 <title>GetFundedAfrica</title>
@@ -661,7 +687,6 @@ Exact code changes for each file:
 ```
 
 ### Change 2: Favicon (Line 17)
-
 ```html
 <!-- FROM: -->
 <link rel="shortcut icon" href="./assets/images/get-funded-africa-logo.png" />
@@ -671,7 +696,6 @@ Exact code changes for each file:
 ```
 
 ### Change 3: CSS File Reference (Line 27)
-
 ```html
 <!-- FROM: -->
 <link rel="stylesheet" href="./assets/css/get-funded-africa.css" />
@@ -681,7 +705,6 @@ Exact code changes for each file:
 ```
 
 ### Change 4: Logo Images in Header (Lines 55-72)
-
 ```html
 <!-- FROM: -->
 <a class="navbar-brand" href="./index.html">
@@ -729,7 +752,6 @@ Exact code changes for each file:
 ```
 
 ### Change 5: About Section Text (Line 358)
-
 ```html
 <!-- FROM: -->
 <span
@@ -745,36 +767,32 @@ Exact code changes for each file:
 ```
 
 ### Change 6: Ad Banner Text (Line 1357)
-
 ```html
 <!-- FROM: -->
-<p class="ad-banner-subtitle">
-  Join GetFundedAfrica today and unlock unlimited access to entrepreneurs, investors, and
-  organizations.
-</p>
+<p class="ad-banner-subtitle">Join GetFundedAfrica today and unlock unlimited access to entrepreneurs, investors, and organizations.</p>
 
 <!-- TO: -->
-<p class="ad-banner-subtitle">
-  Join Communified today and unlock unlimited access to entrepreneurs, investors, and organizations.
-</p>
+<p class="ad-banner-subtitle">Join Communified today and unlock unlimited access to entrepreneurs, investors, and organizations.</p>
 ```
 
 ### Change 7: Footer Text (Line 1375)
-
 ```html
 <!-- FROM: -->
-<h3 class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px">
-  Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.
+<h3
+  class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+>
+ Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.
 </h3>
 
 <!-- TO: -->
-<h3 class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px">
-  Connect with like-minded achievers and take your business to the next level with Communified.
+<h3
+  class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+>
+ Connect with like-minded achievers and take your business to the next level with Communified.
 </h3>
 ```
 
 ### Change 8: Footer Logo (Line 1448)
-
 ```html
 <!-- FROM: -->
 <a href="./index.html" class="footer-logo"
@@ -794,13 +812,12 @@ Exact code changes for each file:
 ```
 
 ### Change 9: Analytics App Name (Line 1502)
-
 ```javascript
 // FROM:
-app_name: 'Getfundedafrica';
+app_name: "Getfundedafrica"
 
 // TO:
-app_name: 'Communified';
+app_name: "Communified"
 ```
 
 ---
@@ -808,7 +825,6 @@ app_name: 'Communified';
 ## **File 2: `pages/pricing.html`**
 
 ### Change 1: Page Title (Line 4)
-
 ```html
 <!-- FROM: -->
 <title>GetFundedAfrica</title>
@@ -818,7 +834,6 @@ app_name: 'Communified';
 ```
 
 ### Change 2: Favicon (Line 14)
-
 ```html
 <!-- FROM: -->
 <link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />
@@ -828,7 +843,6 @@ app_name: 'Communified';
 ```
 
 ### Change 3: CSS File Reference (Line 25)
-
 ```html
 <!-- FROM: -->
 <link rel="stylesheet" href="../assets/css/get-funded-africa.css" />
@@ -838,7 +852,6 @@ app_name: 'Communified';
 ```
 
 ### Change 4: Logo Images in Header (Lines 52-71)
-
 ```html
 <!-- FROM: -->
 <a class="navbar-brand" href="../index.html">
@@ -886,7 +899,6 @@ app_name: 'Communified';
 ```
 
 ### Change 5: Pricing Section Heading (Line 156)
-
 ```html
 <!-- FROM: -->
 <h2 class="text-dark-gray alt-font fw-600 ls-minus-2px mb-2" id="pricing">
@@ -900,21 +912,23 @@ app_name: 'Communified';
 ```
 
 ### Change 6: Footer Text (Line 314)
-
 ```html
 <!-- FROM: -->
-<h3 class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px">
-  Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.
+<h3
+  class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+>
+ Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.
 </h3>
 
 <!-- TO: -->
-<h3 class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px">
-  Connect with like-minded achievers and take your business to the next level with Communified.
+<h3
+  class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+>
+ Connect with like-minded achievers and take your business to the next level with Communified.
 </h3>
 ```
 
 ### Change 7: Footer Logo (Lines 383-388)
-
 ```html
 <!-- FROM: -->
 <a href="../index.html" class="footer-logo"
@@ -938,7 +952,6 @@ app_name: 'Communified';
 ## **File 3: `pages/index.php`**
 
 ### Change 1: Page Title (Line 6)
-
 ```php
 <!-- FROM: -->
 <title>GetFundedAfrica</title>
@@ -948,7 +961,6 @@ app_name: 'Communified';
 ```
 
 ### Change 2: Favicon (Line 16)
-
 ```php
 <!-- FROM: -->
 <link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />
@@ -958,7 +970,6 @@ app_name: 'Communified';
 ```
 
 ### Change 3: CSS File Reference (Line 26)
-
 ```php
 <!-- FROM: -->
 <link rel="stylesheet" href="../assets/css/get-funded-africa.css" />
@@ -968,7 +979,6 @@ app_name: 'Communified';
 ```
 
 ### Change 4: Logo Images in Header (Lines 50-69)
-
 ```php
 <!-- FROM: -->
 <a class="navbar-brand" href="../index.html">
@@ -983,8 +993,1537 @@ app_name: 'Communified';
     data-at2x="../assets/images/get-funded-africa-logo.png"
     alt=""
     class="alt-logo"
-  /
+  />
+  <img
+    src="../assets/images/get-funded-africa-logo.png"
+    data-at2x="../assets/images/get-funded-africa-logo.png"
+    alt=""
+    class="mobile-logo"
+  />
+</a>
+
+<!-- TO: -->
+<a class="navbar-brand" href="../index.html">
+  <img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+    class="default-logo"
+  />
+  <img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+    class="alt-logo"
+  />
+  <img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+    class="mobile-logo"
+  />
+</a>
+```
+
+### Change 5: Pricing Section Heading (Line 154)
+```php
+<!-- FROM: -->
+<h2 class="text-dark-gray alt-font fw-600 ls-minus-2px mb-2" id="pricing">
+  Join GetFundedAfrica Today
+</h2>
+
+<!-- TO: -->
+<h2 class="text-dark-gray alt-font fw-600 ls-minus-2px mb-2" id="pricing">
+  Join Communified Today
+</h2>
+```
+
+### Change 6: Premium Plan Feature Text (Line 254)
+```php
+<!-- FROM: -->
+<li>
+  <i class="fas fa-check"></i> Individual call with a GetFundedAfrica
+  growth representative
+</li>
+
+<!-- TO: -->
+<li>
+  <i class="fas fa-check"></i> Individual call with a Communified
+  growth representative
+</li>
+```
+
+### Change 7: Footer Text (Line 331)
+```php
+<!-- FROM: -->
+<h3
+  class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+>
+ Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.
+</h3>
+
+<!-- TO: -->
+<h3
+  class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+>
+ Connect with like-minded achievers and take your business to the next level with Communified.
+</h3>
+```
+
+### Change 8: Footer Logo (Lines 402-407)
+```php
+<!-- FROM: -->
+<a href="../index.html" class="footer-logo"
+  ><img
+    src="../assets/images/get-funded-africa-logo.png"
+    data-at2x="../assets/images/get-funded-africa-logo.png"
+    alt=""
+/></a>
+
+<!-- TO: -->
+<a href="../index.html" class="footer-logo"
+  ><img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+/></a>
+```
 
 ---
 
+## **File 4: Rename CSS File**
+
+Rename the file:
+- FROM: `assets/css/get-funded-africa.css`
+- TO: `assets/css/communified.css`
+
+---
+
+## **File 5: Copy Logo File**
+
+Copy the logo:
+- FROM: `communified-logo.png` (root directory)
+- TO: `assets/images/communified-logo.png`
+
+---
+
+## **File 6: `portal/app/Views/startup_profile.php`**
+
+### Change: Logo URL (Line 14)
+```php
+<!-- FROM: -->
+<img src="https://getfundedafrica.com/portal/assets/images/logo.png">
+
+<!-- TO: -->
+<img src="https://getfundedafrica.com/portal/assets/images/communified-logo.png">
 ```
+(Note: Update domain if changing from getfundedafrica.com)
+
+---
+
+## **File 7: `portal/app/Views/startups_profile.php`**
+
+### Change: Logo URL (Line 14)
+```php
+<!-- FROM: -->
+<img src="https://getfundedafrica.com/portal/assets/images/logo.png">
+
+<!-- TO: -->
+<img src="https://getfundedafrica.com/portal/assets/images/communified-logo.png">
+```
+(Note: Update domain if changing from getfundedafrica.com)
+
+---
+
+## **File 8: `portal/app/Views/startup_investor_details.php`**
+
+### Change: Email Address (Line 346)
+```php
+<!-- FROM: -->
+<br>1. Upload maximum of five minutes video pitch introducing your Startup/SME in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@getfundedafrica.com">media@getfundedafrica.com</a> to tell your story.
+
+<!-- TO: -->
+<br>1. Upload maximum of five minutes video pitch introducing your Startup/SME in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@communified.com">media@communified.com</a> to tell your story.
+```
+
+### Change: URL References (Line 348)
+```php
+<!-- FROM: -->
+<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.getfundedafrica.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.getfundedafrica.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.
+
+<!-- TO: -->
+<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.communified.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.communified.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.
+```
+(Note: Update URLs if domain changes)
+
+---
+
+## **Additional Portal Files (Optional - if domain/email changes)**
+
+If you're changing the domain from `getfundedafrica.com` to `communified.com`, also update:
+
+- `portal/app/Views/subscribedf.php` (line 488)
+- `portal/app/Views/startup-investor.php` (line 122)
+- `portal/app/Views/sme_register.php` (line 14)
+- `pages/index.php` (lines 122, 207, 265, 308, 347)
+
+---
+
+## **Summary Checklist:**
+
+1. Copy `communified-logo.png` to `assets/images/communified-logo.png`
+2. Rename `assets/css/get-funded-africa.css` to `assets/css/communified.css`
+3. Update `index.html` (9 changes)
+4. Update `pages/pricing.html` (7 changes)
+5. Update `pages/index.php` (8 changes)
+6. Update portal view files (3+ files)
+
+All changes are provided above. Apply them in the order listed.
+
+---
+
+_**User (2025-11-14 16:51Z)**_
+
+@portal Continue the rebranding in the referenced directory @portal 
+
+---
+
+_**Assistant (default)**_
+
+
+
+---
+
+
+Searching the portal directory for branding references to update:
+
+
+---
+
+Tool use: **grep**
+
+<details>
+<summary>Grep for "GetFundedAfrica|getfundedafrica|get-funded-africa|GFA" in "portal" • 84 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `portal\public\assets-new\vendor\libs\datatables-bs5\datatables-bootstrap5.js` | `'AAACAAAAAAAQugAAAQUO+vHtnHuMX0UVx2d3u/t7bXe7FlqgvB+mpQhFmhikMRAg0ZQmakMU+cPWBzZisEGNjUpoiIYCEgmGUGOEGqOVNPUZUGNA+QNIBU2KREEFFSMBUYRISMXE+B3vnPzOzp553tcWfif5ZO5jnufMzJ2ZO/eumlDqFLAWnAMuBBvBZnC5uXZeBe4WsA1sBzs8/naCXcL1G8GtYDfYA74NvgfuAfcZHmT+fwEeBb8DTwvxPQWeAavACyZvq8z9VYxXwCGglijVBcvACnA8eCM4E6wHG8BF4BLwbvA+8AHwUbAd7AA7wS5wC9gN7gR7wX5wN7gXPAAeBr8Gvwd/Ac+CF8EhoCaV6oBZsBKcAE4FZ0wWeV8P9zxwoTnfCHczuBxsAdvAx8Gnzf1r4X4B3AxuA1+bHJb9m5PzdVGW/Yjv+xXHyfmxFfd9OH8Q/Ar8Bjw1WZT3GfACeAX8N5CfqSmlZsAKsGqqCH8K3DXgbHCuuXYB3HeAd4HLpgrdarbi+EPgY+CT4HPg8ybMTcb9MtyvghtYut/A+b4pf95+ELgfw08Qx/3gADgInjDl0veehPtX8A/wsrn2KtzxDuogWNoJx38k/BzXKeI8Ee5qcBZYD9aZtDbg+AwT19uMX83F7JizCdcvBZdZ97c6/BMfMWmfzfTm88/95aLj+DDSvApcDXZ04uPfaen3TMHPLvi5BezuFPVtD4t/qUcfe3FvP7gb3Ouwo9T+H+gMy/UIjh8DfwBPm7T08d/M8WMBe1Sh3xEjXo+M2s+IESNGjBgxYsSI1wLrOsM1gRsi/P+TzV3/Zc1jvxgR/j8IM9Et1mEGcJeDFeA4cJq5/ia467uF/w1wzwdvB+80998LdwvYZs63w90Bdnbd6Wp/uzz3R4wYMWJEvZzTMm2Xf8SIEfVQd/v+EsaPt3eL90J3wP2WMJ78Trd4t6+P77Hu37cIxp9 [... omitted end of long line]` | L54376 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `"url": "https:\/\/getfundedafrica.com\/portal\/",` | L2 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "path": "APPPATH\/Controllers\/Gfa.php", "name": "Gfa.php" \},` | L295 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "path": "APPPATH\/Models\/GfaModel.php", "name": "GfaModel.php" \},` | L298 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `"controller": "\\App\\Controllers\\Gfa",` | L436 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "GET", "route": "\/", "handler": "\\App\\Controllers\\Gfa::index" \},` | L444 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "GET", "route": "gfa", "handler": "\\App\\Controllers\\Gfa::index" \},` | L445 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "GET", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L448 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "HEAD", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L459 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "POST", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L473 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "PATCH", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L485 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "PUT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L498 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "DELETE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L511 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "OPTIONS", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L528 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "TRACE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L545 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "CONNECT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L558 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `\{ "method": "CLI", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L575 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `"varData": \{ "View Data": \{ "page_title": "Login GetFundedAfrica" \} \},` | L622 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `"session": \{ "_ci_previous_url": "https:\/\/getfundedafrica.com\/portal\/" \},` | L623 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `"Host": "getfundedafrica.com",` | L628 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `"Referer": "https:\/\/getfundedafrica.com\/portal",` | L630 |
+| `portal\writable\debugbar\debugbar_1762867211.143386.json` | `"baseURL": "https:\/\/getfundedafrica.com\/portal\/",` | L654 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `"url": "https:\/\/getfundedafrica.com\/portal\/gfa\/register",` | L2 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "path": "APPPATH\/Controllers\/Gfa.php", "name": "Gfa.php" \},` | L294 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "path": "APPPATH\/Models\/GfaModel.php", "name": "GfaModel.php" \},` | L296 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `"controller": "\\App\\Controllers\\Gfa",` | L434 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "GET", "route": "\/", "handler": "\\App\\Controllers\\Gfa::index" \},` | L442 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "GET", "route": "gfa", "handler": "\\App\\Controllers\\Gfa::index" \},` | L443 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "GET", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L446 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "HEAD", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L457 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "POST", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L471 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "PATCH", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L483 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "PUT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L496 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "DELETE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L509 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "OPTIONS", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L526 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "TRACE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L543 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "CONNECT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L556 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `\{ "method": "CLI", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L573 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `"varData": \{ "View Data": \{ "page_title": "Register GetFundedAfrica" \} \},` | L620 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `"session": \{ "_ci_previous_url": "https:\/\/getfundedafrica.com\/portal\/gfa\/register" \},` | L621 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `"Host": "getfundedafrica.com",` | L623 |
+| `portal\writable\debugbar\debugbar_1762865866.863717.json` | `"baseURL": "https:\/\/getfundedafrica.com\/portal\/",` | L645 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `"url": "https:\/\/getfundedafrica.com\/portal\/",` | L2 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "path": "APPPATH\/Controllers\/Gfa.php", "name": "Gfa.php" \},` | L295 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "path": "APPPATH\/Models\/GfaModel.php", "name": "GfaModel.php" \},` | L298 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `"controller": "\\App\\Controllers\\Gfa",` | L436 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "GET", "route": "\/", "handler": "\\App\\Controllers\\Gfa::index" \},` | L444 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "GET", "route": "gfa", "handler": "\\App\\Controllers\\Gfa::index" \},` | L445 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "GET", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L448 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "HEAD", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L459 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "POST", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L473 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "PATCH", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L485 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "PUT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L498 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "DELETE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L511 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "OPTIONS", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L528 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "TRACE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L545 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "CONNECT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L558 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `\{ "method": "CLI", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L575 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `"varData": \{ "View Data": \{ "page_title": "Login GetFundedAfrica" \} \},` | L622 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `"session": \{ "_ci_previous_url": "https:\/\/getfundedafrica.com\/portal\/" \},` | L623 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `"Host": "getfundedafrica.com",` | L628 |
+| `portal\writable\debugbar\debugbar_1762865419.590859.json` | `"baseURL": "https:\/\/getfundedafrica.com\/portal\/",` | L650 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `"url": "https:\/\/getfundedafrica.com\/portal\/gfa\/register",` | L2 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "path": "APPPATH\/Controllers\/Gfa.php", "name": "Gfa.php" \},` | L294 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "path": "APPPATH\/Models\/GfaModel.php", "name": "GfaModel.php" \},` | L296 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `"controller": "\\App\\Controllers\\Gfa",` | L434 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "GET", "route": "\/", "handler": "\\App\\Controllers\\Gfa::index" \},` | L442 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "GET", "route": "gfa", "handler": "\\App\\Controllers\\Gfa::index" \},` | L443 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "GET", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L446 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "HEAD", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L457 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "POST", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L471 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "PATCH", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L483 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "PUT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L496 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "DELETE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L509 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "OPTIONS", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L526 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "TRACE", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L543 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "CONNECT", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L556 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `\{ "method": "CLI", "route": "gfa\/(.*)", "handler": "\\App\\Controllers\\Gfa::$1" \},` | L573 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `"varData": \{ "View Data": \{ "page_title": "Register GetFundedAfrica" \} \},` | L620 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `"session": \{ "_ci_previous_url": "https:\/\/getfundedafrica.com\/portal\/gfa\/register" \},` | L621 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `"Host": "getfundedafrica.com",` | L626 |
+| `portal\writable\debugbar\debugbar_1762861842.148628.json` | `"baseURL": "https:\/\/getfundedafrica.com\/portal\/",` | L651 |
+| `portal\writable\debugbar\debugbar_1762860895.753653.json` | `"url": "https:\/\/getfundedafrica.com\/portal\/gfa\/register",` | L2 |
+| `portal\writable\debugbar\debugbar_1762860895.753653.json` | `\{ "path": "APPPATH\/Controllers\/Gfa.php", "name": "Gfa.php" \},` | L294 |
+
+
+</details>
+
+---
+
+Tool use: **codebase_search**
+
+---
+
+Tool use: **grep**
+
+<details>
+<summary>Grep for "logo\.png|logo-1\.png|get-funded-africa-logo" in "portal" • 104 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `portal\vendor\friendsofphp\php-cs-fixer\README.md` | `<img src="./logo.png" title="PHP CS Fixer" alt="PHP CS Fixer logo">` | L3 |
+| `portal\public\assets\plugins\ckeditor\samples\toolbarconfigurator\index.html` | `<a href="../index.html"><img src="../img/logo.png" alt="CKEditor Logo" /></a>` | L45 |
+| `portal\public\assets\plugins\ckeditor\samples\old\inlineall.html` | `<img src="assets/inlineall/logo.png" alt="CKEditor logo" style="float: left" />` | L288 |
+| `portal\public\assets\plugins\ckeditor\samples\index.html` | `<a href="index.html"><img src="img/logo.png" alt="CKEditor Sample" /></a>` | L38 |
+| `portal\public\assets\app-assets\js\scripts\extensions\ext-component-tree.min.js` | `\{ text: 'logo.png', type: 'img' \},` | L28 |
+| `portal\public\assets\app-assets\js\scripts\extensions\ext-component-tree.min.js` | `\{ text: 'logo.png', type: 'img' \},` | L71 |
+| `portal\public\assets\app-assets\js\scripts\extensions\ext-component-tree.min.js` | `\{ text: 'logo.png', type: 'img' \},` | L114 |
+| `portal\public\assets\app-assets\js\scripts\extensions\ext-component-tree.min.js` | `\{ text: 'logo.png', type: 'img' \},` | L156 |
+| `portal\public\assets-new\js\extended-ui-treeview.js` | `\{ text: 'logo.png', type: 'img' \},` | L28 |
+| `portal\public\assets-new\js\extended-ui-treeview.js` | `\{ text: 'logo.png', type: 'img' \},` | L72 |
+| `portal\public\assets-new\js\extended-ui-treeview.js` | `\{ text: 'logo.png', type: 'img' \},` | L116 |
+| `portal\public\assets-new\js\extended-ui-treeview.js` | `\{ text: 'logo.png', type: 'img' \},` | L159 |
+| `portal\app\Views\updateprofile.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L11 |
+| `portal\app\Views\subscribex.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L12 |
+| `portal\app\Views\startups_profile.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal\app\Views\startup_profile.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal\app\Views\sme_register.php` | `<img src="https://getfundedafrica.com/images/logo-1.png">` | L14 |
+| `portal\app\Views\shop.php` | `<img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png">` | L5 |
+| `portal\app\Views\register_sub.php` | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">` | L11 |
+| `portal\app\Views\register.php` | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">` | L11 |
+| `portal\app\Views\oldmentor\menu_new.php` | `<center><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></center>` | L4 |
+| `portal\app\Views\microsoft.php` | `<img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png">` | L16 |
+| `portal\app\Views\menu_new_corperate.php` | `<center><a href="https://getfundedafrica.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></a></center>` | L5 |
+| `portal\app\Views\menu_newold.php` | `<center><a href="https://getfundedafrica.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></a></center>` | L5 |
+| `portal\app\Views\menu_new.php` | `<center><a href="<?php echo base_url('gfa/dashboard'); ?>"><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></a></center>` | L8 |
+| `portal\app\Views\menu_admin.php` | `<center><a href="<?php echo base_url('gfa/dashboard'); ?>gfa/dashboard"><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></a></center>` | L8 |
+| `portal\app\Views\menu-assets-new.php` | `<img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" width="100%">` | L21 |
+| `portal\app\Views\menu-assets-new-page.php` | `<img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" width="100%">` | L21 |
+| `portal\app\Views\mentor\menu_new.php` | `<center><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></center>` | L4 |
+| `portal\app\Views\mentor\menu_investor.php` | `<center><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></center>` | L4 |
+| `portal\app\Views\login.php` | `<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">` | L16 |
+| `portal\app\Views\invite_confirm.php` | `<img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png">` | L16 |
+| `portal\app\Views\investor\menu_new.php` | `<center><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></center>` | L4 |
+| `portal\app\Views\investor\menu_investor.php` | `<center><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></center>` | L4 |
+| `portal\app\Views\index.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L16 |
+| `portal\app\Views\header_new.php` | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">` | L13 |
+| `portal\app\Views\header_home2.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L61 |
+| `portal\app\Views\header_home.php` | `<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">` | L8 |
+| `portal\app\Views\header_home.php` | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">` | L9 |
+| `portal\app\Views\header_home.php` | `<img src="<?php echo base_url('public/assets/images/gfa-logo.png'); ?>">` | L58 |
+| `portal\app\Views\header_ext.php` | `<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">` | L11 |
+| `portal\app\Views\header_ext.php` | `<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">` | L12 |
+| `portal\app\Views\header.php` | `<link rel="shortcut icon" type="image/x-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">` | L11 |
+| `portal\app\Views\forgotpassword.php` | `<img src="<?php echo base_url("public/assets/images/logo/GFA-Logo.png"); ?>">` | L16 |
+| `portal\app\Views\csdinvestor\menu_new.php` | `<center><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></center>` | L4 |
+| `portal\app\Views\csdinvestor\menu_investor.php` | `<center><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></center>` | L4 |
+| `portal\app\Views\corporate_profile.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal\app\Views\corperate_profile.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal\app\Views\corperate\menu_new.php` | `<center><img src="<?php echo base_url(); ?>public/assets/images/logo/GFA-Logo.png" align="center"></center>` | L4 |
+| `portal\app\Views\corperate\menu_corporate.php` | `<center><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></center>` | L4 |
+| `portal\app\Views\complete_subxx.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L11 |
+| `portal\app\Views\complete_subxp.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L11 |
+| `portal\app\Views\complete_sub.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L11 |
+| `portal\app\Views\application.php` | `<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">` | L11 |
+| `portal\app\Views\admin07070\matchdata.php` | `<img class="profile-user-img img-responsive img-circle" src="https://getfundedafrica.com/images/logo-1.png" alt="gfa">` | L291 |
+| `portal\app\Views\admin\menu_admin (1).php` | `<center><a href="<?php echo base_url('gfa/dashboard'); ?>gfa/dashboard"><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></a></center>` | L8 |
+| `portal\app\Views\admin\matchdata.php` | `<img class="profile-user-img img-responsive img-circle" src="https://getfundedafrica.com/images/logo-1.png" alt="gfa">` | L291 |
+| `portal\app\Views\accelerators.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal\app\Views\accelerator.php` | `<img src="https://getfundedafrica.com/portal/assets/images/logo.png">` | L14 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";` | L4130 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";` | L4174 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href=''http://102.133.150.102/portal/'><img src='http://102.133.150.102/portal/public/assets/images/logo/GFA-Logo.png'></a>";` | L4220 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br>";` | L4920 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br>";` | L4966 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://investorsfinder.GetFundedAfrica.com/images/logo-1.png'></a><br>";` | L5054 |
+| `portal\app\Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L5847 |
+| `portal\app\Controllers\Gfa.php` | `<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L6719 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L6838 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L6884 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L6923 |
+| `portal\app\Controllers\Gfa.php` | `<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L7115 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L8580 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9445 |
+| `portal\app\Controllers\Gfa.php` | `$messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9466 |
+| `portal\app\Controllers\Gfa.php` | `//     $message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9537 |
+| `portal\app\Controllers\Gfa.php` | `//     $messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9556 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L9792 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9851 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9952 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L10029 |
+| `portal\app\Controllers\Gfa.php` | `$messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L10048 |
+| `portal\app\Controllers\Gfa.php` | `<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L10189 |
+| `portal\app\Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L10355 |
+| `portal\app\Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L10494 |
+| `portal\app\Controllers\Gfa.php` | `$message = "<a href='https://fundraisercrm.io/portal/'><img src='https://fundraisercrm.io/images/logo-1.png'></a>` | L10646 |
+| `portal\app\Controllers\Gfa.php` | `$messageSub = "<a href='https://fundraisercrm.io/portal/'><img src='https://fundraisercrm.io/portal/public/assets/img/gfa-logo.png'></a>` | L11355 |
+| `portal\app\Controllers\Gfa.php` | `$messageSub = "<a href='https://getfundedafrica.com'><img src='https://getfundedafrica.com/images/logo-1.png'></a>` | L11498 |
+| `portal\app\Controllers\Admin.php` | `$message ="<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br><br>` | L92 |
+| `portal\app\Controllers\Admin.php` | `$message ="<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br><br>` | L107 |
+| `portal\app\Controllers\Admin.php` | `$message ="<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br><br>` | L151 |
+| `portal\app\Controllers\Admin.php` | `$message ="<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br><br>` | L166 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br><br>` | L586 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a> <br><br>";` | L2339 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a> <br><br>";` | L2386 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a> <br><br>";` | L2412 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L3938 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L3959 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L4012 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L4032 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L4079 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L4115 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L4181 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L4202 |
+| `portal\app\Controllers\Admin.php` | `$message = "<a href='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'><img src='https://GetFundedAfrica.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a>` | L4384 |
+
+
+</details>
+
+---
+
+Tool use: **read_file**
+
+Read file: portal/app/Views/header.php
+
+---
+
+Tool use: **read_file**
+
+Read file: portal/app/Views/footer.php
+
+---
+
+
+
+---
+
+
+Searching for more specific branding references:
+
+
+---
+
+Tool use: **read_file**
+
+Read file: portal/app/Controllers/Gfa.php
+
+---
+
+Tool use: **grep**
+
+<details>
+<summary>Grep for "page_title|GetFundedAfrica|Login GetFundedAfrica|Register GetFundedAfrica" in "portal/app/Controllers" • 413 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = 'NISM - Elevate your professional journey.';` | L28 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L44 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L61 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L71 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L80 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L90 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L100 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L109 |
+| `portal/app/Controllers\Home.php` | `$data['page_title'] = '';` | L119 |
+| `portal/app/Controllers\Gfa.php` | `$data['page_title'] = "Login GetFundedAfrica";` | L44 |
+| `portal/app/Controllers\Gfa.php` | `$data['page_title'] = "Register GetFundedAfrica";` | L51 |
+| `portal/app/Controllers\Gfa.php` | `$data['page_title'] = "Register GetFundedAfrica";` | L58 |
+| `portal/app/Controllers\Gfa.php` | `'url' =>'https://nora.GetFundedAfrica.ci/portal/gfa/learning_external/'.$email.'/labelling/labelling-01'` | L548 |
+| `portal/app/Controllers\Gfa.php` | `//return redirect()->to('https://nora.GetFundedAfrica.ci/portal/gfa/learning');` | L550 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup Content ";` | L574 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup Content ";` | L594 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Ticket Section";` | L620 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Ticket Section";` | L637 |
+| `portal/app/Controllers\Gfa.php` | `$this->sendMail("$recipient_email", "<p>Dear $name, </p> <div style='padding:8px 0px'>$message</div> <p style='padding-bottom:0px; margin-bottom:0px;'>Best regards,</p> GetFundedAfrica Admin.", "Help Desk Response");` | L729 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Contact Admin";` | L763 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Contact Admin";` | L807 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Contact Admin";` | L846 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Chat App System";` | L892 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Notify Inbox";` | L1029 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "DealRoom";` | L1050 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Login GetFundedAfrica";` | L1121 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Forgot Password  ";` | L1135 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Corperate Partners ";` | L1147 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup Content ";` | L1167 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Invite Users Registration ";` | L1186 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Profile ";` | L1206 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Corperate Startups Connection ";` | L1234 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage CSR ";` | L1253 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Corperate Mentor Match ";` | L1275 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update CSR - GetFundedAfrica";` | L1295 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Dashboard ";` | L1320 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Task - GetFundedAfrica";` | L1514 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Quiz - GetFundedAfrica";` | L1528 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Task Section - GetFundedAfrica";` | L1541 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Quiz Section - GetFundedAfrica";` | L1554 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = " Learning Quiz";` | L1584 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = " Learning Quiz";` | L1671 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = " Learning Task";` | L1696 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = " Learning Quiz";` | L1721 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Task Questions - GetFundedAfrica";` | L1861 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Quiz Questions - GetFundedAfrica";` | L1878 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Task Questions - GetFundedAfrica";` | L1893 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Quiz Questions - GetFundedAfrica";` | L1907 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Task - GetFundedAfrica";` | L1967 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Quiz - GetFundedAfrica";` | L1982 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Lesson - GetFundedAfrica";` | L2546 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Lesson - GetFundedAfrica";` | L2562 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Section - GetFundedAfrica";` | L2577 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Section - GetFundedAfrica";` | L2591 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Lesson - GetFundedAfrica";` | L2605 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Course - GetFundedAfrica";` | L2618 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Lesson - GetFundedAfrica";` | L2632 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = " Learning Course";` | L2650 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = " Learning Course";` | L2691 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Course - GetFundedAfrica";` | L2714 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Course - GetFundedAfrica";` | L2728 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Course - GetFundedAfrica";` | L2742 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Course - GetFundedAfrica";` | L2756 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Course Section - GetFundedAfrica";` | L2770 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Lesson - GetFundedAfrica";` | L2784 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Course - GetFundedAfrica";` | L2798 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Course - GetFundedAfrica";` | L2812 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Learning Skills";` | L2866 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Corperate Profile ";` | L2929 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Corperate Investor Match ";` | L2952 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup News ";` | L3027 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup and Corporate Match ";` | L3040 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add CSR ";` | L3188 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Event ";` | L3209 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Cohort ";` | L3229 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Event ";` | L3249 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Event";` | L3270 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "All Weekely Report ";` | L3299 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Revenue Report ";` | L3330 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Analytics Startups Registration ";` | L3353 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Startups Registration ";` | L3374 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Event Applied ";` | L3395 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "CSR Apply ";` | L3427 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "CSR Apply ";` | L3450 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "CSR Apply ";` | L3475 |
+| `portal/app/Controllers\Gfa.php` | `<a href='https://fg-skillnovation.alat.ng'><img src='https://nora.GetFundedAfrica.ci/nigeria/wemabank/img/logo/fgn-alat-logo.jpg'></a><br>` | L3558 |
+| `portal/app/Controllers\Gfa.php` | `<p><a href='https://fgnalat.GetFundedAfrica.com/portal/'><i>Click here to login with your details</i></a></p>` | L3572 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "CStartup Corporate Details ";` | L3639 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Change Password";` | L3680 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup Corporate Details ";` | L3746 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup and Investor Match - GetFundedAfrica";` | L3776 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Investor - GetFundedAfrica";` | L3937 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Job Seeker Details  ";$email  = session()->get('email') ;` | L3961 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup Hire Details ";` | L3963 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup Mentor Details ";` | L3988 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Report Details ";` | L4010 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Story ";` | L4032 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";` | L4130 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";` | L4174 |
+| `portal/app/Controllers\Gfa.php` | `// https://fgnalat.GetFundedAfrica.com/testportal/gfa/startup_website?id=303579` | L4248 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Report ";` | L4261 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Tell your story ";` | L4415 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Event ";` | L4439 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Event ";` | L4463 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "CSR ";` | L4506 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Event - GetFundedAfrica";` | L4538 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = str_replace("\\","'",$checkYourStory[0]['title'])."";` | L4568 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Tell your story ";` | L4607 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Tell your story ";` | L4631 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Data and Insight ";` | L4655 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Microsoft Startup and Corporate Match ";` | L4675 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "All Events ";` | L4695 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "All Events ";` | L4718 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "All Jobs ";` | L4742 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "All Stories ";` | L4765 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "DealRoom";` | L4787 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "DealRoom ";` | L4829 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br>";` | L4920 |
+| `portal/app/Controllers\Gfa.php` | `$this->sendMail("info@getfundedafrica.com", $message,$subject);` | L4933 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br>";` | L4966 |
+| `portal/app/Controllers\Gfa.php` | `$message .= '<p><a href="https://nora.GetFundedAfrica.ci/portal/uploads/files/'.$this->gfa_model->getFileUploadedById($n)[0]['File'].'">'.$this->gfa_model->getFileUploadedById($n)[0]['Title'].'</a></p>';` | L4986 |
+| `portal/app/Controllers\Gfa.php` | `$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@getfundedafrica.com">info@getfundedafrica.com</a>. Additionally, you can log in to your investor account on GetFundedAfrica'.'s platform <a href="http://GetFundedAfrica.com/portal/">here</a> to explore more startup opportunities.</p>` | L4990 |
+| `portal/app/Controllers\Gfa.php` | `<p>GetFundedAfrica<br>` | L4996 |
+| `portal/app/Controllers\Gfa.php` | `GetFundedAfrica Investment App</p>` | L4999 |
+| `portal/app/Controllers\Gfa.php` | `//$this->sendMail("info@GetFundedAfrica.com", $message,$subject);` | L5004 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://investorsfinder.GetFundedAfrica.com/images/logo-1.png'></a><br>";` | L5054 |
+| `portal/app/Controllers\Gfa.php` | `$message .= '<p><a href="https://nora.GetFundedAfrica.ci/portal/uploads/files/'.$this->gfa_model->getFileUploadedById($n)[0]['File'].'">'.$this->gfa_model->getFileUploadedById($n)[0]['Title'].'</a></p>';` | L5073 |
+| `portal/app/Controllers\Gfa.php` | `$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@getfundedafrica.com">info@getfundedafrica.com</a>. Additionally, you can log in to your investor account on GetFundedAfrica'.'s platform <a href="http://GetFundedAfrica.com/portal/">here</a> to explore more startup opportunities.</p>` | L5077 |
+| `portal/app/Controllers\Gfa.php` | `<p>GetFundedAfrica<br>` | L5083 |
+| `portal/app/Controllers\Gfa.php` | `GetFundedAfrica Investment App</p>` | L5086 |
+| `portal/app/Controllers\Gfa.php` | `//$this->sendMail("info@GetFundedAfrica.com", $message,$subject);` | L5091 |
+| `portal/app/Controllers\Gfa.php` | `//$this->sendMail("info@GetFundedAfrica.com", $message,$subject);` | L5102 |
+| `portal/app/Controllers\Gfa.php` | `//                         $response_data['message'] = "<center><font size=2 color=red>Votre compte a été désactivé. Veuillez contacter l’administrateur de la plateforme par courriel: nora@GetFundedAfrica.ci.` | L5274 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "User Login \| GetFundedAfrica";` | L5284 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Dashboard ";` | L5310 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Dashboard ";` | L5660 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Cohort ";` | L5703 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Cohort ";` | L5723 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Cohort ";` | L5742 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Admin/Users";` | L5762 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Invite Users Registration ";` | L5795 |
+| `portal/app/Controllers\Gfa.php` | `<a href='https://getfundedafrica.com/' style='display: inline-block; margin-bottom: 20px;'>` | L5846 |
+| `portal/app/Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L5847 |
+| `portal/app/Controllers\Gfa.php` | `<strong>info@getfundedafrica.com</strong></p>` | L5862 |
+| `portal/app/Controllers\Gfa.php` | `<strong>The GetFundedAfrica Team</strong></p>` | L5865 |
+| `portal/app/Controllers\Gfa.php` | `$Url = "https://nora.GetFundedAfrica.ci/cohort/corporate/?org=" . str_replace(" ", "-", $Title_Extra);` | L5912 |
+| `portal/app/Controllers\Gfa.php` | `$Url = "https://nora.GetFundedAfrica.ci/cohort/corporate/?org=" . str_replace(" ", "-", $Title_Extra);` | L5973 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup and Corperate Match ";` | L6028 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup and Corperate Match ";` | L6053 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Stripe Payment \| Unleashified";` | L6147 |
+| `portal/app/Controllers\Gfa.php` | `<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L6719 |
+| `portal/app/Controllers\Gfa.php` | `has invited you to join GetFundedAfrica as a Startup/SME.</p>` | L6724 |
+| `portal/app/Controllers\Gfa.php` | `<p><br />=================Below is your GetFundedAfrica account login details===============</p>` | L6729 |
+| `portal/app/Controllers\Gfa.php` | `<p><a href='https://nora.GetFundedAfrica.ci/portal/'><i>Click here to login with your details</i></a></p>` | L6730 |
+| `portal/app/Controllers\Gfa.php` | `GetFundedAfrica Team` | L6741 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = lang('translation.Profile');` | L6767 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L6838 |
+| `portal/app/Controllers\Gfa.php` | `//nichole@GetFundedAfricafrica.com` | L6854 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L6884 |
+| `portal/app/Controllers\Gfa.php` | `//nichole@GetFundedAfricafrica.com` | L6899 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L6923 |
+| `portal/app/Controllers\Gfa.php` | `$this->sendMail('info@getfundedafrica.com', $message,$subject);` | L6933 |
+| `portal/app/Controllers\Gfa.php` | `<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L7115 |
+| `portal/app/Controllers\Gfa.php` | `has invited you to join the GetFundedAfrica Platform and manage the account.</p>` | L7120 |
+| `portal/app/Controllers\Gfa.php` | `<p><br />=================Below is your GetFundedAfrica account login details===============</p>` | L7125 |
+| `portal/app/Controllers\Gfa.php` | `<p><a href='https://fgnalat.GetFundedAfrica.com/portal/'><i>Click here to login with your details</i></a></p>` | L7126 |
+| `portal/app/Controllers\Gfa.php` | `GetFundedAfrica Team` | L7137 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Startup and Mentor Match - GetFundedAfrica";` | L7160 |
+| `portal/app/Controllers\Gfa.php` | `$url = 'https://getfundedafrica.com/email/gfajson.php';` | L8422 |
+| `portal/app/Controllers\Gfa.php` | `$url = 'https://getfundedafrica.com/email/sender.php';` | L8448 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Subscribe ";` | L8492 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Subscribe ";` | L8516 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Billing ";` | L8540 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";` | L8580 |
+| `portal/app/Controllers\Gfa.php` | `$this->sendMail('info@getfundedafrica.com', $message,$subject);` | L8590 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Promo Checkout ";` | L8605 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Checkout ";` | L8629 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Checkout ";` | L8656 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Subscribe ";` | L8657 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Perks - GetFundedAfrica";` | L8678 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Update Perks - GetFundedAfrica";` | L8692 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Perks Category- GetFundedAfrica";` | L8708 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Perks Redeemed - GetFundedAfrica";` | L8723 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Perks Redeem- GetFundedAfrica";` | L8738 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Manage Perks- GetFundedAfrica";` | L8754 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Perks - GetFundedAfrica ";` | L8769 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Perks - GetFundedAfrica ";` | L8786 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "All Events - GetFundedAfrica";` | L8801 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Perks - GetFundedAfrica ";` | L8826 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Add Perks - GetFundedAfrica ";` | L8839 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Perks  ";` | L8852 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Perks  ";` | L8873 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Mentor Profile ";` | L8888 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Corporate Profile ";` | L8909 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Investor Profile ";` | L8930 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "SME - GetFundedAfrica";` | L8952 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Mentor Dashboard by GetFundedAfrica";` | L9000 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Investor - GetFundedAfrica";` | L9028 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Sme - GetFundedAfrica";` | L9130 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Mentor - GetFundedAfrica";` | L9163 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9445 |
+| `portal/app/Controllers\Gfa.php` | `<p>Ceci est un e-mail automatisé pour vous informer qu'un mentor de la plateforme GetFundedAfrica a exprimé son intérêt pour une session approfondie avec vous. Veuillez trouver ci-dessous les détails de l'appel programmé :</p>` | L9448 |
+| `portal/app/Controllers\Gfa.php` | `<p>Veuillez vous connecter à votre compte GetFundedAfrica pour consulter les détails du mentor.</p>` | L9456 |
+| `portal/app/Controllers\Gfa.php` | `<p>Si vous avez des questions ou des préoccupations que notre équipe GFA peut vous aider à résoudre, n'hésitez pas à nous contacter à <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>` | L9458 |
+| `portal/app/Controllers\Gfa.php` | `<p>Cordialement,<br>L'équipe GetFundedAfrica !</p>";` | L9460 |
+| `portal/app/Controllers\Gfa.php` | `// $this->sendMail("investor@GetFundedAfrica.com", $message,$subject);` | L9462 |
+| `portal/app/Controllers\Gfa.php` | `$messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9466 |
+| `portal/app/Controllers\Gfa.php` | `<p>Nous vous remercions de l'intérêt que vous portez à \{$Startup_Company_Name\}, et si d'autres moyens peuvent vous être utiles, n'hésitez pas à nous contacter à <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>` | L9471 |
+| `portal/app/Controllers\Gfa.php` | `<p>Cordialement,<br>L'équipe GetFundedAfrica !</p>";` | L9473 |
+| `portal/app/Controllers\Gfa.php` | `//     $message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9537 |
+| `portal/app/Controllers\Gfa.php` | `//     <p>This is an automated email to notify you that an investor from GetFundedAfrica platform has shown interest in having a deep dive session with you. Please see below for scheduled call details:</p>` | L9540 |
+| `portal/app/Controllers\Gfa.php` | `//     <p>Please login to your GetFundedAfrica account to view the investor details. We suggest to conduct preliminary research about the investor to understand who they are and their investment criteria before the call to bring you one step closer to your fundraising success.</p>` | L9548 |
+| `portal/app/Controllers\Gfa.php` | `//     <p>Should you have any questions or concerns that our GFA team can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>` | L9550 |
+| `portal/app/Controllers\Gfa.php` | `//     <p>Cheerios,<br>GetFundedAfrica Team!</p>";` | L9552 |
+| `portal/app/Controllers\Gfa.php` | `//     //$this->sendMail("investor@GetFundedAfrica.com", $message,$subject);` | L9553 |
+| `portal/app/Controllers\Gfa.php` | `//     $messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9556 |
+| `portal/app/Controllers\Gfa.php` | `//     <p>We appreciate your interest in \{$Startup_Company_Name\}, and if there are other possible ways that GetFundedAfrica can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>` | L9561 |
+| `portal/app/Controllers\Gfa.php` | `//     <p>Cheerios!<br>GetFundedAfrica Team!</p>";` | L9563 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Investor - GetFundedAfrica";` | L9582 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Investor - GetFundedAfrica";` | L9642 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L9792 |
+| `portal/app/Controllers\Gfa.php` | `If you have general questions about our [products], check out our [knowledge_base] for walkthroughs and answers to FAQs. (if we don't have this part ready, we can skip it for now and just direct them to info@GetFundedAfrica.com)` | L9803 |
+| `portal/app/Controllers\Gfa.php` | `If you have any additional information that you think will help us to assist you, please feel free to reply to this email [<a href='mailto:investors@GetFundedAfrica.com'>investors@GetFundedAfrica.com</a>]</p>` | L9809 |
+| `portal/app/Controllers\Gfa.php` | `GetFundedAfrica Team!` | L9816 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9851 |
+| `portal/app/Controllers\Gfa.php` | `//$message .= '<br> <br>  <a href="https://nora.GetFundedAfrica.ci/portal/gfa/startupinvite/'.$investor_id.'/'.$startup_id.'">Click here to Accept</a>';` | L9855 |
+| `portal/app/Controllers\Gfa.php` | `$this->sendMail("investor@GetFundedAfrica.com", $message,$subject);` | L9857 |
+| `portal/app/Controllers\Gfa.php` | `$this->sendMail("info@getfundedafrica.com", $message,$subject);` | L9858 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Investor and Mentor Dashboard by GetFundedAfrica";` | L9876 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L9952 |
+| `portal/app/Controllers\Gfa.php` | `<p>Thank you again for your interest. If you have any questions or concerns, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>` | L9968 |
+| `portal/app/Controllers\Gfa.php` | `<p>Cheerios,<br>GetFundedAfrica Team!</p>" ;` | L9970 |
+| `portal/app/Controllers\Gfa.php` | `$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L10029 |
+| `portal/app/Controllers\Gfa.php` | `<p>This is an automated email to notify you that an investor from GetFundedAfrica platform has shown interest in having a deep dive session with you. Please see below for scheduled call details:</p>` | L10032 |
+| `portal/app/Controllers\Gfa.php` | `<p>Please login to your GetFundedAfrica account to view the investor details. We suggest to conduct preliminary research about the investor to understand who they are and their investment criteria before the call to bring you one step closer to your fundraising success.</p>` | L10040 |
+| `portal/app/Controllers\Gfa.php` | `<p>Should you have any questions or concerns that our GFA team can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>` | L10042 |
+| `portal/app/Controllers\Gfa.php` | `<p>Cheerios,<br>GetFundedAfrica Team!</p>";` | L10044 |
+| `portal/app/Controllers\Gfa.php` | `//$this->sendMail("investor@GetFundedAfrica.com", $message,$subject);` | L10045 |
+| `portal/app/Controllers\Gfa.php` | `$messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";` | L10048 |
+| `portal/app/Controllers\Gfa.php` | `<p>We appreciate your interest in \{$Startup_Company_Name\}, and if there are other possible ways that GetFundedAfrica can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>` | L10053 |
+| `portal/app/Controllers\Gfa.php` | `<p>Cheerios!<br>GetFundedAfrica Team!</p>";` | L10055 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Syndicate Information - GetFundedAfrica";` | L10071 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Syndicate a deals, fund - GetFundedAfrica";` | L10090 |
+| `portal/app/Controllers\Gfa.php` | `<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>` | L10189 |
+| `portal/app/Controllers\Gfa.php` | `has invited you to join the GetFundedAfrica Platform monitor and invest in adeal.</p>` | L10194 |
+| `portal/app/Controllers\Gfa.php` | `GetFundedAfrica Team` | L10203 |
+| `portal/app/Controllers\Gfa.php` | `$title['page_title'] = "Investor and Mentor Dashboard by GetFundedAfrica";` | L10227 |
+| `portal/app/Controllers\Gfa.php` | `$subject = 'Welcome to GetFundedAfrica – Your Account Details Inside';` | L10350 |
+| `portal/app/Controllers\Gfa.php` | `<a href='https://getfundedafrica.com/' style='display: inline-block; margin-bottom: 20px;'>` | L10354 |
+| `portal/app/Controllers\Gfa.php` | `<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>` | L10355 |
+| `portal/app/Controllers\Gfa.php` | `<p><strong>Welcome to GetFundedAfrica!</strong></p>` | L10358 |
+| `portal/app/Controllers\Gfa.php` | `<strong>info@getfundedafrica.com</strong></p>` | L10374 |
+| `portal/app/Controllers\Gfa.php` | `<strong>The GetFundedAfrica Team</strong></p>` | L10377 |
+| `portal/app/Controllers\Gfa.php` | `$subject = 'Welcome to GetFundedAfrica – Your Account Details Inside';` | L10489 |
+
+
+</details>
+
+---
+
+Tool use: **read_file**
+
+Read file: portal/app/Views/login.php
+
+---
+
+Tool use: **read_file**
+
+Read file: portal/app/Views/register.php
+
+---
+
+Tool use: **read_file**
+
+Read file: portal/app/Views/header_new.php
+
+---
+
+Tool use: **read_file**
+
+Read file: portal/app/Views/header_home.php
+
+---
+
+
+
+---
+
+
+Exact code changes for the portal directory:
+
+## **Portal Directory Rebranding - Exact Code Changes**
+
+### **PHASE 1: Controller Files**
+
+#### **File 1: `portal/app/Controllers/Gfa.php`**
+
+**Change 1: Login Page Title (Line 44)**
+```php
+// FROM:
+$data['page_title'] = "Login GetFundedAfrica";
+
+// TO:
+$data['page_title'] = "Login Communified";
+```
+
+**Change 2: Register Page Title (Line 51)**
+```php
+// FROM:
+$data['page_title'] = "Register GetFundedAfrica";
+
+// TO:
+$data['page_title'] = "Register Communified";
+```
+
+**Change 3: Register Sub Page Title (Line 58)**
+```php
+// FROM:
+$data['page_title'] = "Register GetFundedAfrica";
+
+// TO:
+$data['page_title'] = "Register Communified";
+```
+
+**Change 4: Help Desk Email Signature (Line 729)**
+```php
+// FROM:
+$this->sendMail("$recipient_email", "<p>Dear $name, </p> <div style='padding:8px 0px'>$message</div> <p style='padding-bottom:0px; margin-bottom:0px;'>Best regards,</p> GetFundedAfrica Admin.", "Help Desk Response");
+
+// TO:
+$this->sendMail("$recipient_email", "<p>Dear $name, </p> <div style='padding:8px 0px'>$message</div> <p style='padding-bottom:0px; margin-bottom:0px;'>Best regards,</p> Communified Admin.", "Help Desk Response");
+```
+
+**Change 5: Update CSR Page Title (Line 1295)**
+```php
+// FROM:
+$title['page_title'] = "Update CSR - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Update CSR - Communified";
+```
+
+**Change 6: Update Task Page Title (Line 1514)**
+```php
+// FROM:
+$title['page_title'] = "Update Task - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Update Task - Communified";
+```
+
+**Change 7: Update Quiz Page Title (Line 1528)**
+```php
+// FROM:
+$title['page_title'] = "Update Quiz - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Update Quiz - Communified";
+```
+
+**Change 8: Manage Task Section Page Title (Line 1541)**
+```php
+// FROM:
+$title['page_title'] = "Manage Task Section - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Manage Task Section - Communified";
+```
+
+**Change 9: Manage Quiz Section Page Title (Line 1554)**
+```php
+// FROM:
+$title['page_title'] = "Manage Quiz Section - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Manage Quiz Section - Communified";
+```
+
+**Change 10: Update Task Questions Page Title (Line 1861)**
+```php
+// FROM:
+$title['page_title'] = "Update Task Questions - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Update Task Questions - Communified";
+```
+
+**Change 11: Update Quiz Questions Page Title (Line 1878)**
+```php
+// FROM:
+$title['page_title'] = "Update Quiz Questions - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Update Quiz Questions - Communified";
+```
+
+**Change 12: Add Task Questions Page Title (Line 1893)**
+```php
+// FROM:
+$title['page_title'] = "Add Task Questions - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Add Task Questions - Communified";
+```
+
+**Change 13: Add Quiz Questions Page Title (Line 1907)**
+```php
+// FROM:
+$title['page_title'] = "Add Quiz Questions - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Add Quiz Questions - Communified";
+```
+
+**Change 14: Add Task Page Title (Line 1967)**
+```php
+// FROM:
+$title['page_title'] = "Add Task - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Add Task - Communified";
+```
+
+**Change 15: Add Quiz Page Title (Line 1982)**
+```php
+// FROM:
+$title['page_title'] = "Add Quiz - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Add Quiz - Communified";
+```
+
+**Change 16: Add Lesson Page Titles (Lines 2546, 2562, 2605, 2632)**
+```php
+// FROM:
+$title['page_title'] = "Add Lesson - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Add Lesson - Communified";
+```
+(Apply to all 4 instances)
+
+**Change 17: Add Section Page Titles (Lines 2577, 2591)**
+```php
+// FROM:
+$title['page_title'] = "Add Section - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Add Section - Communified";
+```
+(Apply to both instances)
+
+**Change 18: Add Course Page Title (Line 2618)**
+```php
+// FROM:
+$title['page_title'] = "Add Course - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Add Course - Communified";
+```
+
+**Change 19: Manage Course Page Titles (Lines 2714, 2728, 2742, 2756, 2798, 2812)**
+```php
+// FROM:
+$title['page_title'] = "Manage Course - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Manage Course - Communified";
+```
+(Apply to all 6 instances)
+
+**Change 20: Manage Course Section Page Title (Line 2770)**
+```php
+// FROM:
+$title['page_title'] = "Manage Course Section - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Manage Course Section - Communified";
+```
+
+**Change 21: Manage Lesson Page Title (Line 2784)**
+```php
+// FROM:
+$title['page_title'] = "Manage Lesson - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Manage Lesson - Communified";
+```
+
+**Change 22: Startup and Investor Match Page Title (Line 3776)**
+```php
+// FROM:
+$title['page_title'] = "Startup and Investor Match - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Startup and Investor Match - Communified";
+```
+
+**Change 23: Investor Page Title (Line 3937)**
+```php
+// FROM:
+$title['page_title'] = "Investor - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Investor - Communified";
+```
+
+**Change 24: Update Event Page Title (Line 4538)**
+```php
+// FROM:
+$title['page_title'] = "Update Event - GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "Update Event - Communified";
+```
+
+**Change 25: User Login Page Title (Line 5284)**
+```php
+// FROM:
+$title['page_title'] = "User Login | GetFundedAfrica";
+
+// TO:
+$title['page_title'] = "User Login | Communified";
+```
+
+**Change 26: Email Logo in Messages (Line 4130, 4174)**
+```php
+// FROM:
+$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";
+
+// TO:
+$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/communified-logo.png'></a><br>";
+```
+(Note: Update domain URLs if changing from GetFundedAfrica.ci)
+
+**Change 27: Email Logo in Investor Messages (Lines 4920, 4966, 5054)**
+```php
+// FROM:
+$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br>";
+
+// TO:
+$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/communified-logo.png'></a><br>";
+```
+(Note: Update domain URLs if changing)
+
+**Change 28: Email Content - Investor Messages (Lines 4990, 4996, 4999)**
+```php
+// FROM:
+$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@getfundedafrica.com">info@getfundedafrica.com</a>. Additionally, you can log in to your investor account on GetFundedAfrica'.'s platform <a href="http://GetFundedAfrica.com/portal/">here</a> to explore more startup opportunities.</p>
+	<p>GetFundedAfrica<br>
+	GetFundedAfrica Investment App</p>
+
+// TO:
+$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@communified.com">info@communified.com</a>. Additionally, you can log in to your investor account on Communified'.'s platform <a href="http://communified.com/portal/">here</a> to explore more startup opportunities.</p>
+	<p>Communified<br>
+	Communified Investment App</p>
+```
+(Apply to lines 4990, 4996, 4999, and similar instances at 5077, 5083, 5086)
+
+**Change 29: Email Logo in HTML Email (Line 5847)**
+```php
+// FROM:
+<img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>
+
+// TO:
+<img src='https://communified.com/assets/images/communified-logo.png' alt='Communified Logo' style='width: 150px; height: auto;'>
+```
+(Note: Update domain if changing)
+
+**Change 30: Email Logo References (Lines 6719, 6838, 6884, 6923, 7115, 8580, 9445)**
+```php
+// FROM:
+$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";
+
+// TO:
+$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/communified-logo.png'></a> <br><br>";
+```
+(Apply to all instances - update domain if changing)
+
+---
+
+### **PHASE 2: View Files - Headers & Logos**
+
+#### **File 2: `portal/app/Views/header.php`**
+
+**Change: Favicon (Line 11)**
+```php
+// FROM:
+<link rel="shortcut icon" type="image/x-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">
+
+// TO:
+<link rel="shortcut icon" type="image/x-icon" href="https://communified.com/assets/images/communified-logo.png">
+```
+(Note: Update domain if changing)
+
+#### **File 3: `portal/app/Views/header_home.php`**
+
+**Change 1: Apple Touch Icon (Line 8)**
+```php
+// FROM:
+<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">
+
+// TO:
+<link rel="apple-touch-icon" href="https://communified.com/assets/images/communified-logo.png">
+```
+
+**Change 2: Favicon (Line 9)**
+```php
+// FROM:
+<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">
+
+// TO:
+<link rel="icon" href="https://communified.com/assets/images/communified-logo.png" sizes="32x32" type="image/png">
+```
+
+**Change 3: Logo Image (Line 58)**
+```php
+// FROM:
+<img src="<?php echo base_url('public/assets/images/gfa-logo.png'); ?>">
+
+// TO:
+<img src="<?php echo base_url('public/assets/images/communified-logo.png'); ?>">
+```
+
+#### **File 4: `portal/app/Views/header_new.php`**
+
+**Change: Favicon (Line 13)**
+```php
+// FROM:
+<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">
+
+// TO:
+<link rel="icon" href="https://communified.com/assets/images/communified-logo.png" sizes="32x32" type="image/png">
+```
+
+#### **File 5: `portal/app/Views/header_ext.php`**
+
+**Change 1: Apple Touch Icon (Line 11)**
+```php
+// FROM:
+<link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">
+
+// TO:
+<link rel="apple-touch-icon" href="https://communified.com/assets/images/communified-logo.png">
+```
+
+**Change 2: Favicon (Line 12)**
+```php
+// FROM:
+<link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">
+
+// TO:
+<link rel="icon" href="https://communified.com/assets/images/communified-logo.png" sizes="32x32" type="image/png">
+```
+
+---
+
+### **PHASE 3: View Files - Login & Registration**
+
+#### **File 6: `portal/app/Views/login.php`**
+
+**Change: Logo Image (Line 16)**
+```php
+// FROM:
+<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">
+
+// TO:
+<img src="https://communified.com/assets/images/communified-logo.png" width="120px" height="120px">
+```
+
+**Change: Help Link (Line 52)**
+```php
+// FROM:
+<a href="https://getfundedafrica.com/register/ticket.php"><?php echo lang('translation.Help'); ?></a>
+
+// TO:
+<a href="https://communified.com/register/ticket.php"><?php echo lang('translation.Help'); ?></a>
+```
+
+**Change: Register Link (Line 57)**
+```php
+// FROM:
+<p class="text-center mt-2"><a href="https://getfundedafrica.com/register"><span><?php echo lang('translation.New on our platform?'); ?><br><?php echo lang('translation.Open an Account'); ?></span></a></p>
+
+// TO:
+<p class="text-center mt-2"><a href="https://communified.com/register"><span><?php echo lang('translation.New on our platform?'); ?><br><?php echo lang('translation.Open an Account'); ?></span></a></p>
+```
+
+#### **File 7: `portal/app/Views/register.php`**
+
+**Change: Logo Image (Line 11)**
+```php
+// FROM:
+<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">
+
+// TO:
+<img src="https://communified.com/assets/images/communified-logo.png" width="120px" height="120px">
+```
+
+#### **File 8: `portal/app/Views/register_sub.php`**
+
+**Change: Logo Image (Line 11)**
+```php
+// FROM:
+<img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">
+
+// TO:
+<img src="https://communified.com/assets/images/communified-logo.png" width="120px" height="120px">
+```
+
+---
+
+### **PHASE 4: View Files - Menu & Navigation**
+
+#### **File 9: `portal/app/Views/menu_new.php`**
+
+**Change: Logo Image (Line 8)**
+```php
+// FROM:
+<center><a href="<?php echo base_url('gfa/dashboard'); ?>"><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></a></center>
+
+// TO:
+<center><a href="<?php echo base_url('gfa/dashboard'); ?>"><img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>" align="center"></a></center>
+```
+
+#### **File 10: `portal/app/Views/menu_new_corperate.php`**
+
+**Change: Logo Image (Line 5)**
+```php
+// FROM:
+<center><a href="https://getfundedafrica.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></a></center>
+
+// TO:
+<center><a href="https://communified.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/communified-logo.png" align="center"></a></center>
+```
+
+#### **File 11: `portal/app/Views/menu_newold.php`**
+
+**Change: Logo Image (Line 5)**
+```php
+// FROM:
+<center><a href="https://getfundedafrica.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></a></center>
+
+// TO:
+<center><a href="https://communified.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/communified-logo.png" align="center"></a></center>
+```
+
+#### **File 12: `portal/app/Views/menu_admin.php`**
+
+**Change: Logo Image (Line 8)**
+```php
+// FROM:
+<center><a href="<?php echo base_url('gfa/dashboard'); ?>gfa/dashboard"><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></a></center>
+
+// TO:
+<center><a href="<?php echo base_url('gfa/dashboard'); ?>gfa/dashboard"><img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>" align="center"></a></center>
+```
+
+#### **File 13: `portal/app/Views/menu-assets-new.php`**
+
+**Change: Logo Image (Line 21)**
+```php
+// FROM:
+<img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" width="100%">
+
+// TO:
+<img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>" width="100%">
+```
+
+#### **File 14: `portal/app/Views/menu-assets-new-page.php`**
+
+**Change: Logo Image (Line 21)**
+```php
+// FROM:
+<img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" width="100%">
+
+// TO:
+<img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>" width="100%">
+```
+
+---
+
+### **PHASE 5: View Files - Other Pages**
+
+#### **File 15: `portal/app/Views/index.php`**
+
+**Change: Logo Image (Line 16)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
+```
+
+#### **File 16: `portal/app/Views/startup_profile.php`**
+
+**Change: Logo Image (Line 14)**
+```php
+// FROM:
+<img src="https://getfundedafrica.com/portal/assets/images/logo.png">
+
+// TO:
+<img src="https://communified.com/portal/assets/images/communified-logo.png">
+```
+
+#### **File 17: `portal/app/Views/startups_profile.php`**
+
+**Change: Logo Image (Line 14)**
+```php
+// FROM:
+<img src="https://getfundedafrica.com/portal/assets/images/logo.png">
+
+// TO:
+<img src="https://communified.com/portal/assets/images/communified-logo.png">
+```
+
+#### **File 18: `portal/app/Views/startup_investor_details.php`**
+
+**Change 1: Email Address (Line 346)**
+```php
+// FROM:
+<br>1. Upload maximum of five minutes video pitch introducing your Startup/SME in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@getfundedafrica.com">media@getfundedafrica.com</a> to tell your story.
+
+// TO:
+<br>1. Upload maximum of five minutes video pitch introducing your Startup/SME in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@communified.com">media@communified.com</a> to tell your story.
+```
+
+**Change 2: URL References (Line 348)**
+```php
+// FROM:
+<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.getfundedafrica.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.getfundedafrica.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.
+
+// TO:
+<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.communified.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.communified.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.
+```
+
+#### **File 19: `portal/app/Views/startup-investor.php`**
+
+**Change: URL Reference (Line 122)**
+```php
+// FROM:
+It seems you don't have an active subscripion, pls <a href="https://getfundedafrica.com/portal/gfa/subscribe">click here</a> to subscribe to view all investors.
+
+// TO:
+It seems you don't have an active subscripion, pls <a href="https://communified.com/portal/gfa/subscribe">click here</a> to subscribe to view all investors.
+```
+
+#### **File 20: `portal/app/Views/subscribedf.php`**
+
+**Change: URL Reference (Line 488)**
+```php
+// FROM:
+<a href="https://getfundedafrica.com/contact-us.php" target="_blank" class="btn btn-primary w-100" tabindex="4">Contact</a>
+
+// TO:
+<a href="https://communified.com/contact-us.php" target="_blank" class="btn btn-primary w-100" tabindex="4">Contact</a>
+```
+
+#### **File 21: `portal/app/Views/sme_register.php`**
+
+**Change: Logo Image (Line 14)**
+```php
+// FROM:
+<img src="https://getfundedafrica.com/images/logo-1.png">
+
+// TO:
+<img src="https://communified.com/images/communified-logo.png">
+```
+
+#### **File 22: `portal/app/Views/shop.php`**
+
+**Change: Logo Image (Line 5)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/logo/communified-logo.png">
+```
+
+#### **File 23: `portal/app/Views/forgotpassword.php`**
+
+**Change: Logo Image (Line 16)**
+```php
+// FROM:
+<img src="<?php echo base_url("public/assets/images/logo/GFA-Logo.png"); ?>">
+
+// TO:
+<img src="<?php echo base_url("public/assets/images/logo/communified-logo.png"); ?>">
+```
+
+#### **File 24: `portal/app/Views/invite_confirm.php`**
+
+**Change: Logo Image (Line 16)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/logo/communified-logo.png">
+```
+
+#### **File 25: `portal/app/Views/microsoft.php`**
+
+**Change: Logo Image (Line 16)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/logo/communified-logo.png">
+```
+
+#### **File 26: `portal/app/Views/updateprofile.php`**
+
+**Change: Logo Image (Line 11)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
+```
+
+#### **File 27: `portal/app/Views/subscribex.php`**
+
+**Change: Logo Image (Line 12)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
+```
+
+#### **File 28: `portal/app/Views/complete_sub.php`**
+
+**Change: Logo Image (Line 11)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
+```
+
+#### **File 29: `portal/app/Views/complete_subxp.php`**
+
+**Change: Logo Image (Line 11)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
+```
+
+#### **File 30: `portal/app/Views/complete_subxx.php`**
+
+**Change: Logo Image (Line 11)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
+```
+
+#### **File 31: `portal/app/Views/application.php`**
+
+**Change: Logo Image (Line 11)**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
+```
+
+---
+
+### **PHASE 6: Subdirectory Menu Files**
+
+Apply the same logo change pattern to these files:
+
+- `portal/app/Views/mentor/menu_new.php` (Line 4)
+- `portal/app/Views/mentor/menu_investor.php` (Line 4)
+- `portal/app/Views/investor/menu_new.php` (Line 4)
+- `portal/app/Views/investor/menu_investor.php` (Line 4)
+- `portal/app/Views/corperate/menu_new.php` (Line 4)
+- `portal/app/Views/corperate/menu_corporate.php` (Line 4)
+- `portal/app/Views/csdinvestor/menu_new.php` (Line 4)
+- `portal/app/Views/csdinvestor/menu_investor.php` (Line 4)
+- `portal/app/Views/oldmentor/menu_new.php` (Line 4)
+- `portal/app/Views/admin/menu_admin (1).php` (Line 8)
+- `portal/app/Views/admin/matchdata.php` (Line 291)
+- `portal/app/Views/admin07070/matchdata.php` (Line 291)
+- `portal/app/Views/accelerator.php` (Line 14)
+- `portal/app/Views/accelerators.php` (Line 14)
+- `portal/app/Views/corperate_profile.php` (Line 14)
+- `portal/app/Views/corporate_profile.php` (Line 14)
+- `portal/app/Views/startup_webinar.php` (Line 12)
+- `portal/app/Views/startup_profile_freshworks.php` (Line 14)
+- `portal/app/Views/schedule.php` (Line 19)
+- `portal/app/Views/startup_connect.php` (Line 59)
+
+**Pattern for all menu files:**
+```php
+// FROM:
+<img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png">
+
+// TO:
+<img src="<?php echo base_url(); ?>assets/images/logo/communified-logo.png">
+```
+
+Or for base_url('public/assets/images/logo/GFA-Logo.png'):
+```php
+// TO:
+<img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>">
+```
+
+---
+
+### **PHASE 7: Logo File Management**
+
+1. Copy `communified-logo.png` to:
+   - `portal/public/assets/images/communified-logo.png`
+   - `portal/public/assets/images/logo/communified-logo.png`
+   - `portal/assets/images/communified-logo.png` (if this directory exists)
+   - `portal/assets/images/logo/communified-logo.png` (if this directory exists)
+
+2. Optionally rename or archive old logo files:
+   - `GFA-Logo.png` → `communified-logo.png`
+   - `gfa-logo.png` → `communified-logo.png`
+   - `logo.png` → `communified-logo.png`
+
+---
+
+## **Summary**
+
+- 1 Controller file: `Gfa.php` (30+ changes)
+- 30+ View files with logo/branding updates
+- Multiple page titles to update
+- Email templates to update
+- Logo file locations to update
+
+Note: If you're changing the domain from `getfundedafrica.com` to `communified.com`, update all URL references accordingly. The changes above assume you want to keep the domain for now but update branding text and logos.
+
+Should I provide changes for specific files, or do you want to switch to agent mode to apply these automatically?
+
+---
+
+_**User (2025-11-14 16:51Z)**_
+
+Continue the rebranding on @register 
+
+---
+
+_**Assistant (default)**_
+
+
+
+---
+

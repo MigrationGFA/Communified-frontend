@@ -55,7 +55,7 @@ table, th, td {
      <div class="col-lg-1">
      <a class="brand-logo" href="<?php echo base_url(); ?>">
      
-      <img src="<?php echo base_url('public/assets/images/gfa-logo.png'); ?>">
+<img src="<?php echo base_url('public/assets/images/communified-logo.png'); ?>">
     </a>
     </div>-->
     <br><!--

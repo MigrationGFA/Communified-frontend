@@ -13,8 +13,7 @@
           <div class="auth-wrapper auth-cover">
             <div class="auth-inner row m-0">
               <!-- Brand logo-->
-                <img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
-              
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
               <!-- /Brand logo-->
               <!-- Left Text-->
               <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">

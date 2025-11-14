@@ -18,7 +18,7 @@
   
   <div class="app-brand demo ">
       <a href="gfa/" class="app-brand-link">      
-     <img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" width="100%">
+<img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>" width="100%">
     </a>
   </div>
 

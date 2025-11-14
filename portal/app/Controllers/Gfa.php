@@ -41,21 +41,21 @@ class Gfa extends BaseController {
     }
 
     public function index() {
-        $data['page_title'] = "Login GetFundedAfrica";
+$data['page_title'] = "Login Communified";
         echo view('header_home',$data);
         echo view('login');
         echo view('header_footer');
     }
     
     public function register() {
-        $data['page_title'] = "Register GetFundedAfrica";
+$data['page_title'] = "Register Communified";
         echo view('header_home',$data);
         echo view('register');
         echo view('header_footer');
     }
     
     public function register_sub() {
-        $data['page_title'] = "Register GetFundedAfrica";
+$data['page_title'] = "Register Communified";
         echo view('header_home',$data);
         echo view('register_sub');
         echo view('header_footer');
@@ -726,7 +726,7 @@ public function resource_details($id)
             $name = $this->gfa_model->getGuestTicketEmail($ticket_id)[0]['full_name'];
             $this->gfa_model->updateTicketStatus('status', 1, $ticket_id); 
             $this->gfa_model->insertSMTicket($data_story); 
-            $this->sendMail("$recipient_email", "<p>Dear $name, </p> <div style='padding:8px 0px'>$message</div> <p style='padding-bottom:0px; margin-bottom:0px;'>Best regards,</p> GetFundedAfrica Admin.", "Help Desk Response");
+            $this->sendMail("$recipient_email", "<p>Dear $name, </p> <div style='padding:8px 0px'>$message</div> <p style='padding-bottom:0px; margin-bottom:0px;'>Best regards,</p> Communified Admin.", "Help Desk Response");
             echo "Email sent successfully";
         } else {
         
@@ -1292,7 +1292,7 @@ public function notify_inbox($ref_id="")
 		
 	 $email  = session()->get('email') ;
  if(($email == '')){ return redirect()->to(base_url('gfa/login')); }
-		$title['page_title'] = "Update CSR - GetFundedAfrica";
+$title['page_title'] = "Update CSR - Communified";
 		$data['id'] = $id;
 
 		$data['email'] = $email;
@@ -1511,7 +1511,7 @@ public function edit_task($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Update Task - GetFundedAfrica";
+$title['page_title'] = "Update Task - Communified";
         $data['id'] =$id;
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
@@ -1525,7 +1525,7 @@ public function edit_task($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Update Quiz - GetFundedAfrica";
+$title['page_title'] = "Update Quiz - Communified";
         $data['id'] =$id;
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
@@ -1538,8 +1538,7 @@ public function edit_task($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Task Section - GetFundedAfrica";
-
+$title['page_title'] = "Manage Task Section - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -1551,8 +1550,7 @@ public function edit_task($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Quiz Section - GetFundedAfrica";
-
+$title['page_title'] = "Manage Quiz Section - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -1858,7 +1856,7 @@ public function edit_task_ques($ref_id="")
 
 {
     $email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-    $title['page_title'] = "Update Task Questions - GetFundedAfrica";
+$title['page_title'] = "Update Task Questions - Communified";
     $data['ref_id'] = $ref_id;
 	$data['getRef'] = $ref_id;
     $data['getQuizTitle'] = $this->gfa_model->getTaskTitle($ref_id); 
@@ -1875,7 +1873,7 @@ public function edit_quiz_ques($ref_id="")
 
 {
     $email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-    $title['page_title'] = "Update Quiz Questions - GetFundedAfrica";
+$title['page_title'] = "Update Quiz Questions - Communified";
     $data['ref_id'] = $ref_id;
     $data['getQuizTitle'] = $this->gfa_model->getQuizTitle($ref_id); 
     echo view('header_new',$title);
@@ -1890,7 +1888,7 @@ public function add_task_ques($ref_id="")
 
 {
     $email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-    $title['page_title'] = "Add Task Questions - GetFundedAfrica";
+$title['page_title'] = "Add Task Questions - Communified";
     $data['ref_id'] = $ref_id;
     echo view('header_new',$title);
     echo view('nav_new',$title);
@@ -1904,7 +1902,7 @@ public function add_task_ques($ref_id="")
 
 {
     $email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-    $title['page_title'] = "Add Quiz Questions - GetFundedAfrica";
+$title['page_title'] = "Add Quiz Questions - Communified";
     $data['ref_id'] = $ref_id;
     echo view('header_new',$title);
     echo view('nav_new',$title);
@@ -1964,8 +1962,7 @@ public function add_task()
 
 {
     $email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-    $title['page_title'] = "Add Task - GetFundedAfrica";
-
+$title['page_title'] = "Add Task - Communified";
     echo view('head_doc',$title);
     echo view('nav_new',$title);
     echo view('menu_admin',$title);
@@ -1979,8 +1976,7 @@ public function add_task()
 
 {
     $email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-    $title['page_title'] = "Add Quiz - GetFundedAfrica";
-
+$title['page_title'] = "Add Quiz - Communified";
     echo view('head_doc',$title);
     echo view('nav_new',$title);
     echo view('menu_admin',$title);
@@ -2543,7 +2539,7 @@ public function fetchSection()
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Add Lesson - GetFundedAfrica";
+$title['page_title'] = "Add Lesson - Communified";
 		$data['course_id'] = $course_id;
         $data['section_id'] = $section_id;
     	$data['lesson_id'] = $lesson_id;
@@ -2559,7 +2555,7 @@ public function fetchSection()
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Add Lesson - GetFundedAfrica";
+$title['page_title'] = "Add Lesson - Communified";
 		$data['course_id'] = $course_id;
         $data['section_id'] = $section_id;
 		echo view('head_doc',$title);
@@ -2574,7 +2570,7 @@ public function fetchSection()
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Add Section - GetFundedAfrica";
+$title['page_title'] = "Add Section - Communified";
         	$data['course_id'] = $course_id;
 		echo view('header_new',$title);
         echo view('nav_new',$title);
@@ -2588,8 +2584,7 @@ public function fetchSection()
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Add Section - GetFundedAfrica";
-
+$title['page_title'] = "Add Section - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -2602,8 +2597,7 @@ public function fetchSection()
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Add Lesson - GetFundedAfrica";
-
+$title['page_title'] = "Add Lesson - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -2615,8 +2609,7 @@ public function fetchSection()
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Add Course - GetFundedAfrica";
-
+$title['page_title'] = "Add Course - Communified";
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -2629,8 +2622,7 @@ public function fetchSection()
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Add Lesson - GetFundedAfrica";
-
+$title['page_title'] = "Add Lesson - Communified";
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -2711,7 +2703,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Course - GetFundedAfrica";
+$title['page_title'] = "Manage Course - Communified";
         $data['id'] =$id;
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
@@ -2725,7 +2717,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Course - GetFundedAfrica";
+$title['page_title'] = "Manage Course - Communified";
         $data['id'] =$id;
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
@@ -2739,7 +2731,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Course - GetFundedAfrica";
+$title['page_title'] = "Manage Course - Communified";
         $data['id'] =$id;
 		echo view('header_new',$title);
         echo view('nav_new',$title);
@@ -2753,7 +2745,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Course - GetFundedAfrica";
+$title['page_title'] = "Manage Course - Communified";
         $data['id'] =$id;
 		echo view('header_new',$title);
         echo view('nav_new',$title);
@@ -2767,8 +2759,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Course Section - GetFundedAfrica";
-
+$title['page_title'] = "Manage Course Section - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -2781,8 +2772,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Lesson - GetFundedAfrica";
-
+$title['page_title'] = "Manage Lesson - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -2795,8 +2785,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Course - GetFundedAfrica";
-
+$title['page_title'] = "Manage Course - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -2809,8 +2798,7 @@ public function course($id="")
 
 	{
 			$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('admin/login')); }		
-		$title['page_title'] = "Manage Course - GetFundedAfrica";
-
+$title['page_title'] = "Manage Course - Communified";
 		echo view('header_new',$title);
         echo view('nav_new',$title);
         echo view('menu_admin',$title);
@@ -3773,8 +3761,7 @@ public function course($id="")
 		
         $email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('gfa/login')); } 	
-		$title['page_title'] = "Startup and Investor Match - GetFundedAfrica";
-        
+$title['page_title'] = "Startup and Investor Match - Communified";        
         //Calculate Profile completed  startup name, industry, amount to raise, Hq Address, phone number, Anuual revenue, Employee size, linkined page url
 // 		 $email = $this->encrypt->decode($this->session->userdata('email')) ;
 		// if($this->gfa_model->getStartUpDetails($email)[0]['Primary_Contact_Name']!=""){
@@ -3934,7 +3921,7 @@ public function course($id="")
 	    $email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('gfa/login')); }  
 	
-		$title['page_title'] = "Investor - GetFundedAfrica";
+$title['page_title'] = "Investor - Communified";
 		$data['email'] =  $email;
         $data['login_type'] = session()->get('login_type') ;
         $data['account_type'] = $account_type = session()->get('account_type') ;
@@ -4535,7 +4522,7 @@ public function storypostpro()
 		
 		$email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('gfa/login')); }
-		$title['page_title'] = "Update Event - GetFundedAfrica";
+$title['page_title'] = "Update Event - Communified";
 		$data['id'] = $id;
 		$data['email'] = $email;
         $data['account_type'] = $account_type = session()->get('account_type');
@@ -4987,17 +4974,16 @@ foreach($id  as $key => $n ) {
 		}
 
 $message .= "<br><p><strong>============================================================<strong></p>";
-$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@getfundedafrica.com">info@getfundedafrica.com</a>. Additionally, you can log in to your investor account on GetFundedAfrica'.'s platform <a href="http://GetFundedAfrica.com/portal/">here</a> to explore more startup opportunities.</p>
+$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@getfundedafrica.com">info@getfundedafrica.com</a>. Additionally, you can log in to your investor account on Communified'.'s platform <a href="http://GetFundedAfrica.com/portal/">here</a> to explore more startup opportunities.</p>
 
 	<p>We appreciate your time and consideration, and we look forward to the possibility of working together.</p>
 	
 	<p>Best regards,</p>
 	
-	<p>GetFundedAfrica<br>
+	<p>Communified<br>
 	['.$name.']<br>
 	['.$companyName.']<br>
-	GetFundedAfrica Investment App</p>
-	
+	Communified Investment App</p>	
 	';
 
  $this->sendMail($InvestorEmail, $message,$subject);
@@ -5281,8 +5267,7 @@ $data_connection = array(
                     
 
                     
-                    $title['page_title'] = "User Login | GetFundedAfrica";
-
+$title['page_title'] = "User Login | Communified";
                     echo view('header_home',$title);
 
                     echo view('login', $response_data);

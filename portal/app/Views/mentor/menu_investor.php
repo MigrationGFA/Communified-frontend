@@ -1,7 +1,8 @@
 <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
       <div class="navbar-header">
-       <center><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center"></center>
+       <center><img src="<?php echo base_url(); ?>assets/images/logo/communified-logo.png"
+       align="center"></center>
 		
     </div><br> <br> <br>
       <div class="shadow-bottom"></div>
