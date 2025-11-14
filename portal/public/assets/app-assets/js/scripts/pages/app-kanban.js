@@ -25,7 +25,7 @@ $(function () {
     url: assetPath + 'data/kanban.json',
     success: function (data) {
       boards = data;
-    }
+    },
   });
 
   // Toggle add new input and actions
@@ -37,7 +37,7 @@ $(function () {
       monthSelectorType: 'static',
       altInput: true,
       altFormat: 'j F, Y',
-      dateFormat: 'Y-m-d'
+      dateFormat: 'Y-m-d',
     });
   }
 
@@ -47,7 +47,12 @@ $(function () {
       if (!option.id) {
         return option.text;
       }
-      var $badge = "<div class='badge " + $(option.element).data('color') + " rounded-pill'> " + option.text + '</div>';
+      var $badge =
+        "<div class='badge " +
+        $(option.element).data('color') +
+        " rounded-pill'> " +
+        option.text +
+        '</div>';
 
       return $badge;
     }
@@ -61,7 +66,7 @@ $(function () {
         templateSelection: renderLabels,
         escapeMarkup: function (es) {
           return es;
-        }
+        },
       });
     });
   }
@@ -70,10 +75,10 @@ $(function () {
   if (commentEditor.length) {
     new Quill('.comment-editor', {
       modules: {
-        toolbar: '.comment-toolbar'
+        toolbar: '.comment-toolbar',
       },
       placeholder: 'Write a Comment... ',
-      theme: 'snow'
+      theme: 'snow',
     });
   }
 
@@ -86,7 +91,7 @@ $(function () {
         id: 'board-dropdown',
         'data-bs-toggle': 'dropdown',
         'aria-haspopup': 'true',
-        'aria-expanded': 'false'
+        'aria-expanded': 'false',
       }) +
       "<div class='dropdown-menu dropdown-menu-end' aria-labelledby='board-dropdown'>" +
       "<a class='dropdown-item delete-board' href='#'> " +
@@ -112,7 +117,7 @@ $(function () {
         id: 'item-dropdown',
         ' data-bs-toggle': 'dropdown',
         'aria-haspopup': 'true',
-        'aria-expanded': 'false'
+        'aria-expanded': 'false',
       }) +
       "<div class='dropdown-menu dropdown-menu-end' aria-labelledby='item-dropdown'>" +
       "<a class='dropdown-item' href='#'>Copy task link</a>" +
@@ -147,7 +152,8 @@ $(function () {
       ? images
           .split(',')
           .map(function (img, index, arr) {
-            var $margin = margin !== undefined && index !== arr.length - 1 ? ' me-' + margin + '' : '';
+            var $margin =
+              margin !== undefined && index !== arr.length - 1 ? ' me-' + margin + '' : '';
 
             return (
               "<li class='avatar kanban-item-avatar" +
@@ -210,7 +216,7 @@ $(function () {
       enabled: true, // add a button to board for easy item creation
       content: '+ Add New Item', // text or html content of the board button
       class: 'kanban-title-button btn btn-default btn-xs', // default class of the button
-      footer: false // position the button on footer
+      footer: false, // position the button on footer
     },
     click: function (el) {
       var el = $(el);
@@ -224,7 +230,7 @@ $(function () {
           : dateObj.getDate() +
             ' ' +
             dateObj.toLocaleString('en', {
-              month: 'long'
+              month: 'long',
             }) +
             ', ' +
             year,
@@ -236,14 +242,14 @@ $(function () {
           e.stopPropagation();
         });
       }
-      $(document).on('click','.item-dropdown', function(e) {
-        flag = true
-      })
-      setTimeout(function(){
-        if(flag === false) {
+      $(document).on('click', '.item-dropdown', function (e) {
+        flag = true;
+      });
+      setTimeout(function () {
+        if (flag === false) {
           sidebar.modal('show');
         }
-      }, 50)
+      }, 50);
       sidebar.find('.update-item-form').on('submit', function (e) {
         e.preventDefault();
       });
@@ -279,7 +285,7 @@ $(function () {
         var currentBoard = $(".kanban-board[data-id='" + boardId + "']");
         kanban.addElement(boardId, {
           title: "<span class='kanban-text'>" + e.target[0].value + '</span>',
-          id: boardId + '-' + currentBoard.find('.kanban-item').length + 1
+          id: boardId + '-' + currentBoard.find('.kanban-item').length + 1,
         });
 
         currentBoard.find('.kanban-item:last-child .kanban-text').before(renderDropdown());
@@ -291,7 +297,7 @@ $(function () {
     },
     dragEl: function (el, source) {
       $(el).find('.item-dropdown, .item-dropdown .dropdown-menu.show').removeClass('show');
-    }
+    },
   });
 
   if (kanbanWrapper.length) {
@@ -345,8 +351,8 @@ $(function () {
     kanban.addBoards([
       {
         id: id,
-        title: value
-      }
+        title: value,
+      },
     ]);
     // Adds delete board option to new board & updates data-order
     $('.kanban-board:last-child').find('.kanban-board-header').append(renderBoardDropdown());

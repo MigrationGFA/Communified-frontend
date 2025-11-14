@@ -11,10 +11,15 @@
   'function' == typeof define && define.amd
     ? define(['jquery'], o)
     : 'object' == typeof module && module.exports
-    ? (module.exports = function (t, n) {
-        return void 0 === n && (n = 'undefined' != typeof window ? require('jquery') : require('jquery')(t)), o(n), n;
-      })
-    : o(jQuery);
+      ? (module.exports = function (t, n) {
+          return (
+            void 0 === n &&
+              (n = 'undefined' != typeof window ? require('jquery') : require('jquery')(t)),
+            o(n),
+            n
+          );
+        })
+      : o(jQuery);
 })(function (D) {
   'use strict';
   var N = 0;
@@ -52,7 +57,7 @@
         },
         callback_after_calculation: function (t) {
           return t;
-        }
+        },
       },
       j = {
         min: 'min',
@@ -79,7 +84,7 @@
         buttondown_class: 'button-down-class',
         buttonup_class: 'button-up-class',
         buttondown_txt: 'button-down-txt',
-        buttonup_txt: 'button-up-txt'
+        buttonup_txt: 'button-up-txt',
       };
     return this.each(function () {
       var i,
@@ -97,7 +102,7 @@
         d = 0,
         f = !1;
       function b() {
-        '' === i.prefix && (o = p.prefix.detach()), '' === i.postfix && (s = p.postfix.detach());
+        ('' === i.prefix && (o = p.prefix.detach()), '' === i.postfix && (s = p.postfix.detach()));
       }
       function h() {
         var t, n, o;
@@ -127,72 +132,76 @@
         if (i.booster) {
           var t = Math.pow(2, Math.floor(d / i.boostat)) * i.step;
           return (
-            i.maxboostedstep && t > i.maxboostedstep && ((t = i.maxboostedstep), (a = Math.round(a / t) * t)),
+            i.maxboostedstep &&
+              t > i.maxboostedstep &&
+              ((t = i.maxboostedstep), (a = Math.round(a / t) * t)),
             Math.max(i.step, t)
           );
         }
         return i.step;
       }
       function x() {
-        return 'number' == typeof i.firstclickvalueifempty ? i.firstclickvalueifempty : (i.min + i.max) / 2;
+        return 'number' == typeof i.firstclickvalueifempty
+          ? i.firstclickvalueifempty
+          : (i.min + i.max) / 2;
       }
       function g() {
         h();
         var t,
           n = (a = parseFloat(i.callback_before_calculation(p.input.val())));
-        isNaN(a) ? (a = x()) : ((t = v()), (a += t)),
+        (isNaN(a) ? (a = x()) : ((t = v()), (a += t)),
           null !== i.max && a > i.max && ((a = i.max), c.trigger('touchspin.on.max'), y()),
           p.input.val(i.callback_after_calculation(Number(a).toFixed(i.decimals))),
-          n !== a && c.trigger('change');
+          n !== a && c.trigger('change'));
       }
       function m() {
         h();
         var t,
           n = (a = parseFloat(i.callback_before_calculation(p.input.val())));
-        isNaN(a) ? (a = x()) : ((t = v()), (a -= t)),
+        (isNaN(a) ? (a = x()) : ((t = v()), (a -= t)),
           null !== i.min && a < i.min && ((a = i.min), c.trigger('touchspin.on.min'), y()),
           p.input.val(i.callback_after_calculation(Number(a).toFixed(i.decimals))),
-          n !== a && c.trigger('change');
+          n !== a && c.trigger('change'));
       }
       function w() {
-        y(),
+        (y(),
           (d = 0),
           (f = 'down'),
           c.trigger('touchspin.on.startspin'),
           c.trigger('touchspin.on.startdownspin'),
           (e = setTimeout(function () {
             t = setInterval(function () {
-              d++, m();
+              (d++, m());
             }, i.stepinterval);
-          }, i.stepintervaldelay));
+          }, i.stepintervaldelay)));
       }
       function _() {
-        y(),
+        (y(),
           (d = 0),
           (f = 'up'),
           c.trigger('touchspin.on.startspin'),
           c.trigger('touchspin.on.startupspin'),
           (r = setTimeout(function () {
             n = setInterval(function () {
-              d++, g();
+              (d++, g());
             }, i.stepinterval);
-          }, i.stepintervaldelay));
+          }, i.stepintervaldelay)));
       }
       function y() {
         switch ((clearTimeout(e), clearTimeout(r), clearInterval(t), clearInterval(n), f)) {
           case 'up':
-            c.trigger('touchspin.on.stopupspin'), c.trigger('touchspin.on.stopspin');
+            (c.trigger('touchspin.on.stopupspin'), c.trigger('touchspin.on.stopspin'));
             break;
           case 'down':
-            c.trigger('touchspin.on.stopdownspin'), c.trigger('touchspin.on.stopspin');
+            (c.trigger('touchspin.on.stopdownspin'), c.trigger('touchspin.on.stopspin'));
         }
-        (d = 0), (f = !1);
+        ((d = 0), (f = !1));
       }
       !(function () {
         if (c.data('alreadyinitialized')) return;
         if ((c.data('alreadyinitialized', !0), (N += 1), c.data('spinnerid', N), !c.is('input')))
           return console.log('Must be an input.');
-        (i = D.extend(
+        ((i = D.extend(
           {},
           C,
           l,
@@ -214,7 +223,7 @@
             var t = c.val(),
               n = c.parent();
             '' !== t && (t = i.callback_after_calculation(Number(t).toFixed(i.decimals)));
-            c.data('initvalue', t).val(t),
+            (c.data('initvalue', t).val(t),
               c.addClass('form-control'),
               n.hasClass('input-group')
                 ? (function (t) {
@@ -261,7 +270,7 @@
                           i.buttonup_txt +
                           '</button></span>'),
                         D(o).insertAfter(c));
-                    D(a).insertBefore(c), D(e).insertAfter(c), (u = t);
+                    (D(a).insertBefore(c), D(e).insertAfter(c), (u = t));
                   })(n)
                 : (function () {
                     var t,
@@ -301,19 +310,19 @@
                         ' bootstrap-touchspin-up" type="button">' +
                         i.buttonup_txt +
                         '</button></span></div>';
-                    (u = D(t).insertBefore(c)),
+                    ((u = D(t).insertBefore(c)),
                       D('.bootstrap-touchspin-prefix', u).after(c),
                       c.hasClass('input-sm')
                         ? u.addClass('input-group-sm')
-                        : c.hasClass('input-lg') && u.addClass('input-group-lg');
-                  })();
+                        : c.hasClass('input-lg') && u.addClass('input-group-lg'));
+                  })());
           })(),
           (p = {
             down: D('.bootstrap-touchspin-down', u),
             up: D('.bootstrap-touchspin-up', u),
             input: D('input', u),
             prefix: D('.bootstrap-touchspin-prefix', u).addClass(i.prefix_extraclass),
-            postfix: D('.bootstrap-touchspin-postfix', u).addClass(i.postfix_extraclass)
+            postfix: D('.bootstrap-touchspin-postfix', u).addClass(i.postfix_extraclass),
           }),
           b(),
           c.on('keydown.touchspin', function (t) {
@@ -327,7 +336,7 @@
             (38 !== n && 40 !== n) || y();
           }),
           c.on('blur.touchspin', function () {
-            h(), c.val(i.callback_after_calculation(c.val()));
+            (h(), c.val(i.callback_after_calculation(c.val())));
           }),
           p.down.on('keydown', function (t) {
             var n = t.keyCode || t.which;
@@ -346,17 +355,20 @@
             (32 !== n && 13 !== n) || y();
           }),
           p.down.on('mousedown.touchspin', function (t) {
-            p.down.off('touchstart.touchspin'),
-              c.is(':disabled') || (m(), w(), t.preventDefault(), t.stopPropagation());
+            (p.down.off('touchstart.touchspin'),
+              c.is(':disabled') || (m(), w(), t.preventDefault(), t.stopPropagation()));
           }),
           p.down.on('touchstart.touchspin', function (t) {
-            p.down.off('mousedown.touchspin'), c.is(':disabled') || (m(), w(), t.preventDefault(), t.stopPropagation());
+            (p.down.off('mousedown.touchspin'),
+              c.is(':disabled') || (m(), w(), t.preventDefault(), t.stopPropagation()));
           }),
           p.up.on('mousedown.touchspin', function (t) {
-            p.up.off('touchstart.touchspin'), c.is(':disabled') || (g(), _(), t.preventDefault(), t.stopPropagation());
+            (p.up.off('touchstart.touchspin'),
+              c.is(':disabled') || (g(), _(), t.preventDefault(), t.stopPropagation()));
           }),
           p.up.on('touchstart.touchspin', function (t) {
-            p.up.off('mousedown.touchspin'), c.is(':disabled') || (g(), _(), t.preventDefault(), t.stopPropagation());
+            (p.up.off('mousedown.touchspin'),
+              c.is(':disabled') || (g(), _(), t.preventDefault(), t.stopPropagation()));
           }),
           p.up.on(
             'mouseup.touchspin mouseout.touchspin touchleave.touchspin touchend.touchspin touchcancel.touchspin',
@@ -378,26 +390,28 @@
           }),
           c.on('mousewheel.touchspin DOMMouseScroll.touchspin', function (t) {
             if (i.mousewheel && c.is(':focus')) {
-              var n = t.originalEvent.wheelDelta || -t.originalEvent.deltaY || -t.originalEvent.detail;
-              t.stopPropagation(), t.preventDefault(), (n < 0 ? m : g)();
+              var n =
+                t.originalEvent.wheelDelta || -t.originalEvent.deltaY || -t.originalEvent.detail;
+              (t.stopPropagation(), t.preventDefault(), (n < 0 ? m : g)());
             }
           }),
           c.on('touchspin.destroy', function () {
             !(function () {
               var t = c.parent();
-              y(),
+              (y(),
                 c.off('.touchspin'),
                 t.hasClass('bootstrap-touchspin-injected')
                   ? (c.siblings().remove(), c.unwrap())
-                  : (D('.bootstrap-touchspin-injected', t).remove(), t.removeClass('bootstrap-touchspin'));
+                  : (D('.bootstrap-touchspin-injected', t).remove(),
+                    t.removeClass('bootstrap-touchspin')));
               c.data('alreadyinitialized', !1);
             })();
           }),
           c.on('touchspin.uponce', function () {
-            y(), g();
+            (y(), g());
           }),
           c.on('touchspin.downonce', function () {
-            y(), m();
+            (y(), m());
           }),
           c.on('touchspin.startupspin', function () {
             _();
@@ -410,24 +424,30 @@
           }),
           c.on('touchspin.updatesettings', function (t, n) {
             !(function (t) {
-              (function (t) {
+              ((function (t) {
                 if (((i = D.extend({}, i, t)), t.postfix)) {
-                  0 === c.parent().find('.bootstrap-touchspin-postfix').length && s.insertAfter(c),
-                    c.parent().find('.bootstrap-touchspin-postfix .input-group-text').text(t.postfix);
+                  (0 === c.parent().find('.bootstrap-touchspin-postfix').length && s.insertAfter(c),
+                    c
+                      .parent()
+                      .find('.bootstrap-touchspin-postfix .input-group-text')
+                      .text(t.postfix));
                 }
                 if (t.prefix) {
-                  0 === c.parent().find('.bootstrap-touchspin-prefix').length && o.insertBefore(c),
-                    c.parent().find('.bootstrap-touchspin-prefix .input-group-text').text(t.prefix);
+                  (0 === c.parent().find('.bootstrap-touchspin-prefix').length && o.insertBefore(c),
+                    c
+                      .parent()
+                      .find('.bootstrap-touchspin-prefix .input-group-text')
+                      .text(t.prefix));
                 }
                 b();
               })(t),
-                h();
+                h());
               var n = p.input.val();
               '' !== n &&
                 ((n = Number(i.callback_before_calculation(p.input.val()))),
                 p.input.val(i.callback_after_calculation(Number(n).toFixed(i.decimals))));
             })(n);
-          });
+          }));
       })();
     });
   };

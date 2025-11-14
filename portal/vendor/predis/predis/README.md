@@ -1,4 +1,4 @@
-# Predis #
+# Predis
 
 [![Software license][ico-license]](LICENSE)
 [![Latest stable][ico-version-stable]][link-releases]
@@ -11,10 +11,9 @@ A flexible and feature-complete [Redis](http://redis.io) client for PHP 7.2 and 
 
 More details about this project can be found on the [frequently asked questions](FAQ.md).
 
+## Main features
 
-## Main features ##
-
-- Support for Redis from __3.0__ to __7.4__.
+- Support for Redis from **3.0** to **7.4**.
 - Support for clustering using client-side sharding and pluggable keyspace distributors.
 - Support for [redis-cluster](http://redis.io/topics/cluster-tutorial) (Redis >= 3.0).
 - Support for master-slave replication setups and [redis-sentinel](http://redis.io/topics/sentinel).
@@ -28,8 +27,7 @@ More details about this project can be found on the [frequently asked questions]
 - Support for custom connection classes for providing different network or protocol backends.
 - Flexible system for defining custom commands and override the default ones.
 
-
-## How to _install_ and use Predis ##
+## How to _install_ and use Predis
 
 This library can be found on [Packagist](http://packagist.org/packages/predis/predis) for an easier
 management of projects dependencies using [Composer](http://packagist.org/about-composer).
@@ -39,8 +37,7 @@ Compressed archives of each release are [available on GitHub](https://github.com
 composer require predis/predis
 ```
 
-
-### Loading the library ###
+### Loading the library
 
 Predis relies on the autoloading features of PHP to load its files when needed and complies with the
 [PSR-4 standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md).
@@ -54,8 +51,7 @@ require 'Predis/Autoloader.php';
 Predis\Autoloader::register();
 ```
 
-
-### Connecting to Redis ###
+### Connecting to Redis
 
 When creating a client instance without passing any connection parameter, Predis assumes `127.0.0.1`
 and `6379` as default host and port. The default timeout for the `connect()` operation is 5 seconds:
@@ -138,8 +134,7 @@ it is still desired to have control of when the connection is opened or closed: 
 achieved by invoking `$client->connect()` and `$client->disconnect()`. Please note that the effect
 of these methods on aggregate connections may differ depending on each specific implementation.
 
-
-### Client configuration ###
+### Client configuration
 
 Many aspects and behaviors of the client can be configured by passing specific client options to the
 second argument of `Predis\Client::__construct()`:
@@ -151,27 +146,26 @@ $client = new Predis\Client($parameters, ['prefix' => 'sample:']);
 Options are managed using a mini DI-alike container and their values can be lazily initialized only
 when needed. The client options supported by default in Predis are:
 
-  - `prefix`: prefix string applied to every key found in commands.
-  - `exceptions`: whether the client should throw or return responses upon Redis errors.
-  - `connections`: list of connection backends or a connection factory instance.
-  - `cluster`: specifies a cluster backend (`predis`, `redis` or callable).
-  - `replication`: specifies a replication backend (`predis`, `sentinel` or callable).
-  - `aggregate`: configures the client with a custom aggregate connection (callable).
-  - `parameters`: list of default connection parameters for aggregate connections.
-  - `commands`: specifies a command factory instance to use through the library.
+- `prefix`: prefix string applied to every key found in commands.
+- `exceptions`: whether the client should throw or return responses upon Redis errors.
+- `connections`: list of connection backends or a connection factory instance.
+- `cluster`: specifies a cluster backend (`predis`, `redis` or callable).
+- `replication`: specifies a replication backend (`predis`, `sentinel` or callable).
+- `aggregate`: configures the client with a custom aggregate connection (callable).
+- `parameters`: list of default connection parameters for aggregate connections.
+- `commands`: specifies a command factory instance to use through the library.
 
 Users can also provide custom options with values or callable objects (for lazy initialization) that
 are stored in the options container for later use through the library.
 
-
-### Aggregate connections ###
+### Aggregate connections
 
 Aggregate connections are the foundation upon which Predis implements clustering and replication and
 they are used to group multiple connections to single Redis nodes and hide the specific logic needed
 to handle them properly depending on the context. Aggregate connections usually require an array of
 connection parameters along with the appropriate client option when creating a new client instance.
 
-#### Cluster ####
+#### Cluster
 
 Predis can be configured to work in clustering mode with a traditional client-side sharding approach
 to create a cluster of independent nodes and distribute the keyspace among them. This approach needs
@@ -200,7 +194,7 @@ $options    = ['cluster' => 'redis'];
 $client = new Predis\Client($parameters, $options);
 ```
 
-#### Replication ####
+#### Replication
 
 The client can be configured to operate in a single master / multiple slaves setup to provide better
 service availability. When using replication, Predis recognizes read-only commands and sends them to
@@ -273,8 +267,7 @@ $client->evalsha(sha1($LUA_SCRIPT), 0);    // ... and `evalsha`, too.
 The [`examples`](examples/) directory contains a few scripts that demonstrate how the client can be
 configured and used to leverage replication in both basic and complex scenarios.
 
-
-### Command pipelines ###
+### Command pipelines
 
 Pipelining can help with performances when many commands need to be sent to a server by reducing the
 latency introduced by network round-trip timings. Pipelining also works with aggregate connections.
@@ -294,8 +287,7 @@ $responses = $client->pipeline(function ($pipe) {
 $responses = $client->pipeline()->set('foo', 'bar')->get('foo')->execute();
 ```
 
-
-### Transactions ###
+### Transactions
 
 The client provides an abstraction for Redis transactions based on `MULTI` and `EXEC` with a similar
 interface to command pipelines:
@@ -315,8 +307,7 @@ This abstraction can perform check-and-set operations thanks to `WATCH` and `UNW
 automatic retries of transactions aborted by Redis when `WATCH`ed keys are touched. For an example
 of a transaction using CAS you can see [the following example](examples/transaction_using_cas.php).
 
-
-### Adding new commands ###
+### Adding new commands
 
 While we try to update Predis to stay up to date with all the commands available in Redis, you might
 prefer to stick with an old version of the library or provide a different way to filter arguments or
@@ -351,8 +342,7 @@ defined by the [Redis documentation for commands](http://redis.io/commands):
 $response = $client->executeRaw(['SET', 'foo', 'bar']);
 ```
 
-
-### Script commands ###
+### Script commands
 
 While it is possible to leverage [Lua scripting](http://redis.io/commands/eval) on Redis 2.6+ using
 directly [`EVAL`](http://redis.io/commands/eval) and [`EVALSHA`](http://redis.io/commands/evalsha),
@@ -393,8 +383,7 @@ $client = new Predis\Client($parameters, [
 $response = $client->lpushrand('random_values', $seed = mt_rand());
 ```
 
-
-### Customizable connection backends ###
+### Customizable connection backends
 
 Predis can use different connection backends to connect to Redis. The builtin Relay integration
 leverages the [Relay](https://github.com/cachewerk/relay) extension for PHP for major performance
@@ -425,19 +414,16 @@ $client = new Predis\Client('tcp://127.0.0.1', [
 For a more in-depth insight on how to create new connection backends you can refer to the actual
 implementation of the standard connection classes available in the `Predis\Connection` namespace.
 
+## Development
 
-## Development ##
-
-
-### Reporting bugs and contributing code ###
+### Reporting bugs and contributing code
 
 Contributions to Predis are highly appreciated either in the form of pull requests for new features,
 bug fixes, or just bug reports. We only ask you to adhere to issue and pull request templates.
 
+### Test suite
 
-### Test suite ###
-
-__ATTENTION__: Do not ever run the test suite shipped with Predis against instances of Redis running
+**ATTENTION**: Do not ever run the test suite shipped with Predis against instances of Redis running
 in production environments or containing data you are interested in!
 
 Predis has a comprehensive test suite covering every aspect of the library and that can optionally
@@ -449,7 +435,7 @@ be disabled. See [the tests README](tests/README.md) for more details about test
 Predis uses GitHub Actions for continuous integration and the history for past and current builds can be
 found [on its actions page](https://github.com/predis/predis/actions).
 
-### License ###
+### License
 
 The code for Predis is distributed under the terms of the MIT license (see [LICENSE](LICENSE)).
 
@@ -459,7 +445,6 @@ The code for Predis is distributed under the terms of the MIT license (see [LICE
 [ico-downloads-monthly]: https://img.shields.io/packagist/dm/predis/predis.svg?style=flat-square
 [ico-build]: https://img.shields.io/github/actions/workflow/status/predis/predis/tests.yml?branch=main&style=flat-square
 [ico-coverage]: https://img.shields.io/coverallsCoverage/github/predis/predis?style=flat-square
-
 [link-releases]: https://github.com/predis/predis/releases
 [link-actions]: https://github.com/predis/predis/actions
 [link-downloads]: https://packagist.org/packages/predis/predis/stats

@@ -17,5 +17,4 @@
       $(this).children('.collapse').collapse('show');
     });
   }
-  
 })(window, document, jQuery);

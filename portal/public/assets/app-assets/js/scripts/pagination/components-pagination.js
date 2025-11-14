@@ -28,7 +28,7 @@
         $('#page1-content').text('You are on Page ' + page);
         $('.pagination').find('li').addClass('page-item');
         $('.pagination').find('a').addClass('page-link');
-      }
+      },
     });
 
     //Default Pagination with last & first
@@ -43,7 +43,7 @@
         $('#firstLast1-content').text('You are on Page ' + page);
         $('.pagination').find('li').addClass('page-item');
         $('.pagination').find('a').addClass('page-link');
-      }
+      },
     });
     //Set Start Page Of Pagination
     $('.start-links').twbsPagination({
@@ -57,7 +57,7 @@
         $('#start-content').text('Your start Page ' + page);
         $('.pagination').find('li').addClass('page-item');
         $('.pagination').find('a').addClass('page-link');
-      }
+      },
     });
 
     // Pagination drop after reload
@@ -73,7 +73,7 @@
         $('#url1-content').text('You are on Page ' + page);
         $('.pagination').find('li').addClass('page-item');
         $('.pagination').find('a').addClass('page-link');
-      }
+      },
     });
   }
 })(window, document, jQuery);

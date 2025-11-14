@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
-    <title>GetFundedAfrica</title>
+<title>Communified</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="ThemeZaa" />
@@ -13,8 +13,7 @@
       content="Powering innovation through connection."
     />
     <!-- favicon icon -->
-    <link rel="shortcut icon" href="../assets/images/get-funded-africa-logo.png" />
-
+<link rel="shortcut icon" href="../assets/images/communified-logo.png" />
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +22,7 @@
     <link rel="stylesheet" href="../assets/css/icon.min.css" />
     <link rel="stylesheet" href="../assets/css/style.min.css" />
     <link rel="stylesheet" href="../assets/css/responsive.min.css" />
-    <link rel="stylesheet" href="../assets/css/get-funded-africa.css" />
+<link rel="stylesheet" href="../assets/css/communified.css" />
     <link rel="stylesheet" href="../assets/css/feather.css" />
     <link rel="stylesheet" href="../assets/css/custom-styles.css" />
     <link
@@ -48,25 +47,25 @@
         <div class="container-fluid">
           <div class="col-auto col-lg-2 me-lg-0 me-auto">
             <a class="navbar-brand" href="../index.html">
-              <img
-                src="../assets/images/get-funded-africa-logo.png"
-                data-at2x="../assets/images/get-funded-africa-logo.png"
-                alt=""
-                class="default-logo"
-              />
-              <img
-                src="../assets/images/get-funded-africa-logo.png"
-                data-at2x="../assets/images/get-funded-africa-logo.png"
-                alt=""
-                class="alt-logo"
-              />
-              <img
-                src="../assets/images/get-funded-africa-logo.png"
-                data-at2x="../assets/images/get-funded-africa-logo.png"
-                alt=""
-                class="mobile-logo"
-              />
-            </a>
+  <img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+    class="default-logo"
+  />
+  <img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+    class="alt-logo"
+  />
+  <img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+    class="mobile-logo"
+  />
+</a>
           </div>
           <div class="col-auto ms-auto md-ms-0 menu-order position-static">
             <button
@@ -151,8 +150,8 @@
           <div class="row justify-content-center mb-5">
             <div class="col-lg-7 text-center">
               <h2 class="text-dark-gray alt-font fw-600 ls-minus-2px mb-2" id="pricing">
-                Join GetFundedAfrica Today
-              </h2>
+  Join Communified Today
+</h2>
               <p class="lead mb-0">
                 Get 75% Off All Packages – Unlock Unlimited Access to Entrepreneurs, Investors, and Organizations to Accelerate Your Business Growth.
               </p>
@@ -251,9 +250,9 @@
                       boost revenue
                     </li>
                     <li>
-                      <i class="fas fa-check"></i> Individual call with a GetFundedAfrica
-                      growth representative
-                    </li>
+  <i class="fas fa-check"></i> Individual call with a Communified
+  growth representative
+</li>
                   </ul>
                 </div>
                 <?php if(getCountry()=='Nigeria'){ $gateway = "flutter";  }else{ $gateway = "stripe"; }
@@ -326,10 +325,10 @@
         <div class="row mb-6">
           <div class="col-lg-5 col-md-6 sm-mb-30px order-2 order-md-1">
             <h3
-              class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
-            >
-             Connect with like-minded achievers and take your business to the next level with GetFundedAfrica.
-            </h3>
+  class="text-white fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px"
+>
+ Connect with like-minded achievers and take your business to the next level with Communified.
+</h3>
             <div class="row">
               <div class="col-lg-5 col-6">
                 <span
@@ -400,11 +399,11 @@
           </div>
           <div class="col-md-2 order-1 order-md-4 sm-mb-30px">
             <a href="../index.html" class="footer-logo"
-              ><img
-                src="../assets/images/get-funded-africa-logo.png"
-                data-at2x="../assets/images/get-funded-africa-logo.png"
-                alt=""
-            /></a>
+  ><img
+    src="../assets/images/communified-logo.png"
+    data-at2x="../assets/images/communified-logo.png"
+    alt=""
+/></a>
           </div>
         </div>
         <!-- <div class="row">

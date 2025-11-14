@@ -26,7 +26,9 @@
   background: rgba(255, 255, 255, 0.6);
 }
 input:focus ~ .bg-white {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #fff !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #fff !important;
 }
 .bg-black .card-footer,
 .bg-black .card-header {
@@ -56,7 +58,9 @@ input:focus ~ .bg-white {
   background: rgba(0, 0, 0, 0.6);
 }
 input:focus ~ .bg-black {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #000 !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #000 !important;
 }
 .bg-dark .card-footer,
 .bg-dark .card-header {
@@ -243,7 +247,9 @@ input:focus ~ .bg-black {
   background: rgba(75, 75, 75, 0.12) !important;
 }
 input:focus ~ .bg-dark {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #4b4b4b !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #4b4b4b !important;
 }
 .form-check-dark .form-check-input:checked {
   border-color: #4b4b4b;
@@ -254,10 +260,7 @@ input:focus ~ .bg-dark {
   border-color: #4b4b4b;
   box-shadow: 0 2px 4px 0 rgba(75, 75, 75, 0.4);
 }
-.select2-dark
-  .select2-container--default
-  .select2-selection--multiple
-  .select2-selection__choice {
+.select2-dark .select2-container--default .select2-selection--multiple .select2-selection__choice {
   background: #4b4b4b !important;
   border-color: #4b4b4b !important;
 }
@@ -289,7 +292,9 @@ input:focus ~ .bg-dark {
   background: rgba(246, 246, 246, 0.6);
 }
 input:focus ~ .bg-light {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #f6f6f6 !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #f6f6f6 !important;
 }
 .bg-primary .card-footer,
 .bg-primary .card-header {
@@ -303,7 +308,7 @@ input:focus ~ .bg-light {
   box-shadow: rgba(115, 103, 240, 0.4) 0 6px 15px -7px;
 }
 .alert-primary .alert-link {
-  color: #FD7B37 !important;
+  color: #fd7b37 !important;
 }
 .alert-primary .btn-close {
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237367f0'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
@@ -372,8 +377,8 @@ input:focus ~ .bg-light {
 .btn-primary:active,
 .btn-primary:focus {
   color: #fff;
-  background-color: #FD7B37 !important;
-  border-color: #FD7B37;
+  background-color: #fd7b37 !important;
+  border-color: #fd7b37;
 }
 .btn-primary:hover:not(.disabled):not(:disabled) {
   box-shadow: 0 8px 25px -8px #005862;
@@ -410,7 +415,7 @@ input:focus ~ .bg-light {
 .btn-relief-primary.active,
 .btn-relief-primary:active,
 .btn-relief-primary:focus {
-  background-color: #FD7B37;
+  background-color: #fd7b37;
 }
 .btn-relief-primary:hover {
   color: #fff;
@@ -530,7 +535,9 @@ input:focus ~ .bg-light {
   background: rgba(115, 103, 240, 0.12) !important;
 }
 input:focus ~ .bg-primary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #005862 !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #005862 !important;
 }
 .form-check-primary .form-check-input:checked {
   border-color: #005862;
@@ -786,7 +793,9 @@ input:focus ~ .bg-primary {
   background: rgba(130, 134, 139, 0.12) !important;
 }
 input:focus ~ .bg-secondary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #82868b !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #82868b !important;
 }
 .form-check-secondary .form-check-input:checked {
   border-color: #82868b;
@@ -1042,7 +1051,9 @@ input:focus ~ .bg-secondary {
   background: rgba(40, 199, 111, 0.12) !important;
 }
 input:focus ~ .bg-success {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #28c76f !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #28c76f !important;
 }
 .form-check-success .form-check-input:checked {
   border-color: #28c76f;
@@ -1298,7 +1309,9 @@ input:focus ~ .bg-success {
   background: rgba(0, 207, 232, 0.12) !important;
 }
 input:focus ~ .bg-info {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #00cfe8 !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #00cfe8 !important;
 }
 .form-check-info .form-check-input:checked {
   border-color: #00cfe8;
@@ -1309,10 +1322,7 @@ input:focus ~ .bg-info {
   border-color: #00cfe8;
   box-shadow: 0 2px 4px 0 rgba(0, 207, 232, 0.4);
 }
-.select2-info
-  .select2-container--default
-  .select2-selection--multiple
-  .select2-selection__choice {
+.select2-info .select2-container--default .select2-selection--multiple .select2-selection__choice {
   background: #00cfe8 !important;
   border-color: #00cfe8 !important;
 }
@@ -1554,7 +1564,9 @@ input:focus ~ .bg-info {
   background: rgba(255, 159, 67, 0.12) !important;
 }
 input:focus ~ .bg-warning {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #ff9f43 !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #ff9f43 !important;
 }
 .form-check-warning .form-check-input:checked {
   border-color: #ff9f43;
@@ -1810,7 +1822,9 @@ input:focus ~ .bg-warning {
   background: rgba(234, 84, 85, 0.12) !important;
 }
 input:focus ~ .bg-danger {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #ea5455 !important;
+  box-shadow:
+    0 0 0 0.075rem #fff,
+    0 0 0 0.21rem #ea5455 !important;
 }
 .form-check-danger .form-check-input:checked {
   border-color: #ea5455;

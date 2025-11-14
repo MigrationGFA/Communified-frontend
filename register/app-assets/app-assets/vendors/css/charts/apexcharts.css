@@ -193,7 +193,7 @@
 .apexcharts-xaxistooltip:before {
   left: 50%;
   border: solid transparent;
-  content: ' ';
+  content: " ";
   height: 0;
   width: 0;
   position: absolute;
@@ -283,7 +283,7 @@
 .apexcharts-yaxistooltip:before {
   top: 50%;
   border: solid transparent;
-  content: ' ';
+  content: " ";
   height: 0;
   width: 0;
   position: absolute;
@@ -637,7 +637,7 @@
 .resize-triggers,
 .resize-triggers > div,
 .contract-trigger:before {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   top: 0;

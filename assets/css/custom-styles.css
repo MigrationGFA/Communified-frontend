@@ -1,12 +1,11 @@
 /* Lazy Loading Background Images */
 /* Add this class to elements that should have lazy-loaded backgrounds */
 .lazy-background {
-  background-image: none; 
+  background-image: none;
   background-color: #f0f0f0;
 }
 
 /* The actual background classes remain unchanged */
-
 
 /* Background Images */
 .cover-background-1 {

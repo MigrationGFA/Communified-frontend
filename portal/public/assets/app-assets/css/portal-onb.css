@@ -1,97 +1,97 @@
 .breakdown-body {
-    margin-top: 20px !important;
-    margin-bottom: 0px !important;
+  margin-top: 20px !important;
+  margin-bottom: 0px !important;
 }
 
 /* index image */
 
-.indeximg{
-    width: 40px;
+.indeximg {
+  width: 40px;
 }
 
-.test{
-    background: #c80d0d;
+.test {
+  background: #c80d0d;
 }
 
-.iframe{
-    width: 100% !important ;
-    height: 100%;
-    overflow: hidden;
+.iframe {
+  width: 100% !important ;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* .row{
     height: 80vh !important;
 } */
 
-.step-box{
-    height: 60vh;
+.step-box {
+  height: 60vh;
 }
 
 /* image on step 2 */
-.step2img{
-    width: 100%;
+.step2img {
+  width: 100%;
 }
 
-.idcard{
-    width: 40px;
+.idcard {
+  width: 40px;
 }
 
 /* step5 iframe */
 
-.step5iframe{
-    width: 100% !important ;
-    height: 100vh !important;
-    overflow: none  !important;
+.step5iframe {
+  width: 100% !important ;
+  height: 100vh !important;
+  overflow: none !important;
 }
 
 .head-text {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .subhead-text {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .breakdown-contain {
-    display: flex;
+  display: flex;
 }
 
-.breakdown-contain .text{
-    margin-left: 15px;
+.breakdown-contain .text {
+  margin-left: 15px;
 }
 
 .breakdown-contain div h5 {
-    font-size: 17px;
-    font-weight: 500;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .breakdown-contain div p {
-    font-size: 13px;
+  font-size: 13px;
 }
 
-.continue-btn{
-    background: #151C8E;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 500;
+.continue-btn {
+  background: #151c8e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.back-btn{
-    background: #83c124;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 500;
+.back-btn {
+  background: #83c124;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.cover-text p{
-    font-size: 13px !important;
+.cover-text p {
+  font-size: 13px !important;
 }
 
 .cover-flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }

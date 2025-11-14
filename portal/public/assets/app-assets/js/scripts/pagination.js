@@ -1,236 +1,285 @@
-//JSLint Verified : Please do not commit this file without first validating it in JSLint. 
+//JSLint Verified : Please do not commit this file without first validating it in JSLint.
 /*jslint browser: true, nomen: true, sloppy: true, white: true, newcap: true, regexp: true, bitwise : true, plusplus: true */
 /*global $, console, alert, jQuery, confirm */
 
 var Pagination = function (el, options) {
-	options.labels = options.labels || {};
+  options.labels = options.labels || {};
 
-	var $container = $(el),
-		$pagesContainer,
-		$pageRangeCombo,
+  var $container = $(el),
+    $pagesContainer,
+    $pageRangeCombo,
+    ALL = -1,
+    PREVIOUS_PAGE_NUMBER = -1,
+    NEXT_PAGE_NUMBER = -2,
+    FIRST_PAGE_NUMBER = -3,
+    LAST_PAGE_NUMBER = -4,
+    isDisabled = options.isDisabled || false,
+    itemsCount = options.itemsCount,
+    currentPage = options.currentPage || 1,
+    pageRange = options.pageRange || [10, 20, 30, -1], //-1 (All)
+    pageSize = options.pageSize || pageRange[0],
+    allPagesLabel = options.labels.all || 'All',
+    firstPageLabel = options.labels.first || 'First',
+    lastPageLabel = options.labels.last || 'Last',
+    nextPageLabel = options.labels.next || '&raquo;',
+    previousPageLabel = options.labels.previous || '&laquo;',
+    init,
+    changePageSize,
+    reRenderPageNumbers,
+    getRenderedPageNumbers,
+    getPageNumbersToDisplay,
+    getPagesCount,
+    goNextPage,
+    goPreviousPage,
+    goToPage,
+    disable,
+    enable,
+    getRenderedPager,
+    process,
+    getRenderedPageRange,
+    toggleElements,
+    onPageClick,
+    onPageRangeComboChange,
+    goToFirstPage,
+    goToLastPage;
 
-		ALL = -1,
-		PREVIOUS_PAGE_NUMBER = -1,
-		NEXT_PAGE_NUMBER = -2,
-		FIRST_PAGE_NUMBER = -3,
-		LAST_PAGE_NUMBER = -4,
+  init = function () {
+    $container.html(getRenderedPager());
+    $pagesContainer = $container.find('.pagination');
+    $pageRangeCombo = $container.find('.page-range');
 
-		isDisabled = options.isDisabled || false,
-		itemsCount = options.itemsCount,
-		currentPage = options.currentPage || 1,
-		pageRange = options.pageRange || [10, 20, 30, -1], //-1 (All)
-		pageSize = options.pageSize || pageRange[0],
+    toggleElements();
 
-		allPagesLabel = options.labels.all || 'All',
-		firstPageLabel = options.labels.first || 'First',
-		lastPageLabel = options.labels.last || 'Last',
-		nextPageLabel = options.labels.next || '&raquo;',
-		previousPageLabel = options.labels.previous || '&laquo;',
+    $pagesContainer.on('click', 'li', onPageClick);
+    $pageRangeCombo.on('change', onPageRangeComboChange);
 
-		init, changePageSize, reRenderPageNumbers, getRenderedPageNumbers, getPageNumbersToDisplay,
-		getPagesCount, goNextPage, goPreviousPage, goToPage, disable, enable, getRenderedPager,
-		process, getRenderedPageRange, toggleElements, onPageClick, onPageRangeComboChange, goToFirstPage, goToLastPage;
+    process();
+  };
 
-	init = function () {
-		$container.html(getRenderedPager());
-		$pagesContainer = $container.find('.pagination');
-		$pageRangeCombo = $container.find('.page-range');
+  onPageRangeComboChange = function () {
+    var psValue = Number($(this).val()),
+      ps = psValue === ALL ? itemsCount : psValue;
 
-		toggleElements();
+    if (!isDisabled) {
+      if (typeof options.onPageSizeChange === 'function') {
+        options.onPageSizeChange(ps);
+      }
 
-		$pagesContainer.on("click", "li", onPageClick);
-		$pageRangeCombo.on('change', onPageRangeComboChange);
+      changePageSize(ps);
+      toggleElements();
+    }
+  };
 
-		process();
-	};
+  onPageClick = function () {
+    var $p = $(this),
+      page = $p.data('page');
 
-	onPageRangeComboChange = function () {
-		var psValue = Number($(this).val()),
-			ps = psValue === ALL ? itemsCount : psValue;
+    if (!isDisabled && !$p.hasClass('active')) {
+      switch (page) {
+        case PREVIOUS_PAGE_NUMBER:
+          goPreviousPage();
+          break;
+        case NEXT_PAGE_NUMBER:
+          goNextPage();
+          break;
+        case FIRST_PAGE_NUMBER:
+          goToFirstPage();
+          break;
+        case LAST_PAGE_NUMBER:
+          goToLastPage();
+          break;
+        default:
+          goToPage(page);
+          break;
+      }
 
-		if (!isDisabled) {
-			if (typeof options.onPageSizeChange === 'function') {
-				options.onPageSizeChange(ps);
-			}
+      toggleElements();
+    }
+  };
 
-			changePageSize(ps);
-			toggleElements();
-		}
-	};
+  toggleElements = function () {
+    var pageCount = getPagesCount();
 
-	onPageClick = function () {
-		var $p = $(this),
-			page = $p.data('page');
+    $pagesContainer
+      .find('li[data-page="' + PREVIOUS_PAGE_NUMBER + '"]')
+      .toggleClass('disabled', currentPage === 1);
+    $pagesContainer
+      .find('li[data-page="' + NEXT_PAGE_NUMBER + '"]')
+      .toggleClass('disabled', currentPage === pageCount);
+    $pagesContainer
+      .find('li[data-page="' + FIRST_PAGE_NUMBER + '"]')
+      .toggleClass('disabled', currentPage === 1);
+    $pagesContainer
+      .find('li[data-page="' + LAST_PAGE_NUMBER + '"]')
+      .toggleClass('disabled', currentPage === pageCount);
+  };
 
-		if (!isDisabled && !$p.hasClass('active')) {
-			switch (page) {
-				case PREVIOUS_PAGE_NUMBER:
-					goPreviousPage();
-					break;
-				case NEXT_PAGE_NUMBER:
-					goNextPage();
-					break;
-				case FIRST_PAGE_NUMBER:
-					goToFirstPage();
-					break;
-				case LAST_PAGE_NUMBER:
-					goToLastPage();
-					break;
-				default:
-					goToPage(page);
-					break;
-			}
+  changePageSize = function (ps) {
+    pageSize = ps;
+    goToPage(1);
+  };
 
-			toggleElements();
-		}
-	};
+  reRenderPageNumbers = function () {
+    $pagesContainer.html(getRenderedPageNumbers());
+  };
 
-	toggleElements = function () {
-		var pageCount = getPagesCount();
+  getRenderedPager = function () {
+    return '<ul class="pagination">' + getRenderedPageNumbers() + '</ul>' + getRenderedPageRange();
+  };
 
-		$pagesContainer.find('li[data-page="' + PREVIOUS_PAGE_NUMBER + '"]').toggleClass('disabled', currentPage === 1);
-		$pagesContainer.find('li[data-page="' + NEXT_PAGE_NUMBER + '"]').toggleClass('disabled', currentPage === pageCount);
-		$pagesContainer.find('li[data-page="' + FIRST_PAGE_NUMBER + '"]').toggleClass('disabled', currentPage === 1);
-		$pagesContainer.find('li[data-page="' + LAST_PAGE_NUMBER + '"]').toggleClass('disabled', currentPage === pageCount);
-	};
+  getRenderedPageRange = function () {
+    var result = '<select class="page-range">';
 
-	changePageSize = function (ps) {
-		pageSize = ps;
-		goToPage(1);
-	};
+    $.each(pageRange, function (i, p) {
+      var selected = pageSize === p ? 'selected="selected"' : '';
+      result +=
+        '<option ' +
+        selected +
+        ' value="' +
+        p +
+        '">' +
+        (p === ALL ? allPagesLabel : p) +
+        '</option>';
+    });
 
-	reRenderPageNumbers = function () {
-		$pagesContainer.html(getRenderedPageNumbers());
-	};
+    return (result += '</select>');
+  };
 
-	getRenderedPager = function () {
-		return '<ul class="pagination">' + getRenderedPageNumbers() + '</ul>' + getRenderedPageRange();
-	};
+  getRenderedPageNumbers = function () {
+    var pageNumbers = getPageNumbersToDisplay(),
+      result;
 
-	getRenderedPageRange = function () {
-		var result = '<select class="page-range">';
+    result =
+      '<li data-page="' +
+      FIRST_PAGE_NUMBER +
+      '"><a href="javascipt:void(0)"><span aria-hidden="true">' +
+      firstPageLabel +
+      '</span></a></li>' +
+      '<li data-page="' +
+      PREVIOUS_PAGE_NUMBER +
+      '"><a href="javascipt:void(0)"><span aria-hidden="true">' +
+      previousPageLabel +
+      '</span></a></li>';
 
-		$.each(pageRange, function (i, p) {
-			var selected = pageSize === p ? 'selected="selected"' : '';
-			result += '<option ' + selected + ' value="' + p + '">' + (p === ALL ? allPagesLabel : p) + '</option>';
-		});
+    $.each(pageNumbers, function (i, p) {
+      result +=
+        '<li data-page="' +
+        p +
+        '" ' +
+        (p === currentPage ? 'class="active"' : '') +
+        '><a href="javascipt:void(0)">' +
+        p +
+        '</a></li>';
+    });
 
-		return result += '</select>';
-	};
+    result +=
+      '<li data-page="' +
+      NEXT_PAGE_NUMBER +
+      '"><a href="javascipt:void(0)"><span aria-hidden="true">' +
+      nextPageLabel +
+      '</span></a></li>' +
+      '<li data-page="' +
+      LAST_PAGE_NUMBER +
+      '"><a href="javascipt:void(0)"><span aria-hidden="true">' +
+      lastPageLabel +
+      '</span></a></li>';
 
-	getRenderedPageNumbers = function () {
-		var pageNumbers = getPageNumbersToDisplay(),
-			result;
+    return result;
+  };
 
-		result = '<li data-page="' + FIRST_PAGE_NUMBER + '"><a href="javascipt:void(0)"><span aria-hidden="true">' + firstPageLabel + '</span></a></li>' +
-				 '<li data-page="' + PREVIOUS_PAGE_NUMBER + '"><a href="javascipt:void(0)"><span aria-hidden="true">' + previousPageLabel + '</span></a></li>';
+  getPageNumbersToDisplay = function () {
+    var pageNumbers = [],
+      startFromNumber,
+      pagesToShow = 5,
+      i = 1,
+      pageCount = getPagesCount();
 
-		$.each(pageNumbers, function (i, p) {
-			result += '<li data-page="' + p + '" ' + (p === currentPage ? 'class="active"' : '') + '><a href="javascipt:void(0)">' + p + '</a></li>';
-		});
+    if (pageCount < 5) {
+      pagesToShow = pageCount;
+    }
 
-		result += '<li data-page="' + NEXT_PAGE_NUMBER + '"><a href="javascipt:void(0)"><span aria-hidden="true">' + nextPageLabel + '</span></a></li>' +
-				  '<li data-page="' + LAST_PAGE_NUMBER + '"><a href="javascipt:void(0)"><span aria-hidden="true">' + lastPageLabel + '</span></a></li>';
+    if (currentPage === 1 || currentPage === 2) {
+      startFromNumber = 1;
+    } else if (currentPage === pageCount) {
+      startFromNumber = currentPage - (pagesToShow - 1);
+    } else if (pageCount - currentPage === 1 && pageCount >= 5) {
+      startFromNumber = currentPage - 3;
+    } else {
+      startFromNumber = currentPage - 2;
+    }
 
-		return result;
-	};
+    while (i <= pagesToShow) {
+      pageNumbers.push(startFromNumber++);
+      i++;
+    }
 
-	getPageNumbersToDisplay = function () {
-		var pageNumbers = [],
-			startFromNumber,
-			pagesToShow = 5,
-			i = 1,
-			pageCount = getPagesCount();
+    return pageNumbers;
+  };
 
-		if (pageCount < 5) {
-			pagesToShow = pageCount;
-		}
+  getPagesCount = function () {
+    return Math.ceil(itemsCount / pageSize);
+  };
 
-		if (currentPage === 1 || currentPage === 2) {
-			startFromNumber = 1;
-		}
-		else if (currentPage === pageCount) {
-			startFromNumber = currentPage - (pagesToShow - 1);
-		}
-		else if ((pageCount - currentPage) === 1 && pageCount >= 5) {
-			startFromNumber = currentPage - 3;
-		}
-		else {
-			startFromNumber = currentPage - 2;
-		}
+  goNextPage = function () {
+    if (currentPage < getPagesCount()) {
+      currentPage++;
+      reRenderPageNumbers();
 
-		while (i <= pagesToShow) {
-			pageNumbers.push(startFromNumber++);
-			i++;
-		}
+      process();
+    }
+  };
 
-		return pageNumbers;
-	};
+  goPreviousPage = function () {
+    if (currentPage > 1) {
+      currentPage--;
+      reRenderPageNumbers();
+      process();
+    }
+  };
 
-	getPagesCount = function () {
-		return Math.ceil(itemsCount / pageSize);
-	};
+  goToFirstPage = function () {
+    if (currentPage !== 1) {
+      goToPage(1);
+    }
+  };
 
-	goNextPage = function () {
-		if (currentPage < getPagesCount()) {
-			currentPage++;
-			reRenderPageNumbers();
+  goToLastPage = function () {
+    var pageCount = getPagesCount();
 
-			process();
-		}
-	};
+    if (currentPage !== pageCount) {
+      goToPage(pageCount);
+    }
+  };
 
-	goPreviousPage = function () {
-		if (currentPage > 1) {
-			currentPage--;
-			reRenderPageNumbers();
-			process();
-		}
-	};
+  goToPage = function (pageNumber) {
+    currentPage = pageNumber;
+    reRenderPageNumbers();
+    process();
+  };
 
-	goToFirstPage = function() {
-		if (currentPage !== 1) {
-			goToPage(1);
-		}
-	};
+  disable = function () {
+    isDisabled = true;
+    $pagesContainer.addClass('disabled');
+    $pageRangeCombo.prop('disabled', true);
+  };
 
-	goToLastPage = function () {
-		var pageCount = getPagesCount();
+  enable = function () {
+    isDisabled = false;
+    $pagesContainer.removeClass('disabled');
+    $pageRangeCombo.prop('disabled', false);
+  };
 
-		if (currentPage !== pageCount) {
-			goToPage(pageCount);
-		}
-	};
+  process = function () {
+    if (typeof options.onPageChange === 'function') {
+      options.onPageChange({
+        currentPage: currentPage,
+        pageSize: pageSize,
+      });
+    }
+  };
 
-	goToPage = function (pageNumber) {
-		currentPage = pageNumber;
-		reRenderPageNumbers();
-		process();
-	};
+  init();
 
-	disable = function () {
-		isDisabled = true;
-		$pagesContainer.addClass('disabled');
-		$pageRangeCombo.prop('disabled', true);
-	};
-
-	enable = function () {
-		isDisabled = false;
-		$pagesContainer.removeClass('disabled');
-		$pageRangeCombo.prop('disabled', false);
-	};
-
-	process = function () {
-		if (typeof options.onPageChange === 'function') {
-			options.onPageChange({
-				currentPage: currentPage,
-				pageSize: pageSize
-			});
-		}
-	};
-
-	init();
-
-	this.disable = disable;
-	this.enable = enable;
+  this.disable = disable;
+  this.enable = enable;
 };

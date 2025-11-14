@@ -8,9 +8,9 @@ $(function () {
     addPermissionForm.validate({
       rules: {
         modalPermissionName: {
-          required: true
-        }
-      }
+          required: true,
+        },
+      },
     });
   }
 

@@ -26,7 +26,7 @@ $(function () {
         { data: 'name' },
         { data: 'assigned_to' },
         { data: 'created_date' },
-        { data: '' }
+        { data: '' },
       ],
       columnDefs: [
         {
@@ -37,16 +37,16 @@ $(function () {
           targets: 0,
           render: function (data, type, full, meta) {
             return '';
-          }
+          },
         },
         {
           targets: 1,
-          visible: false
+          visible: false,
         },
         {
           // remove ordering from Name
           targets: 2,
-          orderable: false
+          orderable: false,
         },
         {
           // User Role
@@ -75,14 +75,14 @@ $(function () {
               Restricted:
                 '<a href="' +
                 userList +
-                '" class="me-50"><span class="badge rounded-pill badge-light-danger">Restricted User</span></a>'
+                '" class="me-50"><span class="badge rounded-pill badge-light-danger">Restricted User</span></a>',
             };
             for (var i = 0; i < $assignedTo.length; i++) {
               var val = $assignedTo[i];
               $output += roleBadgeObj[val];
             }
             return $output;
-          }
+          },
         },
         {
           // Actions
@@ -98,8 +98,8 @@ $(function () {
               feather.icons['trash'].toSvg({ class: 'font-medium-2 text-body' }) +
               '</button>'
             );
-          }
-        }
+          },
+        },
       ],
       order: [[1, 'asc']],
       dom:
@@ -114,7 +114,7 @@ $(function () {
       language: {
         sLengthMenu: 'Show _MENU_',
         search: 'Search',
-        searchPlaceholder: 'Search..'
+        searchPlaceholder: 'Search..',
       },
       // Buttons with Dropdown
       buttons: [
@@ -123,12 +123,12 @@ $(function () {
           className: 'add-new btn btn-primary mt-50',
           attr: {
             'data-bs-toggle': 'modal',
-            'data-bs-target': '#addPermissionModal'
+            'data-bs-target': '#addPermissionModal',
           },
           init: function (api, node, config) {
             $(node).removeClass('btn-secondary');
-          }
-        }
+          },
+        },
       ],
       // For responsive popup
       responsive: {
@@ -137,7 +137,7 @@ $(function () {
             header: function (row) {
               var data = row.data();
               return 'Details of Permission';
-            }
+            },
           }),
           type: 'column',
           renderer: function (api, rowIdx, columns) {
@@ -160,15 +160,15 @@ $(function () {
             }).join('');
 
             return data ? $('<table class="table"/><tbody />').append(data) : false;
-          }
-        }
+          },
+        },
       },
       language: {
         paginate: {
           // remove previous & next text from pagination
           previous: '&nbsp;',
-          next: '&nbsp;'
-        }
+          next: '&nbsp;',
+        },
       },
       initComplete: function () {
         // Adding role filter once table initialized
@@ -185,7 +185,7 @@ $(function () {
                 column.search(val ? val : '', true, false).draw();
               });
           });
-      }
+      },
     });
   }
 

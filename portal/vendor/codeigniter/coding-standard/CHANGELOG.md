@@ -185,9 +185,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Fix GHA workflows
 - Bump versions
-    - PHP 7.4 minimum
-    - friendsofphp/php-cs-fixer v3.4.0
-    - phpstan/phpstan v1.0 minimum
+  - PHP 7.4 minimum
+  - friendsofphp/php-cs-fixer v3.4.0
+  - phpstan/phpstan v1.0 minimum
 - Enable `ordered_class_elements` rule
 - Enable `global_namespace_import` rule (#1)
 - Use `GITHUB_TOKEN` so that secrets can be passed to PRs

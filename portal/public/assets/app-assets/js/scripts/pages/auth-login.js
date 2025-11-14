@@ -29,12 +29,12 @@ $(function () {
       rules: {
         'login-email': {
           required: true,
-          email: true
+          email: true,
         },
         'login-password': {
-          required: true
-        }
-      }
+          required: true,
+        },
+      },
     });
   }
 });

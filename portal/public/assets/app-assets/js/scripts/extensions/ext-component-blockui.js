@@ -45,11 +45,11 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -62,12 +62,12 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
           backgroundColor: '#fff',
-          opacity: 0.8
-        }
+          opacity: 0.8,
+        },
       });
     });
   }
@@ -80,11 +80,11 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -99,11 +99,11 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -117,10 +117,10 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
+          opacity: 0.5,
         },
         timeout: 1000,
         onUnblock: function () {
@@ -130,10 +130,10 @@ $(function () {
             css: {
               backgroundColor: 'transparent',
               color: '#fff',
-              border: '0'
+              border: '0',
             },
             overlayCSS: {
-              opacity: 0.25
+              opacity: 0.25,
             },
             onUnblock: function () {
               section.block({
@@ -142,15 +142,15 @@ $(function () {
                 css: {
                   backgroundColor: 'transparent',
                   color: '#fff',
-                  border: '0'
+                  border: '0',
                 },
                 overlayCSS: {
-                  opacity: 0.25
-                }
+                  opacity: 0.25,
+                },
               });
-            }
+            },
           });
-        }
+        },
       });
     });
   }
@@ -166,11 +166,11 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -183,12 +183,12 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
           backgroundColor: '#fff',
-          opacity: 0.8
-        }
+          opacity: 0.8,
+        },
       });
     });
   }
@@ -202,11 +202,11 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -221,11 +221,11 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -239,10 +239,10 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
+          opacity: 0.5,
         },
         timeout: 1000,
         onUnblock: function () {
@@ -252,10 +252,10 @@ $(function () {
             css: {
               backgroundColor: 'transparent',
               color: '#fff',
-              border: '0'
+              border: '0',
             },
             overlayCSS: {
-              opacity: 0.25
+              opacity: 0.25,
             },
             onUnblock: function () {
               cardSection.block({
@@ -264,15 +264,15 @@ $(function () {
                 css: {
                   backgroundColor: 'transparent',
                   color: '#fff',
-                  border: '0'
+                  border: '0',
                 },
                 overlayCSS: {
-                  opacity: 0.25
-                }
+                  opacity: 0.25,
+                },
               });
-            }
+            },
           });
-        }
+        },
       });
     });
   }
@@ -288,11 +288,11 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -305,12 +305,12 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
           backgroundColor: '#fff',
-          opacity: 0.8
-        }
+          opacity: 0.8,
+        },
       });
     });
   }
@@ -323,11 +323,11 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -342,11 +342,11 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -360,10 +360,10 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
+          opacity: 0.5,
         },
         timeout: 1000,
         onUnblock: function () {
@@ -373,10 +373,10 @@ $(function () {
             css: {
               backgroundColor: 'transparent',
               color: '#fff',
-              border: '0'
+              border: '0',
             },
             overlayCSS: {
-              opacity: 0.5
+              opacity: 0.5,
             },
             onUnblock: function () {
               $.blockUI({
@@ -385,15 +385,15 @@ $(function () {
                 css: {
                   backgroundColor: 'transparent',
                   color: '#fff',
-                  border: '0'
+                  border: '0',
                 },
                 overlayCSS: {
-                  opacity: 0.5
-                }
+                  opacity: 0.5,
+                },
               });
-            }
+            },
           });
-        }
+        },
       });
     });
   }
@@ -410,11 +410,11 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -427,12 +427,12 @@ $(function () {
         timeout: 1000,
         css: {
           backgroundColor: 'transparent',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
           backgroundColor: '#fff',
-          opacity: 0.8
-        }
+          opacity: 0.8,
+        },
       });
     });
   }
@@ -446,11 +446,11 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -465,11 +465,11 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
-        }
+          opacity: 0.5,
+        },
       });
     });
   }
@@ -483,10 +483,10 @@ $(function () {
         css: {
           backgroundColor: 'transparent',
           color: '#fff',
-          border: '0'
+          border: '0',
         },
         overlayCSS: {
-          opacity: 0.5
+          opacity: 0.5,
         },
         timeout: 1000,
         onUnblock: function () {
@@ -496,10 +496,10 @@ $(function () {
             css: {
               backgroundColor: 'transparent',
               color: '#fff',
-              border: '0'
+              border: '0',
             },
             overlayCSS: {
-              opacity: 0.25
+              opacity: 0.25,
             },
             onUnblock: function () {
               formSection.block({
@@ -508,15 +508,15 @@ $(function () {
                 css: {
                   backgroundColor: 'transparent',
                   color: '#fff',
-                  border: '0'
+                  border: '0',
                 },
                 overlayCSS: {
-                  opacity: 0.25
-                }
+                  opacity: 0.25,
+                },
               });
-            }
+            },
           });
-        }
+        },
       });
     });
   }

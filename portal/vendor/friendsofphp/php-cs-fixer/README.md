@@ -11,7 +11,7 @@ whether you want to follow PHP coding standards as defined in the PSR-1, PSR-2, 
 or other community driven ones like the Symfony one.
 You can **also** define your (team's) style through configuration.
 
-It can modernize your code (like converting the ``pow`` function to the ``**`` operator on PHP 5.6)
+It can modernize your code (like converting the `pow` function to the `**` operator on PHP 5.6)
 and (micro) optimize it.
 
 If you are already using a linter to identify coding standards problems in your
@@ -20,11 +20,11 @@ projects. This tool does not only detect them, but also fixes them for you.
 
 ## Supported PHP Versions
 
-* PHP 7.4
-* PHP 8.0
-* PHP 8.1
-* PHP 8.2
-* PHP 8.3
+- PHP 7.4
+- PHP 8.0
+- PHP 8.1
+- PHP 8.2
+- PHP 8.3
 
 > **Note**
 > Each new PHP version requires a huge effort to support the new syntax.
@@ -68,11 +68,11 @@ If you need to apply code styles that are not supported by the tool, you can
 
 Dedicated plugins exist for:
 
-* [NetBeans](https://plugins.netbeans.apache.org/catalogue/?id=36)
-* [PhpStorm](https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html)
-* [Sublime Text](https://github.com/benmatselby/sublime-phpcs)
-* [Vim](https://github.com/stephpy/vim-php-cs-fixer)
-* [VS Code](https://github.com/junstyle/vscode-php-cs-fixer)
+- [NetBeans](https://plugins.netbeans.apache.org/catalogue/?id=36)
+- [PhpStorm](https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html)
+- [Sublime Text](https://github.com/benmatselby/sublime-phpcs)
+- [Vim](https://github.com/stephpy/vim-php-cs-fixer)
+- [VS Code](https://github.com/junstyle/vscode-php-cs-fixer)
 
 ## Community
 

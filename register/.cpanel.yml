@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/getfylig/testnet.getfundedafrica.com/register/
-    - /bin/cp -a * $DEPLOYPATH 
+    - /bin/cp -a * $DEPLOYPATH

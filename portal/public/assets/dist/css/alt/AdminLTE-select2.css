@@ -59,14 +59,14 @@
   outline: none;
   border: 1px solid #3c8dbc;
 }
-.select2-container--default .select2-results__option[aria-disabled=true] {
+.select2-container--default .select2-results__option[aria-disabled="true"] {
   color: #999;
 }
-.select2-container--default .select2-results__option[aria-selected=true] {
+.select2-container--default .select2-results__option[aria-selected="true"] {
   background-color: #ddd;
 }
-.select2-container--default .select2-results__option[aria-selected=true],
-.select2-container--default .select2-results__option[aria-selected=true]:hover {
+.select2-container--default .select2-results__option[aria-selected="true"],
+.select2-container--default .select2-results__option[aria-selected="true"]:hover {
   color: #444;
 }
 .select2-container--default .select2-selection--multiple {

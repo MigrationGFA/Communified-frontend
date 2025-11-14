@@ -36,21 +36,17 @@ tab device
     border-radius: 0px;
   }
   .container .card .left-side {
-    
     display: none;
   }
   .otp {
     padding: 0 4rem;
   }
-  
 }
-  
 
 /*==========================
 small device /mobile sm and large
 ===========================*/
 @media (max-width: 767px) {
- 
   .container .card .right-side {
     background-color: #f1f1f1;
     height: 100%;
@@ -59,12 +55,10 @@ small device /mobile sm and large
     border-radius: 0px;
   }
   .container .card .left-side {
-    
     display: none;
   }
   .input-text .input-div .otp {
     width: 16.67%;
     position: relative;
   }
-  
 }

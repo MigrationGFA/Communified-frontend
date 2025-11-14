@@ -427,4 +427,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Initial release in this repository. See [MIGRATION](MIGRATION.md) for the detailed changes
-from its predecessor library.
+  from its predecessor library.

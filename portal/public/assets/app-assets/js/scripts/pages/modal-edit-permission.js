@@ -8,9 +8,9 @@ $(function () {
     editPermissionForm.validate({
       rules: {
         editPermissionName: {
-          required: true
-        }
-      }
+          required: true,
+        },
+      },
     });
   }
 });

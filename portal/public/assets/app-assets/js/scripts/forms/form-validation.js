@@ -22,7 +22,7 @@ $(function () {
     $this
       .select2({
         placeholder: 'Select value',
-        dropdownParent: $this.parent()
+        dropdownParent: $this.parent(),
       })
       .change(function () {
         $(this).valid();
@@ -37,7 +37,7 @@ $(function () {
         if (instance.isMobile) {
           $(instance.mobileInput).attr('step', null);
         }
-      }
+      },
     });
   }
 
@@ -72,38 +72,38 @@ $(function () {
     jqForm.validate({
       rules: {
         'basic-default-name': {
-          required: true
+          required: true,
         },
         'basic-default-email': {
           required: true,
-          email: true
+          email: true,
         },
         'basic-default-password': {
-          required: true
+          required: true,
         },
         'confirm-password': {
           required: true,
-          equalTo: '#basic-default-password'
+          equalTo: '#basic-default-password',
         },
         'select-country': {
-          required: true
+          required: true,
         },
         dob: {
-          required: true
+          required: true,
         },
         customFile: {
-          required: true
+          required: true,
         },
         validationRadiojq: {
-          required: true
+          required: true,
         },
         validationBiojq: {
-          required: true
+          required: true,
         },
         validationCheck: {
-          required: true
-        }
-      }
+          required: true,
+        },
+      },
     });
   }
 });
