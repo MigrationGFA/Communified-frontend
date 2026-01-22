@@ -13,7 +13,8 @@ class App extends BaseConfig
      *
      * URL to your CodeIgniter root. Typically, this will be your base URL,
      * WITH a trailing slash:
-     *
+     * https://communitified-test.azurewebsites.net/portal/
+     * http://localhost/Communified-frontend/portal/
      * E.g., http://example.com/
      */
     public string $baseURL = 'https://communitified-test.azurewebsites.net/portal/';
