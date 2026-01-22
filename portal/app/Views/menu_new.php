@@ -5,17 +5,17 @@
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
       <div class="navbar-header">
-       <center><a href="<?php echo base_url('gfa/dashboard'); ?>"><img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>" align="center"></a></center>
+       <center><a href="<?php echo base_url('gfa/dashboard'); ?>"><img src="https://communitified-test.azurewebsites.net/assets/images/communified-logo.png" width="120px" height="120px" align="center"></a></center>
       </div><br> <br> <br>
       <div class="shadow-bottom"></div>
-      <div class="main-menu-content">
+      <div class="main-menu-content"> 
           <?php 
                 
                 // $loginkey = $this->gfa_model->getWpCred($email);
                 // $rowArray = $this->admin_model->getAllStartUpNByEmail($email);
            ?>
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-         <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">GefundedAfrica</span><i data-feather="more-horizontal"></i>
+         <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Communified</span><i data-feather="more-horizontal"></i>
          
          <?php   
           if(!empty($login_type)){  ?>

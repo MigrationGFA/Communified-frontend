@@ -545,9 +545,9 @@ public function learning_labelling()
                 return $this->response->setJSON([
                     'status' => 'success',
                     'message' => 'Login successful',
-                    'url' =>'https://nora.GetFundedAfrica.ci/portal/gfa/learning_external/'.$email.'/labelling/labelling-01'
+                    'url' =>'https://nora.Communified.ci/portal/gfa/learning_external/'.$email.'/labelling/labelling-01'
                 ])->setStatusCode(Response::HTTP_OK);
-                //return redirect()->to('https://nora.GetFundedAfrica.ci/portal/gfa/learning');
+                //return redirect()->to('https://nora.Communified.ci/portal/gfa/learning');
             } else {
                 // Validation failed, return error response as JSON
                 return $this->response->setJSON([
@@ -1118,7 +1118,7 @@ public function notify_inbox($ref_id="")
     {
         
         
-        $title['page_title'] = "Login GetFundedAfrica";
+        $title['page_title'] = "Login Communified";
 
         echo view('header_home',$title);
 
@@ -3543,7 +3543,7 @@ $title['page_title'] = "Manage Course - Communified";
             //$this->gfa_model->insertSubPackageFlutter($data_subscription);
 
             $message = "
-  <a href='https://fg-skillnovation.alat.ng'><img src='https://nora.GetFundedAfrica.ci/nigeria/wemabank/img/logo/fgn-alat-logo.jpg'></a><br>
+  <a href='https://fg-skillnovation.alat.ng'><img src='https://nora.Communified.ci/nigeria/wemabank/img/logo/fgn-alat-logo.jpg'></a><br>
     
 <p><strong>Dear {$name},</strong></p>
 <p>I hope this email finds you in good spirits. We are delighted to inform you that after careful consideration, you have been selected to be a part of the <strong>FGN/ALAT Digital SKillnovation Program For MSMEs</strong>.</p>
@@ -3557,7 +3557,7 @@ $title['page_title'] = "Manage Course - Communified";
     <p>If you have any immediate questions or need further information, please don't hesitate to reach out.</p>
     
     <p><br />=================Your fgnalat account login details===============</p>
-        <p><a href='https://fgnalat.GetFundedAfrica.com/portal/'><i>Click here to login with your details</i></a></p>
+        <p><a href='https://fgnalat.Communified.com/portal/'><i>Click here to login with your details</i></a></p>
         <p>Email: " . $email . "</p>
         <p>Password: " . $profile_request[0]['password'] . "</p>
 
@@ -4114,7 +4114,7 @@ $title['page_title'] = "Investor - Communified";
 
 	$subject = "Demande de connexion via Côte d’Ivoire PME";
 
-	$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";
+	$message = "<a href='https://nora.Communified.ci/portal/'><img src='https://nora.Communified.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";
 $message .= "<p>Bonjour, ".$startupDetail[0]['Primary_Contact_Name']. "</p>"; 
 $message .= "Je souhaiterais me connecter avec vous concernant une opportunité de collaboration potentielle. Veuillez me faire savoir un moment qui vous convient pour en discuter davantage.
 Dans l'attente de votre réponse !";
@@ -4158,7 +4158,7 @@ $this->sendMail($connectEmail, $message,$subject);
 
 	$subject = "Demande de connexion via Côte d’Ivoire PME";
 
-	$message = "<a href='https://nora.GetFundedAfrica.ci/portal/'><img src='https://nora.GetFundedAfrica.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";
+	$message = "<a href='https://nora.Communified.ci/portal/'><img src='https://nora.Communified.ci/portal/public/assets/images/logo/GFA-Logo.png'></a><br>";
 $message .= "<p>Bonjour, ".$investorDetail[0]['Contact_Name']. "</p>"; 
 $message .= "Salut! Êtes-vous un investisseur à la recherche de potentiels startups à financer ? Nous sommes une startup dynamique avec une vision révolutionnaire et nous aimerions entrer en contact avec des investisseurs avisés comme vous. Ensemble, nous pouvons alimenter l’innovation et stimuler la croissance. Discutons! Cliquez icipour démarrer une conversation.
 . Discutons ! Cliquez <a href='".base_url()."gfa/startup_website/".$startupDetail[0]['STUP_ID']."'>here</a> pour démarrer une conversation. ";
@@ -4232,7 +4232,7 @@ $message .= "<p>Objet du mentor : ".$startupDetail[0]['Mentorship']."</p>";
 $message .= "<p><strong>====================================<strong></p>";
 $message .= "<p></p>";
  $message .= "<a href='".base_url()."gfa/startup_website/".$startupDetail[0]['STUP_ID']."'>Consulter le profil</a>" ;
- // https://fgnalat.GetFundedAfrica.com/testportal/gfa/startup_website?id=303579
+ // https://fgnalat.Communified.com/testportal/gfa/startup_website?id=303579
 
 	$this->gfa_model->allNotification($connectEmail, $subject, $ref_id);
 	 $this->gfa_model->allNotificationBox($subject,$message, $email, $connectEmail,$ref_id);
@@ -4904,7 +4904,7 @@ $country = $this->gfa_model->getStartUpDetails($email)[0]['CountryHQ'];
 $industry = $this->gfa_model->getStartUpDetails($email)[0]['PrimaryBusinessIndustry'];   
 	    
 	    $subject = $companyName." Uploaded ".$Title." File";
-$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br>";
+$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br>";
 
 $message .= "<p>Email: ".$email."</p>";
 $message .= "<p>Name: ".$name."</p>";
@@ -4917,7 +4917,7 @@ $message .= "<p>File_Desc: ".$File_Desc."</p>";
 $message .= "<p>File_Type: ".$File_Type."</p>";
 $message .= "<p>Date: ".$time."</p>";
 
-$this->sendMail("info@getfundedafrica.com", $message,$subject);
+$this->sendMail("info@Communified.com", $message,$subject);
 
 } 
     
@@ -4950,7 +4950,7 @@ if(!empty($this->gfa_model->getAllDcdtByEmailRef($email)))
 	    
 	    $subject = $companyName." :Startups for Investment";
 
-$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br>";
+$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br>";
 
 $message .= '<h4>Dear '.$InvestorName.',</h4>
 
@@ -4970,11 +4970,11 @@ $message .= "<br><p><strong>====================================================
 foreach($id  as $key => $n ) {
         
      
-		   $message .= '<p><a href="https://nora.GetFundedAfrica.ci/portal/uploads/files/'.$this->gfa_model->getFileUploadedById($n)[0]['File'].'">'.$this->gfa_model->getFileUploadedById($n)[0]['Title'].'</a></p>';
+		   $message .= '<p><a href="https://nora.Communified.ci/portal/uploads/files/'.$this->gfa_model->getFileUploadedById($n)[0]['File'].'">'.$this->gfa_model->getFileUploadedById($n)[0]['Title'].'</a></p>';
 		}
 
 $message .= "<br><p><strong>============================================================<strong></p>";
-$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@getfundedafrica.com">info@getfundedafrica.com</a>. Additionally, you can log in to your investor account on Communified'.'s platform <a href="http://GetFundedAfrica.com/portal/">here</a> to explore more startup opportunities.</p>
+$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@Communified.com">info@Communified.com</a>. Additionally, you can log in to your investor account on Communified'.'s platform <a href="http://Communified.com/portal/">here</a> to explore more startup opportunities.</p>
 
 	<p>We appreciate your time and consideration, and we look forward to the possibility of working together.</p>
 	
@@ -4987,7 +4987,7 @@ $message .= '<p>If you would like to discuss this opportunity further, please fe
 	';
 
  $this->sendMail($InvestorEmail, $message,$subject);
-//$this->sendMail("info@GetFundedAfrica.com", $message,$subject);
+//$this->sendMail("info@Communified.com", $message,$subject);
 $ref_id = time();
 $data_connection = array(
 					
@@ -5037,7 +5037,7 @@ if(!empty($this->gfa_model->getAllDcdtByEmailRef($email)))
 }	    
 	    $subject = $companyName.": Startups for Investment";
 
-$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://investorsfinder.GetFundedAfrica.com/images/logo-1.png'></a><br>";
+$message = "<a href='https://nora.Communified.ci'><img src='https://investorsfinder.Communified.com/images/logo-1.png'></a><br>";
 
 $message .= '<h4>Dear '.$InvestorName.',</h4>
 
@@ -5056,25 +5056,25 @@ $message .= '<h4>Dear '.$InvestorName.',</h4>
 foreach($id  as $key => $n ) {
         
      
-	$message .= '<p><a href="https://nora.GetFundedAfrica.ci/portal/uploads/files/'.$this->gfa_model->getFileUploadedById($n)[0]['File'].'">'.$this->gfa_model->getFileUploadedById($n)[0]['Title'].'</a></p>';
+	$message .= '<p><a href="https://nora.Communified.ci/portal/uploads/files/'.$this->gfa_model->getFileUploadedById($n)[0]['File'].'">'.$this->gfa_model->getFileUploadedById($n)[0]['Title'].'</a></p>';
  }
 
 $message .= "<br><p><strong>============================================================<strong></p>";
-$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@getfundedafrica.com">info@getfundedafrica.com</a>. Additionally, you can log in to your investor account on GetFundedAfrica'.'s platform <a href="http://GetFundedAfrica.com/portal/">here</a> to explore more startup opportunities.</p>
+$message .= '<p>If you would like to discuss this opportunity further, please feel free to reach out to our team at <a href="mailto:info@Communified.com">info@Communified.com</a>. Additionally, you can log in to your investor account on Communified'.'s platform <a href="http://Communified.com/portal/">here</a> to explore more startup opportunities.</p>
 
 	<p>We appreciate your time and consideration, and we look forward to the possibility of working together.</p>
 	
 	<p>Best regards,</p>
 	
-	<p>GetFundedAfrica<br>
+	<p>Communified<br>
 	['.$name.']<br>
 	['.$companyName.']<br>
-	GetFundedAfrica Investment App</p>
+	Communified Investment App</p>
 	
 	';
 if( $InvestorId !=''){
  $this->sendMail($this->gfa_model->getAllInvestorById($InvestorId)[0]['Contact_Email'], $message,$subject);
-//$this->sendMail("info@GetFundedAfrica.com", $message,$subject);
+//$this->sendMail("info@Communified.com", $message,$subject);
 }else{
 foreach($id  as $key => $s ) {
    
@@ -5085,7 +5085,7 @@ $investId = str_replace('|',"",$s);
 
  //$message .= "<br>Investor Email: ".$this->gfa_model->getAllInvestorById($investId)[0]['Contact_Email'];
  //$this->sendMail($this->gfa_model->getAllInvestorById($investId)[0]['Contact_Email'], $message,$subject);
-//$this->sendMail("info@GetFundedAfrica.com", $message,$subject);
+//$this->sendMail("info@Communified.com", $message,$subject);
 
 //Connect to investor 
 $data_connection = array(
@@ -5257,7 +5257,7 @@ $data_connection = array(
             {
                 
 //                     if($profile_request[0]['status'] =='de-active'){
-//                         $response_data['message'] = "<center><font size=2 color=red>Votre compte a été désactivé. Veuillez contacter l’administrateur de la plateforme par courriel: nora@GetFundedAfrica.ci.
+//                         $response_data['message'] = "<center><font size=2 color=red>Votre compte a été désactivé. Veuillez contacter l’administrateur de la plateforme par courriel: nora@Communified.ci.
 // </font></center>";
 //                     }
                     // else{
@@ -5828,8 +5828,8 @@ $email  = session()->get('email'); if(($email == '')){ return redirect()->to(bas
 
                                 $message = "
                                 <div style='font-family: Arial, sans-serif; color: #333; line-height: 1.6;'>
-                                    <a href='https://getfundedafrica.com/' style='display: inline-block; margin-bottom: 20px;'>
-                                        <img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>
+                                    <a href='https://Communified.com/' style='display: inline-block; margin-bottom: 20px;'>
+                                        <img src='https://Communified.com/assets/images/get-funded-africa-logo.png' alt='Communified Logo' style='width: 150px; height: auto;'>
                                     </a>
                                     
                                     <p><strong>You’ve requested to recover access to your account. Your login details are below:</strong></p>
@@ -5844,10 +5844,10 @@ $email  = session()->get('email'); if(($email == '')){ return redirect()->to(bas
                                     <strong>Temporary Password:</strong> {$profile_request[0]['password']}</p>
                                 
                                     <p>If you did not request this recovery or have any concerns, please contact us at:<br>
-                                    <strong>info@getfundedafrica.com</strong></p>
+                                    <strong>info@Communified.com</strong></p>
                                 
                                     <p>Kind regards,<br>
-                                    <strong>The GetFundedAfrica Team</strong></p>
+                                    <strong>The Communified Team</strong></p>
                                 </div>
                                 ";
                                 
@@ -5894,7 +5894,7 @@ $email  = session()->get('email'); if(($email == '')){ return redirect()->to(bas
     $Cohort_Duration = $this->request->getPost("Cohort_Duration");
     $Cohort_Type = $this->request->getPost("Cohort_Type");
     $Demo_Date = $this->request->getPost("Demo_Date");
-    $Url = "https://nora.GetFundedAfrica.ci/cohort/corporate/?org=" . str_replace(" ", "-", $Title_Extra);
+    $Url = "https://nora.Communified.ci/cohort/corporate/?org=" . str_replace(" ", "-", $Title_Extra);
     $Status = "active";
     $Time_submit = date("Y-m-d h:i:s A", time());
     $Ticket = $this->request->getPost("Ticket");
@@ -5955,7 +5955,7 @@ $email  = session()->get('email'); if(($email == '')){ return redirect()->to(bas
     $Cohort_Type = $this->request->getPost("Cohort_Type");
     $Demo_Date = $this->request->getPost("Demo_Date");
 
-    $Url = "https://nora.GetFundedAfrica.ci/cohort/corporate/?org=" . str_replace(" ", "-", $Title_Extra);
+    $Url = "https://nora.Communified.ci/cohort/corporate/?org=" . str_replace(" ", "-", $Title_Extra);
     $Status = "active";
     $Time_submit = date("Y-m-d h:i:s A", time());
     $Ticket = $this->request->getPost("Ticket");
@@ -6701,18 +6701,18 @@ public function unleashified_getquote()
 					    ); 
 					
 				$message = "
-  <a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>
+  <a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a>
     
 <p><strong>Dear ".$name.",</strong></p>
 
 <p> ".$nameCorperate." from ".$corperateName."
-has invited you to join GetFundedAfrica as a Startup/SME.</p>
+has invited you to join Communified as a Startup/SME.</p>
  
 
 
 
-<p><br />=================Below is your GetFundedAfrica account login details===============</p>
-<p><a href='https://nora.GetFundedAfrica.ci/portal/'><i>Click here to login with your details</i></a></p>
+<p><br />=================Below is your Communified account login details===============</p>
+<p><a href='https://nora.Communified.ci/portal/'><i>Click here to login with your details</i></a></p>
 <p>Email: ".$email."</p>
 <p>Password: ".$Password."</p>
 
@@ -6723,7 +6723,7 @@ Thank you
 
  
 <br>
-GetFundedAfrica Team
+Communified Team
  
             ";	
           
@@ -6820,7 +6820,7 @@ $subject = $corperateName." registration success";
             $this->gfa_model->insertWpEvent($data_credit); 
         $getEventDetails = $this->gfa_model->getEventByIdAttend($eventId);
         $profile = $this->gfa_model->getStartUpDetails($Email); 
-            $message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";
+            $message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a> <br><br>";
 
 $message .= "<p>Congratulation you have been confirmed to attend this event with following details:</p>";
 $message .= "<p>Name: ".$attend_name."</p>";
@@ -6836,7 +6836,7 @@ $message .= "<p>See you there!</p>";
 
 $subject = $title. " Enquiry";
     
-//nichole@GetFundedAfricafrica.com                
+//nichole@Communifiedfrica.com                
 $this->sendMail($Email, $message,$subject);                 
     
     }
@@ -6866,7 +6866,7 @@ $this->sendMail($Email, $message,$subject);
                     );
             $this->gfa_model->insertWpEvent($data_credit); 
             
-                $message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";
+                $message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a> <br><br>";
     
     $message .= "<p>Congratulation you have been confirmed to attend this event with following details:</p>";
     $message .= "<p>Name: ".$profile[0]['Primary_Contact_Name']."</p>";
@@ -6881,7 +6881,7 @@ $this->sendMail($Email, $message,$subject);
     $message .= "<p>See you there!</p>";
     
     $subject = $title. " Enquiry";
-//nichole@GetFundedAfricafrica.com                
+//nichole@Communifiedfrica.com                
 $this->sendMail($Email, $message,$subject);                 
     
     }
@@ -6905,7 +6905,7 @@ $this->sendMail($Email, $message,$subject);
                     );
             $this->gfa_model->insertCredit($data_credit); 
             $profile = $this->gfa_model->getStartUpDetails($Email); 
-            $message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";
+            $message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a> <br><br>";
             
             $message .= "<p>Name: ".$profile[0]['Primary_Contact_Name']."</p>";
             $message .= "<p>Email: ".$Email."</p>";
@@ -6915,7 +6915,7 @@ $this->sendMail($Email, $message,$subject);
 
             $subject = "Onboarding Credit Request"; 
                             
-            $this->sendMail('info@getfundedafrica.com', $message,$subject);                    
+            $this->sendMail('info@Communified.com', $message,$subject);                    
                     
     }
 
@@ -7097,18 +7097,18 @@ public function checkProfileErrorDemo()
              $this->gfa_model->insertLogin($data_login);
              
               $message = "
-  <a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>
+  <a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a>
     
 <p><strong>Dear ".$founderName[$j].",</strong></p>
 
 <p> ".$nameCorperate." from ".$corperateName."
-has invited you to join the GetFundedAfrica Platform and manage the account.</p>
+has invited you to join the Communified Platform and manage the account.</p>
  
 
 
 
-<p><br />=================Below is your GetFundedAfrica account login details===============</p>
-<p><a href='https://fgnalat.GetFundedAfrica.com/portal/'><i>Click here to login with your details</i></a></p>
+<p><br />=================Below is your Communified account login details===============</p>
+<p><a href='https://fgnalat.Communified.com/portal/'><i>Click here to login with your details</i></a></p>
 <p>Email: ".$founderGender[$j]."</p>
 <p>Password: ".$Password."</p>
 
@@ -7119,7 +7119,7 @@ Thank you
 
  
 <br>
-GetFundedAfrica Team
+Communified Team
  
             ";  
 $subject = $corperateName." Invite you";
@@ -7142,7 +7142,7 @@ public function startup_mentor()
 	
 	    $email  = session()->get('email');
          if(($email == '')){ return redirect()->to(base_url('gfa/login')) ; }	
-		$title['page_title'] = "Startup and Mentor Match - GetFundedAfrica";
+		$title['page_title'] = "Startup and Mentor Match - Communified";
         
         //Calculate Profile completed  startup name, industry, amount to raise, Hq Address, phone number, Anuual revenue, Employee size, linkined page url
 // 		 $email = $this->encrypt->decode($this->session->userdata('email')) ;
@@ -8404,7 +8404,7 @@ public function sendMail($recipient_email, $message, $subject)
 {
        
 
-$url = 'https://getfundedafrica.com/email/gfajson.php';
+$url = 'https://Communified.com/email/gfajson.php';
 
 		$data = [
 		    "recipient_email" => "{$recipient_email}",
@@ -8430,7 +8430,7 @@ public function sendMailUnleash($recipient_email, $message, $subject)
 {
        
 
-$url = 'https://getfundedafrica.com/email/sender.php';
+$url = 'https://Communified.com/email/sender.php';
 
 
 
@@ -8562,7 +8562,7 @@ echo "";
                     );
                     $this->gfa_model->insertPerkRedeem($data_credit); 
             $profile = $this->gfa_model->getStartUpDetails($Email); 
-            $message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a> <br><br>";
+            $message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a> <br><br>";
             
             $message .= "<p>Name: ".$profile[0]['Primary_Contact_Name']."</p>";
             $message .= "<p>Email: ".$Email."</p>";
@@ -8572,7 +8572,7 @@ echo "";
 
             $subject = "Onboarding Perks Request";  
                             
-            $this->sendMail('info@getfundedafrica.com', $message,$subject);    
+            $this->sendMail('info@Communified.com', $message,$subject);    
             //$this->sendMail('dashotemitope@gmail.com', $message,$subject);    
             if($perks_info[0]['aff_link'] !=''){
                 echo $perks_info[0]['aff_link'] ;
@@ -8660,7 +8660,7 @@ echo "";
     public function edit_perks_category($id='')
 
 	{
-		$title['page_title'] = "Update Perks - GetFundedAfrica";
+		$title['page_title'] = "Update Perks - Communified";
 		$data['id'] = $id;
 		$data['login_type'] = session()->get('login_type');
 		echo view('head_doc',$title);
@@ -8674,7 +8674,7 @@ echo "";
 	public function edit_perks($id='')
 
 	{
-		$title['page_title'] = "Update Perks - GetFundedAfrica";
+		$title['page_title'] = "Update Perks - Communified";
 		$data['id'] = $id;
 		$data['login_type'] = session()->get('login_type');
 		echo view('head_doc',$title);
@@ -8690,7 +8690,7 @@ echo "";
 	{
 		$email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('admin/login')); }	
-		$title['page_title'] = "Manage Perks Category- GetFundedAfrica";
+		$title['page_title'] = "Manage Perks Category- Communified";
 		$data['login_type'] = session()->get('login_type');
 		echo view('header_new',$title);
         echo view('nav_new',$title);
@@ -8705,7 +8705,7 @@ echo "";
 	{
 		$email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('admin/login')); }	
-		$title['page_title'] = "Perks Redeemed - GetFundedAfrica";
+		$title['page_title'] = "Perks Redeemed - Communified";
 		$data['id'] = $id;
 		$data['login_type'] = session()->get('login_type');
 		echo view('head_doc',$title);
@@ -8720,7 +8720,7 @@ echo "";
 	{
 		$email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('admin/login')); }	
-		$title['page_title'] = "Perks Redeem- GetFundedAfrica";
+		$title['page_title'] = "Perks Redeem- Communified";
 		$data['login_type'] = session()->get('login_type');
 		echo view('header_new',$title);
         echo view('nav_new',$title);
@@ -8736,7 +8736,7 @@ echo "";
 	{
 		$email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('admin/login')); } 	
-		$title['page_title'] = "Manage Perks- GetFundedAfrica";
+		$title['page_title'] = "Manage Perks- Communified";
 	    $data['login_type'] = session()->get('login_type');
 		echo view('header_new',$title);
         echo view('nav_new',$title);
@@ -8751,7 +8751,7 @@ echo "";
 	{
 		
 		
-		$title['page_title'] = "Add Perks - GetFundedAfrica ";
+		$title['page_title'] = "Add Perks - Communified ";
 		$data['login_type'] = session()->get('login_type');
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
@@ -8768,7 +8768,7 @@ echo "";
 	{
 		
 		
-		$title['page_title'] = "Add Perks - GetFundedAfrica ";
+		$title['page_title'] = "Add Perks - Communified ";
 		$data['login_type'] = session()->get('login_type');
 		echo view('head_doc',$title);
         echo view('nav_new',$title);
@@ -8783,7 +8783,7 @@ echo "";
 
 	{
 
-		$title['page_title'] = "All Events - GetFundedAfrica";
+		$title['page_title'] = "All Events - Communified";
 
 		echo view('header_new',$title);
 
@@ -8808,7 +8808,7 @@ echo "";
     public function loadperkscategory()
 
     {
-        $title['page_title'] = "Add Perks - GetFundedAfrica ";
+        $title['page_title'] = "Add Perks - Communified ";
         $data['category'] = $this->request->getPost("category");
         echo view('header_home2',$title);
         echo view('load_perks_category',$data);
@@ -8821,7 +8821,7 @@ echo "";
 
     {
         
-        $title['page_title'] = "Add Perks - GetFundedAfrica ";
+        $title['page_title'] = "Add Perks - Communified ";
         echo view('header_home2',$title);
         echo view('load_perks');
         echo view('header_footer2');
@@ -8934,7 +8934,7 @@ public function find_sme()
 		
 	$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
 	
-		$title['page_title'] = "SME - GetFundedAfrica";
+		$title['page_title'] = "SME - Communified";
 		 $data['email'] =  $email;
         $data['login_type'] = session()->get('login_type') ;
         $data['account_type'] = session()->get('account_type') ;
@@ -8982,7 +8982,7 @@ public function mentor()
     {
         
        
-        $title['page_title'] = "Mentor Dashboard by GetFundedAfrica";
+        $title['page_title'] = "Mentor Dashboard by Communified";
         $email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('gfa/login')); }  
         $data['email'] =  $email;
@@ -9010,7 +9010,7 @@ public function mentor()
 		
 	$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
 	
-		$title['page_title'] = "Investor - GetFundedAfrica";
+		$title['page_title'] = "Investor - Communified";
 		$data['email'] =  $email;
         $data['login_type'] = session()->get('login_type') ;
         $data['account_type'] = session()->get('account_type') ;
@@ -9112,7 +9112,7 @@ public function fetchSME()
 		
 		$email  = session()->get('email'); if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
 	
-		$title['page_title'] = "Sme - GetFundedAfrica";
+		$title['page_title'] = "Sme - Communified";
 		$data['id'] = $id;
 	    session()->set('get_investor_id', $id);
         $data['email'] =  $email;
@@ -9145,7 +9145,7 @@ public function fetchSME()
 		
 		$email  = session()->get('email'); if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
 	
-		$title['page_title'] = "Mentor - GetFundedAfrica";
+		$title['page_title'] = "Mentor - Communified";
 		$data['id'] = $id;
 	    session()->set('get_investor_id', $id);
         $data['email'] =  $email;
@@ -9427,10 +9427,10 @@ public function callstartupMentor(){
 
 					
 	$subject = "RE: {$mentor_name} Schedule a Call Request";
-$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 $message .= "<p>Bonjour {$startup_name},</p>
 
-<p>Ceci est un e-mail automatisé pour vous informer qu'un mentor de la plateforme GetFundedAfrica a exprimé son intérêt pour une session approfondie avec vous. Veuillez trouver ci-dessous les détails de l'appel programmé :</p>
+<p>Ceci est un e-mail automatisé pour vous informer qu'un mentor de la plateforme Communified a exprimé son intérêt pour une session approfondie avec vous. Veuillez trouver ci-dessous les détails de l'appel programmé :</p>
 
 <p><strong>Objet :</strong> {$subject_info}; {$subject_ext}</p>
 <p>Date : {$date_time}</p>
@@ -9438,24 +9438,24 @@ $message .= "<p>Bonjour {$startup_name},</p>
 <p>Plateforme : {$meeting_link}</p>
 <p>Message court : {$more_info}</p>
 
-<p>Veuillez vous connecter à votre compte GetFundedAfrica pour consulter les détails du mentor.</p>
+<p>Veuillez vous connecter à votre compte Communified pour consulter les détails du mentor.</p>
 
-<p>Si vous avez des questions ou des préoccupations que notre équipe GFA peut vous aider à résoudre, n'hésitez pas à nous contacter à <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>
+<p>Si vous avez des questions ou des préoccupations que notre équipe GFA peut vous aider à résoudre, n'hésitez pas à nous contacter à <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
 
-<p>Cordialement,<br>L'équipe GetFundedAfrica !</p>";
+<p>Cordialement,<br>L'équipe Communified !</p>";
 
-// $this->sendMail("investor@GetFundedAfrica.com", $message,$subject);
+// $this->sendMail("investor@Communified.com", $message,$subject);
 $this->sendMail($startup_email, $message,$subject);
 
 $subjects = "RE: {$mentor_name} Schedule a Call Request";
-$messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+$messages = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 $messages .= "<p>Bonjour {$mentor_name},</p>
 
 <p>Merci d'avoir choisi de planifier un appel avec {$Startup_Company_Name}. Cet e-mail automatique vous informe que le fondateur a été notifié de l'appel programmé et se réjouit de cet échange.</p>
 
-<p>Nous vous remercions de l'intérêt que vous portez à {$Startup_Company_Name}, et si d'autres moyens peuvent vous être utiles, n'hésitez pas à nous contacter à <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>
+<p>Nous vous remercions de l'intérêt que vous portez à {$Startup_Company_Name}, et si d'autres moyens peuvent vous être utiles, n'hésitez pas à nous contacter à <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
 
-<p>Cordialement,<br>L'équipe GetFundedAfrica !</p>";
+<p>Cordialement,<br>L'équipe Communified !</p>";
 
     // $subject = "Connection";
     $ref_id = time();
@@ -9519,10 +9519,10 @@ $messages .= "<p>Bonjour {$mentor_name},</p>
 
 					
 // 	$subject = "RE: {$mentor_name} Schedule a Call Request";
-// 	$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+// 	$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 //     $message.="<p>Dear {$startup_name},</p>
 
-//     <p>This is an automated email to notify you that an investor from GetFundedAfrica platform has shown interest in having a deep dive session with you. Please see below for scheduled call details:</p>
+//     <p>This is an automated email to notify you that an investor from Communified platform has shown interest in having a deep dive session with you. Please see below for scheduled call details:</p>
 
 //     <p><strong>Subject:</strong>{$subject_info}; {$subject_ext}</p>
 //     <p>Date: {$date_time}</p>
@@ -9530,22 +9530,22 @@ $messages .= "<p>Bonjour {$mentor_name},</p>
 //     <p>Platform: {$meeting_link}</p>
 //     <p>Short Message: {$more_info}</p>
 
-//     <p>Please login to your GetFundedAfrica account to view the investor details. We suggest to conduct preliminary research about the investor to understand who they are and their investment criteria before the call to bring you one step closer to your fundraising success.</p>
+//     <p>Please login to your Communified account to view the investor details. We suggest to conduct preliminary research about the investor to understand who they are and their investment criteria before the call to bring you one step closer to your fundraising success.</p>
 
-//     <p>Should you have any questions or concerns that our GFA team can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>
+//     <p>Should you have any questions or concerns that our GFA team can support you, please do not hesitate to contact us at <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
 
-//     <p>Cheerios,<br>GetFundedAfrica Team!</p>";
-//     //$this->sendMail("investor@GetFundedAfrica.com", $message,$subject);
+//     <p>Cheerios,<br>Communified Team!</p>";
+//     //$this->sendMail("investor@Communified.com", $message,$subject);
 //     //$this->sendMail($startup_email, $message,$subject);
 //     $subjects = "RE: {$mentor_name} Schedule a Call Request";
-//     $messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+//     $messages = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 //     $messages .="<p>Dear {$mentor_name},</p>
 
 //     <p>Thank you for choosing to schedule a call with {$Startup_Company_Name}. This auto-reply is to inform you that the Founder has been notified about the scheduled call and is looking forward to the call.</p>
 
-//     <p>We appreciate your interest in {$Startup_Company_Name}, and if there are other possible ways that GetFundedAfrica can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>
+//     <p>We appreciate your interest in {$Startup_Company_Name}, and if there are other possible ways that Communified can support you, please do not hesitate to contact us at <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
 
-//     <p>Cheerios!<br>GetFundedAfrica Team!</p>";
+//     <p>Cheerios!<br>Communified Team!</p>";
 //     $subject = "Connection";
 //     $ref_id = time();
 //     $message = "Connection";
@@ -9564,7 +9564,7 @@ public function startups()
 		
 	$email  = session()->get('email') ; if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
 	
-		$title['page_title'] = "Investor - GetFundedAfrica";
+		$title['page_title'] = "Investor - Communified";
 		 $data['email'] =  $email;
         $data['login_type'] = session()->get('login_type') ;
         $data['account_type'] = session()->get('account_type') ;
@@ -9624,7 +9624,7 @@ public function investor_startup_details($id="")
 		
 		$email  = session()->get('email'); if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
 	
-		$title['page_title'] = "Investor - GetFundedAfrica";
+		$title['page_title'] = "Investor - Communified";
 		$data['id'] = $id;
 	    session()->set('get_investor_id', $id);
         $data['email'] =  $email;
@@ -9774,7 +9774,7 @@ public function investor_startup_details($id="")
         echo "Successfully submitted! Your Interest is under review, our investment team will get back to you soon";
 
 		if(!empty($dataInfo[0]) || !empty($dataInfo[1]) || !empty($dataInfo[2])){
-			$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>
+			$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a>
 	   
 			<p>
 			Dear  ".$investor_name.",
@@ -9785,20 +9785,20 @@ public function investor_startup_details($id="")
 			</p><br>
 			
 			<p>
-			If you have general questions about our [products], check out our [knowledge_base] for walkthroughs and answers to FAQs. (if we don't have this part ready, we can skip it for now and just direct them to info@GetFundedAfrica.com)
+			If you have general questions about our [products], check out our [knowledge_base] for walkthroughs and answers to FAQs. (if we don't have this part ready, we can skip it for now and just direct them to info@Communified.com)
 	   
 			</p><br>
 	   
 			
 			<p>
-			If you have any additional information that you think will help us to assist you, please feel free to reply to this email [<a href='mailto:investors@GetFundedAfrica.com'>investors@GetFundedAfrica.com</a>]</p>
+			If you have any additional information that you think will help us to assist you, please feel free to reply to this email [<a href='mailto:investors@Communified.com'>investors@Communified.com</a>]</p>
 			<p>
 			
 			We look forward to chatting soon! 
 			<p>
 			Cheerios!<br>
 	   
-			GetFundedAfrica Team!
+			Communified Team!
 			</p>
 			<br>
 			<p>P/S: let us know when the suggested changes has been made and when can we do a test of the end to end process.</p><br>
@@ -9833,14 +9833,14 @@ public function startupinvite($investor_id='',$startup_id=''){
 					if($this->gfa_model->updateStartupInvite($data_invite,$investor_email,$startup_email)){
 					    
 					    $subject = $startup_name." confirmed Invite";
-$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 
 $message .="Your scheduled  with {$startup_company_name} have been successfully confirmed." ;
 
-//$message .= '<br> <br>  <a href="https://nora.GetFundedAfrica.ci/portal/gfa/startupinvite/'.$investor_id.'/'.$startup_id.'">Click here to Accept</a>';
+//$message .= '<br> <br>  <a href="https://nora.Communified.ci/portal/gfa/startupinvite/'.$investor_id.'/'.$startup_id.'">Click here to Accept</a>';
 
-$this->sendMail("investor@GetFundedAfrica.com", $message,$subject);
-$this->sendMail("info@getfundedafrica.com", $message,$subject);
+$this->sendMail("investor@Communified.com", $message,$subject);
+$this->sendMail("info@Communified.com", $message,$subject);
 $this->sendMail($investor_email, $message,$subject);
 
                         $url = 'gfa/invite_confirm';
@@ -9858,7 +9858,7 @@ public function investor_deals()
 	$email  = session()->get('email'); if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
 		
 
-		$title['page_title'] = "Investor and Mentor Dashboard by GetFundedAfrica";
+		$title['page_title'] = "Investor and Mentor Dashboard by Communified";
 		$data['email'] =  $email;
         $data['login_type'] = session()->get('login_type') ;
         $data['account_type'] = session()->get('account_type') ;
@@ -9934,7 +9934,7 @@ public function requestdealroom(){
 
 					
 					$subject = "RE: {$Startup_Company_Name} dealroom access request";
-$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 
 $message .="<p>Dear {$investor_name},</p>
 
@@ -9950,9 +9950,9 @@ purpose of facilitating due diligence. By accessing the dealroom, you agree to
 maintain the confidentiality of all information contained therein and to use it only 
 for the purpose of evaluating your investment of {$Startup_Company_Name}.</p>
 
-<p>Thank you again for your interest. If you have any questions or concerns, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>
+<p>Thank you again for your interest. If you have any questions or concerns, please do not hesitate to contact us at <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
 
-<p>Cheerios,<br>GetFundedAfrica Team!</p>" ;
+<p>Cheerios,<br>Communified Team!</p>" ;
 
 $this->sendMail($investor_email, $message,$subject);
 
@@ -10011,10 +10011,10 @@ public function callstartup(){
 
 					
 					$subject = "RE: {$investor_name} Schedule a Call Request";
-					$message = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+					$message = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 $message.="<p>Dear {$startup_name},</p>
 
-<p>This is an automated email to notify you that an investor from GetFundedAfrica platform has shown interest in having a deep dive session with you. Please see below for scheduled call details:</p>
+<p>This is an automated email to notify you that an investor from Communified platform has shown interest in having a deep dive session with you. Please see below for scheduled call details:</p>
 
 <p><strong>Subject:</strong>{$subject_info}; {$subject_ext}</p>
 <p>Date: {$date_time}</p>
@@ -10022,22 +10022,22 @@ $message.="<p>Dear {$startup_name},</p>
 <p>Platform: {$meeting_link}</p>
 <p>Short Message: {$more_info}</p>
 
-<p>Please login to your GetFundedAfrica account to view the investor details. We suggest to conduct preliminary research about the investor to understand who they are and their investment criteria before the call to bring you one step closer to your fundraising success.</p>
+<p>Please login to your Communified account to view the investor details. We suggest to conduct preliminary research about the investor to understand who they are and their investment criteria before the call to bring you one step closer to your fundraising success.</p>
 
-<p>Should you have any questions or concerns that our GFA team can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>
+<p>Should you have any questions or concerns that our GFA team can support you, please do not hesitate to contact us at <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
 
-<p>Cheerios,<br>GetFundedAfrica Team!</p>";
-//$this->sendMail("investor@GetFundedAfrica.com", $message,$subject);
+<p>Cheerios,<br>Communified Team!</p>";
+//$this->sendMail("investor@Communified.com", $message,$subject);
 $this->sendMail($startup_email, $message,$subject);
 $subjects = "RE: {$investor_name} Schedule a Call Request";
-$messages = "<a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a><br><br>";
+$messages = "<a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a><br><br>";
 $messages .="<p>Dear {$investor_name},</p>
 
 <p>Thank you for choosing to schedule a call with {$Startup_Company_Name}. This auto-reply is to inform you that the Founder has been notified about the scheduled call and is looking forward to the call.</p>
 
-<p>We appreciate your interest in {$Startup_Company_Name}, and if there are other possible ways that GetFundedAfrica can support you, please do not hesitate to contact us at <a href='mailto:info@GetFundedAfrica.com'>info@GetFundedAfrica.com</a>.</p>
+<p>We appreciate your interest in {$Startup_Company_Name}, and if there are other possible ways that Communified can support you, please do not hesitate to contact us at <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
 
-<p>Cheerios!<br>GetFundedAfrica Team!</p>";
+<p>Cheerios!<br>Communified Team!</p>";
 $subject = "Connection";
 $ref_id = time();
 $message = "Connection";
@@ -10053,7 +10053,7 @@ $message = "Connection";
 	{
 		
 	$email  = session()->get('email'); if(($email == '')){ return redirect()->to(base_url('gfa/login')); }	
-		$title['page_title'] = "Syndicate Information - GetFundedAfrica";
+		$title['page_title'] = "Syndicate Information - Communified";
 			$data['email'] =  $email;
         $data['login_type'] = session()->get('login_type') ;
         $data['account_type'] = session()->get('account_type') ;
@@ -10072,7 +10072,7 @@ $message = "Connection";
 	{
 		
 	$email  = session()->get('email'); if(($email == '')){ return redirect()->to(base_url('gfa/login')); }
-		$title['page_title'] = "Syndicate a deals, fund - GetFundedAfrica";
+		$title['page_title'] = "Syndicate a deals, fund - Communified";
 		$data['startup_id'] = $startup_id;
 		$data['email'] =  $email;
         $data['login_type'] = session()->get('login_type') ;
@@ -10171,12 +10171,12 @@ $message = "Connection";
 			//$this->gfa_model->insertLogin($data_login);
 			
 			 $message = "
- <a href='https://nora.GetFundedAfrica.ci'><img src='https://nora.GetFundedAfrica.ci/images/logo-1.png'></a>
+ <a href='https://nora.Communified.ci'><img src='https://nora.Communified.ci/images/logo-1.png'></a>
    
 <p><strong>Dear ".$expected_deal.",</strong></p>
 
 <p> ".$expected_deal." from ".$expected_deal."
-has invited you to join the GetFundedAfrica Platform monitor and invest in adeal.</p>
+has invited you to join the Communified Platform monitor and invest in adeal.</p>
 
 
 
@@ -10185,7 +10185,7 @@ Thank you
 
 
 <br>
-GetFundedAfrica Team
+Communified Team
 
 		   ";	
 //subject = $corperateName."Invite you for a deal";
@@ -10209,7 +10209,7 @@ GetFundedAfrica Team
     {
         
        
-        $title['page_title'] = "Investor and Mentor Dashboard by GetFundedAfrica";
+        $title['page_title'] = "Investor and Mentor Dashboard by Communified";
         $email  = session()->get('email') ;
         if(($email == '')){ return redirect()->to(base_url('gfa/login')); }  
         $data['email'] =  $email;
@@ -10332,15 +10332,15 @@ GetFundedAfrica Team
 				  $this->gfa_model->insertAppLog($data_app_log);
 				//$this->gfa_model->insertStartupProfile($data_startup); 
 				   echo "Successfully registered. Please check your email for login details to continue!";
-				 $subject = 'Welcome to GetFundedAfrica – Your Account Details Inside';
+				 $subject = 'Welcome to Communified – Your Account Details Inside';
 
                     $message = "
                     <div style='font-family: Arial, sans-serif; color: #333; line-height: 1.6;'>
-                        <a href='https://getfundedafrica.com/' style='display: inline-block; margin-bottom: 20px;'>
-                            <img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>
+                        <a href='https://Communified.com/' style='display: inline-block; margin-bottom: 20px;'>
+                            <img src='https://Communified.com/assets/images/get-funded-africa-logo.png' alt='Communified Logo' style='width: 150px; height: auto;'>
                         </a>
                         
-                        <p><strong>Welcome to GetFundedAfrica!</strong></p>
+                        <p><strong>Welcome to Communified!</strong></p>
                     
                         <p>Your account has been successfully created. You can now log in using the details below:</p>
                         
@@ -10356,10 +10356,10 @@ GetFundedAfrica Team
                         <p>We recommend that you change your password after logging in.</p>
                     
                         <p>If you have any questions or need assistance, feel free to contact us at:<br>
-                        <strong>info@getfundedafrica.com</strong></p>
+                        <strong>info@Communified.com</strong></p>
                     
                         <p>Best regards,<br>
-                        <strong>The GetFundedAfrica Team</strong></p>
+                        <strong>The Communified Team</strong></p>
                     </div>
                     ";
 
@@ -10471,15 +10471,15 @@ GetFundedAfrica Team
 				$this->gfa_model->insertStartupProfile($data_startup); 
 				   echo "Successfully registered. Please check your email for login details to continue!";
 			
-				 $subject = 'Welcome to GetFundedAfrica – Your Account Details Inside';
+				 $subject = 'Welcome to Communified – Your Account Details Inside';
 
                     $message = "
                     <div style='font-family: Arial, sans-serif; color: #333; line-height: 1.6;'>
-                        <a href='https://getfundedafrica.com/' style='display: inline-block; margin-bottom: 20px;'>
-                            <img src='https://getfundedafrica.com/assets/images/get-funded-africa-logo.png' alt='GetFundedAfrica Logo' style='width: 150px; height: auto;'>
+                        <a href='https://Communified.com/' style='display: inline-block; margin-bottom: 20px;'>
+                            <img src='https://Communified.com/assets/images/get-funded-africa-logo.png' alt='Communified Logo' style='width: 150px; height: auto;'>
                         </a>
                         
-                        <p><strong>Welcome to GetFundedAfrica!</strong></p>
+                        <p><strong>Welcome to Communified!</strong></p>
                     
                         <p>Your account has been successfully created. You can now log in using the details below:</p>
                         
@@ -10495,10 +10495,10 @@ GetFundedAfrica Team
                         <p>We recommend that you change your password after logging in.</p>
                     
                         <p>If you have any questions or need assistance, feel free to contact us at:<br>
-                        <strong>info@getfundedafrica.com</strong></p>
+                        <strong>info@Communified.com</strong></p>
                     
                         <p>Best regards,<br>
-                        <strong>The GetFundedAfrica Team</strong></p>
+                        <strong>The Communified Team</strong></p>
                     </div>
                     ";
 				  
@@ -11454,8 +11454,8 @@ public function stripepay($paymentMethodId="")
                   
                   $this->gfa_model->insertSubPackageFlutter($data_subscription);
 
-                  $emailx  = "ugochi@getfundedafrica.com";   
-                  //"tunji@getfundedafrica.com";
+                  $emailx  = "ugochi@Communified.com";   
+                  //"tunji@Communified.com";
                   
                   
                   $subject = $name." Subscription Package";
@@ -11480,15 +11480,15 @@ public function stripepay($paymentMethodId="")
                   $this->sendMail("dashotemitope@gmail.com", $message,$subject);
                       #=======================Send Subscribing Message=========================
                       $subjectSub = "Welcome to GFA's AI-Powered Investor Finder CRM Solution";
-                      $messageSub = "<a href='https://getfundedafrica.com'><img src='https://getfundedafrica.com/images/logo-1.png'></a>
+                      $messageSub = "<a href='https://Communified.com'><img src='https://Communified.com/images/logo-1.png'></a>
                     <br>";
                     $messageSub .= "
                     <p>Hello {$name},</p>
                     <p>Wow! Thank you for subscribing to GFA’s AI-Powered Investor Finder CRM Solution!</p>
-                    <p>My name is Tunji and I am a Co-Founder and Chief Commercial Officer at GetFundedAfrica. On behalf of GFA, I say a big thank you for coming on board.</p>
+                    <p>My name is Tunji and I am a Co-Founder and Chief Commercial Officer at Communified. On behalf of GFA, I say a big thank you for coming on board.</p>
                     <p>I thought to connect and tell you how you can benefit from your subscription fully; we intend to provide adequate support post-subscription.</p>
                     <p>What Next?</p>
-                    <p>Your subscription to the Investor Finder CRM represents much more than a transaction to GFA. It has become an entry point for you/your business into the GetFundedAfrica Investor Readiness & Fund Raising Community.</p>
+                    <p>Your subscription to the Investor Finder CRM represents much more than a transaction to GFA. It has become an entry point for you/your business into the Communified Investor Readiness & Fund Raising Community.</p>
                     <p>To ensure you get the results you expect from the Investor Finder, we intend to:</p>
                     <ul>
                         <li>Hold webinars on how to navigate the Investor Finder & Dos/Don’t’s when connecting with investors.</li>
@@ -11497,13 +11497,13 @@ public function stripepay($paymentMethodId="")
                         <li>Other initiatives as communicated in our Investor Finder App CRM for Fundraising and revolutionizing investor engagement email sent earlier in the month.</li>
                     </ul>
                     
-                    <p>Our Customer Support team would love to hear from you. Don’t hesitate to reach out with questions or feedback via email at <a href='mailto:info@getfundedafrica.com'>info@getfundedafrica.com</a>.</p>
+                    <p>Our Customer Support team would love to hear from you. Don’t hesitate to reach out with questions or feedback via email at <a href='mailto:info@Communified.com'>info@Communified.com</a>.</p>
                     <p>Once again, thank you for joining the GFA Family!</p>
-                    <p><a href='https://investorsfinder.getfundedafrica.com/gfa/login'>Sign in to your user dashboard</a>.</p>
+                    <p><a href='https://investorsfinder.Communified.com/gfa/login'>Sign in to your user dashboard</a>.</p>
                     <p>Regards,</p>
                     <p>Tunji Oke</p>
                     <p>Co-Founder & CCO</p>
-                    <p>GetFundedAfrica</p>";
+                    <p>Communified</p>";
                       $this->sendMail($email, $messageSub,$subjectSub);
 
 	    

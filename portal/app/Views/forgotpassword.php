@@ -13,7 +13,7 @@
           <div class="auth-wrapper auth-cover">
             <div class="auth-inner row m-0">
               <!-- Brand logo--><a class="brand-logo" href="#">
-<img src="<?php echo base_url("public/assets/images/logo/communified-logo.png"); ?>">
+<img src="https://communitified-test.azurewebsites.net/assets/images/communified-logo.png" width="120px" height="120px">
                </a>
               <!-- /Brand logo-->
               <!-- Left Text-->

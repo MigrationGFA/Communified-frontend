@@ -13,7 +13,7 @@
           <div class="auth-wrapper auth-cover">
             <div class="auth-inner row m-3">
               <!-- Brand logo--><a class="brand-logo" href="#">
-                <img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">
+                <img src="https://communitified-test.azurewebsites.net/assets/images/communified-logo.png" width="120px" height="120px">
                </a>
               <!-- /Brand logo-->
               <!-- Left Text-->
@@ -49,12 +49,12 @@
                     <div class="mb-1">
                       <div class="d-flex justify-content-between">
                         <a href="<?php echo base_url('gfa/forgotpassword'); ?>"><?php echo lang('translation.Forgot Password'); ?></a>
-                        <a href="https://getfundedafrica.com/register/ticket.php"><?php echo lang('translation.Help'); ?></a>
+                        <a href="https://communitified-test.azurewebsites.net/ticket.php"><?php echo lang('translation.Help'); ?></a>
                       </div>
                     </div>
                     <button class="btn btn-primary w-100" tabindex="4"><?php echo lang('translation.Sign in'); ?></button>
                   </form>
-                   <p class="text-center mt-2"><a href="https://getfundedafrica.com/register"><span><?php echo lang('translation.New on our platform?'); ?><br><?php echo lang('translation.Open an Account'); ?></span></a></p>
+                   <p class="text-center mt-2"><a href="https://communitified-test.azurewebsites.net/register"><span><?php echo lang('translation.New on our platform?'); ?><br><?php echo lang('translation.Open an Account'); ?></span></a></p>
                   <!-- <div class="divider my-2">
                     <div class="divider-text">or</div>
                   </div> -->

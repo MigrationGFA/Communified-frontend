@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'https://getfundedafrica.com/portal/';
+    public string $baseURL = 'https://communitified-test.azurewebsites.net/portal/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
