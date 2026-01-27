@@ -32,7 +32,7 @@ class App extends BaseConfig
      * http://localhost/Communified-frontend/portal/
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost/Communified-frontend/portal/';
+    public string $baseURL = 'https://communitified-test.azurewebsites.net/portal/';
 
 
     /**
