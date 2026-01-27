@@ -1,1 +1,4 @@
 .specstory/*
+.php_tmp
+.vscode
+fiveserver.config.js

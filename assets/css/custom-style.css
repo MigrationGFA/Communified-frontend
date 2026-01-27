@@ -513,8 +513,13 @@
 
 /* Ad Banner Section */
 .ad-banner {
-  background: linear-gradient(135deg, #e97522 0%, #d18215 100%);
-  padding: 50px 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue, #4a6cc4) 0%,
+    var(--primary-blue-dark, #3a5aae) 50%,
+    var(--accent-indigo, #5b6ec4) 100%
+  );
+  padding: 60px 0;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -531,7 +536,7 @@
   right: 0;
   bottom: 0;
   background: url("../images/demo-branding-agency-pattern.svg") center/cover;
-  opacity: 0.1;
+  opacity: 0.08;
   pointer-events: none;
   z-index: -1;
 }
@@ -668,7 +673,7 @@ footer {
   left: 0;
   top: 0;
   height: 100%;
-  background: var(--base-color);
+  background: var(--primary-blue, #4a6cc4);
   width: var(--swiper-progress, 0%);
   transition: width 0.3s ease;
 }
