@@ -12,7 +12,7 @@
 <!--   The investor name & title -->
 
 
-            <h4 class="card-title">FGN-ALAT APPLICANTS <?php //echo $this->encrypt->decode($this->session->userdata('cor_info')) ; ?> </h4>
+            <h4 class="card-title">Application Startups/SME for Corporate Programme/Event <?php //echo $this->encrypt->decode($this->session->userdata('cor_info')) ; ?> </h4>
 
 <!--The investment stage -->
 
@@ -24,7 +24,7 @@
       ?>
     <div class="col-lg-12 col-12">
         <div class="col-lg-12 text-center mb-2">
-            <a href="<?php echo base_url(); ?>gfa/export_all_reg" class="btn btn-secondary btn-next" style="margin:5px;"> Export Data </a> 
+            <!--data-bs-target="#checkHireProfile" data-bs-toggle="modal"-->
             <!--<a href="<?php echo base_url(); ?>gfa/corperates" class="btn btn-secondary btn-next" style="margin:5px;" disabled> Connect </a>   <a href="#" class="btn btn-primary btn-next" style="margin:5px;" data-bs-target="#checkInterview" data-bs-toggle="modal"> Request an Interview </a> <a href="<?php echo base_url(); ?>gfa/calendar" style="margin:5px;" class="btn btn-primary btn-next" > Schedule Meeting </a>-->
         <!--<a href="" class="btn btn-primary btn-next" style="float:auto;">Panel Request</a>-->
         </div>
@@ -36,7 +36,7 @@
            $row  = $this->gfa_model->getStartUpDetailsReg($reg_type); 
            }else{
                
-             $row  = $this->gfa_model->getStartUpDetailsRegAllLimit();   
+             $row  = $this->gfa_model->getStartUpDetailsRegAll();   
            }
     	
     	if(!empty($row)){     

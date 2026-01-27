@@ -262,7 +262,7 @@
     <option value="WST" label="Samoan tālā">WST</option>
     <option value="XAF" label="Central African CFA franc">XAF</option>
     <option value="XCD" label="Eastern Caribbean dollar">XCD</option>
-    <option value="XOF" label="West African CFA franc">XOF</option>
+    <option value="" label="West African CFA franc"></option>
     <option value="XPF" label="CFP franc">XPF</option>
     <option value="ZAR" label="South African rand">ZAR</option>
     <option value="ZMW" label="Zambian kwacha">ZMW</option>

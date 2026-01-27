@@ -65,7 +65,7 @@
             </div>
             <div class="d-flex flex-column">
               <span class="fw-medium">Admin</span>
-              <small class="text-muted">GATEWAY </small> 
+              <small class="text-muted">FGNALAT </small> 
             </div>
           </div>
         </div>

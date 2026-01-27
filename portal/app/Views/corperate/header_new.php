@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html class="loading bordered-layout" lang="en" data-layout="bordered-layout" data-textdirection="ltr">
@@ -15,7 +16,16 @@
     
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/vendors/css/calendars/fullcalendar.min.css"); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/vendors/css/forms/select/select2.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css"); ?>">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+    <script>
+      flatpickr("#fp-date-time", { enableTime: true, locale: "fr" });
+    </script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="<?php // echo base_url("public/assets/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css"); ?>">
+
     <!-- END: Vendor CSS-->
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/vendors/css/vendors.min.css"); ?>">
@@ -86,46 +96,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/portal-onb.css"); ?>">
     <script src="<?php echo base_url("public/assets/app-assets/js/scripts/pagination.js"); ?>"></script>
     <script src="<?php echo base_url("public/assets/app-assets/js/core/api.js"); ?>"></script>
-   <style type="text/css">
-		
-		button {
-			cursor: pointer;
-		}
-		/*Initial style sort*/
-		.tablemanager th.sorterHeader {
-			cursor: pointer;
-		}
-		.tablemanager th.sorterHeader:after {
-			content: " \f0dc";
-			font-family: "FontAwesome";
-		}
-		/*Style sort desc*/
-		.tablemanager th.sortingDesc:after {
-			content: " \f0dd";
-			font-family: "FontAwesome";
-		}
-		/*Style sort asc*/
-		.tablemanager th.sortingAsc:after {
-			content: " \f0de";
-			font-family: "FontAwesome";
-		}
-		/*Style disabled*/
-		.tablemanager th.disableSort {
-
-		}
-		#for_numrows {
-			padding: 10px;
-			float: left;
-		}
-		#for_filter_by {
-			padding: 10px;
-			float: right;
-		}
-		#pagesControllers {
-			display: block;
-			text-align: center;
-		}
-	</style>
+    <style>
+  
+</style>
   </head>
   <!-- END: Head-->
   <!-- BEGIN: Body-->

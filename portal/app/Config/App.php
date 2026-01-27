@@ -26,12 +26,14 @@ class App extends BaseConfig
      * Whether to display error details in the output.
      *
      * 
+        * URL to your CodeIgniter root. Typically, this will be your base URL,
+     * WITH a trailing slash:
+     * https://communitified-test.azurewebsites.net/portal/
+     * http://localhost/Communified-frontend/portal/
+     * E.g., http://example.com/
      */
-    // @var bool
-    // public $displayErrorDetails = false;
-    // https://gfa-tech-test.azurewebsites.net/portal/ https://gfa-tech.com/portal/  
-    // http://localhost/Gfa-tech/portal/
-    public string $baseURL = 'https://gfa-tech.com/portal/';
+    public string $baseURL = 'http://localhost/Communified-frontend/portal/';
+
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

@@ -7,72 +7,12 @@
         
 <div class="container-xxl flex-grow-1 container-p-y">
             
-       
+            
 
 <h4 class="py-3 mb-4"><span class="text-muted fw-light">My</span> Courses</h4>
 
 <div class="app-academy">
-  <div class="row">
-  <!-- Website Analytics -->
   
-  <!--/ Website Analytics -->
-
-  <!-- Sales Overview -->
-  
-  <!--/ Sales Overview -->
-   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="<?php echo $nonce_value; ?>"></script>
-  <!-- Revenue Generated -->
-  
-  
-  <div class="col-lg-12 mb-4">
-    <div class="input-group">
-        <input type="text" class="form-control" value="<?php echo 'https://gfa-tech.com/register-gateway/?ref='.$skillArray[0]['ref']; ?>"  readonly="readonly" id="inputField" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-primary" type="button" id="copyButton">Copy Referral Link</button>
-        </div>
-    </div>
-    <div id="revenueGenerated" class="mb-2 mt-2"><a class="btn btn-outline-primary" href="whatsapp://send?text=<?php echo 'https://gfa-tech.com/register-gateway/?ref='.$skillArray[0]['ref']; ?>" data-action="share/whatsapp/share">Share via WhatsApp</a> 
-   <div class="fb-share-button btn btn-outline-primary" data-href="<?php echo 'https://gfa-tech.com/register-gateway/?ref='.$skillArray[0]['ref']; ?>" data-layout="button"></div>
-   <a href="https://twitter.com/intent/tweet?url=<?php echo 'https://gfa-tech.com/register-gateway/?ref='.$skillArray[0]['ref']; ?>" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Share on Twitter</a>
-   <a href="<?php echo base_url('gfa/referral'); ?>" class="btn btn-dark">Details</a>
-   
-   
-   </div>
-  </div>
-  <!--/ Revenue Generated -->
-
-  <!-- Earning Reports -->
-  
-  <!--/ Earning Reports -->
-<script>
-        document.getElementById('copyButton').addEventListener('click', function() {
-            // Get the value of the input field
-            var inputValue = document.getElementById('inputField').value;
-            
-            // Create a temporary textarea element
-            var tempTextarea = document.createElement('textarea');
-            tempTextarea.value = inputValue;
-            
-            // Append the textarea to the document
-            document.body.appendChild(tempTextarea);
-            
-            // Select the text inside the textarea
-            tempTextarea.select();
-            
-            // Copy the selected text to the clipboard
-            document.execCommand('copy');
-            
-            // Remove the temporary textarea from the document
-            document.body.removeChild(tempTextarea);
-            
-            // Alert the user that the text has been copied (optional)
-            alert('Text copied to clipboard: ' + inputValue);
-        });
-    </script>
-  
-</div>     
 
   <div class="card mb-4">
     <div class="card-header d-flex flex-wrap justify-content-between gap-3">
@@ -90,18 +30,15 @@
     <!--      <option value="Data Analysis and Visualization">Data Analysis and Visualization (7)</option>-->
     <!--      <option value="Search Engine Optimization">Search Engine Optimization (SEO)</option>-->
     <!--      <option value="CRM Management">CRM Management (6)</option>-->
-      <!--<option value="Graphics Design">Graphics Design (0)</option>-->
-      <!--<option value="UIUX Design">UI/UX Design (0)</option>-->
-      <!--<option value="Accounting Software">Accounting Software (2)</option>-->
+		  <!--<option value="Graphics Design">Graphics Design (0)</option>-->
+		  <!--<option value="UIUX Design">UI/UX Design (0)</option>-->
+		  <!--<option value="Accounting Software">Accounting Software (2)</option>-->
     <!--    </select>-->
 
         
     <!--  </div>-->
     </div>
     <div class="card-body">
-    <div class="row mb-4 g-4 loadSoftsKillsAnalytics">
-  
-</div>
       <div class="row gy-4 mb-4">
            <?php if(!empty($courseArrayToday)){  ?>
            <div class="col-sm-6 col-lg-6">
@@ -112,7 +49,7 @@
             </div>
             <div class="card-body p-3 pt-2">
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="badge bg-success">Duration: <ls style="color:#"><?php echo $courseArrayToday[0]['duration']; ?> mins</ls></span>
+                <span class="badge bg-success"><?php echo lang('translation.Duration') ?>: <ls style="color:#"><?php echo $courseArrayToday[0]['duration']; ?> mins</ls></span>
                 <h6 class="d-flex align-items-center justify-content-center gap-1 mb-0">
                  <!--<span class="text-muted"> Day <?php echo $n++ ?></span>-->
                 </h6>
@@ -133,13 +70,13 @@
                     $lesson_url = str_replace(" ","-",$getActiveLesson[0]['title']);
              ?>
                 <a class="app-academy-md-50 btn btn-label-success d-flex align-items-center" ls="<?= $courseArrayToday[0]['coursetitle'];  ?>" href="<?php echo base_url("gfa/course/{$courseArrayToday[0]['id']}/{$cours_url}") ?>"> 
-                  <span class="me-2">Review</span><i class="ti ti-chevron-right scaleX-n1-rtl ti-sm"></i>
+                  <span class="me-2"><?php echo lang('translation.Review') ?></span><i class="ti ti-chevron-right scaleX-n1-rtl ti-sm"></i>
                 </a> 
 
              <?php if($getActiveLesson[0]['title'] !="") {  ?>  
 
                 <a class="app-academy-md-50 btn btn-label-primary d-flex align-items-center userActivity" ls="<?= $getActiveLesson[0]['title'];  ?>" href="<?php echo base_url("gfa/lesson/{$getActiveLesson[0]['id']}/{$lesson_url}") ?>"> 
-                  <span class="me-2">Start</span><i class="ti ti-chevron-right scaleX-n1-rtl ti-sm"></i>
+                  <span class="me-2"><?php echo lang('translation.Start') ?></span><i class="ti ti-chevron-right scaleX-n1-rtl ti-sm"></i>
                 </a>
                 <?php }  ?>
               </div>
@@ -147,9 +84,7 @@
           </div>
         </div>
         <?php } ?>
-         
-        <?php if(!empty($courseArrayNext)){ ?>
-          <div class="col-sm-6 col-lg-6">
+         <div class="col-sm-6 col-lg-6">
           <div class="card p-2 h-100 shadow-none border">
               <a class="h5" href="app-academy-course-details.html">Your Next Course</a>
             <div class="rounded-2 text-center mb-3">
@@ -157,7 +92,7 @@
             </div>
             <div class="card-body p-3 pt-2">
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="badge bg-success">Duration: <ls style="color:#"><?php echo $courseArrayNext[0]['duration']; ?> mins</ls></span>
+                <span class="badge bg-success"><?php echo lang('translation.Duration') ?>: <ls style="color:#"><?php echo $courseArrayNext[0]['duration']; ?> mins</ls></span>
                 <h6 class="d-flex align-items-center justify-content-center gap-1 mb-0">
                  <!--<span class="text-muted"> Day <?php echo $n++ ?></span>-->
                 </h6>
@@ -179,18 +114,17 @@
             </div>
           </div>
         </div><br>
-       <?php }  ?> 
-     <!-- <a class="h5" href="#">Upcoming Courses</a>  -->
-    <?php $n =1;  foreach ($courseArrayUpcoming as $courseDetails) {  ?>
+       
+		<a class="h5" href="#">Upcoming Courses</a>
+		<?php $n =1;  foreach ($courseArrayUpcoming as $courseDetails) {  ?>
         <div class="col-sm-6 col-lg-4">
           <div class="card p-2 h-100 shadow-none border">
-        
             <div class="rounded-2 text-center mb-3">
               <a href="#"><img class="img-fluid" src="<?php echo base_url("public/assets-new/img/{$courseDetails['img']}") ?>" alt="soft skill" /></a>
             </div>
             <div class="card-body p-3 pt-2">
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="badge bg-success">Duration: <ls style="color:#"><?php echo $courseDetails['duration']; ?> mins</ls></span>
+                <span class="badge bg-success"><?php echo lang('translation.Duration') ?>: <ls style="color:#"><?php echo $courseDetails['duration']; ?> mins</ls></span>
                 <h6 class="d-flex align-items-center justify-content-center gap-1 mb-0">
                  <!--<span class="text-muted"> Day <?php echo $n++ ?></span>-->
                 </h6>
@@ -213,12 +147,12 @@
           </div>
         </div>
         
-    <?php }  ?>
-        
-    <!--<br>
-    <a class="h5" href="#">Previous Courses</a> -->
+		<?php }  ?>
+				
+		<br>
+		<a class="h5" href="#">Previous Courses</a>
 
-    <?php $n =1;  foreach ($courseArrayPrev as $courseDetailsPrev) {  ?>
+		<?php $n =1;  foreach ($courseArrayPrev as $courseDetailsPrev) {  ?>
         <div class="col-sm-6 col-lg-4">
           <div class="card p-2 h-100 shadow-none border">
             <div class="rounded-2 text-center mb-3">
@@ -226,7 +160,7 @@
             </div>
             <div class="card-body p-3 pt-2">
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="badge bg-success">Duration: <ls style="color:#"><?php echo $courseDetailsPrev['duration']; ?> mins</ls></span>
+                <span class="badge bg-success"><?php echo lang('translation.Duration') ?>: <ls style="color:#"><?php echo $courseDetailsPrev['duration']; ?> mins</ls></span>
                 <h6 class="d-flex align-items-center justify-content-center gap-1 mb-0">
                  <!--<span class="text-muted"> Day <?php echo $n++ ?></span>-->
                 </h6>
@@ -244,11 +178,11 @@
              ?>
              <div class="d-flex flex-column flex-md-row gap-2 text-nowrap">
                 <a class="app-academy-md-50 btn btn-label-success me-md-2 d-flex align-items-center" ls="<?= $courseDetailsPrev['coursetitle'];  ?>" href="<?php echo base_url("gfa/course/{$courseDetailsPrev['id']}/{$cours_url}") ?>">
-                  <i class="ti ti-chevron-right align-middle scaleX-n1-rtl  me-2 mt-n1 ti-sm"></i><span>Review</span>
+                  <i class="ti ti-chevron-right align-middle scaleX-n1-rtl  me-2 mt-n1 ti-sm"></i><span><?php echo lang('translation.Review') ?></span>
                 </a>
                  <?php if($getActiveLesson[0]['title'] !="") {  ?>
                 <a class="app-academy-md-50 btn btn-label-primary d-flex align-items-center userActivity" ls="<?= $getActiveLesson[0]['title'];  ?>" href="<?php echo base_url("gfa/lesson/{$getActiveLesson[0]['id']}/{$lesson_url}") ?>"> 
-                  <span class="me-2">Start</span><i class="ti ti-chevron-right scaleX-n1-rtl ti-sm"></i>
+                  <span class="me-2"><?php echo lang('translation.Start') ?></span><i class="ti ti-chevron-right scaleX-n1-rtl ti-sm"></i>
                 </a>
                 <?php }  ?>
               </div>
@@ -256,49 +190,10 @@
           </div>
         </div>
         
-    <?php }  ?>
+		<?php }  ?>
       <!--<input type="text" class="getValue" value="" />-->
-    <span class="loadModule1 loadingPage1"></span>
-     <select id="mySelect" style="display: none;">
-                  <option value="">Option</option>
-        <option value="Option 1">Option 1</option>
-       
-    </select>
-    <input type="hidden" name="email" class="emailAcct" value="<?php echo $email;  ?>" />
+		<span class="loadModule1 loadingPage1"></span>
       </div>
-       <script>
-          $(document).ready(function() {
-              $(window).on('load', function() {
-             //$("#mySelect").change(function() {
-                var email = $(".emailAcct").val();  
-                  //load analytic page 
-                  $.ajax({
-        url: '<?php echo base_url("gfa/loadSoftsKillsAnalytics") ?>',
-        method: 'POST',
-        data:{email:email},
-        beforeSend: function() {
-            // Code to be executed before the AJAX request is sent
-            $(".loadSoftsKillsAnalytics").html("Loading...");
-
-            // You can add loading indicators or other preparations here
-        },
-        success: function(data) {
-            // Code to be executed after the AJAX request is successful
-          $(".loadSoftsKillsAnalytics").html("");
-            $(".loadSoftsKillsAnalytics").html(data);
-            
-            // You can perform additional actions or manipulate the loaded content here
-        },
-        error: function(xhr, status, error) {
-            // Handle errors if the AJAX request fails
-            $(".loadSoftsKillsAnalytics").html('Error:', status, error);
-        }
-    });
-           });        
-             
-          });
-             
-      </script>
       <script>
           $(function(){
             $('.userActivity').click(function(){
@@ -312,7 +207,7 @@
         data:{getValue:getValue},
         success: function(response) {
             // Code to be executed after the AJAX request is successful
-          
+        	
             $(".loadModule1").html(response);
             
             // You can perform additional actions or manipulate the loaded content here

@@ -1,4 +1,7 @@
-
+<?php 
+                $this->gfa_model = model('App\Models\GfaModel');
+                $this->admin_model = model('App\Models\AdminModel');
+           ?>
     <!-- BEGIN: Content-->
     <div class="app-content content ">
       <div class="content-overlay"></div>
@@ -81,13 +84,10 @@
                 <?php
                 
                 
-                if($email == 'admin@getfundedafrica.com'){
+                //if($email == 'admin@cotedivoirepme.com'){
                 $row = $this->gfa_model->getAllPerks();
-                }else{
-
-                    $row = $this->gfa_model->getPerksByEmail($email);  
-                }
-				foreach($row as $rowArray){
+                
+				      foreach($row as $rowArray){
 				   
                 ?> 
              

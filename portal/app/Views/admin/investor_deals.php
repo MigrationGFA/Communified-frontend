@@ -1,3 +1,8 @@
+<?php 
+        $this->gfa_model = model('App\Models\GfaModel');
+        $this->admin_model = model('App\Models\AdminModel');
+        
+    ?>
 <div class="content-wrapper">
 
 <section class="content">
@@ -67,13 +72,13 @@
                     </td>
                     <td>
                         <img src="<?php echo base_url(); ?>uploads/files/<?php echo $rowArray['photo']; ?>" alt="photo" height="35" /><br>
-                        <a href="https://getfundedafrica.com/portal/uploads/files/<?php echo $rowArray['photo']; ?>" target="_blank">View File</a>
+                        <a href="<?php echo base_url(); ?>uploads/files/<?php echo $rowArray['photo']; ?>" target="_blank">View File</a>
                     
                     </td>
                      
                     <td>
                         <img src="<?php echo base_url(); ?>uploads/files/<?php echo $rowArray['ids']; ?>" alt="photo" height="35" /><br>
-                        <a href="https://getfundedafrica.com/portal/uploads/files/<?php echo $rowArray['ids']; ?>" target="_blank">View File</a>
+                        <a href="<?php echo base_url(); ?>uploads/files/<?php echo $rowArray['ids']; ?>" target="_blank">View File</a>
                     
                     </td>
                     

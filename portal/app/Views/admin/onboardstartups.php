@@ -1,18 +1,66 @@
 <?php $admin_model = new \App\Models\AdminModel(); ?>
 <?php $gfa_model = new \App\Models\GfaModel(); ?>
+<?php 
+      $profile_request = $admin_model->getAllStartUpNById($id);
+      $getUser = $admin_model->getUser($profile_request[0]['Contact_Email']);
+
+?>
 
 <div class="content-wrapper">
 
  <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        User Form
+        PME Profile
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
        
-        <li class="active">User profile</li>
-      </ol>
+      <div class="btn-group pull-right margin-bottom">
+         <button class="btn btn-primary" href="#"  onclick="history.back()" style="margin-right: 10px;">Back</button>
+         <?php if($getUser[0]['status'] == 'active'){ ?>
+          <button class="btn btn-primary btnApproved" disabled href="#" style="margin-right: 10px;">✔Approved</button>
+        <?php }else{  ?>
+    <button class="btn btn-success btnStatus" href="#" style="margin-right: 10px;" lid="<?php echo $getUser[0]['id'] ?>" ls="active"><span class="showStatus">Approve</span></button>
+  <?php } ?>
+  <?php if($getUser[0]['status'] == 'de-active'){ ?>
+    <button class="btn btn-primary btnDeclined" disabled href="#">x Declined</button>
+  <?php }else{ ?>
+  <button class="btn btn-warning btnStatus" lid="<?php echo $getUser[0]['id'] ?>" ls="de-active"><span class="showStatus">Decline </button>
+<?php }  ?>
+</div>
+<script>
+              
+              $(function(){
+                
+                $('.btnStatus').click(function(){
+                
+            var file_status = $(this).attr('ls');
+            var id = $(this).attr('lid');
+             $.ajax({
+     data:{id:id,file_status:file_status},
+     type: "POST",
+     url: "<?php echo base_url(); ?>admin/userauthext",
+   error:function() {$(".showStatus").html('Error')},
+   beforeSend:function() {$(".showStatus").html('checking...')},
+      success: function(data) {
+        $('.showStatus').html(data);
+        $(this).attr('disabled');
+    if(data == "x Declined"){
+   $(".btnApproved").hide();
+         
+      }else{
+
+    $(".btnDeclined").hide();
+
+  }
+
+   }
+    });   
+            
+            
+                });
+                  
+              });
+          </script>
     </section>
 
     <!-- Main content -->
@@ -21,7 +69,7 @@
       <div class="row">
         <div class="col-md-3">
 		<?php 
-					$profile_request = $admin_model->getAllStartUpNById($id);
+
 				// 	$ref_request = $admin_model->getStartUp($getSub[0]['email']); 
 				// 	$getSub = $admin_model->getProfile($getSub[0]['email']);  
 					$getFile = $admin_model->getFile($profile_request[0]['Contact_Email']);
@@ -36,7 +84,7 @@
       
       $getPhoto =  $gfa_model->getPhotoUploaded($profile_request[0]['Contact_Email']);  
       if(empty($getPhoto)){
-          $showPhoto = "assets/images/uploads/default-avatar.jpg";
+          $showPhoto = "public/assets/images/uploads/default-avatar.jpg";
       }else{
          
          $showPhoto = "uploads/onboarding/".$getPhoto[0]['Photo_name']; 
@@ -54,11 +102,11 @@
                   <!--<b>Status</b> <a class="pull-right bg-light-warning" style="color:#FF3300">Unverified</a>-->
 				  <?php //}   ?>
 				  <?php  //if($getSub[0]['status']=='approved'){   ?>
-                  <b>Status</b> <a class="pull-right bg-light-success" style="color:#009900">Active</a>
+                  <b>Status</b> <a class="pull-right bg-light-success" style="color:#009900"><?php echo ucwords($getUser[0]['status']) ?></a>
 				  <?php //}   ?>
                 </li>
                 <li class="list-group-item">
-                  <b>Sex</b> <a class="pull-right"><?php  //echo  $profile_request[0]['gender'] ?></a>
+                  <b>Sex </b> <a class="pull-right"><?php  echo  $profile_request[0]['Gender'] ?></a>
                 </li>
                 <li class="list-group-item">
                   <b>Phone No</b> <a class="pull-right"><?php  echo  $profile_request[0]['Phones'] ?></a>
@@ -121,9 +169,9 @@
 
               <hr>
 
-              <strong><i class="fa fa-file-text-o margin-r-5"></i>State</strong>
+              <strong><i class="fa fa-file-text-o margin-r-5"></i>City</strong>
 
-              <p><?php  echo  $profile_request[0]['State'] ?></p>
+              <p><?php  echo  $profile_request[0]['City'] ?></p>
 
               <hr>
 
@@ -162,6 +210,47 @@
                       <?php  echo $profile_request[0]['Startup_Company_Name'];  ?>
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Trade Register Number</label>
+          
+                    <div class="col-sm-10">
+
+                      <?php  if(!empty($profile_request[0]['Trade_No'])) { echo $profile_request[0]['Trade_No'];}else{ "Not available" ;}  ?> 
+                      
+                      | 
+                      
+                      <?php  if(!empty($profile_request[0]['Trade_File'])){  ?>
+                      <a href="<?php echo base_url(); ?>uploads/files/<?php  echo $profile_request[0]['Trade_File'];  ?>" target="_blank"><i class="fa fa-file-text-o"></i> View  Copy of the Trade Register</a>
+                    <?php }else{ echo "Not available"; } ?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Tax Account Number</label>
+          
+                    <div class="col-sm-10">
+                       <?php  if(!empty($profile_request[0]['Tax_No'])) { echo $profile_request[0]['Tax_No'];}else{ "Not available" ;}  ?> | 
+                       <?php  if(!empty($profile_request[0]['Tax_File'])){  ?>
+                      <a href="<?php echo base_url(); ?>uploads/files/<?php  echo $profile_request[0]['Tax_File'];  ?>" target="_blank"><i class="fa fa-file-text-o"></i> View  copy of the Tax Declaration of Existence</a>
+                       <?php }else{ echo "Not available"; } ?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">CNPS Number:</label>
+          
+                    <div class="col-sm-10">
+                     <?php  if(!empty($profile_request[0]['CNPS_No'])) { echo $profile_request[0]['CNPS_No'];}else{ "Not available" ;}  ?>
+                       | 
+                       <?php  if(!empty($profile_request[0]['CNPS_No'])){  ?>
+                      <a href="<?php echo base_url(); ?>uploads/files/<?php  echo $profile_request[0]['CNPS_File'];  ?>" target="_blank"><i class="fa fa-file-text-o"></i> View   copy of the CNPS Declaration</a>
+
+                       <?php }else{ echo "Not available"; } ?>
+                    </div>
+                  </div>
+
+                  
                   
                   <div class="form-group">
                     <label for="inputName" class="col-sm-2 control-label">Solution_Corperate</label>

@@ -10,12 +10,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Story</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Story') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/dashboard">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/dashboard"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Startup</a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Startup') ?></a>
                     </li>
                     <li class="breadcrumb-item"><a href="#"><?php echo $story_title ?></a>
                     </li>
@@ -59,7 +59,7 @@ $row =  $this->gfa_model->getTellYourStoryActive(); foreach($row as $rowStoryArr
               <img src="<?php echo base_url().$showPhoto; ?>" alt="Avatar" width="24" height="24" />
             </div>
             <div class="author-info">
-              <small class="text-muted me-25">by</small>
+              <small class="text-muted me-25"><?php echo lang('translation.by') ?></small>
               <small><a href="#" class="text-body"><?php echo $this->gfa_model->getStartUpDetails($rowStoryArray['email'])[0]['Primary_Contact_Name'];  ?></a></small>
               <span class="text-muted ms-50 me-25">|</span>
               <small class="text-muted"><?php echo date('M d Y', strtotime($rowStoryArray['time_submit'])) ?></small>
@@ -70,7 +70,7 @@ $row =  $this->gfa_model->getTellYourStoryActive(); foreach($row as $rowStoryArr
               <span class="badge rounded-pill badge-light-info me-50"><?php echo $this->gfa_model->getStartUpDetails($rowStoryArray['email'])[0]['Startup_Company_Name'];  ?></span>
             </a>
             <a href="#">
-              <span class="badge rounded-pill badge-light-primary"></span<?php echo $this->gfa_model->getStartUpDetails($rowStoryArray['email'])[0]['PrimaryBusinessIndustry'];  ?>
+              <span class="badge rounded-pill badge-light-primary"></span><?php echo lang("translation.{$this->gfa_model->getStartUpDetails($rowStoryArray['email'])[0]['PrimaryBusinessIndustry']}");  ?>
             </a>
           </div>
           <p class="card-text blog-content-truncate">
@@ -84,7 +84,7 @@ $row =  $this->gfa_model->getTellYourStoryActive(); foreach($row as $rowStoryArr
                 <!--<span class="text-body fw-bold">76 Comments</span>-->
               </div>
             </a>
-            <a href="<?php echo base_url()?>gfa/tellyourstory/<?php echo $rowStoryArray['title']; ?>" class="fw-bold">Read More</a>
+            <a href="<?php echo base_url()?>gfa/tellyourstory/<?php echo $rowStoryArray['title']; ?>" class="fw-bold"><?php echo lang('translation.Read More') ?></a>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ $row =  $this->gfa_model->getTellYourStoryActive(); foreach($row as $rowStoryArr
   <!-- Search bar -->
   <div class="blog-search">
     <div class="input-group input-group-merge">
-      <input type="text" class="form-control" placeholder="Search here" />
+      <input type="text" class="form-control" placeholder="<?php echo lang('translation.Search here') ?>" />
       <span class="input-group-text cursor-pointer">
         <i data-feather="search"></i>
       </span>
@@ -137,7 +137,7 @@ $row =  $this->gfa_model->getTellYourStoryActive(); foreach($row as $rowStoryArr
 
   <!-- Recent Posts -->
    <div class="blog-recent-posts mt-3">
-    <h6 class="section-label">Posted Stories</h6>
+    <h6 class="section-label"><?php echo lang('translation.POSTED STORIES') ?></h6>
     <div class="mt-75">
 <?php 
 

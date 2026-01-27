@@ -73,32 +73,3 @@
 <?php } ?>
             
           </div>
- 
- <script>
-        $(document).ready(function() {
-            // Disable context menu (right-click)
-            $(document).on('contextmenu', function(e) {
-                e.preventDefault();
-            });
-
-            // Disable copy event
-            $(document).on('copy', function(e) {
-                e.preventDefault();
-            });
-
-            // Disable cut event
-            $(document).on('cut', function(e) {
-                e.preventDefault();
-            });
-
-            // Disable drag event
-            $(document).on('dragstart', function(e) {
-                e.preventDefault();
-            });
-
-            // Disable select event
-            $(document).on('selectstart', function(e) {
-                e.preventDefault();
-            });
-        });
-    </script>

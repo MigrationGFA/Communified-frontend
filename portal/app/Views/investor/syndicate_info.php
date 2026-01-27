@@ -8,13 +8,12 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Syndicate a deal</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang("translation.Syndicate a Deal") ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/syndicate_info">Syndicate Information</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/syndicate_info"><?php echo lang("translation.Syndicate Information") ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/syndicate_manage">Manage Syndicate</a>
-                    </li>
+                    <!--<li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/syndicate_manage">Manage Syndicate</a></li>-->
                     
                     
                   </ol>
@@ -32,7 +31,7 @@
       <div class="card-header">
         <div class="d-flex align-items-center">
           <i data-feather="list" class="user-timeline-title-icon"></i>
-          <h4 class="card-title">How does running a deal (SPV) on GetFundedAfrica syndicate work? </h4>
+          <h4 class="card-title"><?php echo lang("translation.How does running a deal (SPV) on NORA syndicate work") ?>? </h4>
         </div>
         <i data-feather="more-vertical" class="font-medium-3 cursor-pointer"></i>
       </div>
@@ -42,9 +41,9 @@
             <span class="timeline-point timeline-point-indicator"></span>
             <div class="timeline-event">
               <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                <h6>Submit Your Deal 
+                <h6><?php echo lang("translation.Submit Your Deal") ?> 
 
-                Submit information about the company, investment terms, and pitch to prospective LPs</h6>
+                <?php echo lang("translation.Submit information about the company, investment terms, and pitch to prospective LPs") ?></h6>
                 <!-- <span class="timeline-event-time me-1">12 min ago</span> -->
               </div>
               <p>
@@ -60,12 +59,12 @@
             <span class="timeline-point timeline-point-warning timeline-point-indicator"></span>
             <div class="timeline-event">
               <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                <h6>CGetFundedAfrica Review and Approval 
+                <h6><?php echo lang("translation.NORA Review and Approval") ?> 
 
-We’ll review your deal and follow up with any questions. If everything looks good, your deal will be approved. </h6>
+<?php echo lang("translation.We’ll review your deal and follow up with any questions. If everything looks good, your deal will be approved") ?>. </h6>
                 <!-- <span class="timeline-event-time me-1">45 min ago</span> -->
               </div>
-              <p>Average time ~2 days</p>
+              <p><?php echo lang("translation.Average time ~2 days") ?></p>
               <div class="d-flex flex-row align-items-center">
                 
                 <div class="user-info">
@@ -75,26 +74,27 @@ We’ll review your deal and follow up with any questions. If everything looks g
               </div>
             </div>
           </li>
+         
           <li class="timeline-item">
             <span class="timeline-point timeline-point-info timeline-point-indicator"></span>
             <div class="timeline-event">
               <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                <h6>Invite LPs, Collect Funds</h6>
+                <h6><?php echo lang("translation.Invite LPs") ?>, <?php echo lang("translation.Collect Funds") ?></h6>
                 <!-- <span class="timeline-event-time me-1">2 day ago</span> -->
               </div>
-              <p>Now you can create custom invite links and invite your LPs. Investors can send funds via ACH or wire. </p>
-              <p>Dependent on your LPs - can take several weeks </p>
+              <p><?php echo lang("translation.Now you can create custom invite links and invite your LPs") ?>. <?php echo lang("translation.Investors can send funds via ACH or wire") ?>. </p>
+              <p><?php echo lang("translation.Dependent on your LPs - can take several weeks") ?> </p>
             </div>
           </li>
           <li class="timeline-item">
             <span class="timeline-point timeline-point-danger timeline-point-indicator"></span>
             <div class="timeline-event">
               <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                <h6>Deal Closes, Funds Wired </h6>
+                <h6><?php echo lang("translation.Deal Closes, Funds Wired") ?> </h6>
                 <!-- <span class="timeline-event-time me-1">5 day ago</span> -->
               </div>
-              <p class="mb-0">Once your deal closes, GetFundedAfrica wires funds directly to the company. </p>
-              <p class="mb-0">Wire execution requires at least 1 business day </p>
+              <p class="mb-0"><?php echo lang("translation.Once your deal closes, NORA wires funds directly to the company") ?>. </p>
+              <p class="mb-0"><?php echo lang("translation.Wire execution requires at least 1 business day") ?> </p>
             </div>
           </li>
         </ul>
@@ -102,7 +102,7 @@ We’ll review your deal and follow up with any questions. If everything looks g
         <div class="col-12">
                 <a href="<?php echo base_url(); ?>gfa/dealroom" class="btn btn-icon btn-primary mt-1 me-1">
                   
-                  <span>Share Files with Lps</span> </a>
+                  <span><?php echo lang("translation.Share Files with LPs") ?></span> </a>
 
               </div>
           </div>

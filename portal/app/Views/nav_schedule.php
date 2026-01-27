@@ -13,7 +13,7 @@
             
           </ul>
           <ul class="nav navbar-nav bookmark-icons">
-            <li class="nav-item d-lg-block"><a class="nav-link" href="mailto:info@getfundedafrica.com" data-bs-toggle="tooltip" data-bs-placement="bottom" target="_blank"  title="info@getfundedafrica.com"><i class="ficon" data-feather="mail"></i></a></li>
+            <li class="nav-item d-lg-block"><a class="nav-link" href="mailto:info@cipme.com" data-bs-toggle="tooltip" data-bs-placement="bottom" target="_blank"  title="info@cipme.com"><i class="ficon" data-feather="mail"></i></a></li>
             
             <!--<li class="nav-item d-none d-lg-block"><a class="nav-link" href="gfa-chat.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chat"><i class="ficon" data-feather="message-square"></i></a></li>
             <li class="nav-item d-none d-lg-block"><a class="nav-link" href="gfa-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Todo"><i class="ficon" data-feather="check-square"></i></a></li>

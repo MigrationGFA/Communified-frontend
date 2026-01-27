@@ -1,4 +1,7 @@
-
+<?php 
+  $this->gfa_model = model('App\Models\GfaModel');
+  $this->admin_model = model('App\Models\AdminModel');
+   ?>
     <!-- BEGIN: Content-->
     <div class="app-content content ">
       <div class="content-overlay"></div>
@@ -15,7 +18,7 @@
 
 <!--The industries the investor invests in -->
 <i data-feather="list" class="user-timeline-title-icon"></i>
-            <h4 class="card-title">Manage CSR Posted</h4>
+            <h4 class="card-title"><?php echo lang('translation.Manage CSR Posted') ?></h4>
 <!--The size of cheques the investor writes -->
 
 <!--The investment stage -->
@@ -27,7 +30,7 @@
                    
                   if($admin_access=='sub-admin'){ echo '';}else{ ?>
         <div class="col-lg-12 text-center mb-2">
-        <a href="<?php echo base_url("gfa/corperate_add_csr"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ Add CSR</a>
+        <a href="<?php echo base_url("gfa/corperate_add_csr"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ <?php echo lang('translation.Add CSR') ?></a>
         </div>
         <?php }  ?>
       <div class="card card-company-table">
@@ -58,9 +61,9 @@
               </td>
               </tr>
                 <tr>
-                  <th>CSR Title </th>
-                  <th>Date</th>
-                  <th class="locationChange">Participants</th>
+                  <th><?php echo lang('translation.CSR TITLE') ?> </th>
+                  <th><?php echo lang('translation.DATE') ?></th>
+                  <th class="locationChange"><?php echo lang('translation.PARTICIPANTS') ?></th>
                   
                   <th></th>
                 </tr>
@@ -105,7 +108,7 @@
                   </td>
                   <td class="text-nowrap">
                     <div class="d-flex flex-column">
-                       <a href="<?php echo base_url("gfa/csr_apply/"); ?><?php echo $rowArray['csr_id']; ?>" >   <span class="fw-bolder me-1">Check [<?php echo $this->gfa_model->countCSRParticipant($rowArray['csr_id']); ?>]</span></a>
+                       <a href="<?php echo base_url("gfa/csr_apply/"); ?><?php echo $rowArray['csr_id']; ?>" >   <span class="fw-bolder me-1"><?php echo lang('translation.Check') ?> [<?php echo $this->gfa_model->countCSRParticipant($rowArray['csr_id']); ?>]</span></a>
                       
                     </div>
                   </td>

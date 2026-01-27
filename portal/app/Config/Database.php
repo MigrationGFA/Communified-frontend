@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'      => '',
-        'hostname' => 'dimpmysql.mysql.database.azure.com',
-        'username' => 'dimpified',
-        'password' => '-jWxNJlsW6qC75NuC@2]',
-        'database' => 'getfylig_gfa',
+        'hostname'     => 'noradb.mysql.database.azure.com',
+        'username'     => 'NoraDBAdmin',
+        'password'     => 'Creo*la@1789',
+        'database'     => 'nora_test_db',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

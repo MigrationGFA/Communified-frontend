@@ -8,7 +8,7 @@
   <div class="auth-inner row m-0">
     <!-- Brand logo-->
     <a class="brand-logo" href="index.html">
-     <img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
     </a>
     <!-- /Brand logo-->
 

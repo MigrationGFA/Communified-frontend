@@ -224,7 +224,13 @@
     <!--<script src="<?php //echo base_url(); ?>assets/app-assets/js/scripts/forms/form-repeater.min.js"></script>-->
     <!-- END: Page JS-->
 
-    
+    <script>
+      $(window).on('load',  function(){
+        if (feather) {
+          feather.replace({ width: 14, height: 14 });
+        }
+      })
+    </script>
 
     
     

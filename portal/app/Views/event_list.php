@@ -11,12 +11,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Events</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Events') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/dashboard'); ?>">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/dashboard'); ?>"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Startup</a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Startup') ?></a>
                     </li>
 <!--                     <li class="breadcrumb-item"><a href="#"><?php //echo $story_title ?></a>
                     </li> -->
@@ -73,7 +73,7 @@ $row =  $this->gfa_model->getAllEvent(); foreach($row as $rowStoryArray){ ?>
                 } ?></a></small>
               
               <span class="text-muted ms-50 me-25">|</span>
-              <small class="text-muted"><?php echo date('M d Y', strtotime($rowStoryArray['time_submit'])) ?></small>
+              <small class="text-muted"><?php echo date('d M Y', strtotime($rowStoryArray['time_submit'])) ?></small>
             </div>
           </div>
           <div class="my-1 py-25">
@@ -115,7 +115,7 @@ $row =  $this->gfa_model->getAllEvent(); foreach($row as $rowStoryArray){ ?>
                 <!--<span class="text-body fw-bold">76 Comments</span>-->
               </div>
             </a>
-            <a href="<?php echo base_url("gfa/events/{$rowStoryArray['ref_id']}"); ?>" class="fw-bold">Read More</a>
+            <a href="<?php echo base_url("gfa/events/{$rowStoryArray['ref_id']}"); ?>" class="fw-bold"><?php echo lang('translation.Read More') ?></a>
           </div>
         </div>
       </div>
@@ -187,7 +187,7 @@ $row =  $this->gfa_model->getEventLimit10(); foreach($row as $rowStoryArray){ ?>
           <h6 class="blog-recent-post-title">
             <a href="<?php echo $rowStoryArray['ref_id'] ?>" class="text-body-heading"><?php echo $rowStoryArray['title'] ?></a>
           </h6>
-          <div class="text-muted mb-0"><?php echo date('M d Y', strtotime($rowStoryArray['start_date'])) ?></div>
+          <div class="text-muted mb-0"><?php echo date('d M Y', strtotime($rowStoryArray['start_date'])) ?></div>
          
         </div>
       </div>

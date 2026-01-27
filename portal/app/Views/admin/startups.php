@@ -12,10 +12,9 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <form class="pull-right" method="POST" action="<?php echo base_url(); ?>download/export/Startups_Inv/">
-                <input type="hidden" name="column_value" value="" >
-                  <button type="submit" name="submit" class="btn btn-primary" class="btn btn-info ">Export</button>
-                </form>
+            <a class="btn btn-primary pull-right btn btn-info" href="<?php echo base_url(); ?>download/export/Startups_Inv/">Export</a>
+                
+                 
                 
                <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -27,7 +26,7 @@
 				  <th>Current Implementation Stage</th>
                   <th>Operating Country(ies)</th>
                   <th>Funding Goals</th>
-                  <th>Profile Points</th>
+                  
                   <th></th>
                   
                 </tr>
@@ -66,11 +65,7 @@
                     <strong>$ </strong><?php echo $rowArray['Next_Funding_Round_Target_Sought']; ?><br>
                     
                     </td>
-                    <td>
                     
-                    <strong></strong><?php echo $gfa_model->creditPointScore($rowArray['Contact_Email']); ?>%<br>
-                    
-                    </td>
                     <td class="display<?php echo $rowArray['STUP_ID'] ?>"><a href="<?php echo base_url(); ?>admin/startupsinfo/<?php echo $rowArray['STUP_ID'] ?>"><i class="fa fa-fw fa-external-link"></i> <span>View</span></a> 
                     <!--&nbsp; &nbsp;  <a href="<?php echo base_url(); ?>admin/editcohort/<?php echo $rowArray['id']?>" class=""><i class="fa fa-fw fa-pencil"></i></a><span></span>-->
                     &nbsp; &nbsp;

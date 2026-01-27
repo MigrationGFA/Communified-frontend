@@ -11,10 +11,8 @@
               <h3 class="box-title">MENTORS</h3>
             </div>
             <!-- /.box-header -->
-            <form class="pull-right" method="POST" action="<?php echo base_url(); ?>download/export/mentor_info/">
-                <input type="hidden" name="column_value" value="" >
-                  <button type="submit" name="submit" class="btn btn-primary" class="btn btn-info ">Export</button>
-                </form>
+             <a class="btn btn-primary pull-right btn btn-info"  href="<?php echo base_url(); ?>admin/export/mentor_info/">Export</a>
+           
                 <br><br>
             <div class="box-body" style="overflow: auto; margin: 0 10px;">
                <table id="example1" class="table table-bordered table-striped">
@@ -35,7 +33,7 @@
 				<tbody class="showInvestor">
 				<?php 
 			
-				$row = $admin_model->getAllMentors();  foreach($row as $rowArray){  
+				$row = $admin_model->getAllMentors();    foreach($row as $rowArray){  
 					
 				
 				?>

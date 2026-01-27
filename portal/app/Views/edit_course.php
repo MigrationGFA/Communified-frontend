@@ -112,13 +112,7 @@
               
                
               
-              <div class="col-sm-6 col-12">
-                  <label>Course Picture</label>
-                <div class="mb-2">
-                  <input type="file" name="file[]" class="form-control"  placeholder="Lesson Cover Picture" />
-                </div>
-              </div>
-               <input type="hidden" name="getfile" class="form-control" value="<?php echo $getCourseData[0]['img'] ?>"   />
+             
              <div class="col-sm-6 col-12">
               
                 <div class="mb-2">
@@ -137,6 +131,20 @@
                   <input type="text" class="form-control" name="lmslink" placeholder="Course Url/Link" value="<?php echo $getCourseData[0]['lmslink'] ?>" />
                 </div>
               </div>
+               <div class="col-sm-6 col-12">
+                  <label>Course Picture</label>
+                <div class="mb-2">
+                  <input type="file" name="file[]" class="form-control"  placeholder="Lesson Cover Picture" />
+                </div>
+              </div>
+               <input type="hidden" name="getfile" class="form-control" value="<?php echo $getCourseData[0]['img'] ?>"   />
+                <div class="col-sm-6 col-12">
+                  <label>Course Picture</label>
+                <div class="mb-2">
+                  <input type="file" name="file[]" class="form-control"  placeholder="Lesson Cover Picture" />
+                </div>
+              </div>
+               <input type="hidden" name="getdoc" class="form-control" value="<?php echo $getCourseData[0]['file'] ?>"   />
               <div id="full-wrapper col-12">
                 <div id="full-container" class="mb-2">
                   <div class="editor eventDoc textData" style="height:250px;">

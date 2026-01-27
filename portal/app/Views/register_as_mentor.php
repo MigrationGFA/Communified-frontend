@@ -276,7 +276,7 @@ $(".fileInfox").submit(function(e) {
 <option value="Congo">Congo, the Democratic Republic of the</option>
 <option value="Cook Islands">Cook Islands</option>
 <option value="Costa Rica">Costa Rica</option>
-<option value="Cota D'Ivoire">Cote d'Ivoire</option>
+<option value="Cote D'Ivoire">Cote d'Ivoire</option>
 <option value="Croatia">Croatia (Hrvatska)</option>
 <option value="Cuba">Cuba</option>
 <option value="Cyprus">Cyprus</option>
@@ -658,7 +658,7 @@ $(".fileInfox").submit(function(e) {
                   rows="3"
                   placeholder="About yourself"
                   style="height: 100px"
-				  name="Bio_data"
+				          name="Bio_data"
                 ><?php echo $this->gfa_model->getMentorDetails($email)[0]['Bio_data'];  ?></textarea>
             </div>
            <div class="col-12 col-sm-6 mb-1">

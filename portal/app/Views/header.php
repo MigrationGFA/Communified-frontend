@@ -8,7 +8,7 @@
     <meta name="author" content="PIXINVENT">
     <title><?php if(!empty($page_title)){ echo $page_title; } ?></title>
     <link rel="icon" href="https://getfundedafrica.com/portal/assets/images/fav.png" sizes="16x16" type="image/png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
     
     <!-- BEGIN: Vendor CSS-->

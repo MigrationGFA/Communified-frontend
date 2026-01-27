@@ -1,3 +1,7 @@
+ <?php 
+                $this->gfa_model = model('App\Models\GfaModel');
+                $this->admin_model = model('App\Models\AdminModel');
+      ?>
  <div class="app-content content ">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
@@ -6,12 +10,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Edit CSR</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Edit CSR') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/dashboard">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/corporate_dashboard"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Corperate Social Responsibility</a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Corporate Social Responsibility') ?></a>
                     </li>
                     
                     
@@ -31,22 +35,22 @@
       <h6 class="section-label mt-25"></h6>
       <div class="card">
         <div class="card-body">
-      <?php       $email = $this->encrypt->decode($this->session->userdata('email')) ;
+      <?php      
                     $updateStory =  $this->gfa_model->getCsrById($email,$id);   ?>
-          <form action="#" id="#EventForm" class="form EventForm" enctype="multipart/form-data">
+          <form action="#" id="#EventForm" method="post" class="form EventForm" enctype="multipart/form-data">
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" name="title" class="form-control" required placeholder="Title" value="<?php echo $updateStory[0]['title'] ?>" />
+                  <input type="text" name="title" class="form-control" required placeholder="<?php echo lang('translation.Title') ?>" value="<?php echo $updateStory[0]['title'] ?>" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="venue" placeholder="City/State/Country" value="<?php echo $updateStory[0]['venue'] ?>" />
+                  <input type="text" class="form-control" name="venue" placeholder="<?php echo lang('translation.City/State/Country') ?>" value="<?php echo $updateStory[0]['venue'] ?>" />
                 </div>
               </div>
                <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">Start Date</label>
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.Start Date') ?></label>
           <input
             type="text"
             id="fp-date-time"
@@ -57,7 +61,7 @@
           />
         </div>
          <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">End Date</label>
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.End Date') ?></label>
           <input
             type="text"
             id="fp-date-time"
@@ -73,18 +77,18 @@
                 <div class="mb-2">
                   <select  class="form-control" name="ticket" placeholder="Free">
                      <option value="<?php echo $updateStory[0]['title'] ?>"><?php echo $updateStory[0]['ticket'] ?></option>
-                 <option value="Free">Free</option>
-                  <option value="Paid">Paid</option> 
+                 <option value="Free"><?php echo lang('translation.Free') ?></option>
+                  <option value="Paid"><?php echo lang('translation.Paid') ?></option> 
                     </select>
                 </div>
               </div>
-              <?php  $email = $this->encrypt->decode($this->session->userdata('email')); ?>
+             
                <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <select  class="form-control" name="startup_view" placeholder="Availabilty">
+                  <select  class="form-control" name="startup_view" placeholder="<?php echo lang('translation.Availabilty') ?>">
                 <option value="<?php echo $updateStory[0]['startup_view'] ?>"><?php echo $updateStory[0]['startup_view'] ?></option>     
-                 <option value="all">All</option>
-                  <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Event']; ?>">Organisation(<?php echo strtoupper($this->gfa_model->getCorperateDetails($email)[0]['Event']) ?>)</option> 
+                 <option value="all"><?php echo lang('translation.All') ?></option>
+                  <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Event']; ?>"><?php echo lang('translation.Organisation') ?>(<?php echo strtoupper($this->gfa_model->getCorperateDetails($email)[0]['Event']) ?>)</option> 
                     </select>
                 </div>
               </div>
@@ -94,24 +98,26 @@
               <!--  </div>-->
               <!--</div>-->
               <div class="col-sm-6 col-12">
-                  <label>CSR Cover Picture </label>
+                  <label><?php echo lang('translation.CSR Cover Picture') ?> </label>
                 <div class="mb-2">
-                  <input type="file" name="file[]" class="form-control" required placeholder="Event Cover Picture" />
+                  <input type="file" name="file[]" class="form-control" placeholder="<?php echo lang('translation.Event Cover Picture') ?>" />
                 </div>
+                <input type="hidden" name="getFile" class="form-control" value="<?php echo $updateStory[0]['picture'] ?>" />
+                <input type="hidden" name="id" class="form-control" value="<?php echo $id ?>" />
               </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="videourl" placeholder="Video Url (youtube, vimeo e.t.c" value="<?php echo $updateStory[0]['videourl'] ?>"  />
+                  <input type="text" class="form-control" name="videourl" placeholder="<?php echo lang("translation.Video url (youtube, vimeo e.t.c)")?>" value="<?php echo $updateStory[0]['videourl'] ?>"  />
                 </div>
               </div>
               
               
               <div class="col-12">
-                <textarea class="form-control mb-2" name="event" required rows="4" placeholder="Startup Event"><?php echo $updateStory[0]['csr'] ?></textarea>
+                <textarea class="form-control mb-2" name="event" required rows="4" placeholder="<?php echo lang('translation.Startup Event') ?>"><?php echo $updateStory[0]['csr'] ?></textarea>
               </div>
              
               <div class="col-12">
-                <button type="submit" class="btn btn-primary EventBtn">Post CSR</button><span class="displayAction"></span>
+                <button type="submit" class="btn btn-primary EventBtn"><?php echo lang('translation.Edit CSR') ?></button><span class="displayAction"></span>
               </div>
             </div>
           </form>
@@ -129,23 +135,23 @@
            $(".EventForm").submit(function(e) {
     //---------------^---------------
     e.preventDefault();
-	//$(".saveFile3").html('Finish Uploading');
+  //$(".saveFile3").html('Finish Uploading');
     var form = $(this)[0];
         var formData = new FormData(form);
       
     $.ajax({
      data:formData,
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/Csrpostpro",
-	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".displayAction").html('Submiting Event...'); $(".EventBtn").prop('disabled', true);},
-	 processData: false,
+     url: "<?php echo base_url("gfa/UpdateCsrpostpro"); ?>",
+   error:function() {$(".displayAction").html('Error')},
+   beforeSend:function() {$(".displayAction").html("Soumission de l'événement..."); $(".EventBtn").prop('disabled', true);},
+   processData: false,
     contentType: false,
       success: function(data) {
         
-	 $(".displayAction").html(data);  
-	   //$(".saveBtn").html(data); 
-		 $(".EventBtn").prop('disabled', true);
+   $(".displayAction").html(data);  
+     //$(".saveBtn").html(data); 
+     $(".EventBtn").prop('disabled', true);
 
       }
     });
@@ -186,10 +192,10 @@
 
   <!-- Recent Posts -->
   <div class="blog-recent-posts mt-3">
-    <h6 class="section-label">Your Posted CSR</h6>
+    <h6 class="section-label"><?php echo lang("translation.Posted CSR") ?></h6>
     <div class="mt-75">
 <?php 
-$email = $this->encrypt->decode($this->session->userdata('email')) ;
+
 $row =  $this->gfa_model->getCsr($email); foreach($row as $rowStoryArray){ ?>
       <div class="d-flex mb-2">
         <a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>" class="me-2">
@@ -206,7 +212,7 @@ $row =  $this->gfa_model->getCsr($email); foreach($row as $rowStoryArray){ ?>
             <a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>" class="text-body-heading"><?php echo $rowStoryArray['title'] ?></a>
           </h6>
           <div class="text-muted mb-0"><?php echo date('M d Y', strtotime($rowStoryArray['time_submit'])) ?> | <?php echo $rowStoryArray['status']; ?> </div>
-          <div class="text-muted mb-0"><a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>">View</a> | <a href="<?php echo base_url()?>gfa/edit_csr/<?php echo $rowStoryArray['csr_id']; ?>">Edit</a> | <a href="">Delete</a>  </div>
+          <div class="text-muted mb-0"><a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>"><?php echo lang("translation.View") ?></a> | <a href="<?php echo base_url()?>gfa/edit_csr/<?php echo $rowStoryArray['csr_id']; ?>"><?php echo lang("translation.Edit") ?></a> | <a href=""><?php echo lang("translation.Delete") ?></a>  </div>
         </div>
       </div>
       

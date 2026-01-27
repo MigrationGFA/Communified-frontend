@@ -145,7 +145,7 @@
      $.ajax({
    data:{deals:deals},
    type: "POST",
-   url: "<?php echo base_url(); ?>gfa/fetchdeals",
+   url: "<?php echo base_url("gfa/fetchdeals"); ?>",
  error:function() {$(".display").html('Error loading Data');},
  beforeSend:function() {$(".display").html('loading data...');},
    success: function(data) {

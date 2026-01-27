@@ -1,8 +1,11 @@
-
+<?php 
+  $this->gfa_model = model('App\Models\GfaModel');
+  $this->admin_model = model('App\Models\AdminModel');
+   ?>
               
             <?php
             
-                // $rowArray = $this->admin_model->getAllInvestorNByEmail($email);
+                // $rowArray = $this->admin_model->getAllInvestorNByEmail($email); 
             	$row = $this->admin_model->MatchAllStartup($PrimaryBusinessIndustry,$CurrentInvestmentStage,$Startup_Implementation_Stage,$CountryHQ, $Next_Funding_Round_Target_Sought); 
             if(!empty($row)){
               $n = 1;
@@ -21,7 +24,7 @@
                     
                       <i data-feather="trending-down" class="text-danger font-medium-1"></i> &nbsp; 
                       </div> -->
-                      <a href="<?php echo base_url(); ?>gfa/checkConnection_url/<?php echo $rowArrays['STUP_ID'] ; ?>" class="btn btn-primary getStartups">Connect <span style="display: none;"><?php echo $rowArrays['STUP_ID'] ?></a>
+                      <a href="<?php echo base_url(); ?>gfa/checkConnection_url/<?php echo $rowArrays['STUP_ID'] ; ?>" class="btn btn-primary getStartups"><?php echo lang("translation.Connect") ?> <span style="display: none;"><?php echo $rowArrays['STUP_ID'] ?></a>
                     
                   </td>
                   <td>
@@ -40,7 +43,7 @@
                           <i data-feather="monitor" class="font-medium-3"></i>
                         </div>
                       </div>
-                      <span><?php echo $rowArrays['PrimaryBusinessIndustry'] ; ?></span>
+                      <span><?php echo lang("translation.{$rowArrays['PrimaryBusinessIndustry']}"); ?></span>
                     </div>
                   </td>
                   <td class="text-nowrap">
@@ -49,9 +52,9 @@
                       <!--<span class="font-small-2 text-muted">in 24 hours</span>-->
                     </div>
                   </td>
-                  <td>$<?php if($rowArrays['Next_Funding_Round_Target_Sought']=='0' || $rowArrays['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $rowArrays['Next_Funding_Round_Target_Sought'] ;} ?></td>
+                  <td><?php if($rowArrays['Next_Funding_Round_Target_Sought']=='0' || $rowArrays['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $rowArrays['Next_Funding_Round_Target_Sought'] ;} ?> XOF</td>
                   
                 </tr>
-                <?php }else{ echo '';} }}else{ echo 'Oops! Search not found';} ?>
+                <?php }else{ echo '';} }}else{ echo lang("translation.Oops! Search not found");} ?>
        
               

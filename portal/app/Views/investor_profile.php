@@ -290,7 +290,7 @@ $(".fileInfox").submit(function(e) {
 <option value="Congo">Congo, the Democratic Republic of the</option>
 <option value="Cook Islands">Cook Islands</option>
 <option value="Costa Rica">Costa Rica</option>
-<option value="Cota D'Ivoire">Cote d'Ivoire</option>
+<option value="Cote D'Ivoire">Cote d'Ivoire</option>
 <option value="Croatia">Croatia (Hrvatska)</option>
 <option value="Cuba">Cuba</option>
 <option value="Cyprus">Cyprus</option>
@@ -612,7 +612,7 @@ $(".fileInfox").submit(function(e) {
 <option value="Congo">Congo, the Democratic Republic of the</option>
 <option value="Cook Islands">Cook Islands</option>
 <option value="Costa Rica">Costa Rica</option>
-<option value="Cota D'Ivoire">Cote d'Ivoire</option>
+<option value="Cote D'Ivoire">Cote d'Ivoire</option>
 <option value="Croatia">Croatia (Hrvatska)</option>
 <option value="Cuba">Cuba</option>
 <option value="Cyprus">Cyprus</option>

@@ -54,7 +54,7 @@
                <div class="avatar-content avatar  p-50 m-0 bg-light-primary" style="float:right;">
                 <i data-feather="user-check" class="font-large-2"  style="color:#7A6FF1;"></i>
               
-                  </div><span class="bg-light-primary" style="float:right;paddding:4px;"> [You are ATTENDING THIS EVENT]</span>
+                  </div><span class="bg-light-primary" style="float:right;paddding:4px;"> [<?php echo lang('translation.You are ATTENDING THIS EVENT') ?>]</span>
                 <?php }elseif($this->gfa_model->getWpEvent($email,$checkYourStory[0]['event_id'])[0]['status']=='pending'){  ?> 
                 <button type="button" disabled class="btn btn-primary">Enquiry Pending</button> 
                 <a href="<?php echo base_url(); ?>gfa/speakers/<?php echo $checkYourStory[0]['event_id']; ?>"  class="btn btn-warning" >Host Profile</a>
@@ -62,21 +62,21 @@
                 <?php }else{  ?>
                   <?php if($email !=''){  ?>
                   <?php  if($checkYourStory[0]['ticket'] =="Free"){  ?>
-                     <button type="button"  class="btn btn-primary attendEvent">Attend Event</button><span class="displayActionX"></span>
+                     <button type="button"  class="btn btn-primary attendEvent"><?php echo lang('translation.Attend Event') ?></button><span class="displayActionX"></span>
                     
                     <?php }else{  ?>
-                     <button type="button"  class="btn btn-success attendEventOutPaid" data-bs-target="#checkDealRoomPaid" data-bs-toggle="modal" >Attend Event</button> 
-                    <?php }  ?>
+                     <button type="button"  class="btn btn-success attendEventOutPaid" data-bs-target="#checkDealRoomPaid" data-bs-toggle="modal" ><?php echo lang('translation.Attend Event') ?></button> 
+                    <?php }  ?> 
                  
                   <?php }else{    ?>
                     <?php  if($checkYourStory[0]['ticket'] =="Free"){  ?>
-                    <button type="button"  class="btn btn-success attendEventOut" data-bs-target="#checkDealRoom" data-bs-toggle="modal" >Attend Event</button> 
+                    <button type="button"  class="btn btn-success attendEventOut" data-bs-target="#checkDealRoom" data-bs-toggle="modal" ><?php echo lang('translation.Attend Event') ?></button> 
                     
                     <?php }else{  ?>
-                     <button type="button"  class="btn btn-success attendEventOutPaid" data-bs-target="#checkDealRoomPaid" data-bs-toggle="modal" >Attend Event</button> 
+                     <button type="button"  class="btn btn-success attendEventOutPaid" data-bs-target="#checkDealRoomPaid" data-bs-toggle="modal" ><?php echo lang('translation.Attend Event') ?></button> 
                     <?php }  ?>
                   <?php }  ?>
-                  <a href="<?php echo base_url(); ?>gfa/speakers/<?php echo $checkYourStory[0]['event_id']; ?>"  class="btn btn-warning" >Host Profile</a>
+                  <a href="<?php echo base_url(); ?>gfa/speakers/<?php echo $checkYourStory[0]['event_id']; ?>"  class="btn btn-warning" ><?php echo lang('translation.Host Profile') ?></a>
 
               <?php     }} ?>
               
@@ -104,7 +104,7 @@
               <small class="text-muted me-25">by</small>
               <small><a href="#" class="text-body"><?php echo ucwords($this->gfa_model->getStartUpDetails($checkYourStory[0]['email'])[0]['Primary_Contact_Name']);  ?></a></small>
               <span class="text-muted ms-50 me-25">|</span>
-              <small class="text-muted"><?php echo date('M d Y', strtotime($checkYourStory[0]['time_submit'])) ?></small>
+              <small class="text-muted"><?php echo date('d M Y', strtotime($checkYourStory[0]['time_submit'])) ?></small>
             </div>
           </div>
           <div class="my-1 py-25">
@@ -163,7 +163,7 @@
        
 		 $(".attendEvent").html('Submitted'); 
 	    $('.attendEvent').prop("disabled", true );
-		 $(".displayActionX").html('Please check your email for more details.');
+		 $(".displayActionX").html("Vous avez été confirmé pour assister, heureux de vous voir à l'événement");
 	   
 	  
 	
@@ -223,7 +223,7 @@ $row =  $this->gfa_model->getEventLimit10(); foreach($row as $rowStoryArray){ ?>
           <h6 class="blog-recent-post-title">
             <a href="<?php echo $rowStoryArray['ref_id'] ?>" class="text-body-heading"><?php echo $rowStoryArray['title'] ?></a>
           </h6>
-          <div class="text-muted mb-0"><?php echo date('M d Y', strtotime($rowStoryArray['start_date'])) ?></div>
+          <div class="text-muted mb-0"><?php echo date('d M Y', strtotime($rowStoryArray['start_date'])) ?></div>
          
         </div>
       </div>

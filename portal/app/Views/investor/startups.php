@@ -1,4 +1,7 @@
-
+<?php 
+  $this->gfa_model = model('App\Models\GfaModel');
+  $this->admin_model = model('App\Models\AdminModel');
+   ?>
     <!-- BEGIN: Content-->
     <div class="app-content content ">
       <div class="content-overlay"></div>
@@ -13,7 +16,7 @@
 <!--   The investor name & title -->
 
 <i data-feather="list" class="user-timeline-title-icon"></i>
-            <h4 class="card-title">Search Startups</h4>
+            <h4 class="card-title"><?php echo lang('translation.Search Startups') ?></h4>
 
 <!--The investment stage -->
 <?php    ?>
@@ -34,24 +37,24 @@
           
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helpInputTop">Industry</label>
+                <label class="form-label" for="helpInputTop"><?php echo lang('translation.Industry') ?></label>
                 
                 <select class="getIndustry select2 form-select" name="industry[]" id="select2-multiple" multiple>
 
                 
 			  <?php	$rowIndustry = $this->admin_model->getAllIndustry();  foreach($rowIndustry as $rowArrayIndustry){  ?>
-                  <option><?php echo $rowArrayIndustry["industry"] ?></option>
+                  <option><?php echo lang("translation.{$rowArrayIndustry['industry']}") ?></option>
                   <?php }  ?>
               </select>
               </div>
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="basicInput">Current Stage</label>
+                <label class="form-label" for="basicInput"><?php echo lang('translation.Current Stage') ?></label>
                 <select id="country" name="current_stage" class="form-select current_stage">
                 <option value=""></option>  
              <?php	$rowIndustry = $this->admin_model->getInvestmentStage();  foreach($rowIndustry as $rowArrayIndustry){  ?>
-              <option value="<?php echo $rowArrayIndustry["Stages"] ?>"><?php echo $rowArrayIndustry["Stages"] ?></option>
+              <option value="<?php echo $rowArrayIndustry["Stages"] ?>"><?php echo lang("translation.{$rowArrayIndustry['Stages']}") ?></option>
                   <?php }  ?>
                   
                   </select>
@@ -59,11 +62,11 @@
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="disabledInput">Implementation Stage</label>
+                <label class="form-label" for="disabledInput"><?php echo lang('translation.Implementation Stage') ?></label>
                 <select id="country" name="Implementation_stage" class="form-select Implementation_stage">
                 <option value=""></option>  
              <?php $rowIS = $this->admin_model->implementationStage();  foreach($rowIS as $implementStage){  ?>
-                  <option value="<?php echo $implementStage['Stages'] ?>"><?php echo $implementStage['Stages'] ?></option>
+                  <option value="<?php echo $implementStage['Stages'] ?>"><?php echo lang("translation.{$implementStage['Stages']}") ?></option>
                   <?php }  ?>
                  </select>  
               </div>
@@ -71,7 +74,7 @@
             
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Country</label>
+                <label class="form-label" for="helperText"><?php echo lang('translation.Country') ?></label>
                 <select id="country" name="startup_country" class="form-select startup_country">
                             <option value=""></option>            
                             <option value="Algeria">Algeria</option>
@@ -139,7 +142,7 @@
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Investment size (USD)</label>
+                <label class="form-label" for="helperText"><?php echo lang("Investment size ($)") ?></label>
                 <input type="number" class="form-control fund_to_raise" id="accountAddress" name="fund_to_raise" placeholder="Funding to raise" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Next_Funding_Round_Target_Sought'];  ?>" />
 
                 
@@ -416,10 +419,10 @@ $('.modal').modal('hide');
                 </tr>
               <tr>
                 <th></th>
-                  <th>Company</th>
-                  <th>Category</th>
-                  <th>Country</th>
-                  <th>Investment Size</th>
+                  <th><?php echo lang('translation.Company') ?></th>
+                  <th><?php echo lang('translation.Category') ?></th>
+                  <th><?php echo lang('translation.Country') ?></th>
+                  <th><?php echo lang('translation.Investment Size') ?></th>
                  <th></th>
                 </tr>
               </thead>
@@ -433,7 +436,7 @@ $('.modal').modal('hide');
               $count = 0;
           
             	foreach($row as $rowArrays){  
-    if($rowArrays['PrimaryBusinessIndustry'] !='' && $rowArrays['CountryHQ'] !='' && $rowArrays['CurrentInvestmentStage'] !='' && $rowArrays['Next_Funding_Round_Target_Sought'] !='' && $rowArrays['Startup_Implementation_Stage']!=''){
+    if(!empty($rowArrays)){
       $count += $n;
             ?>
                 <tr class="data">
@@ -445,7 +448,7 @@ $('.modal').modal('hide');
                     
                       <i data-feather="trending-down" class="text-danger font-medium-1"></i> &nbsp; 
                       </div> -->
-					  <a href="<?php echo base_url(); ?>gfa/investor_startup_details/<?php echo $rowArrays['STUP_ID'] ; ?>" class="btn btn-primary getStartup">Connect <span style="display: none;"><?php echo $rowArrays['STUP_ID'] ?></a>
+					  <a href="<?php echo base_url(); ?>gfa/investor_startup_details/<?php echo $rowArrays['STUP_ID'] ; ?>" class="btn btn-primary getStartup"><?php echo lang("translation.Connect") ?> <span style="display: none;"><?php echo $rowArrays['STUP_ID'] ?></a>
                     
                   </td>
                   <td>
@@ -464,7 +467,7 @@ $('.modal').modal('hide');
                           <i data-feather="monitor" class="font-medium-3"></i>
                         </div>
                       </div>
-                      <span><?php echo $rowArrays['PrimaryBusinessIndustry'] ; ?></span>
+                      <span><?php echo lang("translation.{$rowArrays['PrimaryBusinessIndustry']}"); ?></span>
                     </div>
                   </td>
                   <td class="text-nowrap">
@@ -473,14 +476,14 @@ $('.modal').modal('hide');
                       <!--<span class="font-small-2 text-muted">in 24 hours</span>-->
                     </div>
                   </td>
-                  <td>$<?php if($rowArrays['Next_Funding_Round_Target_Sought']=='0' || $rowArrays['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $rowArrays['Next_Funding_Round_Target_Sought'] ;} ?></td>
+                  <td><?php if($rowArrays['Next_Funding_Round_Target_Sought']=='0' || $rowArrays['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $rowArrays['Next_Funding_Round_Target_Sought'] ;} ?> $</td>
                   
                 </tr>
                 <?php }else{ echo '';} } ?>
        
               </tbody>
             </table>
-            <div class="paging-container hidePage" id="tablePaging"> </div>
+            <div class="paging-container hidePage" id="tablePaging"></div>
           </div>
         </div>
       </div>

@@ -17,6 +17,19 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('public/assets/dist/js/demo.js ') ?>"></script>
 <!-- page script -->
+<script type="text/javascript">
+function triggerGoogleTranslate() {
+    var translateDropdown = document.querySelector("select.goog-te-combo");
+    if (translateDropdown) {
+        translateDropdown.value = "fr";
+        translateDropdown.dispatchEvent(new Event("change"));
+    }
+}
+
+window.addEventListener('load', function() {
+    triggerGoogleTranslate();
+});
+</script>
 <script>
   $(function () {
     $("#example1").DataTable();
@@ -30,8 +43,31 @@
     });
   });
 </script>
-<script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js ') ?>"></script>
-<script src="<?php echo base_url('public/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js ') ?>"></script>
+
+<!--<script src="<?php echo base_url('public/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js ') ?>"></script>-->
+<!--<script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>-->
+<script>
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: [
+                [{ 'header': [1, 2, false] }],
+                ['bold', 'italic', 'underline', 'strike'],
+                ['link', 'image', 'video'],
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                [{ 'indent': '-1'}, { 'indent': '+1' }],
+                [{ 'align': [] }],
+                 [{ 'color': [] }], // Add text color option
+                ['clean']
+            ]
+        }
+    });
+
+    // Get the HTML content of the editor
+    var htmlContent = quill.root.innerHTML;
+
+    // Save content to local storage or perform other actions as needed
+</script>
 <script>
   $(function () {
       //Date picker
@@ -43,21 +79,11 @@
     });
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
-    CKEDITOR.replace('editor1');
+    //CKEDITOR.replace('editor1');
     //bootstrap WYSIHTML5 - text editor
-    $(".textarea").wysihtml5();
-    CKEDITOR.replace('editor2');
+   
     //bootstrap WYSIHTML5 - text editor
-    $(".textarea").wysihtml5();
-     CKEDITOR.replace('editor3');
-    //bootstrap WYSIHTML5 - text editor
-    $(".textarea").wysihtml5();
-     CKEDITOR.replace('editor4');
-    //bootstrap WYSIHTML5 - text editor
-    $(".textarea").wysihtml5();
-     CKEDITOR.replace('editor5');
-    //bootstrap WYSIHTML5 - text editor
-    $(".textarea").wysihtml5();
+    
      
   });
    

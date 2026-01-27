@@ -11,12 +11,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Add Report</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Add Report') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/dashboard">Home</a>
+                    <li class="breadcrumb-item"><a href="#" onclick="event.preventDefault(); window.history.back();"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/report">Weekly Report  <?php 
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/report"><?php echo lang('translation.Weekly Report') ?>  <?php 
                     
                     // 
                     // echo $this->gfa_model->getStartupWeeklyRefByEmail($email)[0]['ref']; 
@@ -47,7 +47,7 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="number" name="total_sale" step="0.001" class="form-control" required placeholder="Total Sales" />
+                  <input type="number" name="total_sale" step="0.001" class="form-control" required placeholder="<?php echo lang('translation.Total Sales') ?>" />
                 </div>
               </div>
              
@@ -57,36 +57,35 @@
               
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="number" name="total_exp" step="0.001" class="form-control" required  placeholder="Total Expenses" />
+                  <input type="number" name="total_exp" step="0.001" class="form-control" required  placeholder="<?php echo lang('translation.Total Expenses') ?>" />
                 </div>
               </div>
              
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="number" class="form-control" name="new_hiring" placeholder="New Hired Employee this week" />
+                  <input type="number" class="form-control" id="newHiringInput" name="new_hiring" placeholder="<?php echo lang('translation.New Hired Employee this week') ?>" />
                 </div>
               </div>
               
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="number" name="employ_term" class="form-control"  placeholder="Employee Exits this week" />
+                  <input type="number" name="employ_term" class="form-control"  placeholder="<?php echo lang('translation.Employee Exits this week') ?>" />
                 </div>
               </div>
              <div class="col-sm-6 col-12">
               <!--<label class="form-label" for="accountAddress">category</label>-->
-             
-              
+            
               <select id="country" name="tax_paid" class="form-select">
-                    <option>Do you pay Tax?</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option><?php echo lang('translation.Do you pay Tax') ?>?</option>
+                    <option value="Yes"><?php echo lang('translation.Yes') ?></option>
+                    <option value="No"><?php echo lang('translation.No') ?></option>
                     
                   
                   </select>
             </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="number" step="0.001" class="form-control" name="tax" placeholder="Tax Paid" />
+                  <input type="number" step="0.001" class="form-control" name="tax" placeholder="<?php echo lang('translation.Tax Paid') ?>" />
                 </div>
               </div>
               
@@ -97,23 +96,23 @@
               <!--</div>-->
                
              <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">Weekly Report Start Date</label>
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.Weekly Report Start Date') ?></label>
           <input
             type="text"
             id="fp-date-time"
             class="form-control flatpickr-date-time"
             name="start_date"
-            placeholder="YYYY-MM-DD HH:MM"
+            placeholder="JJ-MM-AAAA HH:MM"
           />
         </div>
          <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">Weekly Report End Date</label>
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.Weekly Report End Date') ?></label>
           <input
             type="text"
             id="fp-date-time"
             name="end_date"
             class="form-control flatpickr-date-time"
-            placeholder="YYYY-MM-DD HH:MM"
+            placeholder="JJ-MM-AAAA HH:MM"
           />
           
           
@@ -123,8 +122,11 @@
              
               
               <select id="country" name="csr_active" class="form-select">
-                    <option value=''>Select the CRS you participated ?</option>
-                    <option value='Our Inhouse CSR Program'>Our Inhouse CSR Program</option>
+                    <option value=''><?php echo lang('translation.Select the CRS you participated') ?> ?</option>
+                    <option value='PA Ps Gouv'>PA Ps Gouv</option>
+                    <option value='Tomorrow Fab'>Tomorrow Fab</option>
+                    <option value='PEJEDEC'>PEJEDEC</option>
+                    
                 <?php    $row =  $this->gfa_model->getAllCsr(); foreach($row as $rowStoryArray){  ?>
                     <option value="<?php echo $rowStoryArray['csr_id']  ?>"><?php echo $rowStoryArray['title']  ?></option>
                  <?php }  ?>   
@@ -132,20 +134,22 @@
                   
                   </select>
             </div>
+             
+              
              <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="amount" placeholder="Amount Spent for Participating" />
+                  <input type="text" class="form-control" name="amount" placeholder="<?php echo lang('translation.Amount Spent for Participating') ?>" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
-                  <label>Picture </label>
+                  <label><?php echo lang('translation.Picture') ?> </label>
                 <div class="mb-2">
-                  <input type="file" name="file[]" class="form-control" required placeholder="Picture" />
+                  <input type="file" name="file[]" class="form-control" required placeholder="<?php echo lang('translation.Picture') ?>" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="videourl" placeholder="Video Url (youtube, vimeo e.t.c" />
+                  <input type="text" class="form-control" name="videourl" placeholder="<?php echo lang("translation.Video Url (youtube, vimeo e.t.c)") ?>" />
                 </div>
               </div>
          <div class="col-sm-6 col-12">
@@ -155,7 +159,7 @@
                   class="form-control char-textarea"
                   id="textarea-counter"
                   rows="3"
-                  placeholder="Community Social Resposibility Participation Details"
+                  placeholder="<?php echo lang('translation.Community Social Responsibility Participation Details') ?>"
                   style="height: 100px"
 				  name="csr_active_details"
                 ></textarea>
@@ -168,7 +172,7 @@
                   class="form-control char-textarea"
                   id="textarea-counter"
                   rows="3"
-                  placeholder="Other weekly information"
+                  placeholder="<?php echo lang('translation.Other weekly information') ?>"
                   style="height: 100px"
 				  name="other_info"
                 ></textarea>
@@ -178,7 +182,7 @@
             
              
               <div class="col-12">
-                <button type="submit" class="btn btn-primary storyBtn">Post Report</button><span class="displayAction"></span>
+                <button type="submit" class="btn btn-primary storyBtn"><?php echo lang('translation.Post Report') ?></button><span class="displayAction"></span>
               </div>
             </div>
           </form>
@@ -190,6 +194,15 @@
     <script>
       $(function(){
           
+          $('#newHiringInput').keyup(function() {
+    var inputValue = $(this).val();
+    
+    // Check if the input value is negative
+    if (inputValue < 0) {
+      // If negative, set input value to 0
+      $(this).val(0);
+    }
+  });
           
           
           
@@ -205,7 +218,7 @@
      type: "POST",
      url: "<?php echo base_url(); ?>gfa/postreport",
 	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".displayAction").html('Submiting Report...'); $(".storyBtn").prop('disabled', true);},
+	 beforeSend:function() {$(".displayAction").html('Soumettre le rapport...'); $(".storyBtn").prop('disabled', true);},
 	 processData: false,
     contentType: false,
       success: function(data) {
@@ -238,70 +251,6 @@
 
           </div>
         </div>
-        <div class="sidebar-detached sidebar-right">
-          <div class="sidebar"><div class="blog-sidebar my-2 my-lg-0">
-  <!-- Search bar -->
-  <div class="blog-search">
-    <div class="input-group input-group-merge">
-      <input type="text" class="form-control" placeholder="Search here" />
-      <span class="input-group-text cursor-pointer">
-        <i data-feather="search"></i>
-      </span>
-    </div>
-  </div>
-  <!--/ Search bar -->
-
-  <!-- Recent Posts -->
-  <div class="blog-recent-posts mt-3">
-    <h6 class="section-label">Your Posted Jobs</h6>
-    <div class="mt-75">
-<?php 
-
-$row = $this->gfa_model->getAllJobByEmail($email);  foreach($row as $rowStoryArray){  
-
-    $getPhoto =  $this->gfa_model->getLogoUploaded($email);  
-      if(empty($getPhoto)){
-          $showPhoto = "assets/images/uploads/default-avatar.jpg";
-      }else{
-         
-         $showPhoto = "uploads/onboarding/".$getPhoto[0]['Photo_name']; 
-          
-      }
-
-?>
-
-    
-      <div class="d-flex mb-2">
-        <a href="#<?php echo base_url()?>gfa/job_details/<?php echo $rowStoryArray['id']; ?>" class="me-2">
-          <img
-            class="rounded"
-            src="<?php echo base_url().$showPhoto; ?>"
-            width="100"
-            height="70"
-            alt="Company logo"
-          />
-        </a>
-        <div class="blog-info">
-          <h6 class="blog-recent-post-title">
-            <a href="#" class="text-body-heading"><?php echo $rowStoryArray['job_title'] ?></a>
-          </h6>
-          <div class="text-muted mb-0"><?php echo date('M d Y', strtotime($rowStoryArray['time_submit'])) ?></div>
-          <div class="text-muted mb-0"><a href="<?php echo base_url()?>gfa/job_details/<?php echo $rowStoryArray['id']; ?>">View</a> | <a href="<?php echo base_url()?>gfa/edit_job/<?php echo $rowStoryArray['id']; ?>">Edit</a> | <a href="">Delete</a>  </div>
-        </div>
-      </div>
-      
-      <?php  }   ?>
-      
-    </div>
-  </div>
-  <!--/ Recent Posts -->
-
-  <!-- Categories -->
-  
-  <!--/ Categories -->
-</div>
-
-          </div>
-        </div>
+        
       </div>
     </div>

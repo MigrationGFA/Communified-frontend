@@ -1,3 +1,7 @@
+ <?php 
+  $this->gfa_model = model('App\Models\GfaModel');
+  $this->admin_model = model('App\Models\AdminModel');
+   ?>
  <div class="app-content content ">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
@@ -6,12 +10,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">CSR Detail</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang("translation.CSR Detail") ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/dashboard">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/corporate_dashboard"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Corperate Social Responsibility</a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Corporate Social Responsibility') ?></a>
                     </li>
                     <li class="breadcrumb-item"><a href="#"><?php echo $story_title ?></a>
                     </li>
@@ -36,6 +40,7 @@
           src="<?php echo base_url()?>uploads/files/<?php echo $checkYourStory[0]['picture'] ?>"
           class="img-fluid card-img-top"
           alt="Blog Detail Pic"
+          width="24" height="24"
         />
         <div class="card-body">
           <h4 class="card-title"><?php echo $checkYourStory[0]['title'] ?></h4>
@@ -75,15 +80,15 @@
            <?php echo $checkYourStory[0]['csr'] ?>
           </p>
           
-          <?php $email = $this->encrypt->decode($this->session->userdata('email')) ; 
+          <?php 
                 if($email == $checkYourStory[0]['email']){ echo ''; }else{ 
            ?>
            <hr class="mb-2" />
           <div class=" col-lg-4 col-md-6 d-grid">         
 <?php if(!empty($this->admin_model->applyCSRByEmail($email,$checkYourStory[0]['csr_id']))){  ?> 
-           <button type="button" disabled class="btn btn-primary attendEvents">Already Participated</button>
+           <button type="button" disabled class="btn btn-primary attendEvents"><?php echo lang('translation.Already Participated') ?></button>
            <?php }else{  ?>
-             <button type="button"  class="btn btn-primary attendEvent">Participate in CSR</button>
+             <button type="button"  class="btn btn-primary attendEvent"><?php echo lang('translation.Participate in CSR') ?></button>
            <?php } ?> 
          </div>
          
@@ -150,7 +155,7 @@
     <h6 class="section-label">Your Posted CSR</h6>
     <div class="mt-75">
 <?php 
-$email = $this->encrypt->decode($this->session->userdata('email')) ;
+
 $row =  $this->gfa_model->getCsr($email); foreach($row as $rowStoryArray){ ?>
       <div class="d-flex mb-2">
         <a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>" class="me-2">
@@ -167,7 +172,7 @@ $row =  $this->gfa_model->getCsr($email); foreach($row as $rowStoryArray){ ?>
             <a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>" class="text-body-heading"><?php echo $rowStoryArray['title'] ?></a>
           </h6>
           <div class="text-muted mb-0"><?php echo date('M d Y', strtotime($rowStoryArray['time_submit'])) ?> | <?php echo $rowStoryArray['status']; ?> </div>
-          <div class="text-muted mb-0"><a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>">View</a> | <a href="<?php echo base_url()?>gfa/edit_csr/<?php echo $rowStoryArray['csr_id']; ?>">Edit</a> | <a href="">Delete</a>  </div>
+          <div class="text-muted mb-0"><a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>"><?php echo lang('translation.View') ?></a> | <a href="<?php echo base_url()?>gfa/edit_csr/<?php echo $rowStoryArray['csr_id']; ?>"><?php echo lang('translation.Edit') ?></a> | <a href=""><?php echo lang('translation.Delete') ?></a>  </div>
         </div>
       </div>
       

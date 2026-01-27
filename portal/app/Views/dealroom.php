@@ -4,28 +4,8 @@
            ?>
      <!-- BEGIN: Content-->
     <div class="app-content content file-manager-application">
-        <?php  
-        
-
-        if($this->gfa_model->countProfileDocs($email) == 2){ echo ''; } else {
-                ?>
-       <div class="alert alert-info" role="alert">
-              <h4 class="alert-heading">Note</h4>
-              <div class="alert-body">
-                  <?php 
-        		         
-        		        $loginkey = $this->gfa_model->getWpCred($email);
-        		   ?>
-               
-You must upload two important files to your profile before uploading files to the rest of the folders in the Dealroom.
-
-<br>1. Upload maximum of five minutes video pitch introducing your Startup in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@getfundedafrica.com">media@getfundedafrica.com</a> to tell your story.
-
-<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.getfundedafrica.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.getfundedafrica.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.
-<br>3. All files uploaded into your dealroom will be reviewed by GFA team before its allowed in your dealroom.
-              </div>
-            </div>
-            <?php }  ?>
+       
+            
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
       <div class="content-area-wrapper container-xxl p-0">
@@ -45,7 +25,7 @@ You must upload two important files to your profile before uploading files to th
         aria-haspopup="true"
         aria-expanded="true"
       >
-        <span class="align-middle">Add Files</span>
+        <span class="align-middle"><?php echo lang('translation.Add Files') ?></span>
       </button>
       <div class="dropdown-menu" aria-labelledby="addNewFile">
         <!--<div class="dropdown-item" data-bs-toggle="modal" data-bs-target="#new-folder-modal">-->
@@ -57,14 +37,14 @@ You must upload two important files to your profile before uploading files to th
         <div class="dropdown-item" data-bs-toggle="modal" data-bs-target="#new-folder-modal">
           <div class="mb-0" for="file-upload">
             <i data-feather="upload-cloud" class="me-25"></i>
-            <span class="align-middle">File Upload</span>
+            <span class="align-middle"><?php echo lang('translation.File Upload') ?></span>
             <input type="file" id="file-upload" hidden />
           </div>
         </div>
         <div class="dropdown-item">
           <div for="folder-upload" class="mb-0 E-store">
             <i data-feather="shopping-bag" class="me-25"></i>
-            <span class="align-middle">E-Store</span>
+            <span class="align-middle"><?php echo lang('translation.E-Store') ?></span>
            
           </div>
         </div>
@@ -91,22 +71,22 @@ You must upload two important files to your profile before uploading files to th
         <!--</a>-->
       <!--</div>-->
       <div class="list-group list-group-labels">
-        <h6 class="section-label px-2 mb-1">Labels</h6>
+        <h6 class="section-label px-2 mb-1"><?php echo lang('translation.Labels') ?></h6>
         <a href="<?php echo base_url(); ?>gfa/dealroom_files/Documents" class="list-group-item list-group-item-action">
           <i data-feather="file-text" class="me-50 font-medium-3"></i>
-          <span class="align-middle">Documents</span>
+          <span class="align-middle"><?php echo lang('translation.Documents') ?></span>
         </a>
         <a href="<?php echo base_url(); ?>gfa/dealroom_files/Images" class="list-group-item list-group-item-action">
           <i data-feather="image" class="me-50 font-medium-3"></i>
-          <span class="align-middle">Images</span>
+          <span class="align-middle"><?php echo lang('translation.Images') ?></span>
         </a>
         <a href="<?php echo base_url(); ?>gfa/dealroom_files/Videos" class="list-group-item list-group-item-action">
           <i data-feather="video" class="me-50 font-medium-3"></i>
-          <span class="align-middle">Videos</span>
+          <span class="align-middle"><?php echo lang('translation.Videos') ?></span>
         </a>
         <a href="<?php echo base_url(); ?>gfa/dealroom_files/Audio" class="list-group-item list-group-item-action">
           <i data-feather="music" class="me-50 font-medium-3"></i>
-          <span class="align-middle">Audio</span>
+          <span class="align-middle"><?php echo lang('translation.Audio') ?></span>
         </a>
         <!--<a href="#" class="list-group-item list-group-item-action">-->
         <!--  <i data-feather="layers" class="me-50 font-medium-3"></i>-->
@@ -167,7 +147,7 @@ You must upload two important files to your profile before uploading files to th
         <span class="input-group-text border-0">
           <i data-feather="search"></i>
         </span>
-        <input type="text" class="form-control files-filter border-0 bg-transparent" placeholder="Search" />
+        <input type="text" class="form-control files-filter border-0 bg-transparent" placeholder="<?php echo lang('translation.Search') ?>" />
       </div>
     </div>
     <div class="d-flex align-items-center">
@@ -260,13 +240,13 @@ You must upload two important files to your profile before uploading files to th
 
     <!-- Folders Container Starts -->
     <div class="view-container">
-      <h6 class="files-section-title mt-25 mb-75">Folders</h6>
+      <h6 class="files-section-title mt-25 mb-75"><?php echo lang('translation.Folders') ?></h6>
       <div class="files-header">
-        <h6 class="fw-bold mb-0">Filename</h6>
+        <h6 class="fw-bold mb-0"><?php echo lang('translation.Filename') ?></h6>
         <div>
-          <h6 class="fw-bold file-item-size d-inline-block mb-0">Size</h6>
-          <h6 class="fw-bold file-last-modified d-inline-block mb-0">Last modified</h6>
-          <h6 class="fw-bold d-inline-block me-1 mb-0">Actions</h6>
+          <h6 class="fw-bold file-item-size d-inline-block mb-0"><?php echo lang('translation.Size') ?></h6>
+          <h6 class="fw-bold file-last-modified d-inline-block mb-0"><?php echo lang('translation.Last modified') ?></h6>
+          <h6 class="fw-bold d-inline-block me-1 mb-0"><?php echo lang('translation.Actions') ?></h6>
         </div>
       </div>
       <div class="card file-manager-item folder level-up">
@@ -296,7 +276,7 @@ You must upload two important files to your profile before uploading files to th
         </div>
         <div class="card-body">
           <div class="content-wrapper">
-            <p class="card-text file-name mb-0">Profile</p>
+            <p class="card-text file-name mb-0"><?php echo lang('translation.Profile') ?></p>
             <p class="card-text file-size mb-0"></p>
             
             <p class="card-text file-date"></p>
@@ -321,7 +301,7 @@ You must upload two important files to your profile before uploading files to th
         </div>
         <div class="card-body">
           <div class="content-wrapper">
-            <p class="card-text file-name mb-0">Pitch Deck</p>
+            <p class="card-text file-name mb-0"><?php echo lang('translation.Pitch Deck') ?></p>
             <p class="card-text file-size mb-0"></p>
             <p class="card-text file-date"></p>
           </div>
@@ -344,7 +324,7 @@ You must upload two important files to your profile before uploading files to th
         </div>
         <div class="card-body">
           <div class="content-wrapper">
-            <p class="card-text file-name mb-0">Finance</p>
+            <p class="card-text file-name mb-0"><?php echo lang('translation.Finance') ?></p>
             <p class="card-text file-size mb-0"></p>
             <p class="card-text file-date"></p>
             <!--05 Aug 2022-->
@@ -367,7 +347,7 @@ You must upload two important files to your profile before uploading files to th
         </div>
         <div class="card-body">
           <div class="content-wrapper">
-            <p class="card-text file-name mb-0">Legal</p>
+            <p class="card-text file-name mb-0"><?php echo lang('translation.Legal') ?></p>
             <p class="card-text file-size mb-0"></p>
             <p class="card-text file-date"></p>
           </div>
@@ -389,7 +369,7 @@ You must upload two important files to your profile before uploading files to th
         </div>
         <div class="card-body">
           <div class="content-wrapper">
-            <p class="card-text file-name mb-0">Proposal</p>
+            <p class="card-text file-name mb-0"><?php echo lang('translation.Proposal') ?></p>
             <p class="card-text file-size mb-0"></p>
             <p class="card-text file-date"></p>
           </div>
@@ -411,7 +391,7 @@ You must upload two important files to your profile before uploading files to th
         </div>
         <div class="card-body">
           <div class="content-wrapper">
-            <p class="card-text file-name mb-0">Videos</p>
+            <p class="card-text file-name mb-0"><?php echo lang('translation.Videos') ?></p>
             <p class="card-text file-size mb-0"></p>
             <p class="card-text file-date"></p>
           </div>
@@ -433,7 +413,7 @@ You must upload two important files to your profile before uploading files to th
         </div>
         <div class="card-body">
           <div class="content-wrapper">
-            <p class="card-text file-name mb-0">Partnership</p>
+            <p class="card-text file-name mb-0"><?php echo lang('translation.Partnership') ?></p>
             <p class="card-text file-size mb-0"></p>
             <p class="card-text file-date"></p>
           </div>
@@ -449,7 +429,7 @@ You must upload two important files to your profile before uploading files to th
 
     <!-- Files Container Starts -->
   <div class="view-container">
-      <h6 class="files-section-title mt-2 mb-75">Recent Files</h6>
+      <h6 class="files-section-title mt-2 mb-75"><?php echo lang('translation.Recent Files') ?></h6>
       <?php
                 
                 $row = $this->gfa_model->getRecentFileUploaded($email);
@@ -544,14 +524,14 @@ You must upload two important files to your profile before uploading files to th
             <br>
             
            <?php if($rowArray['Status']=='' || $rowArray['Status']=='pending' ){ ?>
-            <span class="font-small-2 text-muted" style="color:Tomato;">■ Waiting for Approval</span>
+            <span class="font-small-2 text-muted" style="color:Tomato;">■ <?php echo lang('translation.Waiting for Approval') ?></span>
                 
              <?php }elseif($rowArray['Status']=='approved'){   ?>   
              
-             <span class="font-small-2 text-muted" style="color:green;">&#10003; Approved</span>
+             <span class="font-small-2 text-muted" style="color:green;">&#10003; <?php echo lang('translation.Approved') ?></span>
                
                <?php }else{  ?>
-            <span class="font-small-2 text-muted" style="color:red;">x Declined</span>   
+            <span class="font-small-2 text-muted" style="color:red;">x <?php echo lang('translation.Declined') ?></span>   
             
             <?php  }  ?>
             
@@ -567,7 +547,7 @@ You must upload two important files to your profile before uploading files to th
       
       <div class="d-none flex-grow-1 align-items-center no-result mb-3">
         <i data-feather="alert-circle" class="me-50"></i>
-        No Results
+        <?php echo lang('translation.No Results') ?>
       </div>
     </div>
     <!-- /Files Container Ends -->
@@ -777,34 +757,30 @@ You must upload two important files to your profile before uploading files to th
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">New File</h5>
+        <h5 class="modal-title"><?php echo lang('translation.New File') ?></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form class="startUpForm" method="post" action="" enctype="multipart/form-data">
       <div class="modal-body">
           
         <div class="col-12 col-sm-12 mb-1">
-              <label class="form-label" for="country">Select Folder</label>
+              <label class="form-label" for="country"><?php echo lang('translation.Select Folder') ?></label>
               <select name="File_Type" id="country" class="select2 form-select fileTypex">
 
-<?php
-               
-                if($this->gfa_model->countProfileDocs($email) != 2){
-                ?>
-                <option value="Profile">Profile</option>
-                <?php }else{  ?>
-<option value="Finance">Finance</option>
-<option value="Legal_Doc">Legal Document</option>
-<option value="Pitch_Deck">Pitch Deck</option>
-<option value="Proposal">Proposal</option>
-<option value="Partnership">Partnership</option>
-<option value="Videos">Videos</option>
-<?php }  ?>
+
+                <option value="Profile"><?php echo lang('translation.Profile') ?></option>
+                <option value="Finance"><?php echo lang('translation.Finance') ?></option>
+                <option value="Legal_Doc"><?php echo lang('translation.Legal Document') ?></option>
+                <option value="Pitch_Deck"><?php echo lang('translation.Pitch Deck') ?></option>
+                <option value="Proposal"><?php echo lang('translation.Proposal') ?></option>
+                <option value="Partnership"><?php echo lang('translation.Partnership') ?></option>
+                <option value="Videos"><?php echo lang('translation.Videos') ?></option>
+
               </select>
             </div> 
             
             <div class="col-12 col-sm-12 mb-1">
-              <label class="form-label" for="accountFirstName">Title of File</label>
+              <label class="form-label" for="accountFirstName"><?php echo lang('translation.Title of File') ?></label>
               <input
                 type="text"
                 class="form-control"
@@ -816,12 +792,13 @@ You must upload two important files to your profile before uploading files to th
                 data-msg="Please enter first name"
               />
             </div>
+             <!-- FilUploader -->
             <div class="col-12 col-sm-12 mb-1">
-              <label class="form-label" for="accountLastName">File</label>
+              <label class="form-label" for="accountLastName"><?php echo lang('translation.File') ?></label>
               <input
                 type="file"
                 class="form-control"
-                id="<?php  if($this->gfa_model->countProfileDocs($email) != 2){ echo 'FilUploader'; }else { echo '';  } ?>"
+                id=""
                 name="file[]"
                 placeholder="File"
                
@@ -831,7 +808,7 @@ You must upload two important files to your profile before uploading files to th
             <span class="showFileType"></span>
             
             <div class="col-12 col-sm-12 mb-1">
-              <label class="form-label" for="accountAddress">Description of File Uploaded  </label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Description of File Uploaded') ?></label>
               <textarea
                   
                   class="form-control char-textarea"
@@ -839,14 +816,16 @@ You must upload two important files to your profile before uploading files to th
                   rows="3"
                   placeholder="Counter"
                   style="height: 100px"
-				  name="File_Desc"
-                ></textarea>
+				          name="File_Desc"
+                >
+                  
+                </textarea>
             </div>
       </div>
       
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary me-1 saveBtn UploadFile" >Upload</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary me-1 saveBtn UploadFile" ><?php echo lang('translation.Upload') ?></button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><?php echo lang('translation.Cancel') ?></button>
         <span class="displayAction"></span>
       </div>
        </form>
@@ -869,7 +848,7 @@ You must upload two important files to your profile before uploading files to th
            $(".file-manager-item").on('click','.deletebtn',function() {
     var id = $(this).find('span').text();
     //$(".showDataDel").val(id);
-  var choice = confirm('Do you really want to delete this file?');
+  var choice = confirm('Voulez-vous vraiment supprimer ce Fichier ?');
     if(choice === true) {
   $(this).closest('.file-manager-item').remove();
         //$('tr.myTable').remove();
@@ -900,7 +879,7 @@ You must upload two important files to your profile before uploading files to th
       $("#FilUploader").change(function () {
         var fileExtension = ['pdf','mp4','pptx','ppt'];
         if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
-           $(".showFileType").html("Only formats are allowed : "+fileExtension.join(', '));
+           $(".showFileType").html("Seuls les formats suivants sont autorisés : "+fileExtension.join(', '));
            $('.UploadFile').prop('disabled',true);
            
         }else{
@@ -939,7 +918,7 @@ You must upload two important files to your profile before uploading files to th
         
         $(".E-store").click(function() {
               
-          window.open("https://estore.getfundedafrica.com/", "_self");
+          window.open("#", "_self");
           });
           
           $(".linkProfile").click(function() {
@@ -1009,10 +988,10 @@ You must upload two important files to your profile before uploading files to th
      type: "POST",
      url: "<?php echo base_url(); ?>gfa/sendToInvestor",
 	 error:function() {$(".sendBtn").html('Error loading Data');},
-	 beforeSend:function() {$(".sendBtn").html('Sending data...');},
+	 beforeSend:function() {$(".sendBtn").html('Envoi des données...');},
      success: function(data) {
         
-		$(".sendBtn").html('Message Sent');
+		$(".sendBtn").html('Message envoyé');
 		$(".sendAction").html(data);
 	    
 		}
@@ -1044,7 +1023,7 @@ You must upload two important files to your profile before uploading files to th
      type: "POST",
      url: "<?php echo base_url(); ?>gfa/dealroom_file_upload",
 	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".UploadFile").html('Uploading...');$('.UploadFile').prop('disabled',true);},
+	 beforeSend:function() {$(".UploadFile").html('Téléchargement en cours...');$('.UploadFile').prop('disabled',true);},
 	 processData: false,
     contentType: false,
       success: function(data) {
@@ -1052,7 +1031,7 @@ You must upload two important files to your profile before uploading files to th
 		//if(data==1){
 		$(".displayAction").html(data);
 		$('.UploadFile').prop('disabled',false);
-		$('.UploadFile').html('Upload');
+		$('.UploadFile').html('Télécharger');
 	
 		//}
       }

@@ -1,15 +1,70 @@
+<?php $admin_model = new \App\Models\AdminModel(); ?>
+<?php $gfa_model = new \App\Models\GfaModel(); ?>
+<?php  $rowArray = $admin_model->getAllCorperateById($id);  
+$profile_request = $getUser = $admin_model->getUser($rowArray[0]['Need_contact_email']);
+
+  ?>
+
 <div class="content-wrapper">
 
  <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Cohort 
+        Corporate Profile  
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <!-- <ol class="breadcrumb">
+        
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li> 
        
-        <li class="active">Investor Details</li>
-      </ol>
+        <li class="active">User profile</li> 
+      </ol> -->
+       <div class="btn-group pull-right margin-bottom">
+         <button class="btn btn-primary" href="#"  onclick="history.back()" style="margin-right: 10px;">Back</button>
+         <?php if($getUser[0]['status'] == 'active'){ ?>
+          <button class="btn btn-primary btnApproved" disabled href="#" style="margin-right: 10px;">✔Approved</button>
+        <?php }else{  ?>
+    <button class="btn btn-success btnStatus" href="#" style="margin-right: 10px;" lid="<?php echo $getUser[0]['id'] ?>" ls="active"><span class="showStatus">Approve</span></button>
+  <?php } ?>
+  <?php if($getUser[0]['status'] == 'de-active'){ ?>
+    <button class="btn btn-primary btnDeclined" disabled href="#">x Declined</button>
+  <?php }else{ ?>
+  <button class="btn btn-warning btnStatus" lid="<?php echo $getUser[0]['id'] ?>" ls="de-active"><span class="showStatus">Decline </button>
+<?php }  ?>
+</div>
+<script>
+              
+              $(function(){
+                
+                $('.btnStatus').click(function(){
+                
+            var file_status = $(this).attr('ls');
+            var id = $(this).attr('lid');
+             $.ajax({
+     data:{id:id,file_status:file_status},
+     type: "POST",
+     url: "<?php echo base_url(); ?>admin/userauthext",
+   error:function() {$(".showStatus").html('Error')},
+   beforeSend:function() {$(".showStatus").html('checking...')},
+      success: function(data) {
+        $('.showStatus').html(data);
+        $(this).attr('disabled');
+    if(data == "x Declined"){
+   $(".btnApproved").hide();
+         
+      }else{
+
+    $(".btnDeclined").hide();
+
+  }
+
+   }
+    });   
+            
+            
+                });
+                  
+              });
+          </script>
     </section>
 
     <!-- Main content -->
@@ -18,9 +73,9 @@
       <div class="row">
         <div class="col-md-3">
 		<?php 
-				    $rowArray = $this->admin_model->getAllCorperateById($id);  
+				    
 				// 	$subType = $this->admin_model->getSubPayX($rowArray[0]['email'],'Investor Readiness Cohort'); 
-					$profile_request = $this->admin_model->getUser($rowArray[0]['Email']); 
+					
 		
 		?>
           <!-- Profile Image -->

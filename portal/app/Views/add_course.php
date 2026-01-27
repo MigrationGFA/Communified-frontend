@@ -109,12 +109,7 @@
               
                
               
-              <div class="col-sm-6 col-12">
-                  <label>Course Picture</label>
-                <div class="mb-2">
-                  <input type="file" name="file[]" class="form-control"  placeholder="Lesson Cover Picture" />
-                </div>
-              </div>
+              
              <div class="col-sm-6 col-12">
               
                 <div class="mb-2">
@@ -131,6 +126,18 @@
               
                 <div class="mb-2">
                   <input type="text" class="form-control" name="lmslink" placeholder="Course Url/Link" />
+                </div>
+              </div>
+              <div class="col-sm-6 col-12">
+                  <label>Course Picture</label>
+                <div class="mb-2">
+                  <input type="file" name="file[]" class="form-control"  placeholder="Lesson Cover Picture" />
+                </div>
+              </div>
+              <div class="col-sm-6 col-12">
+                  <label>Resource Upload(.pdf)</label>
+                <div class="mb-2">
+                  <input type="file" name="file[]" class="form-control"  placeholder="Resource Upload" />
                 </div>
               </div>
               <div id="full-wrapper col-12">

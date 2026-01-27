@@ -1,6 +1,6 @@
  <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
-      <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT  &copy; 2022 GetFundedAfrica, All rights Reserved</span></span><span class="float-md-end d-none d-md-block">Powered by GFA<i data-feather="heart"></i></span></p>
+      <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25"><?php echo lang('translation.COPYRIGHT © 2024 CIPME, All rights Reserved') ?></span></p>
     </footer>
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
@@ -31,52 +31,7 @@
       })
     </script>
 
-    <script>
-      $(function(){
-        
-        (function updateTR5() {
-  $.ajax({
-    type : 'POST',
-    url : '<?php echo base_url(); ?>gfa/verifypayment',
-    success : function(data){
-    //   $('.loadDashboard').html(data);
-    },                       // pass existing options
-  }).then(function() {           // on completion, restart
-     setTimeout(updateTR5, 1000);  // function refers to itself
-  });
-})();
-
-        (function updateTR6() {
-  $.ajax({
-    type : 'POST',
-    url : '<?php echo base_url(); ?>gfa/verifyexpire',
-    success : function(data){
-    //   $('.loadDashboard').html(data);
-    },                       // pass existing options
-  }).then(function() {           // on completion, restart
-     setTimeout(updateTR6, 1000);  // function refers to itself
-  });
-})();
-
-(function updateTR7() {
-  $.ajax({
-    type : 'POST',
-    url : '<?php echo base_url(); ?>gfa/checkpaystack',
-    success : function(data){
-    //   $('.loadDashboard').html(data);
-    },                       // pass existing options
-  }).then(function() {           // on completion, restart
-     setTimeout(updateTR7, 1000);  // function refers to itself
-  });
-})();
-        
-    });
-      $(window).on('load',  function(){
-        if (feather) {
-          feather.replace({ width: 14, height: 14 });
-        }
-      })
-    </script>
+   
   </body>
   
 </html>

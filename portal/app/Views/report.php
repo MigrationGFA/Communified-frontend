@@ -15,7 +15,7 @@
 
 <!--The industries the investor invests in -->
 <i data-feather="list" class="user-timeline-title-icon"></i>
-            <h4 class="card-title">Weekly Report</h4>
+            <h4 class="card-title"><?php echo lang('translation.Weekly Report') ?></h4>
 <!--The size of cheques the investor writes -->
 
 <!--The investment stage -->
@@ -40,10 +40,10 @@
             <thead>
               <tr>
                
-                <th>S/No</th>
-                <th>Date</th>
-                <th>Report</th>
-                <th>Other Info</th>
+                <th><?php echo lang('translation.S/NO') ?></th>
+                <th><?php echo lang('translation.DATE') ?></th>
+                <th><?php echo lang('translation.REPORT') ?></th>
+                <th><?php echo lang('translation.OTHER INFO') ?></th>
                 
               </tr>
             </thead>
@@ -73,9 +73,9 @@
                   </td>
                   <td class="text-nowrap">
                     <div class="d-flex flex-column">
-                      <span class="fw-bolder mb-25"><strong>Total Sale: $</strong><?php echo $rowArray['total_sale']; ?></span>
-                      <span class="fw-bolder mb-25"><strong>Total Expenses: $</strong><?php echo $rowArray['total_exp']; ?></span>
-                      <span class="fw-bolder mb-25"><strong>Tax: $</strong><?php echo $rowArray['tax']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.Total Sales') ?>: $</strong><?php echo $rowArray['total_sale']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.Total Expenses') ?>: $</strong><?php echo $rowArray['total_exp']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.Tax') ?>: $</strong><?php echo $rowArray['tax']; ?></span>
                    
                     
                     </div>
@@ -87,14 +87,15 @@
                 
                     
                     <div class="d-flex flex-column">
-                      <span class="fw-bolder mb-25"><strong>No of Workers: </strong><?php echo $rowArray['new_hiring']; ?></span>
-                      <span class="fw-bolder mb-25"><strong>Stopped Workers: </strong><?php echo $rowArray['employ_term']; ?></span>
-                      <span class="fw-bolder mb-25"><strong>Other info: </strong><?php echo $rowArray['other_info']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.No of Workers') ?>: </strong><?php echo $rowArray['new_hiring']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.Stopped Workers') ?>: </strong><?php echo $rowArray['employ_term']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.Other info') ?>: </strong><?php echo $rowArray['other_info']; ?></span>
                      <hr></hr>
-                        <span class="fw-bolder mb-25"><strong>CSR: </strong><?php echo $rowArray['csr_active']; ?></span>
-                      <span class="fw-bolder mb-25"><strong>CRS Amount: $</strong><?php echo $rowArray['amount']; ?></span>
-                      <span class="fw-bolder mb-25"><strong>CRS Details: </strong><?php echo $rowArray['csr_active_details']; ?></span>
+                        <span class="fw-bolder mb-25"><strong><?php echo lang('translation.CSR') ?>: </strong><?php echo $rowArray['csr_active']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.CRS Amount') ?>: $</strong><?php echo $rowArray['amount']; ?></span>
+                      <span class="fw-bolder mb-25"><strong><?php echo lang('translation.CRS Details') ?>: </strong><?php echo $rowArray['csr_active_details']; ?></span>
                     </div>
+                    
                 
 
                   

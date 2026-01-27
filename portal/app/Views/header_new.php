@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html class="loading bordered-layout" lang="en" data-layout="bordered-layout" data-textdirection="ltr">
@@ -8,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?php if(!empty($page_title)){ echo $page_title; } ?></title>
-    <link rel="apple-touch-icon" href="<?php echo base_url("public/assets/app-assets/images/ico/apple-icon-120.html"); ?>">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="<?php echo base_url('public/favicon-nora.png') ?>">
+    <link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 <!-- BEGIN: Vendor CSS-->
     
@@ -47,8 +48,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/core/menu/menu-types/vertical-menu.min.css"); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/dashboard-ecommerce.min.css"); ?>">
       <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/vendors/css/forms/select/select2.min.css"); ?>">
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/app-chat.min.css"); ?>">
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/app-chat-list.min.css"); ?>">
    
     <!-- END: Page CSS-->
     
@@ -88,46 +87,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/portal-onb.css"); ?>">
     <script src="<?php echo base_url("public/assets/app-assets/js/scripts/pagination.js"); ?>"></script>
     <script src="<?php echo base_url("public/assets/app-assets/js/core/api.js"); ?>"></script>
-    <style type="text/css">
-		
-		button {
-			cursor: pointer;
-		}
-		/*Initial style sort*/
-		.tablemanager th.sorterHeader {
-			cursor: pointer;
-		}
-		.tablemanager th.sorterHeader:after {
-			content: " \f0dc";
-			font-family: "FontAwesome";
-		}
-		/*Style sort desc*/
-		.tablemanager th.sortingDesc:after {
-			content: " \f0dd";
-			font-family: "FontAwesome";
-		}
-		/*Style sort asc*/
-		.tablemanager th.sortingAsc:after {
-			content: " \f0de";
-			font-family: "FontAwesome";
-		}
-		/*Style disabled*/
-		.tablemanager th.disableSort {
-
-		}
-		#for_numrows {
-			padding: 10px;
-			float: left;
-		}
-		#for_filter_by {
-			padding: 10px;
-			float: right;
-		}
-		#pagesControllers {
-			display: block;
-			text-align: center;
-		}
-	</style>
+    <style>
+   
+</style>
   </head>
   <!-- END: Head-->
   <!-- BEGIN: Body-->

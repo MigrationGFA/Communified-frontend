@@ -10,12 +10,11 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Event Details</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Event Details') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/dashboard'); ?>">Home</a>
-                    </li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/manage_event'); ?>">Manage Events</a>
+                    
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/manage_event'); ?>"><?php echo lang('translation.Manage Events') ?></a>
                     </li>
                     <?php $checkYourStory = $this->gfa_model->getEventByTitle($ref_id); ?>
                     <li class="breadcrumb-item"><a href="#"><?php echo $checkYourStory[0]['title'] ?></a>
@@ -63,7 +62,7 @@
               <small class="text-muted me-25">by</small>
               <small><a href="#" class="text-body"><?php echo $this->gfa_model->getStartUpDetails($checkYourStory[0]['email'])[0]['Primary_Contact_Name'];  ?></a></small>
               <span class="text-muted ms-50 me-25">|</span>
-              <small class="text-muted"><?php echo date('M d Y', strtotime($checkYourStory[0]['time_submit'])) ?></small>
+              <small class="text-muted"><?php echo date('d M Y', strtotime($checkYourStory[0]['time_submit'])) ?></small>
             </div>
           </div>
           <div class="my-1 py-25">
@@ -96,23 +95,23 @@
                   <?php
                   if($email== $checkYourStory[0]['email'] ){ echo ''; }else{
 
-                   = (!empty($this->gfa_model->getWpEvent($email,$checkYourStory[0]['event_id'])[0]['status']))?$this->gfa_model->getWpEvent($email,$checkYourStory[0]['event_id'])[0]['status'] : "";
+                   (!empty($this->gfa_model->getWpEvent($email,$checkYourStory[0]['event_id'])[0]['status']))?$this->gfa_model->getWpEvent($email,$checkYourStory[0]['event_id'])[0]['status'] : "";
                   if($checkAttendanceStatus=='active'){  ?>
                   <div class="avatar-content avatar  p-50 m-0 bg-light-primary" style="float:right;">
                       <i data-feather="user-check" class="font-large-2"  style="color:#7A6FF1;"></i>
                  
                     </div>
                    <?php }elseif($checkAttendanceStatus =='pending'){  ?> 
-                   <button type="button" disabled class="btn btn-primary">Enquiry Pending</button>
+                   <button type="button" disabled class="btn btn-primary"><?php echo lang('translation.Enquiry Pending') ?></button>
                    <?php }else{  ?>
-                    <button type="button"  class="btn btn-primary attendEvent">Attend Event</button>
-                    <a href="<?php echo base_url("gfa/speakers/{$checkYourStory[0]['event_id']}"); ?>"  class="btn btn-warning" >Host Profile</a>
+                    <button type="button"  class="btn btn-primary attendEvent"><?php echo lang('translation.Attend Event') ?></button>
+                    <a href="<?php echo base_url("gfa/speakers/{$checkYourStory[0]['event_id']}"); ?>"  class="btn btn-warning" ><?php echo lang('translation.Host Profile') ?></a>
         
                 <?php     }} ?>
                  <?php   if($checkYourStory[0]['event_type']=='Paid'){ 
                     ?>
                     
-                    <a href="<?php echo base_url("gfa/event_pay/{$checkYourStory[0]['event_id']}"); ?>"  class="btn btn-primary" >Pay</a>
+                    <a href="<?php echo base_url("gfa/event_pay/{$checkYourStory[0]['event_id']}"); ?>"  class="btn btn-primary" ><?php echo lang('translation.Pay') ?></a>
         
                    <?php }else{ echo '';} ?>
             </div>
@@ -138,7 +137,7 @@
 	 beforeSend:function() {$(".attendEvent").html('Requesting...');$('.attendEvent').prop("disabled", true );},
       success: function(data) {
        
-		 $(".attendEvent").html('You have been confirmed to attend, Glad to see you at the event'); 
+		 $(".attendEvent").html("Veuillez vérifier votre email pour plus de détails."); 
 	    $('.attendEvent').prop("disabled", true );
 	   
 	  
@@ -180,7 +179,7 @@
 
   <!-- Recent Posts -->
   <div class="blog-recent-posts mt-3">
-    <h6 class="section-label">Your Posted Events</h6>
+    <h6 class="section-label"><?php echo lang('translation.YOUR POSTED EVENTS') ?></h6>
     <div class="mt-75">
 <?php 
 
@@ -199,8 +198,8 @@ $row =  $this->gfa_model->getEvent($email); foreach($row as $rowStoryArray){ ?>
           <h6 class="blog-recent-post-title">
             <a href="<?php echo base_url()?>gfa/event/<?php echo $rowStoryArray['ref_id']; ?>" class="text-body-heading"><?php echo $rowStoryArray['title'] ?></a>
           </h6>
-          <div class="text-muted mb-0"><?php echo date('M d Y', strtotime($rowStoryArray['time_submit'])) ?> | <?php echo $rowStoryArray['status']; ?> </div>
-          <div class="text-muted mb-0"><a href="<?php echo base_url()?>gfa/event/<?php echo $rowStoryArray['ref_id']; ?>">View</a> | <a href="<?php echo base_url()?>gfa/edit_event/<?php echo $rowStoryArray['event_id']; ?>">Edit</a>  </div>
+          <div class="text-muted mb-0"><?php echo date('d M Y', strtotime($rowStoryArray['time_submit'])) ?> | <?php echo $rowStoryArray['status']; ?> </div>
+          <div class="text-muted mb-0"><a href="<?php echo base_url()?>gfa/event/<?php echo $rowStoryArray['ref_id']; ?>"><?php echo lang('translation.View') ?></a> | <a href="<?php echo base_url()?>gfa/edit_event/<?php echo $rowStoryArray['event_id']; ?>"><?php echo lang('translation.Edit') ?></a>  </div>
           <!-- | <a href="#">Delete</a>  -->
         </div>
       </div>

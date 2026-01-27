@@ -3,16 +3,32 @@
                 $this->gfa_model = model('App\Models\GfaModel');
                 $this->admin_model = model('App\Models\AdminModel');
            ?>
- <div class="app-content content " onmouseover='getpost(<?php echo json_encode($this->gfa_model->sort_dcdt_name($cor_info)); ?>); getallposts(3);'>
+ <div class="app-content content " onmouseover='getallposts(5)'>
      <div class="content-overlay"></div>
      <div class="header-navbar-shadow"></div>
      <div class="content-wrapper container-xxl p-0">
          <div class="content-header row">
          </div>
-         <div class="content-body" onmouseover='getpostcount(<?php echo json_encode($this->gfa_model->sort_dcdt_name($cor_info)); ?>)'>
+         <div class="content-body" onmouseover=''>
              <!-- Dashboard Ecommerce Starts -->
              <section id="dashboard-ecommerce">
                  <div class="row match-height">
+                    <!-- Current Notification -->
+    
+<div class="row connectionAlert">
+    
+    </div>
+    <!-- Current Notification -->
+    <div class="col-xl-12 col-md-12 col-12">
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <div class="alert-body dashboardNotification">
+                
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+    
+      </div>
+    <!-- End of Current Notification -->
                      <?php //echo   $this->encrypt->decode($this->session->userdata('admin_access')); ?>
                      <!-- Medal Card -->
                      <?php
@@ -37,14 +53,14 @@
                                  </div>
 
                                  <div class="text-center">
-                                     <h1 class="mb-1 text-white">Congratulations</h1>
+                                     <h1 class="mb-1 text-white"><?php echo lang('translation.Congratulations') ?></h1>
                                      <p class="card-text m-auto w-15">
-                                         You have done <strong><?php echo $point; ?>%</strong> onboarding. <br><a
+                                         You must complete your integration.<br><a
                                              href="<?php echo base_url(); ?>gfa/profile_corperate" style="color:#fff;"
-                                             target="_blank">Please below to update profile for better experience.</a>
+                                             target="_blank"> Please update your profile for a better user experience.</a>
                                          <br>
                                          <a href="<?php echo base_url(); ?>gfa/profile_corperate"
-                                             class="btn btn-primary">Update Profile</a>
+                                             class="btn btn-primary"><?php echo lang('translation.Update Profile') ?></a>
                                      </p>
 
 
@@ -62,32 +78,16 @@
                      <div class="col-xl-8 col-md-6 col-12">
                          <div class="card card-statistics">
                              <div class="card-header">
-                                 <h4 class="card-title">Your Interations in Summary</h4>
+                                 <h4 class="card-title"><?php echo lang('Your Interations in Summary') ?></h4>
                                  <div class="d-flex align-items-center">
-                                     <p class="card-text font-small-2 me-25 mb-0">Recent updated transactions</p>
+                                     <p class="card-text font-small-2 me-25 mb-0"><?php echo lang('translation.Recent updated transactions') ?></p>
                                  </div>
                              </div>
                              <div class="card-body statistics-body">
                                  <div class="row">
+                                     
                                      <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
-                                         <a href='<?php echo base_url(); ?>gfa/manage_cohort'>
-                                             <div class="d-flex flex-row">
-                                                 <div class="avatar bg-light-primary me-2">
-                                                     <div class="avatar-content">
-                                                         <i data-feather="box" class="avatar-icon"></i>
-                                                     </div>
-                                                 </div>
-                                                 <div class="my-auto">
-                                                     <h4 class="fw-bolder mb-0">
-                                                         <?php echo $this->admin_model->countCohort($corperateRow_Event[0]['Event']) ; ?>
-                                                     </h4>
-                                                     <p class="card-text font-small-3 mb-0">Cohort</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                     <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
-                                         <a href='<?php echo base_url(); ?>gfa/analytics'>
+                                         <a href='<?php echo base_url(); ?>gfa/corperate_startups'>
                                              <div class="d-flex flex-row">
                                                  <div class="avatar bg-light-info me-2">
                                                      <div class="avatar-content">
@@ -96,70 +96,15 @@
                                                  </div>
                                                  <div class="my-auto">
                                                      <h4 class="fw-bolder mb-0">
+                                                        <?php $startupCount = $this->gfa_model->getStartupCount()[0]['startup_count']; echo $startupCount ?>
+                                                         
+                                                     </h4>
+                                                     <p class="card-text font-small-3 mb-0"><?php echo lang('translation.Applications') ?></p>
+                                                 </div>
+                                             </div>
+                                         </a>
+                                     </div>
 
-                                                        <?php echo  $this->gfa_model->countRegistrationTotal(); ?>
-                                                     </h4>
-                                                     <p class="card-text font-small-3 mb-0">Applications</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                     <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-sm-0">
-                                         <a href='<?php echo base_url(); ?>gfa/corperate_investor'>
-                                             <div class="d-flex flex-row">
-                                                 <div class="avatar bg-light-danger me-2">
-                                                     <div class="avatar-content">
-                                                         <i data-feather="dollar-sign" class="avatar-icon"></i>
-                                                     </div>
-                                                 </div>
-                                                 <div class="my-auto">
-                                                     <h4 class="fw-bolder mb-0">
-                                                         <?php echo $this->admin_model->countConnectStartupsInvestors($corperateRow_Event[0]['Event']) ; ?>
-                                                     </h4>
-                                                     <p class="card-text font-small-3 mb-0">Investors </p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                     <div class="col-xl-3 col-sm-6 col-12">
-                                         <a href='<?php echo base_url(); ?>gfa/corperate_mentor'>
-                                             <div class="d-flex flex-row">
-                                                 <div class="avatar bg-light-success me-2">
-                                                     <div class="avatar-content">
-                                                         <i data-feather="user" class="avatar-icon"></i>
-                                                     </div>
-                                                 </div>
-                                                 <div class="my-auto">
-                                                     <h4 class="fw-bolder mb-0">
-                                                         <?php echo $this->admin_model->countConnectStartupsMentors($corperateRow_Event[0]['Event']) ; ?>
-                                                     </h4>
-                                                     <p class="card-text font-small-3 mb-0">Mentors</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div>
-                             </div>
-
-                             <div class="card-body statistics-body">
-                                 <div class="row">
-                                     <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
-                                         <a href='<?php echo base_url(); ?>gfa/partner_startup'>
-                                             <div class="d-flex flex-row">
-                                                 <div class="avatar bg-light-primary me-2">
-                                                     <div class="avatar-content">
-                                                         <i data-feather="box" class="avatar-icon"></i>
-                                                     </div>
-                                                 </div>
-                                                 <div class="my-auto">
-                                                     <h4 class="fw-bolder mb-0">
-                                                         <?php echo $this->admin_model->countPartner("wema-541") ; ?>
-                                                     </h4>
-                                                     <p class="card-text font-small-3 mb-0">Partners</p>  
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
                                      <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
                                          <a href='<?php echo base_url(); ?>gfa/manage_csr'>
                                              <div class="d-flex flex-row">
@@ -172,45 +117,52 @@
                                                      <h4 class="fw-bolder mb-0">
                                                          <?php echo $this->admin_model->countCorperateCrs($email) ; ?>
                                                      </h4>
-                                                     <p class="card-text font-small-3 mb-0">Community</p>
+                                                     <p class="card-text font-small-3 mb-0"><?php echo lang('translation.Community') ?></p>
                                                  </div>
                                              </div>
                                          </a>
                                      </div>
-                                     <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-sm-0">
-                                         <a href='<?php echo base_url(); ?>gfa/corporate_startup_news'>
+                                     <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
+                                         <a href='<?php echo base_url(); ?>gfa/notify_inbox'>
                                              <div class="d-flex flex-row">
-                                                 <div class="avatar bg-light-danger me-2">
+                                                 <div class="avatar bg-light-info me-2">
                                                      <div class="avatar-content">
-                                                         <i data-feather="dollar-sign" class="avatar-icon"></i>
-                                                     </div>
-                                                 </div>
-                                                 <div class="my-auto">
-                                                     <h4 class="fw-bolder mb-0" id="media_count">0</h4>
-                                                     <p class="card-text font-small-3 mb-0">Media/PR</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                     <div class="col-xl-3 col-sm-6 col-12  mb-2 mb-sm-0">
-                                         <a href='<?php echo base_url(); ?>gfa/startup_content'>
-                                             <div class="d-flex flex-row">
-                                                 <div class="avatar bg-light-success me-2">
-                                                     <div class="avatar-content">
-                                                         <i data-feather="user" class="avatar-icon"></i>
+                                                         <i data-feather="box" class="avatar-icon"></i>
                                                      </div>
                                                  </div>
                                                  <div class="my-auto">
                                                      <h4 class="fw-bolder mb-0">
-                                                         <?php echo $this->admin_model->countStoryPostByStartup($corperateRow_Event[0]['Event']) ; ?>
+                                                         <?php echo $this->gfa_model->getNotificationSummary($email)[0]['total_notifications'] ?>
                                                      </h4>
-                                                     <p class="card-text font-small-3 mb-0">Content</p>
+                                                     <p class="card-text font-small-3 mb-0"><?php echo lang('translation.Messaging') ?></p>
                                                  </div>
                                              </div>
                                          </a>
                                      </div>
+
+                                     <div class="col-xl-3 col-sm-6 col-12  mb-2 mb-sm-0">
+                                         <a href='<?php echo base_url(); ?>gfa/manage_event'>
+                                             <div class="d-flex flex-row">
+                                                 <div class="avatar bg-light-success me-2">
+                                                     <div class="avatar-content">
+                                                         <i data-feather="users" class="avatar-icon"></i>
+                                                     </div>
+                                                 </div>
+                                                 <div class="my-auto">
+                                                     <h4 class="fw-bolder mb-0">
+                                                         <?php echo $this->gfa_model->countAllEvents($email) ?>
+                                                     </h4>
+                                                     <p class="card-text font-small-3 mb-0"><?php echo lang('translation.Events') ?></p>
+                                                 </div>
+                                             </div>
+                                         </a>
+                                     </div>
+                                     
+                                     
                                  </div>
                              </div>
+
+                             
                          </div>
                      </div>
                      <!--/ Statistics Card -->
@@ -222,12 +174,12 @@
                              <!-- Bar Chart - Orders -->
 
                              <div class="col-lg-6 col-md-3 col-6">
-                                 <a href="https://remsana.getfundedafrica.com/sso.php?key=<?php echo $loginkey[0]['LoginKey']; ?>&account=corporate"
+                                 <a href="<?php echo base_url(); ?>gfa/learning"
                                      target="_blank">
                                      <div class="card">
                                          <div class="card-body pb-50">
-                                             <h6>Learning</h6>
-                                             <h2 class="fw-bolder mb-1">230</h2>
+                                             <h6><?php echo lang('translation.Learning') ?></h6>
+                                             <h2 class="fw-bolder mb-1">30</h2>
                                              <div id="statistics-order-chart"></div>
                                          </div>
                                      </div>
@@ -241,7 +193,7 @@
                                  <a href='<?php echo base_url(); ?>gfa/manage_event'>
                                      <div class="card card-tiny-line-stats">
                                          <div class="card-body pb-50">
-                                             <h6>Manage Event</h6>
+                                             <h6><?php echo lang('translation.Manage Event') ?></h6>
                                              <h2 class="fw-bolder mb-1">
                                                  <?php echo $this->gfa_model->countAllEvents($email) ?></h2>
                                              <div id="statistics-profit-chart"></div>
@@ -254,8 +206,8 @@
                              <div class="col-lg-6 col-md-3 col-6">
                                  <div class="card" style="background-color: #958DF3;">
                                      <div class="card-body pb-50">
-                                         <h6>Perks</h6>
-                                         <h2 class="fw-bolder mb-1">$2500</h2>
+                                         <h6><?php echo lang('translation.Perks') ?></h6>
+                                         <h2 class="fw-bolder mb-1">25000 </h2>
                                          <div id="statistics-order-chart"></div>
                                      </div>
                                  </div>
@@ -264,31 +216,13 @@
 
                              <!-- Line Chart - Profit -->
                              <div class="col-lg-6 col-md-3 col-6">
-                                 <a href="<?php echo base_url(); ?>gfa/reports">
+                                 <a href="https://pmemarket.cipme.ci" target="_blank">
                                      <div class="card card-tiny-line-stats">
                                          <div class="card-body pb-50">
-                                             <h6>Hiring</h6>
+                                             <h6>Embauche</h6>
                                              <h2 class="fw-bolder mb-1"><?php
                     
-                                                if($corperateRow[0]['ref']==$cor_info){
-                                                    $rowArrays = $this->admin_model->getCorperateEventRefByEmail($email,$cor_info); 
-                                                    $row = $this->admin_model->MatchRefStartup($cor_info);
-                                                      $rows = $this->admin_model->MatchRefStartups($cor_info);
-                                                  }else {
-                                                  
-                                                  if($corperateRow_Event[0]['Event']=='Microsoft'){
-                                                    $rowArrays = $this->admin_model->getCorperateMicrosoftByEmail($email); 
-                                                  $row = $this->admin_model->MatchMicrosftStartup($rowArrays[0]['Solution_Corperate'],$rowArrays[0]['Core_Interest_Corporate']);
-                                                      
-                                                  }else{
-                                                      
-                                                    $rowArrays = $this->admin_model->getCorperateByEmail($email); 
-                                                  $row = $this->admin_model->MatchCorperateStartup($rowArrays[0]['Solution_Corperate'],$rowArrays[0]['Core_Interest_Corporate']);
-                                                  $rowsd = $this->admin_model->MatchCorperateStartup($rowArrays[0]['Solution_Corperate'],$rowArrays[0]['Core_Interest_Corporate']);
-    
-                                                  }
-                                                  
-                                                  }
+                                                
                                                   
                                                   $sum = 0;
                                                   foreach($row as $rowArray){  
@@ -339,17 +273,17 @@
                              <div class="row mx-0">
                                  <div class="col-md-8 col-12 revenue-report-wrapper">
                                      <div class="d-sm-flex justify-content-between align-items-center mb-3">
-                                         <h4 class="card-title mb-50 mb-sm-0">Weekly Report</h4>
+                                         <h4 class="card-title mb-50 mb-sm-0"><?php echo lang('translation.Weekly Report') ?></h4>
                                          <div class="d-flex align-items-center">
                                              <div class="d-flex align-items-center me-2">
                                                  <span
                                                      class="bullet bullet-primary font-small-3 me-50 cursor-pointer"></span>
-                                                 <span>Returns</span>
+                                                 <span><?php echo lang('translation.Returns') ?></span>
                                              </div>
                                              <div class="d-flex align-items-center ms-75">
                                                  <span
                                                      class="bullet bullet-warning font-small-3 me-50 cursor-pointer"></span>
-                                                 <span>Expense</span>
+                                                 <span><?php echo lang('translation.Expense') ?></span>
                                              </div>
                                          </div>
                                      </div>
@@ -366,14 +300,14 @@
                                              <a class="dropdown-item" href="#">2022</a>
                                          </div>
                                      </div>
-                                     <h2 class="mb-25">$<?php echo $totalTrans; ?></h2>
+                                     <h2 class="mb-25"><?php echo $totalTrans; ?></h2>
                                      <div class="d-flex justify-content-center">
-                                         <span class="fw-bolder me-25">Tax:</span>
-                                         <span><?php echo $tax ?></span>
+                                         <span class="fw-bolder me-25"><?php echo lang('translation.Tax') ?>:</span>
+                                         <span><?php echo $tax ?> </span>
                                      </div>
                                      <div id="budget-chart"></div>
-                                     <a href="<?php echo base_url(); ?>gfa/corporate_report"
-                                         class="btn btn-primary">View All Report</a>
+                                     <a href="<?php echo base_url(); ?>gfa/add_report"
+                                         class="btn btn-primary"><?php echo lang('translation.View All Report') ?></a>
                                  </div>
                              </div>
                          </div>
@@ -387,7 +321,18 @@
                          <div class="card card-company-table">
                              <div class="card-body p-0">
                                  <div class="table-responsive">
-                                    
+                                     <table class="table" id="table">
+                                         <thead>
+                                             <tr>
+                                                 <th colspan="5">
+                                                    <?php echo lang('translation.BROWSE YOUR RECOMMENDED STARTUPS') ?> 
+                                                 <a href="<?php echo base_url(); ?>gfa/corperate_startups/" class="btn btn-success"><?php echo $startupCount; ?> </a></th>
+
+                                             </tr>
+                                             
+                                         </thead>
+           
+                                     </table>
                                     
                                  </div>
                              </div>
@@ -398,18 +343,18 @@
 
 
                      <!-- Mentor Card -->
-                     <div class="col-lg-4 col-12">
+                     <div class="col-lg-6 col-12">
                          <div class="card card-user-timeline">
                              <div class="card-header">
                                  <div class="d-flex align-items-center">
                                      <i data-feather="list" class="user-timeline-title-icon"></i>
-                                     <h4 class="card-title">Latest News</h4>
+                                     <h4 class="card-title"><?php echo lang('translation.Latest News') ?></h4>
                                  </div>
                              </div>
                              <div class="card-body">
 
                                  <ul class="timeline ms-50" id="startup_news">
-                                     <h6>Loading.....</h6>
+                                     <h6><?php echo lang('translation.Loading') ?>.....</h6>
                                  </ul>
                                  <ul class="timeline ms-50" id="startup_news_rand">
                                  </ul>
@@ -424,50 +369,10 @@
                      <!--/ Transaction Card -->
 
                      <!-- Profile Card -->
-                     <div class="col-lg-4 col-md-6 col-12">
-                         <div class="card card-profile">
-                             <img src="https://getfundedafrica.com/images/cohort.jpg" class="img-fluid card-img-top"
-                                 alt="Profile Cover Photo" />
-                             <div class="card-body">
-                                 <div class="profile-image-wrapper">
-                                     <div class="profile-image">
-                                         <div class="avatar">
-
-                                             <img src="<?php echo base_url("public/assets/app-assets/images/gfacohort.jpg"); ?>"
-                                                 alt="Cohort Pic" />
-                                         </div>
-                                     </div>
-                                 </div>
-
-                                 <h6 class="text-muted">NEXT COHORT STARTING</h6>
-                                 <br>
-
-                                 <h3>Investor Readiness Cohort</h3>
-                                 <br>
-                                 <span class="badge badge-light-primary profile-badge"> 9th Jan 2023</span><br><br>
-
-                                 <hr class="mb-2" />
-                                 <div class="d-grid">
-                                     <button onclick="document.location='https://getfundedafrica.com/cohort'"
-                                         type="button" class="btn btn-primary">Learn more</button>
-                                 </div>
-                                 <!--        	<br>
-                                      <br>
-                                            
-                                    <h3> Cohort</h3>
-                                  
-                                    <span class="badge badge-light-primary profile-badge"> </span><br><br>
-                                    
-                                    
-                                    <button onclick="document.location=''" type="button" class="btn btn-primary" style="float:auto;">Learn more</button> 
-                                          -->
-
-                             </div>
-                         </div>
-                     </div>
+                     
                      <!--/ Profile Card -->
                      <!-- Developer Meetup Card -->
-                     <div class="col-lg-4 col-md-6 col-12">
+                     <div class="col-lg-6 col-md-6 col-12">
                             <div class="card card-developer-meetup">
                                 <div class="meetup-img-wrapper rounded-top text-center">
                                     <img src="<?php echo base_url("public/assets/app-assets/images/eventgfa.jpg"); ?>" alt="Meeting Pic" height="170" />
@@ -475,7 +380,7 @@
 
                                 
                                 <div class="card-body">
-                                <h4 class="card-title mb-25"> Events </h4>
+                                <h4 class="card-title mb-25"> <?php echo lang('translation.Events') ?> </h4>
 
                                 <?php if(empty($eventResp['Title'])){ echo ''; $limit = 2;}else{  ?>
                                     <div class="meetup-header d-flex align-items-center">
@@ -492,8 +397,7 @@
                                         <div class="my-auto">
                                             
                                             <p class="card-text mb-0"><?php echo $eventResp['Title']; ?></p>
-                                            <p><a href="<?php echo $eventResp['Url']; ?>" target="_blank">Click here for
-                                                    more details</a></p>
+                                            <p><a href="<?php echo $eventResp['Url']; ?>" target="_blank"><?php echo lang('translation.Click here for more details') ?></a></p>
                                         </div>
 
                                     </div>
@@ -513,16 +417,15 @@
                                         <div class="my-auto">
                                             
                                             <p class="card-text mb-0"><?php echo $rowArrayEvent['title']; ?></p>
-                                            <p><a href="<?php echo base_url(); ?>gfa/events/<?php echo $rowArrayEvent['ref_id']; ?>">Click here for
-                                                    more details</a></p>
+                                            <p><a href="<?php echo base_url(); ?>gfa/events/<?php echo $rowArrayEvent['ref_id']; ?>"><?php echo lang('translation.Click here for more details') ?></a></p>
                                         </div>
                                     </div>
                                     <?php }  ?>
                                     <input type="hidden" class="eventId" value="<?php echo $eventResp['ID']; ?>">
                                     <input type="hidden" class="title" value="<?php echo $eventResp['Title']; ?>">
-                                    <!--<a href="<?php echo base_url(); ?>gfa/add_event" class="btn btn-primary mt-1">+Add Event</a>-->
-                                    <!--<a href="<?php echo base_url(); ?>gfa/manage_event" class="btn btn-primary mt-1 me-sm-1">My Events</a>-->
-                                    <!--<a href="<?php echo base_url(); ?>gfa/all_events" class="btn btn-primary mt-1 me-sm-1">All Events</a>-->
+                                    <a href="<?php echo base_url(); ?>gfa/add_event" class="btn btn-primary mt-1">+<?php echo lang('translation.Add Event') ?></a>
+                                    <a href="<?php echo base_url(); ?>gfa/manage_event" class="btn btn-primary mt-1 me-sm-1"><?php echo lang('translation.My Events') ?></a>
+                                    <a href="<?php echo base_url(); ?>gfa/all_events" class="btn btn-primary mt-1 me-sm-1"><?php echo lang('translation.All Events') ?></a>
                                     
                                 </div>
 
@@ -544,4 +447,35 @@
  </div>
  <!-- END: Content-->
 
- 
+ <script>
+
+	$(function () {
+			// for (var i = 1; i < 20; i++) {
+			// 	$('#table').append('<tr class="data"><td>' + i + '</td><td>Some title</td><td>Some Description</td></tr>');
+			// }
+
+			load = function() {
+				window.tp = new Pagination('#tablePaging', {
+					itemsCount: <?php echo $count ?>,
+					onPageSizeChange: function (ps) {
+						console.log('changed to ' + ps);
+					},
+					onPageChange: function (paging) {
+						//custom paging logic here
+						console.log(paging);
+						var start = paging.pageSize * (paging.currentPage - 1),
+							end = start + paging.pageSize,
+							$rows = $('#table').find('.data');
+
+						$rows.hide();
+
+						for (var i = start; i < end; i++) {
+							$rows.eq(i).show();
+						}
+					}
+				});
+			}
+
+		load();
+	});
+	</script>

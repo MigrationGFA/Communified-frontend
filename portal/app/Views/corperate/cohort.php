@@ -151,7 +151,7 @@
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Investment size (USD)</label>
+                <label class="form-label" for="helperText">Investment size ()</label>
                 <input type="number" class="form-control fund_to_raise" id="accountAddress" name="fund_to_raise" placeholder="Funding to raise" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Next_Funding_Round_Target_Sought'];  ?>" />
 
                 

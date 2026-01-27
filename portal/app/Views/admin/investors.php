@@ -12,10 +12,8 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form class="pull-right" method="POST" action="<?php echo base_url(); ?>download/export/investor/">
-                  <input type="hidden" name="column_value" value="" >
-                    <button type="submit" name="submit" class="btn btn-primary" class="btn btn-info ">Export</button>
-                  </form>
+              <a class="btn btn-primary pull-right btn btn-info"  href="<?php echo base_url(); ?>admin/export/investor/">Export</a>
+                
                 <br><br>
 
                <table id="example1" class="table table-bordered table-striped">

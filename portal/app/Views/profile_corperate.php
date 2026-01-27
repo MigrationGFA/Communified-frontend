@@ -15,11 +15,11 @@
                 <h2 class="content-header-title float-start mb-0">Account</h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/corporate_dashboard"); ?>">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/corporate_dashboard"); ?>"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Corporate Profile </a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Corporate Profile') ?> </a>
                     </li>
-                    <li class="breadcrumb-item active"> Account
+                    <li class="breadcrumb-item active"> <?php echo lang('translation.Account') ?>
                     </li>
                   </ol>
                 </div>
@@ -42,7 +42,7 @@
      <li class="nav-item">
         <a class="nav-link  active" href="<?php echo base_url("gfa/profile"); ?>">
           <i data-feather="user" class="font-medium-3 me-50"></i>
-          <span class="fw-bold">User Profile</span>
+          <span class="fw-bold"><?php echo lang('translation.User Profile') ?></span>
         </a>
       </li>
        
@@ -72,7 +72,7 @@
     <!-- profile -->
     <div class="card">
       <div class="card-header border-bottom">
-        <h4 class="card-title">Profile Details</h4><br>
+        <h4 class="card-title"><?php echo lang('translation.Profile Details') ?></h4><br>
        
       </div>
       
@@ -100,7 +100,7 @@
      
      </div><br>
         <!-- header section -->
-         <label class="form-label" for="accountFirstName">Upload your Logo</label><br>
+         <label class="form-label" for="accountFirstName"><?php echo lang('translation.Upload your Logo') ?></label><br>
          <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Upload your Logo</label>-->
           
               <br>
@@ -121,11 +121,11 @@
           <form class="fileInfox" method="post" action="#" enctype="multipart/form-data">
           <div class="d-flex align-items-end mt-75 ms-1">
             <div>
-              <label for="account-upload" class="btn btn-sm btn-primary mb-75 me-75 uploadBtn">Upload</label>
+              <label for="account-upload" class="btn btn-sm btn-primary mb-75 me-75 uploadBtn"><?php echo lang('translation.Upload') ?></label>
               <input type="file" name="file[]" id="account-upload" hidden accept="image/*"  onchange="preview()" />
               <input type="hidden" name='upload_type' value='photo' />
-              <button type="submit" id="account-reset" class="btn btn-sm btn-outline-secondary mb-75 savePhotox">Save Upload</button>
-              <p class="mb-0">Allowed file types: png, jpg, jpeg.</p>
+              <button type="submit" id="account-reset" class="btn btn-sm btn-outline-secondary mb-75 savePhotox"><?php echo lang('translation.Save Upload') ?></button>
+              <p class="mb-0"><?php echo lang('translation.Allowed file types: png, jpg, jpeg') ?>.</p>
               <span class="savePhoto"></span>
             </div>
           </div>
@@ -187,7 +187,7 @@ $(".fileInfox").submit(function(e) {
                      $country = $this->gfa_model->getOldStartUpDetails($email)[0]['country'];
                      $industry = $this->gfa_model->getOldStartUpDetails($email)[0]['industry'];
                  }else{
-                     if($account_type=='corperate'){
+                     if($account_type=='corperate' || $account_type=='accelerator'){
                   $nameArray = explode(" ", $this->gfa_model->getCorperateDetails($email)[0]['Key_contact_name']);
                   $firsname = $nameArray[0];
                     $lastname = $nameArray[1];
@@ -209,7 +209,7 @@ $(".fileInfox").submit(function(e) {
               
                  
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountFirstName">First Name</label>
+              <label class="form-label" for="accountFirstName"><?php echo lang('translation.First Name') ?></label>
                <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* First Name</label>-->
               <input
                 type="text"
@@ -222,7 +222,7 @@ $(".fileInfox").submit(function(e) {
               />
             </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountLastName">Last Name</label>
+              <label class="form-label" for="accountLastName"><?php echo lang('translation.Last Name') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Last Name</label>-->
               <input
                 type="text"
@@ -235,18 +235,18 @@ $(".fileInfox").submit(function(e) {
               />
             </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Gender</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Gender') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* How did you hear about us?</label>-->
               
               <select name="gender" class=" form-control form-select">
               <option value="<?php echo (!empty($this->gfa_model->getCorperateDetails($email)[0]['Gender']))?$this->gfa_model->getCorperateDetails($email)[0]['Gender'] : "";  ?>"><?php echo (!empty($this->gfa_model->getCorperateDetails($email)[0]['Gender']))?$this->gfa_model->getCorperateDetails($email)[0]['Gender'] : "";  ?></option>
-                  <option value="Male">Male</option>
-                       <option value="Female">Female</option>
+                  <option value="Male"><?php echo lang('translation.Male') ?></option>
+                       <option value="Female"><?php echo lang('translation.Female') ?></option>
                        
                </select>  
                  </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountEmail">Email</label>
+              <label class="form-label" for="accountEmail"><?php echo lang('translation.Email') ?></label>
                <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Email</label>-->
               
               <input
@@ -255,27 +255,26 @@ $(".fileInfox").submit(function(e) {
                 id="accountEmail"
                 name="email"
                 disabled
-                placeholder="Email"
+                
                 value="<?php echo $email ; ?>"
               />
             </div>
             
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountPhoneNumber">Phone Number</label>
+              <label class="form-label" for="accountPhoneNumber"><?php echo lang('translation.Phone Number') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Phone Number</label>-->
               <input
                 type="text"
                 class="form-control account-number-mask"
                 id="accountPhoneNumber"
                 name="phoneNumber"
-                placeholder="Phone Number"
                 value="<?php echo (!empty($phone))?$phone : "" ; ?>"
               />
             </div>
               <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="country">Your Country</label>
+              <label class="form-label" for="country"><?php echo lang('translation.Your Country') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Country</label>-->
-              <select id="country" name="country" class="select2 form-select">
+<select id="country" name="country" class="select2 form-select">
                 <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Hq_country'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Hq_country'];  ?></option>
     <option value="Afghanistan">Afghanistan</option>
 <option value="Albania">Albania</option>
@@ -518,164 +517,174 @@ $(".fileInfox").submit(function(e) {
 <option value="Zimbabwe">Zimbabwe</option> 
               </select>
             </div>
-            <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountState">State</label>
+            <div class="col-12 col-sm-6 mb-1" style="display: none;">
+              <label class="form-label" for="accountState">A PRECISER </label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* State</label>-->
-              <input type="text" class="form-control" id="accountState" name="City" placeholder="State" value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['City'];  ?>" />
+              <input type="text" class="form-control" id="accountState" name="Other_Country"  value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Hq_country'];  ?>" />
             </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Address</label>
+              <label class="form-label" for="accountState"><?php echo lang('translation.State') ?></label>
+              <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* State</label>-->
+              <input type="text" class="form-control" id="accountState" name="City"  value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['City'];  ?>" />
+            </div>
+            <div class="col-12 col-sm-6 mb-1">
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Address') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Address</label>-->
-              <input type="text" class="form-control" id="accountAddress" name="Business_address" placeholder="Your Address" value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Business_address'];  ?>" />
+              <input type="text" class="form-control" id="accountAddress" name="Business_address"  value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Business_address'];  ?>" />
             </div>
             
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountZipCode">Website</label>
+              <label class="form-label" for="accountZipCode"><?php echo lang('translation.Website') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Zip Code</label>-->
               <input
                 type="text"
                 class="form-control account-zip-code"
                 id="accountZipCode"
                 name="Website"
-                placeholder="Website"
+                
                
                 value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Website'];  ?>"
               />
             </div>
             
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Facebook Profile</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Facebook Profile') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Facebook Profile</label>-->
-              <input type="text" class="form-control" id="accountAddress" name="Facebook" placeholder="Facebook Profile ID" value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Facebook'];  ?>" />
+              <input type="text" class="form-control" id="accountAddress" name="Facebook" value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Facebook'];  ?>" />
             </div>
             
           <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">LinkedIn Profile</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.LinkedIn Profile') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Linkedin Profile</label>-->
-              <input type="text" class="form-control" id="accountAddress" name="LinkedIn" placeholder="LinkedIn Profile ID" value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['LinkedIn'];  ?>" />
+              <input type="text" class="form-control" id="accountAddress" name="LinkedIn"  value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['LinkedIn'];  ?>" />
             </div>
           
             
               <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">How did you hear about us?</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.How did you hear about us?') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* How did you hear about us?</label>-->
               
-              <select id="country" name="Hear_Us" class=" form-control form-select">
+              <select  name="Hear_Us" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Hear_Us'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Hear_Us'];  ?></option>
-                  <option value="Tv/Radio">Tv/Radio</option>
-                       <option value="GFA Website">GFA Website</option>
-                       <option value="Tv/Radio">Google Search</option>
-                       <option value="GFA Website">Online Ads</option>
+                  <option value="Tv/Radio"><?php echo lang('translation.Tv/Radio') ?></option>
+                       <option value="CIPME Website"><?php echo lang('translation.CIPME Website') ?></option>
+                       <option value="Google Search"><?php echo lang('translation.Google Search') ?></option>
+                       <option value="Online Ads"><?php echo lang('translation.Online Ads') ?></option>
                        <option value="Linkedin">Linkedin</option>
+                       <option value="Others">Autres – précisez</option>
                </select>  
                  </div>
+                 <div class="col-12 col-sm-6 mb-1 otherSelected" style="display:none;">
+              <label class="form-label" for="accountAddress">Autres – précisez</label>
+              <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Linkedin Profile</label>-->
+              <input type="text" class="form-control" id="accountAddress" name="Hear_Us_Others"  value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Hear_Us'];  ?>" />
+            </div>
                  <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Company Name</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Company Name') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Linkedin Profile</label>-->
               <input type="text" class="form-control" id="accountAddress" name="Corporate_Name" placeholder="Company Name" value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Corporate_Name'];  ?>" />
             </div>
              <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="normalMultiSelect">Industry</label>
+              <label class="form-label" for="normalMultiSelect"><?php echo lang('translation.Industry') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Industry</label>-->
               
                <select class="select2 form-select" name="industry[]" id="select2-multiple" multiple>
               
                 <?php  $IndustryArray = explode(",",$this->gfa_model->getCorperateDetails($email)[0]['Corporate_industry']); ?>
                  <?php if(!empty($IndustryArray[0])){  ?>
-                 <option value="<?php echo $IndustryArray[0];  ?>" selected><?php echo $IndustryArray[0]  ?></option>     
+                 <option value="<?php echo $IndustryArray[0];  ?>" selected><?php echo lang("translation.{$IndustryArray[0]}")  ?></option>     
                       
                 <?php  }else{ echo ''; }  ?>
                 <?php if(!empty($IndustryArray[1])){  ?>
-                 <option value="<?php echo $IndustryArray[1];  ?>" selected><?php echo $IndustryArray[1]  ?></option>     
                       
                 <?php  }else{ echo ''; }  ?>
                 <?php if(!empty($IndustryArray[2])){  ?>
-                 <option value="<?php echo $IndustryArray[2];  ?>" selected><?php echo $IndustryArray[2]  ?></option>     
+                 <option value="<?php echo $IndustryArray[2];  ?>" selected><?php echo lang("translation.{$IndustryArray[2]}")  ?></option>     
                       
                 <?php  }else{ echo ''; }  ?>
 			  <?php	$rowIndustry = $this->admin_model->getAllIndustry();  foreach($rowIndustry as $rowArrayIndustry){  ?>
-                  <option><?php echo $rowArrayIndustry["industry"] ?></option>
+                  <option><?php echo lang("translation.{$rowArrayIndustry['industry']}") ?></option>
                   <?php }  ?>
               </select>
             </div>
              <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountReadiness">What Type of Startups are your Interest?</label>
+              <label class="form-label" for="accountReadiness"><?php echo lang('translation.What Type of Startups are your Interest?') ?></label>
               <!-- <label class="form-label" for="accountReadines" style="color:#ff0000;">* Product / Tech Readines?</label>-->
               
               <select id="Readiness" name="Partner_startup_stage" class="form-control form-select">
-              <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Partner_startup_stage'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Partner_startup_stage'];  ?></option>
+              <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Partner_startup_stage'];  ?>"><?php echo lang("{$this->gfa_model->getCorperateDetails($email)[0]['Partner_startup_stage']}");  ?></option>
                        
    
-    <option value="Early to late stage">Early to late stage</option>
-    <option value="Early Stage">Early Stage</option>
-    <option value="Late Stage">Late Stage</option>
-    <option value="All Stages ">All Stages</option>
-    <option value="Specific Stage">Specific Stage</option>
+    
+    <option value="Launch"><?php echo lang('translation.Launch') ?></option>
+    <option value="Early Stage"><?php echo lang('translation.Early Stage') ?></option>
+    <option value="Late Stage"><?php echo lang('translation.Late Stage') ?></option>
+    <option value="All Stages "><?php echo lang('translation.All Stages') ?></option>
+    <option value="Specific Stage"><?php echo lang('translation.Specific Stage') ?></option>
     
                </select>  
                  </div>
-             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountReadiness">How would you like to engage with GetfundedAfrica & the startups in our community?</label>
+             <div class="col-12 col-sm-6 mb-1" style="display: none;">
+              <label class="form-label" for="accountReadiness"><?php echo lang('translation.How would you like to engage with CIPME & the startups in our community?') ?></label>
               <!-- <label class="form-label" for="accountReadines" style="color:#ff0000;">* Product / Tech Readines?</label>-->
               
               <select id="Readiness" name="Engage_Startup" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Engage_Startup'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Engage_Startup'];  ?></option>
                        
-   
-    <option value="As a sponsor of an Accelerator Program">As a sponsor of an Accelerator Program</option>
-    <option value="As an Investor in Startups">As an Investor in Startups</option>
-    <option value="Solutions on Efficiency and cost saving">Solutions on Efficiency and cost saving</option>
-    <option value="Customised Partnership">Customised Partnership</option>
-    <option value="Others">Others</option>
+   As a sponsor of an Accelerator Program,As an Investor in Startups,Solutions on Efficiency and cost saving
+    <option value="As a sponsor of an Accelerator Program"><?php echo lang('translation.As a sponsor of an Accelerator Program') ?></option>
+    <option value="As an Investor in Startups"><?php echo lang('translation.As an Investor in Startups') ?></option>
+    <option value="Solutions on Efficiency and cost saving"><?php echo lang('translation.Solutions on Efficiency and cost saving') ?></option>
+    <option value="Customised Partnership"><?php echo lang('translation.Customised Partnership') ?></option>
+    <option value="Others"><?php echo lang('translation.Others') ?></option>
     
                </select>  
                  </div>
                 <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Would you like to co-organize events with GetFundedAfrica?</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Would you like to co-organize events with CIPME?') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* How did you hear about us?</label>-->
               
               <select id="country" name="Gfa_Event" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Gfa_Event'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Gfa_Event'];  ?></option>
-                  <option value="Yes">Yes</option>
-                       <option value="No">No</option>
-                       <option value="Maybe">Maybe</option>
+                  <option value="Yes"><?php echo lang('translation.Yes') ?></option>
+                       <option value="No"><?php echo lang('translation.No') ?></option>
+                       <option value="Maybe"><?php echo lang('translation.Maybe') ?></option>
                        
                </select>  
                  </div>  
                  <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Would you like to be featured on any of our media platforms?</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Would you like to be featured on any of our media platforms?') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* How did you hear about us?</label>-->
               
               <select id="country" name="GFa_Media" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['GFa_Media'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['GFa_Media'];  ?></option>
-                  <option value="Yes">Yes</option>
-                       <option value="No">No</option>
-                       <option value="Maybe">Maybe</option>
+                  <option value="Yes"><?php echo lang('translation.Yes') ?></option>
+                       <option value="No"><?php echo lang('translation.No') ?></option>
+                       <option value="Maybe"><?php echo lang('translation.Maybe') ?></option>
                        
                </select>  
                  </div>
-            <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountReadiness">Corporate Solutions</label>
+            <div class="col-12 col-sm-6 mb-1" style="display: none;">
+              <label class="form-label" for="accountReadiness"><?php echo lang('Corporate Solutions') ?></label>
               <!-- <label class="form-label" for="accountReadines" style="color:#ff0000;">* Product / Tech Readines?</label>-->
               
               <select id="Readiness" name="Solution_Corperate" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Solution_Corperate'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Solution_Corperate'];  ?></option>
                        
-    <option value="Financial Services FMCG/CPG">Financial Services FMCG/CPG</option>
-    <option value="Renewable Energy Software">Renewable Energy Software</option>
-    <option value="Digital Banks">Digital Banks</option>
-    <option value="Mastercard/VISA">Mastercard/VISA</option>
-    <option value="Manufacturing">Manufacturing</option>
-    <option value="Payment Platform">Payment Platform</option>
-    <option value="ICT Technology Products & Solutions">ICT Technology Products & Solutions</option>
-    <option value="Engineering/ESG">Engineering/ESG</option>
+    <option value="Financial Services FMCG/CPG"><?php echo lang('translation.Financial Services FMCG/CPG') ?></option>
+    <option value="Renewable Energy Software"><?php echo lang('translation.Renewable Energy Software') ?></option>
+    <option value="Mastercard/VISA"><?php echo lang('translation.Mastercard/VISA') ?></option>
+    <option value="Manufacturing"><?php echo lang('translation.Manufacturing') ?></option>
+    <option value="Payment Platform"><?php echo lang('translation.Payment Platform') ?></option>
+    <option value="ICT Technology Products & Solutions"><?php echo lang('translation.ICT Technology Products & Solutions') ?></option>
+    <option value="Engineering/ESG"><?php echo lang('translation.Engineering/ESG') ?></option>
                </select>  
                  </div>
            
                  
            
                <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountModel">Whats your business model</label>
+              <label class="form-label" for="accountModel"><?php echo lang('translation.Whats your business model') ?></label>
               <!-- <label class="form-label" for="accountInvolvement" style="color:#ff0000;">* Whats your business model</label>-->
               
               <select id="Model" name="Startup_Model" class=" form-control form-select">
@@ -694,52 +703,52 @@ $(".fileInfox").submit(function(e) {
                 
                  
                  
-                  <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountReadiness">Core Interest of Corporate your Startup can Solve</label>
+                  <div class="col-12 col-sm-6 mb-1" style="display: none;">
+              <label class="form-label" for="accountReadiness"><?php echo lang('translation.Core Interest of Corporate your Startup can Solve') ?></label>
               <!-- <label class="form-label" for="accountReadines" style="color:#ff0000;">* Product / Tech Readines?</label>-->
               
               <select id="Readiness" name="Core_Interest_Corporate" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Core_Interest_Corporate'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Core_Interest_Corporate'];  ?></option>
                        
    
- <option value="Increasing revenue">Increasing revenue</option>
- <option value="Reducing company costs">Reducing company costs</option>
- <option value="Enhance operational excellence, capabilities or performance management">Enhance operational excellence, capabilities or performance management</option>
- <option value="Ensure resources & processes becoming liabilities rather capabilities, when facing challenges such as new markets or disruptive challenges">Ensure resources & processes becoming liabilities rather capabilities, when facing challenges such as new markets or disruptive challenges</option>
- <option value="Accessing new markets/customers">Accessing new markets/customers</option>
-    <option value="Increasing sales in existing markets">Increasing sales in existing markets</option>
- <option value="Improving your access to technology and other resources">Improving your access to technology and other resources</option>
- <option value="Improving your product offering for your customers">Improving your product offering for your customers</option>
-    <option value="Diversifying your product offerings">Diversifying your product offerings</option>
-    <option value="Digital Transformation digital transformation for a company's business process, culture, and customer experiences to meet changing business and market requirements">Digital Transformation digital transformation for a company's business process, culture and customer experiences to meet changing business and market requirements</option>
- <option value="Aggregation of data and gaining new insights">Aggregation of data and gaining new insights</option>
-    <option value="Solutions to enable a smart workforce across multiple internal functions">Solutions to enable a smart workforce across multiple internal functions</option>
+ <option value="Increasing revenue"><?php echo lang('translation.Increasing revenue') ?></option>
+ <option value="Reducing company costs"><?php echo lang('translation.Reducing company costs') ?></option>
+ <option value="Enhance operational excellence, capabilities or performance management"><?php echo lang('translation.Enhance operational excellence, capabilities or performance management') ?></option>
+ <option value="Ensure resources & processes becoming liabilities rather capabilities, when facing challenges such as new markets or disruptive challenges"><?php echo lang('translation.Ensure resources & processes becoming liabilities rather capabilities, when facing challenges such as new markets or disruptive challenges') ?></option>
+ <option value="Accessing new markets/customers"><?php echo lang('translation.Accessing new markets/customers') ?></option>
+    <option value="Increasing sales in existing markets"><?php echo lang('translation.Increasing sales in existing markets') ?></option>
+ <option value="Improving your access to technology and other resources"><?php echo lang('translation.Improving your access to technology and other resources') ?></option>
+ <option value="Improving your product offering for your customers"><?php echo lang('translation.Improving your product offering for your customers') ?></option>
+    <option value="Diversifying your product offerings"><?php echo lang('translation.Diversifying your product offerings') ?></option>
+    <option value="Digital Transformation digital transformation for a company's business process, culture, and customer experiences to meet changing business and market requirements"><?php echo lang("translation.Digital Transformation digital transformation for a company's business process, culture and customer experiences to meet changing business and market requirements") ?></option>
+ <option value="Aggregation of data and gaining new insights"><?php echo lang('translation.Aggregation of data and gaining new insights') ?></option>
+    <option value="Solutions to enable a smart workforce across multiple internal functions"><?php echo lang('translation.Solutions to enable a smart workforce across multiple internal functions') ?></option>
                </select>  
                  </div>
-                  <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountReadiness">Corporate Solution Proximity to Company's Core</label>
+                  <div class="col-12 col-sm-6 mb-1" style="display: none;">
+              <label class="form-label" for="accountReadiness"><?php echo lang("translation.Corporate Solution Proximity to Company's Core") ?></label>
               <!-- <label class="form-label" for="accountReadines" style="color:#ff0000;">* Product / Tech Readines?</label>-->
               
               <select id="Readiness" name="Corporate_Solution_Prox" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Corporate_Solution_Prox'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Corporate_Solution_Prox'];  ?></option>
                        
-    <option value="Adjacent">Adjacent</option>
-    <option value="Close">Close</option>
-    <option value="Radical">Radical</option>
+    <option value="Adjacent"><?php echo lang("translation.Adjacent") ?></option>
+    <option value="Close"><?php echo lang("translation.Close") ?></option>
+    <option value="Radical"><?php echo lang("translation.Radical") ?></option>
     
                </select>  
                  </div>
                   <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountReadiness">Solution Ownership/Relationship Style</label>
+              <label class="form-label" for="accountReadiness"><?php echo lang("translation.Solution Ownership/Relationship Style") ?></label>
               <!-- <label class="form-label" for="accountReadines" style="color:#ff0000;">* Product / Tech Readines?</label>-->
               
               <select id="Readiness" name="Solution_Ownership" class=" form-control form-select">
               <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Solution_Ownership'];  ?>"><?php echo $this->gfa_model->getCorperateDetails($email)[0]['Solution_Ownership'];  ?></option>
-                       Solution_Ownership
-    <option value="Built In-house">Built In-house</option>
-    <option value="Investment Opportunity">Investment Opportunity</option>
-    <option value="Partnership/Joint Venture">Partnership/Joint Venture</option>
-    <option value="Acquisition">Acquisition</option>
+                   
+    <option value="Built In-house"><?php echo lang("translation.Built In-house") ?></option>
+    <option value="Investment Opportunity"><?php echo lang("translation.Investment Opportunity") ?></option>
+    <option value="Partnership/Joint Venture"><?php echo lang("translation.Partnership/Joint Venture") ?></option>
+    <option value="Acquisition"><?php echo lang("translation.Acquisition") ?></option>
     
                </select>  
                  </div>
@@ -794,7 +803,7 @@ $(".fileInfox").submit(function(e) {
             <!--  </select>-->
             <!--</div>-->
             <div class="col-12">
-              <button type="submit" class="btn btn-primary mt-1 me-1 saveBtn">Save Company Profile</button>
+              <button type="submit" class="btn btn-primary mt-1 me-1 saveBtn"><?php echo lang("translation.Save Company Profile") ?></button>
               <!--<button type="reset" class="btn btn-outline-secondary mt-1">Discard</button>-->
               <span class="displayAction"></span>
               
@@ -809,6 +818,25 @@ $(".fileInfox").submit(function(e) {
     
     <script>
       $(function(){
+
+         // Listen for changes in the select element
+    $('select[name="Hear_Us"]').on('change', function() {
+        // Check if the selected value is "Others"
+        if ($(this).val() === 'Others') {
+            // Show the input field for "Others"
+            $('.otherSelected').show();
+        } else {
+            // Hide the input field for "Others"
+            $('.otherSelected').hide();
+        }
+    });
+
+    // Optionally, check the initial value to handle pre-selected "Others"
+    if ($('select[name="Hear_Us"]').val() === 'Others') {
+        $('.otherSelected').show();
+    } else {
+        $('.otherSelected').hide();
+    }
           
           $('inputX').keyup(function(){
               
@@ -877,11 +905,11 @@ $(".fileInfox").submit(function(e) {
      type: "POST",
      url: "<?php echo base_url("gfa/corperateProfileproDemo"); ?>",
      error:function() {$(".displayAction").html('Error saving data');},
-	 beforeSend:function() {$(".saveBtn").html('Saving Profile...');},
+	 beforeSend:function() {$(".saveBtn").html('Enregistrement du profil...');},
       success: function(data) {
        //
-		  $(".displayAction").html("Successfully Saved!");  
-	   $(".saveBtn").html('Saved');  
+		  $(".displayAction").html("Enregistré avec succès !");  
+	   $(".saveBtn").html('Enregistré');  
 	   
 	  
 	

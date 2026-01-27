@@ -1,4 +1,6 @@
-
+<?php 
+  $this->gfa_model = model('App\Models\GfaModel');
+   ?>
     <!-- BEGIN: Content-->
     <div class="app-content content ">
       <div class="content-overlay"></div>
@@ -36,7 +38,7 @@
                   <th>Package</th>
                   <th>Amount</th>
                   
-                  <th>Description</th>
+                  
                   
                 </tr>
               </thead>
@@ -51,7 +53,7 @@
                       </div>
                       <div>
                         
-                        <div class="font-small-2 text-muted"><?php echo $this->session->userdata('type');  ?></div>
+                        <div class="font-small-2 text-muted"><?php echo session()->get('type');  ?></div>
                       </div>
                     </div>
                   </td>
@@ -62,63 +64,12 @@
                           <i data-feather="monitor" class="font-medium-3"></i>
                         </div>
                       </div>
-                      <span>GFA subscription packege best for Founders/SMEs<?php //echo $this->session->userdata('sub');   ?></span>
+                      <span>GFA subscription packege best for Founders/SMEs<?php //echo session()->get('sub');   ?></span>
                     </div>
                   </td>
                   
-                <td valign="top"><strong><?php detectCurrency(); ?><?php echo $this->session->userdata('amt');  ?></strong></td>
-                <td class="text-nowrap">
-                    <div class="d-flex flex-column">
-                      <ul class="list-group list-group-circle text-start">
-                             <?php if($this->session->userdata('type') =='monthly')    {  ?>                       
-                                                        <li class="list-group-item">20% discount applies!</li>
-<li class="list-group-item">$500 worth of perks</li>
-<li class="list-group-item">$15 or 1 free worth of Investor-readiness templates on GFA e-store</li>
-<li class="list-group-item">Access to 30 modules of the Fundrasing courses on Remsana.com</li>
-<li class="list-group-item">Unlimited access to Investors</li>
-<li class="list-group-item">Unlimited access to Mentors</li>
-<li class="list-group-item">Unlimited access to Corporates</li>
-<li class="list-group-item">Access to 2 folders on the Dataroom</li>
-<li class="list-group-item">Cohort Participation</li>
-<li class="list-group-item">Publish your Startup's story</li>
-<li class="list-group-item">Get invites to 1 exclusive events</li>
-                                                       
-                                                       <?php }  ?>
-                                                       
-                                                       <?php if($this->session->userdata('type') =='quarterly')    {  ?>                       
-                                                       <li class="list-group-item">20% discount applies!</li>
-<li class="list-group-item">$3,000 worth of perks</li>
-<li class="list-group-item">$30 or 3 free worth of Investor-readiness templates on GFA e-store</li>
-<li class="list-group-item">Dedicated investment/growth adviser</li>
-<li class="list-group-item">Access to 130 modules of the Fundrasing courses on Remsana.com</li>
-<li class="list-group-item">Unlimited access to Investors</li>
-<li class="list-group-item">Unlimited access to Mentors</li>
-<li class="list-group-item">Unlimited access to Corporates</li>
-<li class="list-group-item">Access to 3 folders on the Dataroom</li>
-<li class="list-group-item">Cohort Participation</li>
-<li class="list-group-item">Publish your Startup's story</li>
-<li class="list-group-item">Get invites to 3 exclusive events</li>
-                                                       
-                                                       <?php }  ?>
-                                                       
-                                                       <?php if($this->session->userdata('type') =='yearly')    {  ?>                       
-                                                        <li class="list-group-item">33.3% discount applies!
-<li class="list-group-item">$15,000 worth of perks
-<li class="list-group-item">$45 or 7 free worth of Investor-readiness templates on GFA e-store
-<li class="list-group-item">Dedicated investment/growth adviser
-<li class="list-group-item">Access to all the 230 modules of the Fundrasing courses on Remsana.com
-<li class="list-group-item">Unlimited access to Investors
-<li class="list-group-item">Unlimited access to Mentors
-<li class="list-group-item">Unlimited access to Corporates
-<li class="list-group-item">Unlimited access to a Dataroom
-<li class="list-group-item">Cohort Participation
-<li class="list-group-item">Publish your Startup's story
-<li class="list-group-item">Get invites to all exclusive events
-                                                       
-                                                       <?php }  ?>
-              </ul>
-                    </div>
-                  </td>
+                <td valign="top"><strong><?php detectCurrency(); ?><?php echo session()->get('amt');  ?></strong></td>
+               
                  
                 </tr>
                 
@@ -130,121 +81,130 @@
         <div class="row">
             <?php    ?>
             <input type='hidden' name='name'   class="form-control" placeholder="First Name" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Primary_Contact_Name'] ?>">
-            <input type='hidden' name='subpackage'   class="form-control" placeholder="First Name"  value="<?php echo $this->session->userdata('package');   ?>">
+            <input type='hidden' name='subpackage'   class="form-control" placeholder="First Name"  value="<?php echo session()->get('package');   ?>">
             <input type='hidden' name='phone'   class="form-control" placeholder="First Name"  value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Phones'] ?>">
-            <input type='hidden' name='email'   class="form-control" placeholder="First Name" value="<?php echo $this->encrypt->decode($this->session->userdata('email')) ; ?>">
+            <input type='hidden' name='email'   class="form-control" placeholder="First Name" value="<?php echo $email ; ?>">
             <input type='hidden' name='industry'   class="form-control industry" placeholder="First Name" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['PrimaryBusinessIndustry'] ?>">
             <input type='hidden' name='country'   class="form-control country" placeholder="First Name" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['CountryHQ'] ?>">
             <input type='hidden' name='reg_type'   class="form-control startup" placeholder="First Name" value="startup">
                                  <div class="col-md-12 ">
 <!--window.open("https://getfundedafrica.com/paypro.php?onetime=1&package=insight&type="+showValue+"&sub=Standard Startups Finder Individual&amt="+optAmount+"", "_self");    -->
                                         <input  type="hidden" name="amount" class="amount" value="<?php 
-			if($this->session->userdata['onetime']==0 && $this->session->userdata['type']=='monthly'){
+			if(session()->get('onetime')==0 && session()->get('type')=='monthly'){
 			
-			echo str_replace(",","",$this->session->userdata['amt']);
+			echo str_replace(",","",session()->get('amt'));
 			}
 			
-				if($this->session->userdata['onetime']==0 && $this->session->userdata['type']=='daily'){
+				if(session()->get('onetime')==0 && session()->get('type')=='daily'){
 			
-			echo str_replace(",","",$this->session->userdata['amt']);
+			echo str_replace(",","",session()->get('amt'));
 			}
 			
-			if($this->session->userdata['onetime']==0 && $this->session->userdata['type']=='quarterly'){
+			if(session()->get('onetime')==0 && session()->get('type')=='quarterly'){
 			
-			echo str_replace(",","",$this->session->userdata['amt']);
+			echo str_replace(",","",session()->get('amt'));
 			}
+
+      if(session()->get('onetime')==0 && session()->get('type')=='bi-annually'){
+      
+      echo str_replace(",","",session()->get('amt'));
+      }
 			
-			if($this->session->userdata['onetime']==0 && $this->session->userdata['type']=='yearly'){
+			if(session()->get('onetime')==0 && session()->get('type')=='yearly'){
 			
-			$amount = str_replace(",","",$this->session->userdata['amt']);
+			$amount = str_replace(",","",session()->get('amt'));
 			echo $amount;
 			}
-			if($this->session->userdata['onetime']==1 && ($this->session->userdata['type']=='yearly' || $this->session->userdata['type']=='monthly' || $this->session->userdata['type']=='daily' || $this->session->userdata['type']=='quarterly')){
+			if(session()->get('onetime')==1 && (session()->get('type')=='yearly' || session()->get('type')=='monthly' || session()->get('type')=='daily' || session()->get('type')=='quarterly')){
 			
-			$amount = str_replace(",","",$this->session->userdata['amt']);
+			$amount = str_replace(",","",session()->get('amt'));
 			echo $amount ;
 			}
-			?>" />
+			?>" /> 
             
             <input type='hidden' name='currencyCode'   class="form-control currencyCode" placeholder=""  value="<?php if(getCountry()=='Nigeria'){ echo 'NGN'; }
-              elseif(getCountry()=='Ghana'){ echo 'GHS'; }
-              elseif(getCountry()=='Kenya'){ echo 'KES'; }
-              elseif(getCountry()=='South Africa'){ echo 'ZAR'; }
-              elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
-  || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon'){ echo 'XAF'; }
-  elseif(getCountry()=='Senegal' || getCountry()=='Mali' 
-  || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau'){ echo 'XOF'; }
-  elseif(getCountry()=='Morocco') {
-    echo "MAD";
-  }
-  elseif(getCountry()=='Egypt') {
-    echo "EGP";
-  }elseif(getCountry()=='Guinea') {
-    echo "GNF";
-  }elseif(getCountry()=='Malawi') {
-    echo "MWK";
-  }elseif(getCountry()=='Rwanda') {
-    echo "RWF";
-  }elseif(getCountry()=='Sierra Leone') {
-    echo "SLL";
-  }elseif(getCountry()=='São Tomé and Príncipe') {
-    echo "STD";
-  }elseif(getCountry()=='Tanzania') {
-    echo "TZS";
-  }elseif(getCountry()=='Uganda') {
-    echo "UGX";
-  }elseif(getCountry()=='Zambia') {
-    echo "ZMW";
-  }
+  //             elseif(getCountry()=='Ghana'){ echo 'GHS'; }
+  //             elseif(getCountry()=='Kenya'){ echo 'KES'; }
+  //             elseif(getCountry()=='South Africa'){ echo 'ZAR'; }
+  //             elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
+  // || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon'){ echo 'XAF'; }
+  // elseif(getCountry()=='Senegal' || getCountry()=='Mali' 
+  // || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau'){ echo 'XOF'; }
+  // elseif(getCountry()=='Morocco') {
+  //   echo "MAD";
+  // }
+  // elseif(getCountry()=='Egypt') {
+  //   echo "EGP";
+  // }elseif(getCountry()=='Guinea') {
+  //   echo "GNF";
+  // }elseif(getCountry()=='Malawi') {
+  //   echo "MWK";
+  // }elseif(getCountry()=='Rwanda') {
+  //   echo "RWF";
+  // }elseif(getCountry()=='Sierra Leone') {
+  //   echo "SLL";
+  // }elseif(getCountry()=='São Tomé and Príncipe') {
+  //   echo "STD";
+  // }elseif(getCountry()=='Tanzania') {
+  //   echo "TZS";
+  // }elseif(getCountry()=='Uganda') {
+  //   echo "UGX";
+  // }elseif(getCountry()=='Zambia') {
+  //   echo "ZMW";
+  // }
               else{ echo '';} ?>">
                 <input type='hidden' name='countryCode'   class="form-control countryCode" placeholder=""  value="<?php if(getCountry()=='Nigeria'){ echo 'NG'; }
-              elseif(getCountry()=='Ghana'){ echo 'GH'; }
-              elseif(getCountry()=='Kenya'){ echo 'KE'; }
-              elseif(getCountry()=='South Africa'){ echo 'ZA'; }
-              elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
-  || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon'){ echo 'XA'; }
-  elseif(getCountry()=='Senegal' || getCountry()=='Mali' 
-  || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau'){ echo 'XO'; }
-  elseif(getCountry()=='Morocco') {
-    echo "MA";
-  }
-  elseif(getCountry()=='Egypt') {
-    echo "EG";
-  }elseif(getCountry()=='Guinea') {
-    echo "GN";
-  }elseif(getCountry()=='Malawi') {
-    echo "MW";
-  }elseif(getCountry()=='Rwanda') {
-    echo "RW";
-  }elseif(getCountry()=='Sierra Leone') {
-    echo "SL";
-  }elseif(getCountry()=='São Tomé and Príncipe') {
-    echo "ST";
-  }elseif(getCountry()=='Tanzania') {
-    echo "TZ";
-  }elseif(getCountry()=='Uganda') {
-    echo "UG";
-  }elseif(getCountry()=='Zambia') {
-    echo "ZM";
-  }
+  //             elseif(getCountry()=='Ghana'){ echo 'GH'; }
+  //             elseif(getCountry()=='Kenya'){ echo 'KE'; }
+  //             elseif(getCountry()=='South Africa'){ echo 'ZA'; }
+  //             elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
+  // || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon'){ echo 'XA'; }
+  // elseif(getCountry()=='Senegal' || getCountry()=='Mali' 
+  // || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau'){ echo 'XO'; }
+  // elseif(getCountry()=='Morocco') {
+  //   echo "MA";
+  // }
+  // elseif(getCountry()=='Egypt') {
+  //   echo "EG";
+  // }elseif(getCountry()=='Guinea') {
+  //   echo "GN";
+  // }elseif(getCountry()=='Malawi') {
+  //   echo "MW";
+  // }elseif(getCountry()=='Rwanda') {
+  //   echo "RW";
+  // }elseif(getCountry()=='Sierra Leone') {
+  //   echo "SL";
+  // }elseif(getCountry()=='São Tomé and Príncipe') {
+  //   echo "ST";
+  // }elseif(getCountry()=='Tanzania') {
+  //   echo "TZ";
+  // }elseif(getCountry()=='Uganda') {
+  //   echo "UG";
+  // }elseif(getCountry()=='Zambia') {
+  //   echo "ZM";
+  // }
               else{ echo '';} ?>">    
-				<input  type="hidden" name="subType" class="subType" value="<?php echo $this->session->userdata['type'] ?>" />
-			<input  type="hidden" name="subscription" class="subscription" value="<?php echo $this->session->userdata['sub'] ?>"  />
+				<input  type="hidden" name="subType" class="subType" value="<?php echo session()->get('type') ?>" />
+			<input  type="hidden" name="subscription" class="subscription" value="<?php echo session()->get('sub') ?>"  />
       <input  type="hidden" name="trans_ref" class="trans_ref" value="<?php echo 'gfa-'.time() ?>" />
 
                                         <div id='submit' class="pull-right">
-                                            <?php if(getlocation()=='Nigeria'){ ?>
+                                            <?php //if(getlocation()=='Nigeria'){ ?>
      
-      <button  id='send_message'  class="btn w-80 btn-primary mt-2 payBtn" >Pay with Paystack </button> 
-      <?php }elseif(getCountry()=='Ghana' || getCountry()=='Kenya' || getCountry()=='South Africa' || getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
+      <!--<button  id='send_message'  class="btn w-80 btn-primary mt-2 payBtn" >Pay with Paystack </button> -->
+      <?php //}else
+/*
+      || getCountry()=='Ghana' || getCountry()=='Kenya' || getCountry()=='South Africa' || getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
   || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon' || getCountry()=='Senegal' || getCountry()=='Mali' 
   || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau' || getCountry()=='Zambia' || getCountry()=='Uganda' 
   || getCountry()=='Tanzania' || getCountry()=='São Tomé and Príncipe' || getCountry()=='Sierra Leone' || getCountry()=='Rwanda' || getCountry()=='Malawi' || getCountry()=='Guinea' 
-  || getCountry()=='Egypt' || getCountry()=='Morocco'){ $amountFlutter = str_replace(",","",$this->session->userdata['amt']);  ?>
-      <button  id='send_message'  class="btn w-80 btn-warning mt-2 payBtnFlutter" onclick="makePayment(<?php echo $amountFlutter; ?>,<?php echo $this->session->userdata['payment_plan']; ?>)" >Pay with FlutterWave </button>
+  || getCountry()=='Egypt' || getCountry()=='Morocco'
+  */
+    if(getlocation()=='Nigeria'){ $amountFlutter = str_replace(",","",session()->get('amt'));  ?>
+      <button  id='send_message'  class="btn w-80 btn-warning mt-2 payBtnFlutter" onclick="makePayment(<?php echo $amountFlutter; ?>,<?php echo session()->get('payment_plan'); ?>)" >Pay Now </button>
  <?php }else{  ?> 
   
-  <button  id='send_message'  class="btn w-80 btn-primary mt-2 payPalBtn" >Pay with PayPal</button>
+  <button id="payPalBtn" class="btn w-80 btn-primary mt-2 payPalBtn" >Pay Now</button> 
                                 
                            <?php  }   ?>
                            
@@ -264,7 +224,7 @@
    
   </div>
   
-  <div class="pricing-free-trial displaySub" style="display: none">
+  <div class="pricing-free-trial displaySub" style="display: none" id="payment-success">
     <div class="row">
       <div class="col-12 col-lg-10 col-lg-offset-3 mx-auto">
         <div class="pricing-trial-content d-flex justify-content-between">
@@ -283,11 +243,8 @@
 	<script>
           	
           		$(function() {
-	    
-	  
 
-  
-  $(".payPalBtn").click(function(e){
+  $("#payPalBtn").click(function(e){
    e.preventDefault();
 	 var totalAmount = $(".amount").val();
 	 var name = $("input[name='name']").val();
@@ -298,17 +255,20 @@
 	 var subpackage = $("input[name='subpackage']").val();
 	 var subscription = $("input[name='subscription']").val();
 	 var subType = $("input[name='subType']").val();
-	 var urlreq = 'portal';
+	 var urlreq = 'investor-finder';
+   var trans_ref = $("input[name='trans_ref']").val();
 	 var onetime = 1;
 	 $.ajax({
-     data:{subscription:subscription,subType:subType,onetime:onetime,amount:totalAmount,name:name,phone:phone,email:email,industry:industry,country:country,urlreq:urlreq,subpackage:subpackage},
-     type: "POST",
-     url: "https://getfundedafrica.com/paypaldata.php",
+     data:{subscription:subscription,subType:subType,onetime:onetime,amount:totalAmount,name:name,phone:phone,email:email,industry:industry,country:country,urlreq:urlreq,subpackage:subpackage,trans_ref:trans_ref},
+     type:"GET",
+     url:"https://getfundedafrica.com/portal/gfa/stripepost_ext/",
+     error:function() {$(".payPalBtn").html('Error in processing');},
+	 beforeSend:function() {$(".payPalBtn").html('Payment in progress');},
      success: function(data) {
 	 	
 	
 		
-     	window.open("https://getfundedafrica.com/paypalplan.php", "_self");
+     	window.open("https://getfundedafrica.com/portal/gfa/stripe/", "_self");
 		
 		//pk_live_f849722976a4354c340163f7d161f74d0f53fce6
 		//+data1+"/"+data2+"/"+data3+"/"+encodeURIComponent(email)
@@ -340,7 +300,7 @@
 		 $.ajax({
      data:{amount:totalAmount,subscription:subscription,subType:subType,startup:startup,name:name,phone:phone,email:email,industry:industry,country:country},
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/subpaydemo",
+     url: "<?php echo base_url("gfa/subpaydemo"); ?>",
      error:function() {$(".payBtn").html('Error');},
 	 beforeSend:function() {$(".payBtn").html('Sending payment...');},
      success: function(data) {
@@ -394,7 +354,7 @@
 	 $.ajax({
      data:{ref:ref,amount:totalAmount,subscription:subscription,subType:subType,startup:startup,name:name,phone:phone,email:email,industry:industry,country:country},
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/subpay",
+     url: "<?php echo base_url("gfa/subpay"); ?>",
      success: function(data) {
 	 	
 // 		$(".displaySub").html("<p>Thank you for subscribing</p>");
@@ -421,7 +381,7 @@
   
 
 </script>
- 
+ <!--FLWPUBK-1469eb5e177d68107d6961e2bae0b88b-X-->
 <script src="https://checkout.flutterwave.com/v3.js"></script>
 <script>
   function makePayment(flutterAmount, fluterPlan) {
@@ -432,7 +392,7 @@
   var countryCode = $("input[name='countryCode']").val();
    var trans_ref = $("input[name='trans_ref']").val();
     FlutterwaveCheckout({
-      public_key: "FLWPUBK-1469eb5e177d68107d6961e2bae0b88b-X",
+      public_key:'FLWPUBK-66d8ea488d57ba291013b93eae8bc3e8-X',
       tx_ref: trans_ref,
       amount: flutterAmount,
       currency: currencyCode,
@@ -457,7 +417,7 @@
 	 $.ajax({
      data:{ref:ref,amount:totalAmount,subscription:subscription,subType:subType,startup:startup,name:name,phone:phone,email:email,industry:industry,country:country},
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/subpayflutter",
+     url: "<?php echo base_url("gfa/subpayflutter"); ?>", 
      success: function(data) {
 	 	
 // 		$(".displaySub").html("<p>Thank you for subscribing</p>");
@@ -465,7 +425,7 @@
 		$(".formDisplay").hide();
 		$(".payBtn").hide();
 		$(".payBtnFlutter").hide(); 
-     	window.open("<?php echo base_url(); ?>gfa/dashboard", "_self");
+     	window.open("<?php echo base_url("gfa/dashboard"); ?>", "_self");
 		
 		//pk_live_f849722976a4354c340163f7d161f74d0f53fce6
 		//+data1+"/"+data2+"/"+data3+"/"+encodeURIComponent(email)
@@ -480,6 +440,7 @@
           document.querySelector("form").style.display = 'none';
           if (window.verified == true) {
             document.querySelector("#payment-success").style.display = 'block';
+            	window.open("<?php echo base_url("gfa/dashboard"); ?>", "_self");
           } else {
             document.querySelector("#payment-pending").style.display = 'block';
           }
@@ -503,7 +464,7 @@
     });
   }
 
-  function verifyTransactionOnBackend(transactionId) {
+  function verifyTransactionOnBackend(transactionId) { 
     // Let's just pretend the request was successful
     setTimeout(function() {
       window.verified = true;

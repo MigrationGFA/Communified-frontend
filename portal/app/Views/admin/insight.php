@@ -16,10 +16,8 @@
             
             <div class="box-body">
                 <!--<a href="<?php echo base_url(); ?>admin/add_cohort_participant/Microsoft" class="btn btn-info pull-right">+ Add Cohort Particpant</a>-->
-                <form class="pull-right" method="POST" action="<?php echo base_url(); ?>download/export/onboard_individual/interest_insight_report">
-                  <button type="submit" name="submit" class="btn btn-primary" class="btn btn-info ">Export</button>
-                  <input type="hidden" name="column_value" value="Insight Report" >
-                </form>
+                <a class="btn btn-primary pull-right btn btn-info"  href="<?php echo base_url(); ?>admin/export/onboard_individual/">Export</a>
+                
                 <br><br>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -41,7 +39,10 @@
 				<tbody>
 				<?php 
 				$n = 1;
-				$row = $admin_model->getAllInsight();  foreach($row as $rowArray){  
+				$row = $admin_model->getAllInsight();  
+
+        if(!empty($row)){
+        foreach($row as $rowArray){  
 				// 	$subType = $admin_model->getSubPayX($rowArray[0]['email'],'Investor Readiness Cohort'); 
 				// 	$profile_request = $admin_model->getUser($rowArray['email']);  
 				
@@ -56,7 +57,7 @@
                     </td>
                     
                     <td><?php echo $rowArray['mobile']; ?></td>
-					<td><?php echo $rowArray['current_stage']; ?></td>
+					           <td><?php echo $rowArray['current_stage']; ?></td>
                     	<td><?php echo $rowArray['city'].', '.$rowArray['country']; ?></td>
                     	
                     	<td><?php echo $rowArray['time_submit']; ?></td>
@@ -68,7 +69,7 @@
                   </tr>
                   </tr>
 				
-                  <?php } ?>
+                  <?php }  } ?>
 
 				
 				</tbody>

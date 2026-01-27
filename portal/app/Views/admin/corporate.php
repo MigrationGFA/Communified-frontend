@@ -12,10 +12,8 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <form class="pull-right" method="POST" action="<?php echo base_url(); ?>download/export/cooperate_info/">
-                <input type="hidden" name="column_value" value="" >
-                  <button type="submit" name="submit" class="btn btn-primary" class="btn btn-info ">Export</button>
-                </form>
+              <a class="btn btn-primary pull-right btn btn-info"  href="<?php echo base_url(); ?>admin/export/cooperate_info/">Export</a>
+             
                 <br><br>
 
                <table id="example1" class="table table-bordered table-striped">
@@ -66,10 +64,10 @@
                     <?php echo $rowArray['Business_need_support']; ?>
                     </td>
                     
-                    <td class="display<?php echo $rowArray['Mentor_ID'] ?>"><a href="#<?php echo base_url(); ?>admin/investorsinfo/<?php echo $rowArray['Mentor_ID'] ?>"><i class="fa fa-fw fa-external-link"></i> <span>View</span></a> 
+                    <td class="display<?php echo $rowArray['Corporate_ID'] ?>"><a href="<?php echo base_url(); ?>admin/corperate_info/<?php echo $rowArray['Corporate_ID'] ?>"><i class="fa fa-fw fa-external-link"></i> <span>View</span></a> 
                     <!--&nbsp; &nbsp;  <a href="<?php echo base_url(); ?>admin/editcohort/<?php echo $rowArray['id']?>" class=""><i class="fa fa-fw fa-pencil"></i></a><span></span>-->
                     &nbsp; &nbsp;
-                    <a href="#"  class="deletebtn"><i class="fa fa-fw fa-trash"></i><span style="display: none;"><?php echo $rowArray['Mentor_ID'] ?></span></a>
+                    <a href="#"  class="deletebtn"><i class="fa fa-fw fa-trash"></i><span style="display: none;"><?php echo $rowArray['Corporate_ID'] ?></span></a>
                     </td>
                     
                   </tr>

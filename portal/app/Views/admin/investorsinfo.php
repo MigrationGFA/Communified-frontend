@@ -1,5 +1,9 @@
 <?php $admin_model = new \App\Models\AdminModel(); ?>
 <?php $gfa_model = new \App\Models\GfaModel(); ?>
+<?php $rowArray = $admin_model->getAllInvestorById($id);  
+$getUser = $admin_model->getUser($rowArray[0]['Contact_Email']);
+?>
+
 
 <div class="content-wrapper">
 
@@ -8,11 +12,53 @@
       <h1>
         Investor - Startups
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-       
-        <li class="active">Investor Details</li>
-      </ol>
+      <div class="btn-group pull-right margin-bottom">
+         <button class="btn btn-primary" href="#"  onclick="history.back()" style="margin-right: 10px;">Back</button>
+         <?php if($getUser[0]['status'] == 'active'){ ?>
+          <button class="btn btn-primary btnApproved" disabled href="#" style="margin-right: 10px;">✔Approved</button>
+        <?php }else{  ?>
+    <button class="btn btn-success btnStatus" href="#" style="margin-right: 10px;" lid="<?php echo $getUser[0]['id'] ?>" ls="active"><span class="showStatus">Approve</span></button>
+  <?php } ?>
+  <?php if($getUser[0]['status'] == 'de-active'){ ?>
+    <button class="btn btn-primary btnDeclined" disabled href="#">x Declined</button>
+  <?php }else{ ?>
+  <button class="btn btn-warning btnStatus" lid="<?php echo $getUser[0]['id'] ?>" ls="de-active"><span class="showStatus">Decline </button>
+<?php }  ?>
+</div>
+<script>
+              
+              $(function(){
+                
+                $('.btnStatus').click(function(){
+                
+            var file_status = $(this).attr('ls');
+            var id = $(this).attr('lid');
+             $.ajax({
+     data:{id:id,file_status:file_status},
+     type: "POST",
+     url: "<?php echo base_url(); ?>admin/userauthext",
+   error:function() {$(".showStatus").html('Error')},
+   beforeSend:function() {$(".showStatus").html('checking...')},
+      success: function(data) {
+        $('.showStatus').html(data);
+        $(this).attr('disabled');
+    if(data == "x Declined"){
+   $(".btnApproved").hide();
+         
+      }else{
+
+    $(".btnDeclined").hide();
+
+  }
+
+   }
+    });   
+            
+            
+                });
+                  
+              });
+          </script>
     </section>
 
     <!-- Main content -->
@@ -21,7 +67,7 @@
       <div class="row">
         <div class="col-md-3">
 		<?php 
-				    $rowArray = $admin_model->getAllInvestorById($id);  
+				    
 				// 	$subType = $admin_model->getSubPayX($rowArray[0]['email'],'Investor Readiness Cohort'); 
 					$investor_email = $admin_model->getAllInvestorById($id)[0]['Contact_Email']; 
 		
@@ -38,7 +84,7 @@
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
 				
-				  getAllInvestorById
+				  
                   <b>Status</b> <a class="pull-right bg-light-success" style="color:#009900">Active</a>
 				  
                 </li>
@@ -345,7 +391,7 @@
 			        $n = 1;
 			     $row = $admin_model->getInvestorsFileUploadedByEmail($investor_email);
 				foreach($row as $rowArray){
-				    $investorDetails =  $ga_model->getInvestorDetails($rowArray['email']);
+				    $investorDetails =  $gfa_model->getInvestorDetails($rowArray['email']);
 				    $personalDetails =  $admin_model->getAllStartUpNByEmail($rowArray['email_startup']);
 					
 				

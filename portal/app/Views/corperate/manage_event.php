@@ -14,16 +14,16 @@
 <section id="dashboard-analytics">
 <div class="row">
 <i data-feather="list" class="user-timeline-title-icon"></i>
-            <h4 class="card-title">Manage Event Posted</h4>
+            <h4 class="card-title"><?php echo lang('translation.Manage Event Posted') ?></h4>
 <div class="col-lg-12 text-center mb-2">
             <?php 
         if($account_type == 'corperate'){  ?>
-        <a href="<?php echo base_url("gfa/corperate_add_event"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ Add Event</a>
+        <a href="<?php echo base_url("gfa/corperate_add_event"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ <?php echo lang('translation.Add Event') ?></a>
         <?php } 
          if($account_type == 'startup'){  
              
         ?>
-                <a href="<?php echo base_url("gfa/add_event"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ Add Event</a>
+                <a href="<?php echo base_url("gfa/add_event"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ <?php echo lang('translation.Add Event') ?></a>
                 <?php }  ?>
         </div>
     <div class="col-lg-3 col-sm-6 col-12">
@@ -42,7 +42,7 @@
             
             ?>
             </h2>
-            <p class="card-text">Attendees</p>
+            <p class="card-text"><?php echo lang('translation.Attendees') ?></p>
           </div>
           <div class="avatar bg-light-primary p-50 m-0">
             <div class="avatar-content">
@@ -67,7 +67,7 @@
             
             ?>
             </h2>
-            <p class="card-text">Male</p>
+            <p class="card-text"><?php echo lang('translation.Male') ?></p>
           </div>
           <div class="avatar bg-light-success p-50 m-0">
             <div class="avatar-content">
@@ -92,7 +92,7 @@
             
             ?>
             </h2>
-            <p class="card-text">Female</p>
+            <p class="card-text"><?php echo lang('translation.Female') ?></p>
           </div>
           <div class="avatar bg-light-danger p-50 m-0">
             <div class="avatar-content">
@@ -146,11 +146,11 @@
               </td>
               </tr>
                 <tr>
-                  <th>Event Title </th>
-                  <th>Date Posted</th>
-                  <th>Event Link</th>
-                  <th>Status</th>
-                  <th class="locationChange">Participants</th>
+                  <th><?php echo lang('translation.EVENT TITLE') ?></th>
+                  <th><?php echo lang('translation.DATE POSTED') ?></th>
+                  <th><?php echo lang('translation.EVENT LINK') ?></th>
+                  <th><?php echo lang('translation.STATUS') ?></th>
+                  <th class="locationChange"><?php echo lang('translation.PARTICIPANTS') ?></th>
                   
                   <th></th>
                 </tr>
@@ -195,8 +195,8 @@
                   </td>
                   <td>
                   <?php if($rowArray['status'] =='pending' || $rowArray['status'] =='declined'){ echo ''; }else { ?><?php //echo base_url()."gfa/events/". $rowArray['ref_id'] ;?>
-                  <a href="https://getfundedafrica.com/events/?e=<?php echo $rowArray['ref_id']; ?>&rf=<?php echo $rowArray['event_url']; ?>" class="string-input" style="display:none"></a>
-                  <a href="#" class="copyLink"><p style="display:none">https://getfundedafrica.com/events/?e=<?php echo $rowArray['ref_id']; ?><?php echo "&"; ?>rf=<?php echo $rowArray['event_url']; ?></p><span><i data-feather="copy"></i>Click here to copy link<span></a>
+                  <a href="https://nora.cipme.ci/portal/gfa/events/<?php echo $rowArray['ref_id']; ?>/<?php echo $rowArray['event_url']; ?>" class="string-input" style="display:none"></a>
+                  <a href="#" class="copyLink"><p style="display:none">https://nora.cipme.ci/portal/gfa/events/<?php echo $rowArray['ref_id']; ?>/<?php echo $rowArray['event_url']; ?></p><span><i data-feather="copy"></i><?php echo lang('translation.Click here to copy link') ?><span></a>
                   <?php  }   ?>
                 </td>
                   <td>
@@ -205,15 +205,15 @@
                         
                       </div>
                       <span><?php if($rowArray['status'] =='pending'){
-                        echo "Awaiting approval";
+                        echo lang("translation.Awaiting approval");
                       }else{
-                        echo $rowArray['status'];
+                        echo lang("translation.{$rowArray['status']}");
                       } ?></span>
                     </div>
                   </td>
                   <td class="text-nowrap">
                     <div class="d-flex flex-column">
-                       <a href="<?php echo base_url(); ?>gfa/event_apply/<?php echo $rowArray['event_id']; ?>" >   <span class="fw-bolder me-1">View [<?php echo $this->gfa_model->countEventParticipant($rowArray['event_id']); ?>]</span></a>
+                       <a href="<?php echo base_url(); ?>gfa/event_apply/<?php echo $rowArray['event_id']; ?>" >   <span class="fw-bolder me-1"><?php echo lang('translation.View') ?> [<?php echo $this->gfa_model->countEventParticipant($rowArray['event_id']); ?>]</span></a>
                       
                     </div>
                   </td>
@@ -222,9 +222,9 @@
                   <td>
                     <div class="d-flex align-items-center">
                 
-               <a href="<?php echo base_url("gfa/event/")?><?php echo $rowArray['ref_id']; ?>" ><i data-feather="external-link" class="text-success font-medium-1"></i>View</a> <?php  if($admin_access=='sub-admin'){ echo '';}else{ ?>| 
-               <a href="<?php echo base_url("gfa/edit_event/")?><?php echo $rowArray['event_id']; ?>" ><i data-feather="edit" class="text-success font-medium-1"></i>Edit</a> <?php if($rowArray['status']=='active'){ echo '';}else{ ?> | 
-               <a href="#" alt="delete Cohort" class="deletebtn"><i data-feather="trash" class="text-success font-medium-1"></i>Delete<span style="display: none;"><?php echo $rowArray['ref_id'] ?></span></a>
+               <a href="<?php echo base_url("gfa/event/")?><?php echo $rowArray['ref_id']; ?>" ><i data-feather="external-link" class="text-success font-medium-1"></i><?php echo lang('translation.View') ?></a> <?php  if($admin_access=='sub-admin'){ echo '';}else{ ?>| 
+               <a href="<?php echo base_url("gfa/edit_event/")?><?php echo $rowArray['event_id']; ?>" ><i data-feather="edit" class="text-success font-medium-1"></i><?php echo lang('translation.Edit') ?></a> <?php if($rowArray['status']=='active'){ echo '';}else{ ?> | 
+               <a href="#" alt="delete Cohort" class="deletebtn"><i data-feather="trash" class="text-success font-medium-1"></i><?php echo lang('translation.Delete') ?><span style="display: none;"><?php echo $rowArray['ref_id'] ?></span></a>
                <?php }  ?>
                <?php }  ?>
                     </div>

@@ -1,221 +1,127 @@
 <?php
-
 namespace App\Models;
-
 use CodeIgniter\Model;
 
-class ChatModel extends Model {
-    protected $table = 'user_messages';
+class ChatModel extends Model
+{
+    protected $table = 'chat_app';
     protected $primaryKey = 'id';
-    protected $useAutoIncrement = true;
-    protected $returnType = 'array';
+    protected $allowedFields = ['SenderEmail', 'ReceiverEmail', 'Message', 'SenderName', 'ReceiverName', 'SenderAcct', 'ReceiverAcct', 'ReadChat', 'TimeCreated'];
     
-    public function __construct()
+    
+    public function getChatContacts($senderEmail)
     {
-        parent::__construct();
-        $this->db = db_connect();
+        return $this->distinct()
+                ->select("(CASE 
+                            WHEN SenderEmail = '$senderEmail' THEN ReceiverName
+                            WHEN ReceiverEmail = '$senderEmail' THEN SenderName
+                            ELSE ReceiverName END) AS ReceiverName", FALSE)
+                ->select("(CASE 
+                            WHEN SenderEmail = '$senderEmail' THEN ReceiverEmail
+                            WHEN ReceiverEmail = '$senderEmail' THEN SenderEmail
+                            ELSE ReceiverEmail END) AS ReceiverEmail", FALSE)
+        		->select('ANY_VALUE(TimeCreated) AS TimeCreated')
+    ->where("SenderEmail", $senderEmail)
+    ->orWhere("ReceiverEmail", $senderEmail)
+    ->groupBy("ReceiverEmail, SenderEmail, ReceiverName, SenderName")
+    ->orderBy('TimeCreated', 'DESC')
+    ->findAll();
     }
-    protected $allowedFields = ['SenderEmail', 'ReceiverEmail', 'Message', 'time'];
-
-    // public function sentMessage($data)
-    // {
-    //     $this->insert($data);
-    // }
-
-    // public function getmessage($data)
-    // {
-    //     $logged_in_email = session()->get('email');
-    //     $builder_message = $this->db->table('user_messages');
-    //     $builder_message->where("SenderEmail = '$logged_in_email' AND ReceiverEmail = '$data'")->orWhere("SenderEmail = '$data' AND ReceiverEmail = '$logged_in_email'");
-    //     $message_query = $builder_message->get();
-    //     if ($message_query->getNumRows() > 0) {
-    //         $result = $message_query->getResultArray()[0];
-    //     } else{
-    //         $result = '';
-    //     }
-    //     return $result;
-        
-    // }
-
-    public function getmessage($logged_in_email, $receiver_email)
+    
+    public function getLatestChatMessage($senderEmail)
     {
-        $builder = $this->db->table('user_messages');
-        $builder->where("SenderEmail = '$logged_in_email' AND ReceiverEmail = '$receiver_email'")
-        ->orwhere("SenderEmail = '$receiver_email' AND ReceiverEmail = '$logged_in_email'");
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
+       return $this->distinct()
+                ->select("(CASE 
+                            WHEN SenderEmail = '$senderEmail' THEN ReceiverName
+                            WHEN ReceiverEmail = '$senderEmail' THEN SenderName
+                            ELSE ReceiverName END) AS ReceiverName", FALSE)
+                ->select("(CASE 
+                            WHEN SenderEmail = '$senderEmail' THEN ReceiverEmail
+                            WHEN ReceiverEmail = '$senderEmail' THEN SenderEmail
+                            ELSE ReceiverEmail END) AS ReceiverEmail", FALSE)
+                ->select('Message')
+                ->select('TimeCreated')
+                ->where("SenderEmail", $senderEmail)
+                ->orWhere("ReceiverEmail", $senderEmail)
+                ->orderBy('TimeCreated', 'DESC')
+                ->findAll();
+                
     }
-
-
-    public function getLastMessage($data)
+    
+    public function fetchFirstChat($senderEmail, $receiverEmail)
     {
-        $session = session();
-        $logged_in_email = $session->get('email');
-        $session_email = $this->encrypt->decode($logged_in_email);
-
-        $where = "SenderEmail = '$session_email' AND ReceiverEmail = '$data' OR SenderEmail = '$data' AND ReceiverEmail = '$session_email'";
-        $this->where($where);
-        $this->orderBy('time', 'DESC');
-        $result = $this->findAll(1);
-        return $result;
+        return $this->select('Message, TimeCreated')
+               ->where("SenderEmail = '$senderEmail' AND ReceiverEmail = '$receiverEmail'")
+                ->orWhere("SenderEmail = '$receiverEmail' AND ReceiverEmail = '$senderEmail'")
+               ->orderBy('TimeCreated', 'DESC')
+               ->first();
     }
-     
-	 
-    public function sentMessage($data){
-
-        $builder = $this->db->table('user_messages');
-        $query = $builder->insert($data);
-        
-        if ($builder->resultID->num_rows > 0) {
-            return true; // Or you can return $builder->insertID() if you need the inserted ID
-        } else {
-            return false;
-        }
-
-        // $this->db->insert('user_messages',$data);
-
-        // if($this->db->affectedRows() > 0 )
-        // {
-        //     return $this->db->affectedRows();
-        // }
-        // else
-        // {
-        //     return 0;
-        // }
-    }
-
-    // public function getmessage($data){
-    //   $logged_in_email = $this->encrypt->decode($this->session->userdata('email'));
-    //   $this->db->select('*');
-    //   $session_email = $logged_in_email;
-    //   $where = "SenderEmail = '$session_email' AND ReceiverEmail = '$data' OR 
-	// 	  SenderEmail = '$data' AND ReceiverEmail = '$session_email'";
-    //   $this->db->where($where);
-    //   // $this->db->order_by('time', 'ASC');
-    //   $result = $this->db->get('user_messages')->result_array();
-    //   return $result;
-    // }
-    // public function getLastMessage($data){
-    //   $logged_in_email = $this->encrypt->decode($this->session->userdata('email'));
-    //   $this->db->select('*');
-    //   $session_email = $logged_in_email;
-    //   $where = "sender_message_email = '$session_email' AND receiver_message_email = '$data' OR 
-    //   sender_message_email = '$data' AND receiver_message_email = '$session_email'";
-    //   $this->db->where($where);
-    //   $this->db->order_by('time', 'DESC');
-    //   $result = $this->db->get('user_messages', 1)->result_array();
-    //   return $result;
-    // }
-
-    public function getSuggestedContacts(){
-        $builder = $this->db->table('login');
-        $builder->select('email');
-        $builder->where('account_type', 'startup');
-        //$builder->where('email', 'daddymmg0002@gmail.com');
-        
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            $startups = $query->getResultArray();
-        } else {
-            $startups = [];
-        }
-
-        if (!empty($startups)) {
-            $randomContacts = array_rand($startups, 10);
-
-            $suggestedContacts = array();
-            foreach ($randomContacts as $key) {
-                $suggestedContacts[] = $startups[$key];
-            }
-
-            return $suggestedContacts;
-        } else {
-            return [];
-        }
-    }
-
-    public function getRecentChats($currentUserEmail)
+    
+    public function getData($senderEmail, $receiverEmail)
     {
-        return $this->select("
-                CASE 
-                    WHEN SenderEmail = '$currentUserEmail' THEN ReceiverEmail
-                    WHEN ReceiverEmail = '$currentUserEmail' THEN SenderEmail
-                END AS other_user_email,
-                MAX(STR_TO_DATE(TimeSent, '%Y-%m-%d %H:%i:%s')) AS last_message_timestamp,
-                MAX(Message) AS last_message_content
-            ")
-            ->where("SenderEmail = '$currentUserEmail' OR ReceiverEmail = '$currentUserEmail'")
-            ->groupBy('other_user_email')
-            ->orderBy('last_message_timestamp', 'DESC')
-            ->findAll();
-    }
-
-    // public function getSearchedContact($searchQuery = ''){
-    //     $builder = $this->db->table('Startups_Inv');
-    //     $builder->select('Contact_Email');
+        $query = $this->select('Message, TimeCreated')
+                      ->select("CASE 
+                                    WHEN SenderEmail = '$senderEmail' THEN 'receiver'
+                                    WHEN SenderEmail = '$receiverEmail' THEN 'sender' 
+                                  END AS MessageOwner")
+                      ->where("(SenderEmail = '$senderEmail' AND ReceiverEmail = '$receiverEmail') 
+                                OR (SenderEmail = '$receiverEmail' AND ReceiverEmail = '$senderEmail')")
+                      ->orderBy('TimeCreated', 'ASC')
+                      ->findAll();
         
-    //     if (!empty($searchQuery)) {
-    //         // Add conditions to search by email or name
-    //         $builder->groupStart();
-    //         $builder->like('Startup_Company_Name', $searchQuery);
-    //         $builder->orLike('Primary_Contact_Name', $searchQuery);
-    //         $builder->groupEnd();
-    //     }
+        return $query;
+    }
+    
+    public function updateReadChat($senderEmail, $receiverEmail)
+    {
+        $this->set('ReadChat', '1');
+        $this->where('SenderEmail', $senderEmail);
+        $this->where('ReceiverEmail', $receiverEmail);
+        $this->orWhere('SenderEmail', $receiverEmail);
+        $this->where('ReceiverEmail', $senderEmail);
+        return $this->update();
 
-    //     $query = $builder->get();
-    
-    //     if ($query->getNumRows() > 0) {
-    //         $startups = $query->getResultArray();
-    
-    //         $suggestedContacts = array();
-    //         foreach ($startups as $value) {
-    //             $suggestedContacts[] = $value['Contact_Email'];
-    //         }
-    
-    //         return $suggestedContacts;
-    //     }
-    
-    //     return [];
-    // }
-
-    public function getSearchedContact($searchQuery = '', $limit = 10, $offset = 0) {
-        $builder = $this->db->table('Startups_Inv');
-        $builder->select('Contact_Email');
-    
-        if (!empty($searchQuery)) {
-            // Add conditions to search by email or name
-            $builder->groupStart();
-            $builder->like('Startup_Company_Name', $searchQuery);
-            $builder->orLike('Primary_Contact_Name', $searchQuery);
-            $builder->groupEnd();
-        }
-    
-        // Add limit and offset for pagination
-        $builder->limit($limit, $offset);
-    
-        $query = $builder->get();
-    
-        if ($query->getNumRows() > 0) {
-            $startups = $query->getResultArray();
-    
-            $suggestedContacts = array();
-            foreach ($startups as $value) {
-                $suggestedContacts[] = $value['Contact_Email'];
-            }
-    
-            return $suggestedContacts;
-        }
-    
-        return [];
     }
 
-	
-   }
+	public function markMessageAsRead($sender, $receiver)
+	{
+    	$this->set('ReadChat', 1);
+        $this->where('SenderEmail', $receiver);
+        $this->where('ReceiverEmail', $sender);
+        return $this->update();
+    // $this->db->table('messages')
+    //          ->where('id', $messageId)
+    //          ->update(['isRead' => true]);
+	}
+    
+public function isFirstMessage($senderEmail, $receiverEmail)
+{
+	// If there are no messages from the sender to the receiver, it's the first message
+    $sentCount = $this->where('SenderEmail', $senderEmail)
+                      ->where('ReceiverEmail', $receiverEmail)
+                      ->countAllResults();
+
+	if ($sentCount === 0) {
+		return 1;
+	}
+    // Check if there are any unread messages from the sender to the receiver
+    $unreadCount = $this->where('SenderEmail', $senderEmail)
+                        ->where('ReceiverEmail', $receiverEmail)
+                        ->where('ReadChat', 0)
+                        ->countAllResults();
+
+	if ($unreadCount === 0) {
+    	return 1;
+    } else {
+    	return 0;
+    }
+
+}
+
+    public function insertChat($data)
+    {
+        $this->insert($data);
+        return $this->db->insertID();
+    }
+
+}

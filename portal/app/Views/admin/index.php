@@ -9,12 +9,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
-        <small>Control panel</small>
+        <?php echo lang('translation.Dashboard') ?>
+        <small><?php echo lang('translation.Control Panel') ?></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> <?php echo lang('translation.Home') ?></a></li>
+        <li class="active"><?php echo lang('translation.Dashboard') ?></li>
       </ol>
     </section>
 
@@ -59,9 +59,93 @@
         </div>
 
       <?php } } ?>
+      
+      <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3><?php echo $admin_model->count_unleash_quote() ?></h3>
+
+              <p>Unleashified Quote</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-yellow"></i>
+            </div>
+            <a href="<?php echo base_url(); ?>admin/unleash_quote" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3><?php echo $admin_model->count_unleash_contact() ?></h3>
+
+              <p>Unleashified Contacts</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-yellow"></i>
+            </div>
+            <a href="<?php echo base_url(); ?>admin/unleash_contact" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
         
-        
-       
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3><?php echo $admin_model->count_unleash_newsletter() ?></h3>
+
+              <p>Unleashified Newsletter</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-yellow"></i>
+            </div>
+            <a href="<?php echo base_url(); ?>admin/unleash_newsletter" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3><?php echo $admin_model->countAllConnectionsByAdmin() ?></h3>
+
+              <p><?php echo lang('translation.All Connections') ?></p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-yellow"></i>
+            </div>
+            <a href="<?php echo base_url(); ?>admin/all_connections" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+          <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3><?php echo $admin_model->countAllUsers() ?></h3>
+
+              <p><?php echo lang('translation.All Users') ?></p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="<?php echo base_url(); ?>admin/gfa_all_users" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3><?php echo $admin_model->countOnboardingStartups() ?></h3>
+
+              <p><?php echo lang('translation.Startups') ?></p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="<?php echo base_url(); ?>admin/startups" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -69,71 +153,32 @@
             <div class="inner">
               <h3><?php echo $admin_model->countAllUsersIndividuals() ?></h3>
 
-              <p>Individuals</p>
+              <p><?php echo lang('translation.Individuals') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/gfa_all_individual_users" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/gfa_all_individual_users" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
-         <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3><?php echo $admin_model->countOnboardingCohort() ?></h3>
-
-              <p>Cohort</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="<?php echo base_url(); ?>admin/cohort" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
+         
         
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3><?php echo $admin_model->countCohortHarmattan() ?><sup style="font-size: 20px"></sup></h3>
-
-              <p>Harmattan Cohort</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="<?php echo base_url(); ?>admin/cohort_harmattan" class="small-box-footer">More info<i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
+       
         
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3><?php echo $admin_model->countPaidCohort() ?></h3>
-
-              <p>Paid Cohort Participants</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="<?php echo base_url(); ?>admin/paid_cohort" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
+       
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
               <h3><?php echo $admin_model->countActiveSubcribers() ?></h3>
 
-              <p>Active Subscribers</p>
+              <p><?php echo lang('translation.Active Subscribers') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/active_subscribers" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/active_subscribers" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -143,12 +188,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countSubcribers() ?></h3>
 
-              <p>Subscribers</p>
+              <p><?php echo lang('translation.Subscribers') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/payment" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/payment" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -159,12 +204,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingInvestors() ?><sup style="font-size: 20px"></sup></h3>
 
-              <p>Onboard Investors</p>
+              <p><?php echo lang('translation.Onboard Investors') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/investors" class="small-box-footer">More info<i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/investors" class="small-box-footer"><?php echo lang('translation.More info') ?><i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -174,12 +219,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingMentors() ?></h3>
 
-              <p>Onboard Mentors</p>
+              <p><?php echo lang('translation.Onboard Mentors') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/mentors" class="small-box-footer">More info<i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/mentors" class="small-box-footer"><?php echo lang('translation.More info') ?><i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -189,12 +234,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingAccelerators() ?></h3>
 
-              <p>Onboarding Accelerators</p>
+              <p><?php echo lang('translation.Onboarding Accelerators') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/accelerators" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/accelerators" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -205,12 +250,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingCorporate() ?></h3>
 
-              <p>Corporate/Government</p>
+              <p><?php echo lang('translation.Enterprise') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/corporate" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/corporate" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -222,12 +267,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingOldStartups() ?></h3>
 
-              <p>Previous Signups</p>
+              <p><?php echo lang('translation.Previous Signups') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/prev_startups" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/prev_startups" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -237,12 +282,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingFunding() ?><sup style="font-size: 20px"></sup></h3>
 
-              <p>Funding</p>
+              <p><?php echo lang('translation.Funding') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/funding" class="small-box-footer">More info<i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/funding" class="small-box-footer"><?php echo lang('translation.More info') ?><i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -252,12 +297,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingVenture() ?></h3>
 
-              <p>Business Growth</p>
+              <p><?php echo lang('translation.Business Growth') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/venture_building" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/venture_building" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -267,12 +312,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingNews() ?></h3>
 
-              <p>News</p>
+              <p><?php echo lang('translation.News') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/news" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/news" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -282,12 +327,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingInsight() ?></h3>
 
-              <p>Insight</p>
+              <p><?php echo lang('translation.Insight') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/insight" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/insight" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -297,29 +342,16 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingLearning() ?></h3>
 
-              <p>Learning</p>
+              <p><?php echo lang('translation.Learning') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/learning" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/learning" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3><?php echo $admin_model->countOnboardingGfaMax() ?></h3>
-
-              <p>GFA-Max</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="<?php echo base_url(); ?>admin/gfa_max" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
+       
         
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -327,12 +359,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingEventsAttendance() ?></h3>
 
-              <p>Events Enquiries</p>
+              <p><?php echo lang('translation.Events Enquiries') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/event_list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/event_list" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -342,12 +374,12 @@
             <div class="inner">
               <h3><?php echo $admin_model->countOnboardingFiles() ?></h3>
 
-              <p>Data Room Files</p>
+              <p><?php echo lang('translation.Data Room Files') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/files" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/files" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
@@ -355,14 +387,14 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3><?php //echo count($admin_model->getActiveUsers()); ?></h3>
+              <h3><?php echo 0 //$admin_model->getActiveUsers(); ?></h3>
 
-              <p>User Activity</p>
+              <p><?php echo lang('translation.User Activity') ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="<?php echo base_url(); ?>admin/all_active_user" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url(); ?>admin/all_active_user" class="small-box-footer"><?php echo lang('translation.More info') ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
@@ -388,8 +420,8 @@
     <div class="pull-right hidden-xs">
     
     </div>
-    <strong>Copyright &copy; 2022 <a href="http://almsaeedstudio.com"></a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; 2024 <a href="#"></a>.</strong> All rights
+    reserved CIPME.
   </footer>
 
   <!-- Control Sidebar -->

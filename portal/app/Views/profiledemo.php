@@ -11,14 +11,14 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Account</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Account') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/dashboard'); ?>">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/dashboard'); ?>"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Profile </a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Profile') ?> </a>
                     </li>
-                    <li class="breadcrumb-item active"> Account
+                    <li class="breadcrumb-item active"> <?php echo lang('translation.Account') ?>
                     </li>
                   </ol>
                 </div>
@@ -41,14 +41,14 @@
      <li class="nav-item">
         <a class="nav-link  active" href="<?php echo base_url('gfa/profile'); ?>">
           <i data-feather="user" class="font-medium-3 me-50"></i>
-          <span class="fw-bold">User Profile</span>
+          <span class="fw-bold"><?php echo lang('translation.User Profile') ?></span>
         </a>
       </li>
        
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('gfa/startupprofile'); ?>">
           <i data-feather="lock" class="font-medium-3 me-50"></i>
-          <span class="fw-bold">Startup Profile</span>
+          <span class="fw-bold"><?php echo lang('translation.Startup Profile') ?></span>
         </a>
       </li>
       <!-- billing and plans 
@@ -71,7 +71,7 @@
     <!-- profile -->
     <div class="card">
       <div class="card-header border-bottom">
-        <h4 class="card-title">Profile Details</h4><br>
+        <h4 class="card-title"><?php echo lang('translation.Profile Details') ?></h4><br>
        
       </div>
       
@@ -91,53 +91,15 @@
       
       ?>
       <div class="card-body py-2 my-25">
-         <div class='showProfileError'>
-           Required field updates are marked with an asterisk (*) and coloured red. <br>
-    <?php if($this->gfa_model->getPhotoUploaded($email)[0]['Photo_name']==""){ ?>
-     <!--<div style="color:#ff0000;">* Upload your Logo</div>-->
-     <?php } ?>
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['Primary_Contact_Name']==""){ ?>
-     <div style="color:#ff0000;">* First Name</div>
-     <div style="color:#ff0000;">* Last Name</div> 
-     <?php }  ?>
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['Phones']==""){ ?>
-     <div style="color:#ff0000;">* Phone Number</div>
-      <?php }  ?>
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['Country']==""){ ?>
-     <div style="color:#ff0000;">* Your Country</div>
-      <?php }  ?>
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['State']==""){ ?>
-     <div style="color:#ff0000;">* State</div>
-      <?php }  ?>
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['Address']==""){ ?>
-     <div style="color:#ff0000;">* Address</div>
-      <?php }  ?>
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['ZipCode']==""){ ?>
-     <div style="color:#ff0000;">* Zip Code</div>
-      <?php }  ?>
+         <div class='showProfileErrorXDC'>
+           
     
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['Personal_Linkedin']==""){ ?>
-     <div style="color:#ff0000;">* Personal LinkedIn Profile</div>
-      <?php }  ?>
-   
-     <?php if($this->gfa_model->getStartUpDetails($email)[0]['Hear_Us']==""){ ?>
-     <div style="color:#ff0000;">* How did you hear about us?</div>
-      <?php }  ?>
-      <?php if($this->gfa_model->getStartUpDetails($email)[0]['Gender']==""){ ?>
-     <div style="color:#ff0000;">* Gender?</div>
-      <?php }  ?>
-      <?php if($this->gfa_model->getStartUpDetails($email)[0]['About_Me']==""){ ?>
-     <div style="color:#ff0000;">* About yourself</div>
-      <?php }  ?>
-     
-     
      
      
      </div><br>
         <!-- header section -->
-         <label class="form-label" for="accountFirstName">Upload your Logo</label><br>
+         <label class="form-label" for="accountFirstName"><?php echo lang('translation.Upload your Logo') ?></label><br>
          <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Upload your Logo</label>-->
-          
               <br>
         <div class="d-flex">
    <?php        $getPhoto = $this->gfa_model->getPhotoUploaded($email);
@@ -165,11 +127,11 @@
           <form class="fileInfox" method="post" action="#" enctype="multipart/form-data">
           <div class="d-flex align-items-end mt-75 ms-1">
             <div>
-              <label for="account-upload" class="btn btn-sm btn-primary mb-75 me-75 uploadBtn">Upload</label>
+              <label for="account-upload" class="btn btn-sm btn-primary mb-75 me-75 uploadBtn"><?php echo lang('translation.Upload') ?></label>
               <input type="file" name="file[]" id="account-upload" hidden accept="image/*"  onchange="preview()" />
               <input type="hidden" name='upload_type' value='photo' />
-              <button type="submit" id="account-reset" class="btn btn-sm btn-outline-secondary mb-75 savePhotox">Save Upload</button>
-              <p class="mb-0">Allowed file types: png, jpg, jpeg.</p>
+              <button type="submit" id="account-reset" class="btn btn-sm btn-outline-secondary mb-75 savePhotox"><?php echo lang('translation.Save Upload') ?></button>
+              <p class="mb-0"><?php echo lang('translation.Allowed file types: png, jpg, jpeg') ?></p>
               <span class="savePhoto"></span>
             </div>
           </div>
@@ -230,7 +192,7 @@ $(".fileInfox").submit(function(e) {
                      $country = $this->gfa_model->getOldStartUpDetails($email)[0]['country'];
                      $industry = $this->gfa_model->getOldStartUpDetails($email)[0]['industry'];
                  }else{
-                     if($account_type=='startup'){
+                     if($account_type=='startup' || $account_type=='individual'){
                   $nameArray = explode(" ", $this->gfa_model->getStartUpDetails($email)[0]['Primary_Contact_Name']);
                   $firsname = $nameArray[0];
                     $lastname = (!empty($nameArray[1]))? $nameArray[1] : '';
@@ -252,7 +214,7 @@ $(".fileInfox").submit(function(e) {
               
                  
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountFirstName">First Name</label>
+              <label class="form-label" for="accountFirstName"><?php echo lang('translation.First Name') ?></label>
                <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* First Name</label>-->
               <input
                 type="text"
@@ -265,7 +227,7 @@ $(".fileInfox").submit(function(e) {
               />
             </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountLastName">Last Name</label>
+              <label class="form-label" for="accountLastName"><?php echo lang('translation.Last Name') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Last Name</label>-->
               <input
                 type="text"
@@ -278,18 +240,23 @@ $(".fileInfox").submit(function(e) {
               />
             </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Gender</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Gender') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* How did you hear about us?</label>-->
               
               <select name="gender" class=" form-control form-select">
-              <option value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Gender'];  ?>"><?php echo $this->gfa_model->getStartUpDetails($email)[0]['Gender'];  ?></option>
-                  <option value="Male">Male</option>
-                       <option value="Female">Female</option>
+              <option value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Gender'];  ?>"><?php 
+
+              $trans_gender = $this->gfa_model->getStartUpDetails($email)[0]['Gender']; 
+              echo lang("translation.{$trans_gender}"); 
+
+            ?></option>
+                 <option value="Male">Homme</option>
+                  <option value="Female">Femme</option>
                        
                </select>  
                  </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountEmail">Email</label>
+              <label class="form-label" for="accountEmail"><?php echo lang('translation.Email') ?></label>
                <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Email</label>-->
               
               <input
@@ -298,25 +265,24 @@ $(".fileInfox").submit(function(e) {
                 id="accountEmail"
                 name="email"
                 disabled
-                placeholder="Email"
+                
                 value="<?php echo $email ; ?>"
               />
             </div>
             
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountPhoneNumber">Phone Number</label>
+              <label class="form-label" for="accountPhoneNumber"><?php echo lang('translation.Phone Number') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Phone Number</label>-->
               <input
                 type="text"
                 class="form-control account-number-mask"
                 id="accountPhoneNumber"
                 name="phoneNumber"
-                placeholder="Phone Number"
                 value="<?php echo $phone ; ?>"
               />
             </div>
               <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="country">Your Country</label>
+              <label class="form-label" for="country"><?php echo lang('translation.Your Country') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Country</label>-->
               <select id="country" name="country" class="select2 form-select">
                 <option value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Country'];  ?>"><?php echo $this->gfa_model->getStartUpDetails($email)[0]['Country'];  ?></option>
@@ -372,7 +338,7 @@ $(".fileInfox").submit(function(e) {
 <option value="Congo">Congo, the Democratic Republic of the</option>
 <option value="Cook Islands">Cook Islands</option>
 <option value="Costa Rica">Costa Rica</option>
-<option value="Cota D'Ivoire">Cote d'Ivoire</option>
+<option value="Cote d'Ivoire">Cote d'Ivoire</option>
 <option value="Croatia">Croatia (Hrvatska)</option>
 <option value="Cuba">Cuba</option>
 <option value="Cyprus">Cyprus</option>
@@ -562,45 +528,44 @@ $(".fileInfox").submit(function(e) {
               </select>
             </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountState">State</label>
+              <label class="form-label" for="accountState"><?php echo lang('translation.State') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* State</label>-->
-              <input type="text" class="form-control" id="accountState" name="state" placeholder="State" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['State'];  ?>" />
+              <input type="text" class="form-control" id="accountState" name="state"  value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['State'];  ?>" />
             </div>
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Address</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Address') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Address</label>-->
-              <input type="text" class="form-control" id="accountAddress" name="personal_address" placeholder="Your Address" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Personal_Address'];  ?>" />
+              <input type="text" class="form-control" id="accountAddress" name="personal_address"  value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Personal_Address'];  ?>" />
             </div>
             
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountZipCode">Zip Code</label>
+              <label class="form-label" for="accountZipCode"><?php echo lang('translation.Zip Code') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Zip Code</label>-->
               <input
                 type="text"
                 class="form-control account-zip-code"
                 id="accountZipCode"
                 name="zipCode"
-                placeholder="Zip Code"
                 maxlength="6"
                 value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['ZipCode'];  ?>"
               />
             </div>
             
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Facebook Profile</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Facebook Profile') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Facebook Profile</label>-->
-              <input type="text" class="form-control" id="accountAddress" name="facebook" placeholder="Facebook Profile ID" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Facebook'];  ?>" />
+              <input type="text" class="form-control" id="accountAddress" name="facebook"  value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Facebook'];  ?>" />
             </div>
             
           <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Personal LinkedIn Profile</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Personal LinkedIn Profile') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* Linkedin Profile</label>-->
-              <input type="text" class="form-control" id="accountAddress" name="personal_linkedIn" placeholder="LinkedIn Profile ID" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Personal_Linkedin'];  ?>" />
+              <input type="text" class="form-control" id="accountAddress" name="personal_linkedIn"  value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Personal_Linkedin'];  ?>" />
             </div>
           
             
               <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">How did you hear about us?</label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.How did you hear about us?') ?></label>
               <!-- <label class="form-label" for="accountFirstName" style="color:#ff0000;">* How did you hear about us?</label>-->
               
               <select id="country" name="Hear_Us" class=" form-control form-select">
@@ -615,16 +580,15 @@ $(".fileInfox").submit(function(e) {
            
                 
             <div class="col-12 col-sm-6 mb-1">
-              <label class="form-label" for="accountAddress">Tell us a little about yourself? </label>
+              <label class="form-label" for="accountAddress"><?php echo lang('translation.Tell us a little about yourself?') ?></label>
                
               <textarea
                   
                   class="form-control char-textarea"
                   id="textarea-counter"
                   rows="3"
-                  placeholder="About yourself"
                   style="height: 100px"
-				  name="about_me"
+				          name="about_me"
                 ><?php echo $this->gfa_model->getStartUpDetails($email)[0]['About_Me'];  ?></textarea>
             </div>
            
@@ -676,13 +640,13 @@ $(".fileInfox").submit(function(e) {
             <!--  </select>-->
             <!--</div>-->
             <div class="col-12">
-              <button type="submit" class="btn btn-primary mt-1 me-1 saveBtn">Save Personal Profile</button>
+              <button type="submit" class="btn btn-primary mt-1 me-1 saveBtn"><?php echo lang('translation.Save Personal Profile') ?></button>
               <!--<button type="reset" class="btn btn-outline-secondary mt-1">Discard</button>-->
               <span class="displayAction"></span>
               
               <a class="btn btn-primary mt-1 me-1"  href="<?php echo base_url('gfa/startupprofile'); ?>">
           <i data-feather="lock" class="font-medium-3 me-50"></i>
-          <span class="fw-bold">Next: Startup Profile</span>
+          <span class="fw-bold"><?php echo lang('translation.Next: Startup Profile') ?></span>
         </a>
               
             </div>
@@ -762,11 +726,11 @@ $(".fileInfox").submit(function(e) {
      type: "POST",
      url: "<?php echo base_url('gfa/startupProfileproDemo'); ?>",
      error:function() {$(".displayAction").html('Error saving data');},
-	 beforeSend:function() {$(".saveBtn").html('Saving Profile...');},
+	 beforeSend:function() {$(".saveBtn").html('Enregistrement du profil...');},
       success: function(data) {
        //
-		  $(".displayAction").html("Successfully Saved!");  
-	   $(".saveBtn").html('Saved');  
+		  $(".displayAction").html("Enregistré avec succès !");  
+	   $(".saveBtn").html('Enregistré');  
 	   
 	  
 	

@@ -1069,9 +1069,12 @@ $(document).ready(function() {
             <div class="col-md-12 mb-1">
                 <select class="form-select"  name="subject_ext" >
 
-                <option value="">Subject</option> 
-                <option value="Yearly Revenue">Yearly Revenue</option>
-                <option value="Pitch deck presentation">Pitch deck presentation</option>
+                <option value=""><?php echo lang('translation.Subject') ?></option> 
+                <option value="Yearly Revenue"><?php echo lang('translation.Yearly Revenue') ?></option>
+                <option value="Request for a Partnership">Sollicitation pour un partenariat</option>
+                <option value="Request for Experience Sharing">Sollicitation pour un partage d’expérience</option>
+                <option value="Request for Coaching/Mentorship">Sollicitation pour un coaching/Mentorat</option>
+                <option value="Pitch Presentation">Présentation de pitch</option>
               </select>
               </div>
               <div class="col-12">

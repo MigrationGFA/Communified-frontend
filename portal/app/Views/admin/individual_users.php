@@ -7,12 +7,9 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Subscribers</h3>
+              <h3 class="box-title">Individual Users</h3>
             </div>
-            <form class="pull-right" method="POST" action="<?php echo base_url(); ?>download/export/login/account_type">
-                <input type="hidden" name="column_value" value="individual" >
-                  <button type="submit" name="submit" class="btn btn-primary" class="btn btn-info ">Export</button>
-                </form>
+            <a class="btn btn-primary pull-right btn btn-info"  href="<?php echo base_url(); ?>admin/export/login/">Export</a>
                 <br><br>
             <!-- /.box-header -->
             <div class="box-body">

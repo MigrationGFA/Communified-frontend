@@ -11,12 +11,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Account</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Account') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/dashboard"); ?>">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/dashboard"); ?>"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/manage_user"); ?>">Manage Users  </a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/manage_user"); ?>"><?php echo lang('translation.Manage Users') ?>  </a>
                     </li>
                     
                   </ol>
@@ -40,7 +40,7 @@
     <!-- profile -->
     <div class="card">
       <div class="card-header border-bottom">
-        <h4 class="card-title">Invite User(s) Profile Details</h4><br>
+        <h4 class="card-title"><?php echo lang('translation.Invite User(s) Profile Details') ?></h4><br>
        
       </div>
       
@@ -96,7 +96,7 @@
          <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">User Profile</h4>
+          <h4 class="card-title"><?php echo lang('translation.User Profile') ?></h4>
         </div>
         <div class="card-body">
             <!--invoice-repeater -->
@@ -109,13 +109,13 @@
                 <div class="row d-flex align-items-end">
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemname">Name</label>
+                      <label class="form-label" for="itemname"><?php echo lang('translation.Industry Name') ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemname"
                         aria-describedby="itemname"
-                        placeholder="Founders Name"
+                        placeholder="<?php echo lang('translation.Founders Name') ?>"
                         name="founderName[]"
                         
                       />
@@ -124,13 +124,13 @@
 
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemcost">Email</label>
+                      <label class="form-label" for="itemcost"><?php echo lang('translation.Email') ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemcost"
                         aria-describedby="itemcost"
-                        placeholder="Email"
+                        placeholder="<?php echo lang('translation.Email') ?>"
                         name="founderGender[]"
                         
                       />
@@ -139,13 +139,13 @@
 
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemquantity">Designation</label>
+                      <label class="form-label" for="itemquantity"><?php echo lang('translation.Designation') ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemquantity"
                         aria-describedby="itemquantity"
-                        placeholder="Designation"
+                        placeholder="<?php echo lang('translation.Designation') ?>"
                         name="founderDesignation[]"
                        
                       />
@@ -153,13 +153,13 @@
                   </div>
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemquantity">Phone</label>
+                      <label class="form-label" for="itemquantity"><?php echo lang('translation.Phone') ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemquantity"
                         aria-describedby="itemquantity"
-                        placeholder="Phone"
+                        placeholder="<?php echo lang('translation.Phone') ?>"
                         name="founderLinkedin[]"
                         
                       />
@@ -167,11 +167,11 @@
                   </div>
                   <div class="col-md-3 col-12">
               <div class="mb-1">
-                   <label class="form-label" for="staticprice">Set Permission</label>
+                   <label class="form-label" for="staticprice"><?php echo lang('translation.Set Permission') ?></label>
               <select id="country" name="admin[]" class="form-select">
                 
-                 <option value="admin">Admin</option>
-                  <option value="sub-admin">Sub Admin</option>
+                 <option value="admin"><?php echo lang('translation.Admin') ?></option>
+                  <option value="sub-admin"><?php echo lang('translation.Sub Admin') ?></option>
                 </select>
                 </div>
             </div>
@@ -194,9 +194,9 @@
               <div class="col-12">
                 <button class="btn btn-icon btn-primary mt-1 me-1 add_field_button_ot" type="button">
                   <i data-feather="plus" class="me-25"></i>
-                  <span>Add more</span>
+                  <span><?php echo lang('translation.Add more') ?></span>
                 </button>
-                <button type="submit" class="btn btn-primary mt-1 me-1 saveFounders">Send Invite</button>
+                <button type="submit" class="btn btn-primary mt-1 me-1 saveFounders"><?php echo lang('translation.Send Invite') ?></button>
               <!--<button type="reset" class="btn btn-outline-secondary mt-1">Discard</button>-->
               <span class="displayActionF"></span>
               
@@ -234,14 +234,14 @@ $(".founderForm").submit(function(e) {
      data:formData,
      type: "POST",
      url: "<?php echo base_url("gfa/inviteformpro"); ?>",
-	 error:function() {$(".displayActionF").html('Error')},
-	 beforeSend:function() {$(".displayActionF").html('Saving profile...')},
+	 error:function() {$(".displayActionF").html('Erreur')},
+	 beforeSend:function() {$(".displayActionF").html('Enregistrement du profil...')},
 	 processData: false,
     contentType: false,
       success: function(data) {
         
 		//if(data==1){
-		$(".displayActionF").html('Invite sent!');
+		$(".displayActionF").html('Invitation envoyée !');
 		
 	
 		//}
@@ -307,7 +307,7 @@ $(".fileInfox").submit(function(e) {
 
             x++; //text box increment
 
-$(wrapperx).append('<div class="removeMoreot"><div data-repeater-item><div class="row d-flex align-items-end"><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemname">Name</label><input type="text" class="form-control" id="itemname" aria-describedby="itemname" placeholder="Founders Name" name="founderName[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemcost">Email</label><input type="text" class="form-control" id="itemcost" aria-describedby="itemcost" placeholder="F" name="founderGender[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemquantity">Designation</label><input type="text" class="form-control" id="itemquantity" placeholder="Designation" name="founderDesignation[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemquantity">Phone</label><input type="text" class="form-control" placeholder="Phone" name="founderLinkedin[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="staticprice">Set Permission</label><select id="country" name="admin[]" class="form-select"><option value="admin">Admin</option><option value="sub-admin">Sub Admin</option></select></div></div><div class="col-md-2 col-12 mb-50"><div class="mb-1"><button class="btn btn-outline-danger text-nowrap px-1 removeFieldot" data-repeater-delete type="button"><i data-feather="x" class="me-25"></i>x</button></div></div></div><hr /></div></div>');
+$(wrapperx).append('<div class="removeMoreot"><div data-repeater-item><div class="row d-flex align-items-end"><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemname">Nom</label><input type="text" class="form-control" id="itemname" aria-describedby="itemname" placeholder="Nom des fondateurs" name="founderName[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemcost">Adresse email</label><input type="text" class="form-control" id="itemcost" aria-describedby="itemcost" placeholder="Adresse email" name="founderGender[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemquantity">Désignation</label><input type="text" class="form-control" id="itemquantity" placeholder="Désignation" name="founderDesignation[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="itemquantity">Téléphone</label><input type="text" class="form-control" placeholder="Téléphone" name="founderLinkedin[]" /></div></div><div class="col-md-3 col-12"><div class="mb-1"><label class="form-label" for="staticprice">Définir l’autorisation</label><select id="country" name="admin[]" class="form-select"><option value="admin">Admin</option><option value="sub-admin">Sous Admin</option></select></div></div><div class="col-md-2 col-12 mb-50"><div class="mb-1"><button class="btn btn-outline-danger text-nowrap px-1 removeFieldot" data-repeater-delete type="button"><i data-feather="x" class="me-25"></i>x</button></div></div></div><hr /></div></div>');
         }
 
     });

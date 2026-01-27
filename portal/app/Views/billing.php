@@ -10,14 +10,14 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Billing &amp; Plans</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Billing & Plans') ?> </h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/'); ?>">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/'); ?>"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Account Settings</a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Account Settings') ?></a>
                     </li>
-                    <li class="breadcrumb-item active">Billing &amp; Plans
+                    <li class="breadcrumb-item active"><?php echo lang('translation.Billing & Plans') ?> 
                     </li>
                   </ol>
                 </div>
@@ -43,33 +43,33 @@
     <!-- current plan -->
     <div class="card">
       <div class="card-header border-bottom">
-        <h4 class="card-title">Current plan</h4>
+        <h4 class="card-title"><?php echo lang('translation.Current plan') ?></h4>
       </div>
       <div class="card-body my-2 py-25">
         <div class="row">
           <div class="col-md-6">
               <?php if(!empty($subArray)) {  ?>
             <div class="mb-2 pb-50">
-              <h5>Your Current Plan is <strong><?php echo 'GFA Premium' ?></strong></h5>
+              <h5><?php echo lang('translation.Your Current Plan is') ?> <strong><?php echo lang('translation.CIPME Premium') ?></strong></h5>
               <span>
-                Best for founders/SMEs</span>
+                <?php echo lang('translation.Best for founders/SMEs') ?></span>
             </div>
             <div class="mb-2 pb-50">
-              <h5>Active until <?php echo date('M d,Y', strtotime($subArray[0]['time_end'])) ?></h5>
-              <span>We will send you a notification upon Subscription expiration</span>
+              <h5><?php echo lang('translation.Active until') ?> <?php echo date('M d,Y', strtotime($subArray[0]['time_end'])) ?></h5>
+              <span><?php echo lang('translation.We will send you a notification upon Subscription expiration') ?></span>
             </div>
             
             <?php }else{ ?>
             
              <div class="mb-2 pb-50">
-              <h5>No active subscription</strong></h5>
+              <h5><?php echo lang('translation.No active subscription') ?></strong></h5>
               
             </div>
             
             <?php }  ?>
             <div class="mb-1">
-              <h5><?php detectCurrency(); ?><?php echo detectCurrencyAmount(13800); ?>  Per Month <span class="badge badge-light-primary ms-50">Popular</span></h5>
-              <span>Standard plan for Best for founders/SMEs</span>
+              <h5><?php detectCurrency(); ?><?php echo detectCurrencyAmount(13800); ?>  <?php echo lang('translation.Per Month') ?> <span class="badge badge-light-primary ms-50"><?php echo lang('translation.Popular') ?></span></h5>
+              <span><?php echo lang('translation.Standard plan for Best for founders/SMEs') ?></span>
             </div>
           </div>
            <?php  
@@ -91,17 +91,17 @@
           <div class="col-md-6">
               <?php if($today > $expire){ ?>
             <div class="alert alert-warning mb-2" role="alert">
-              <h6 class="alert-heading">We need your attention!</h6>
-              <div class="alert-body fw-normal">your plan requires update</div>
-              <h5 class="fw-bolder">Expired: <?php echo $expire  ?> day(s) ago. </h5>
+              <h6 class="alert-heading"><?php echo lang('translation.We need your attention!') ?></h6>
+              <div class="alert-body fw-normal"><?php echo lang('translation.Your plan requires update') ?></div>
+              <h5 class="fw-bolder"><?php echo lang('translation.Expired') ?>: <?php echo $expire  ?> <?php echo lang('translation.day(s) ago') ?>. </h5>
             </div>
             <?php }else{  ?> 
             <div class="plan-statistics pt-1">
               <div class="d-flex justify-content-between">
-                <h5 class="fw-bolder">Days</h5>
+                <h5 class="fw-bolder"><?php echo lang('translation.Days') ?></h5>
                
                
-                <h5 class="fw-bolder"><?php echo $start ?> of <?php echo $end ?> Days</h5>
+                <h5 class="fw-bolder"><?php echo $start ?> of <?php echo $end ?> <?php echo lang('translation.Day') ?></h5>
               </div>
               <div class="progress">
                 <div
@@ -112,14 +112,14 @@
                   aria-valuemax="100"
                 ></div>
               </div>
-              <p class="mt-50"><?php echo $end - $start  ?> days remaining until your plan requires update</p>
+              <p class="mt-50"><?php echo $end - $start  ?> <?php echo lang('translation.days remaining until your plan requires update') ?></p>
             </div>
             <?php }  ?>
           </div>
           <?php } ?>
           <div class="col-12">
             <a href="<?php echo base_url('gfa/subscribe'); ?>" class="btn btn-primary me-1 mt-1" >
-              Subscribe
+              <?php echo lang('translation.Subscribe') ?>
             </a>
             <!--<button class="btn btn-outline-danger cancel-subscription mt-1">Cancel Subscription</button>-->
           </div>
@@ -147,11 +147,11 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Subscription</th>
+            <th><?php echo lang('translation.SUBSCRIPTION') ?></th>
             
-            <th><i data-feather="trending-up"></i>Payment Status</th>
-            <th class="text-truncate">Due Date</th>
-            <th>Amount</th>
+            <th><i data-feather="trending-up"></i><?php echo lang('translation.PAYMENT STATUS') ?></th>
+            <th class="text-truncate"><?php echo lang('translation.DUE DATE') ?></th>
+            <th><?php echo lang('translation.AMOUNT') ?></th>
             <!--<th class="cell-fit">Actions</th>-->
           </tr>
         </thead>
@@ -176,8 +176,8 @@
                     <div class="d-flex align-items-center">
                      
                       <div>
-                        <div class="fw-bolder"><?php echo $rowArray['subscription'] ; ?></div>
-                        <div class="font-small-2 text-muted"><?php echo $rowArray['subtype'] ; ?></div>
+                        <div class="fw-bolder"><?php echo lang("translation.{$rowArray['subscription']}") ; ?></div>
+                        <div class="font-small-2 text-muted"><?php echo lang("translation.{$rowArray['subtype']}") ; ?></div>
                       </div>
                     </div>
                   </td>
@@ -186,8 +186,8 @@
                       <div class="avatar bg-light-primary me-1">
                         
                       </div>
-                     <div class="fw-bolder"><?php echo $rowArray['payment_status'] ; ?></div>
-                        <div class="font-small-2 text-muted"><?php echo $rowArray['status'] ; ?></div>
+                     <div class="fw-bolder"><?php echo lang("translation.{$rowArray['payment_status']}")  ; ?></div>
+                        <div class="font-small-2 text-muted"><?php echo lang("translation.{$rowArray['status']}"); ?></div>
                     </div>
                   </td>
                   <td class="text-nowrap">

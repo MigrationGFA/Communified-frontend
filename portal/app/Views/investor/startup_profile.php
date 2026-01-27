@@ -1,3 +1,8 @@
+<?php 
+  $this->gfa_model = model('App\Models\GfaModel');
+  $this->admin_model = model('App\Models\AdminModel');
+   ?>
+
 <div class="app-content content ">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
@@ -24,7 +29,7 @@
             <div class="d-flex align-items-center flex-column">
               <img
                 class="img-fluid rounded mt-3 mb-2"
-                src="<?php echo base_url(); ?>assets/images/uploads/default-avatar.jpg"
+                src="<?php echo base_url(); ?>public/assets/images/uploads/default-avatar.jpg"
                 height="110"
                 width="110"
                 alt="User avatar"
@@ -41,8 +46,8 @@
                 <i data-feather="briefcase" class="font-medium-2"></i>
               </span>
               <div class="ms-75">
-                <h4 class="mb-0">$<?php if($row[0]['Next_Funding_Round_Target_Sought']=='0' || $row[0]['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $row[0]['Next_Funding_Round_Target_Sought'] ;} ?></h4>
-                <small>Amount to raise</small>
+                <h4 class="mb-0"><?php if($row[0]['Next_Funding_Round_Target_Sought']=='0' || $row[0]['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $row[0]['Next_Funding_Round_Target_Sought'] ;} ?> XOF</h4>
+                <small><?php echo lang('translation.Amount to raise') ?></small>
               </div>
             </div>
             <div class="d-flex align-items-start">
@@ -50,51 +55,51 @@
                 <i data-feather="users" class="font-medium-2"></i>
               </span>
               <div class="ms-75">
-                <h4 class="mb-0"><?php echo $this->gfa_model->countStartupConnect($row[0]['Contact_Email'],'startup-investor');  ?></h4>
-                <small>Connection</small>
+                <h4 class="mb-0"><?php echo $this->gfa_model->countAllConnByEmail($row[0]['Contact_Email'])[0]['email_count'];  ?></h4>
+                <small><?php echo lang('translation.Connection') ?></small>
               </div>
             </div>
           </div>
-          <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
+          <h4 class="fw-bolder border-bottom pb-50 mb-1"><?php echo lang('translation.Details') ?></h4>
           <div class="info-container">
             <ul class="list-unstyled">
             <li class="mb-75">
-                <span class="fw-bolder me-25"> Email:</span>
+                <span class="fw-bolder me-25"> <?php echo lang('translation.Email') ?>:</span>
                 <span><?php echo $row[0]['Contact_Email']; ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25"> Address:</span>
+                <span class="fw-bolder me-25"> <?php echo lang('translation.Address') ?>:</span>
                 <span><?php echo $row[0]['CountryHQ']; ?></span>
               </li>
                <li class="mb-75">
-                <span class="fw-bolder me-25"> Company Category:</span>
-                <span><?php echo $row[0]['PrimaryBusinessIndustry']; ?></span>
+                <span class="fw-bolder me-25"> <?php echo lang('translation.Company Category') ?>:</span>
+                <span><?php echo lang("translation.{$row[0]['PrimaryBusinessIndustry']}"); ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25">Status:</span>
-                <span class="badge bg-light-success">Active</span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Status') ?>:</span>
+                <span class="badge bg-light-success"><?php echo lang('translation.Active') ?></span>
               </li>
               
                <li class="mb-75">
-                <span class="fw-bolder me-25">Phone:</span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Phone') ?>:</span>
                 <span><?php echo $row[0]['Phones']; ?></span>
               </li>
               
               <li class="mb-75">
-                <span class="fw-bolder me-25">Business Model:</span>
-                <span><?php echo $rowArray[0]['Startup_Model']; ?></span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Business Model') ?>:</span>
+                <span><?php echo lang("translation.{$rowArray[0]['Startup_Model']}"); ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25">Business Solution:</span>
-                <span><?php echo $rowArray[0]['Solution_Corperate']; ?></span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Business Solution') ?>:</span>
+                <span><?php echo lang("translation.{$rowArray[0]['Solution_Corperate']}"); ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25">Core Interest Corporate</span>
-                <span><?php echo $rowArray[0]['Core_Interest_Corporate']; ?></span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Core Interest Corporate') ?></span>
+                <span><?php echo lang("translation.{$rowArray[0]['Core_Interest_Corporate']}"); ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25">Solution Ownership</span>
-                <span><?php echo $rowArray[0]['Solution_Ownership']; ?></span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Solution Ownership') ?></span>
+                <span><?php echo lang("translation.{$rowArray[0]['Solution_Ownership']}"); ?></span>
               </li>
               <li class="mb-75">
                 <span class="fw-bolder me-25">LinkedIn:</span>
@@ -103,9 +108,11 @@
             </ul>
             <div class="demo-inline-spacing justify-content-center">
           
-            <button type="button" class="btn btn-primary" data-bs-target="#checkProfile" data-bs-toggle="modal" actionMsg="Schedule a call">Schedule a call</button>
+            <button type="button" class="btn btn-primary btn-sm" data-bs-target="#checkProfile" data-bs-toggle="modal" actionMsg="Schedule a call"><?php echo lang("translation.Schedule a call") ?></button>
+            <a href="<?php echo base_url(); ?>calendar/index" class="btn btn-secondary btn-sm" actionMsg="Schedule meeting"><?php echo lang('translation.Schedule meeting') ?></a>
+            <a href="<?php echo base_url(); ?>chat/index" class="btn btn-success btn-sm" actionMsg="Chat"><?php echo lang('translation.Chat') ?></a>
             
-            <button type="button" class="btn btn-dark" data-bs-target="#referEarnModal" data-bs-toggle="modal" actionMsg="invest">Invest</button>
+            <button type="button" class="btn btn-dark btn-sm" data-bs-target="#referEarnModal" data-bs-toggle="modal" actionMsg="invest"><?php echo lang("translation.Invest") ?></button>
 
             </div>
           </div>
@@ -161,12 +168,12 @@
         <li class="nav-item">
           <a class="nav-link" href="app-user-view-account.html">
             <i data-feather="user" class="font-medium-3 me-50"></i>
-            <span class="fw-bold">Profile Details</span></a>
+            <span class="fw-bold"><?php echo lang("translation.Profile Details") ?></span></a>
         </li>
         
         <li class="nav-item">
           <a class="nav-link active" href="<?php echo base_url(); ?>gfa/investor_deals/">
-            <i data-feather="link" class="font-medium-3 me-50"></i><span class="fw-bold">Connections</span>
+            <i data-feather="link" class="font-medium-3 me-50"></i><span class="fw-bold"><?php echo lang("translation.Connections") ?></span>
           </a>
         </li>
       </ul>
@@ -175,7 +182,7 @@
       <!-- connection -->
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-75">About the Company</h4>
+          <h4 class="card-title mb-75"><?php echo lang('translation.About the Company') ?></h4>
           <p></p>
 
           <!-- Connections -->
@@ -185,7 +192,7 @@
             </div>
             <div class="d-flex align-item-center justify-content-between flex-grow-1">
               <div class="me-1">
-                <p class="fw-bolder mb-0">About the Startup</p>
+                <p class="fw-bolder mb-0"><?php echo lang('translation.About the Startup') ?></p>
                 <span><?php echo $row[0]['About_Me']; ?></span>
               </div>
               <!-- <div class="mt-50 mt-sm-0">
@@ -211,8 +218,8 @@
             </div>
             <div class="d-flex align-item-center justify-content-between flex-grow-1">
               <div class="me-1">
-                <p class="fw-bolder mb-0">Revenue</p>
-                <span>$<?php echo $row[0]['Revenue']; ?></span>
+                <p class="fw-bolder mb-0"><?php echo lang('translation.Revenue') ?></p>
+                <span><?php echo $row[0]['Revenue']; ?> XOF</span>
               </div>
               <!-- <div class="mt-50 mt-sm-0">
                 <div class="form-check form-switch form-check-primary">
@@ -237,8 +244,8 @@
             </div>
             <div class="d-flex align-item-center justify-content-between flex-grow-1">
               <div class="me-1">
-                <p class="fw-bolder mb-0">Current Investment Stage</p>
-                <span><?php echo $row[0]['CurrentInvestmentStage']; ?></span>
+                <p class="fw-bolder mb-0"><?php echo lang('translation.Current Investment Stage') ?></p>
+                <span><?php echo lang("translation.{$row[0]['CurrentInvestmentStage']}"); ?></span>
               </div>
               
             </div>
@@ -255,8 +262,8 @@
             </div>
             <div class="d-flex align-item-center justify-content-between flex-grow-1">
               <div class="me-1">
-                <p class="fw-bolder mb-0">Implementation Stage</p>
-                <span><?php echo $row[0]['Startup_Implementation_Stage']; ?></span>
+                <p class="fw-bolder mb-0"><?php echo lang('translation.Implementation Stage') ?></p>
+                <span><?php echo lang("translation.{$row[0]['Startup_Implementation_Stage']}"); ?></span>
               </div>
               
             </div>
@@ -273,7 +280,7 @@
             </div> 
             <div class="d-flex align-item-center justify-content-between flex-grow-1">
               <div class="me-1">
-                <p class="fw-bolder mb-0">Website</p>
+                <p class="fw-bolder mb-0"><?php echo lang('translation.Website') ?></p>
                 <span><?php echo $row[0]['Website']; ?></span>
               </div>
               <!-- <div class="mt-50 mt-sm-0">
@@ -293,7 +300,7 @@
 
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-75">Deal Room Files</h4>
+          <h4 class="card-title mb-75"><?php echo lang('translation.Deal Room Files') ?></h4>
           <p></p>
           <!-- Social Accounts -->
           <?php 
@@ -396,7 +403,7 @@
             </div>
           </div>
          
-          <?php }}}else{ echo 'No files uploaded yet';}  ?>
+          <?php }}}else{ echo lang('translation.No files uploaded yet');}  ?>
           
           
           <!-- /Social Accounts -->
@@ -405,7 +412,7 @@
       <div class="demo-inline-spacing justify-content-center">
           
             
-            <button type="button" class="btn btn-warning" data-bs-target="#checkDealRoom" data-bs-toggle="modal" actionMsg="Dealroom Request">DealRoom Request</button>
+            <button type="button" class="btn btn-warning" data-bs-target="#checkDealRoom" data-bs-toggle="modal" actionMsg="Dealroom Request"><?php echo lang('translation.DealRoom Request') ?></button>
 
             </div>
       <!--/ connection -->
@@ -419,7 +426,7 @@
       </div>
       <div class="modal-body pb-5 px-sm-5 pt-50">
         <div class="text-center mb-2">
-         <span><i data-feather="users" class="font-large-2 me-sm-2 mb-2 mb-sm-0"></i></span><h1 class="mb-1">Dealroom Request</h1>
+         <span><i data-feather="users" class="font-large-2 me-sm-2 mb-2 mb-sm-0"></i></span><h1 class="mb-1"><?php echo lang('translation.Dealroom Request') ?></h1>
           
          <form action="#" id="#EventForm" class="form EventFormDealRoom" enctype="multipart/form-data">
             <div class="row">
@@ -428,16 +435,16 @@
               <div class="col-12">
                   <input type="hidden" name="id" class="form-control" value="<?php echo $id ?>" />
                 <div class="mb-2">
-                  <input type="text" name="subject" class="form-control"  placeholder="Subject of the message" />
+                  <input type="text" name="subject" class="form-control"  placeholder="<?php echo lang('translation.Subject of the message') ?>" />
                 </div>
               </div>
               
               <div class="col-12">
-                <textarea class="form-control mb-2" name="more_info" required rows="4" placeholder="More infomation"></textarea>
+                <textarea class="form-control mb-2" name="more_info" required rows="4" placeholder="<?php echo lang('translation.More information') ?>"></textarea>
               </div>
              
               <div class="col-12">
-                <button type="submit" class="btn btn-primary EventBtnDealRoom">Submit</button><span class="displayActionDealRoom"></span>
+                <button type="submit" class="btn btn-primary EventBtnDealRoom"><?php echo lang('translation.Submit') ?></button><span class="displayActionDealRoom"></span>
               </div>
             </div>
           </form>
@@ -459,7 +466,7 @@
       </div>
       <div class="modal-body pb-5 px-sm-0">
         <div class="px-sm-4 mx-50">
-          <h1 class="text-center mb-1" id="referEarnTitle">Please select how you want to invest</h1>
+          <h1 class="text-center mb-1" id="referEarnTitle"><?php echo lang('translation.Please select how you want to invest') ?></h1>
           <!--<p class="text-center mb-5">-->
           <!--  Invite your friend to vuexy, if thay sign up, you and-->
           <!--  <br />-->
@@ -485,8 +492,8 @@
                 </div>
               </div>
               <div class="text-center">
-                <h6 class="fw-bolder mb-1">Co-Investment</h6>
-                <span id="myButton1" title="Select this option, if you would like to co-invest on a chosen deal available on GFA platform with another fund. GFA is not the lead in this deal. You liaise directly with the selected funds that you want to work with on investment terms.">More info</span>
+                <h6 class="fw-bolder mb-1"><?php echo lang('translation.Co-Investment') ?></h6>
+                <span id="myButton1" title="Select this option, if you would like to co-invest on a chosen deal available on CIPME platform with another fund. CIPME is not the lead in this deal. You liaise directly with the selected funds that you want to work with on investment terms."><?php echo lang('translation.More info') ?></span>
 
               </div></a>
             </div>
@@ -508,10 +515,10 @@
                 </div>
               </div>
               <div class="text-center">
-                <h6 class="fw-bolder mb-1">GFA Syndicate</h6>
-                <span id="myButton2" title="GFA Syndicates and Rolling Funds - Select this option, if you would like to explore GFA's syndicate deals and different types of rolling funds. GFA is the lead investor in these selected deals.
-*Note: A syndicate is where a group of investors pools their resources together to invest in a single deal.
-*Note: Rolling fund is a type of fund that operates on a quarterly subscription model, allowing investors to make ongoing commitments rather than one-time investments.">More info</span>
+                <h6 class="fw-bolder mb-1"><?php echo lang('translation.CIPME Syndicate') ?></h6>
+                <span id="myButton2" title="<?php echo lang("translation.CIPME Syndicates and Rolling Funds - Select this option, if you would like to explore GFA's syndicate deals and different types of rolling funds. CIPME is the lead investor in these selected deals.") ?>
+*<?php echo lang("translation.Note: A syndicate is where a group of investors pools their resources together to invest in a single deal.") ?>
+*<?php echo lang("translation.Note: Rolling fund is a type of fund that operates on a quarterly subscription model, allowing investors to make ongoing commitments rather than one-time investments.") ?>"><?php echo lang('translation.More info') ?></span>
 
               </div></a>
             </div>
@@ -533,8 +540,8 @@
                 </div>
               </div>
               <div class="text-center">
-                <h6 class="fw-bolder mb-1">Direct Investment</h6>
-                <span id="myButton" title="Select this option, if you want to invest in this deal without any lead investor, you liaise directly with the startup on investment terms.">More info</span>
+                <h6 class="fw-bolder mb-1"><?php echo lang('translation.Direct Investment') ?></h6>
+                <span id="myButton" title="<?php echo lang('translation.Select this option if you want to invest in this deal without any lead investor you liaise directly with the startup on investment terms.') ?>"><?php echo lang('translation.More info') ?></span>
 
                 <!--<p>Your friend will get 30 days free trial</p>-->
               </div></a>
@@ -585,7 +592,7 @@
         <div class="text-center mb-2">
          <span><i data-feather="users" class="font-large-2 me-sm-2 mb-2 mb-sm-0"></i></span><h1 class="mb-1 showInvest">Verification</h1>
          <?php if(empty($investorFile[0]['photo']) || empty($investorFile[0]['ids']) || empty($investorFile[0]['address'])){  ?>
-         <h5 class="kycText">We need to you more before investing.</h5>
+         <h5 class="kycText"><?php echo lang('translation.We need to you more before investing.') ?></h5>
          <?php  }  ?>
          <form action="#" id="#EventFormFile" class="form EventFormFile" enctype="multipart/form-data">
             <div class="row">
@@ -596,7 +603,7 @@
             ?>
             
               <div class="col-12">
-                  <label>Upload Photo </label>
+                  <label><?php echo lang('translation.Upload Photo') ?> </label>
                 <div class="mb-2">
                   <input type="file" name="file[]" class="form-control" required placeholder="Upload your photo" />
                 </div>
@@ -607,7 +614,7 @@
               
               <?php  if(empty($investorFile[0]['ids'])){  ?>
               <div class="col-12">
-                  <label>Upload ID</label>
+                  <label><?php echo lang('translation.Upload ID') ?></label>
                 <div class="mb-2">
                   <input type="file" name="file[]" class="form-control" required placeholder="Upload your IDs" />
                 </div>
@@ -615,7 +622,7 @@
               <?php  }else{ echo '';  }  ?>
              <?php  if(empty($investorFile[0]['address'])){  ?> 
               <div class="col-12">
-                  <label>Upload Proof of Address</label>
+                  <label><?php echo lang('translation.Upload Proof of Address') ?></label>
                 <div class="mb-2">
                   <input type="file" name="file[]" class="form-control" required placeholder="Upload Proof of Address" />
                 </div>
@@ -626,7 +633,7 @@
         <div class="col-12">
         <?php if(empty($investorFile[0]['photo']) || empty($investorFile[0]['ids']) || empty($investorFile[0]['address'])){  ?>
 
-                <button class="btn btn-primary float-end mt-3 btnNext">Next</button>
+                <button class="btn btn-primary float-end mt-3 btnNext"><?php echo lang('translation.Next') ?></button>
                 <?php  }  ?>
                 <!-- <button  class="btn btn-primary" data-bs-target="#editUser" data-bs-toggle="modal">Discuss further with GFA</button> -->
                 <p class="displayActionFile"></p>
@@ -636,13 +643,13 @@
               <div class="col-12">
                   
                 <div class="mb-2">
-                  <input type="number" name="amount" class="form-control" required placeholder="Amount to Invest in $" />
+                  <input type="number" name="amount" class="form-control" required placeholder="<?php echo lang('translation.Amount to Invest in') ?> $" />
                 </div>
               </div>
               <div class="col-md-12 hideDirectInvest">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Invite other Investors</h4>
+          <h4 class="card-title"><?php echo lang('translation.Invite other Investors') ?></h4>
         </div>
         <div class="card-body">
          
@@ -650,7 +657,7 @@
           
             <div class="col-xl-5 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helpInputTop">Select Investors</label>
+                <label class="form-label" for="helpInputTop"><?php echo lang('translation.Select Investors') ?></label>
                 
                 <select class="form-select" name="gfa_investor[]" >
 
@@ -667,8 +674,8 @@
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="basicInput">Other Investor via email</label>
-            <input type="text" class="form-control fund_to_raise" id="accountAddress" name="other_investor[]" placeholder="Other Investor via email" />
+                <label class="form-label" for="basicInput"><?php echo lang('translation.Other Investor via email') ?></label>
+            <input type="text" class="form-control fund_to_raise" id="accountAddress" name="other_investor[]" placeholder="" />
 
               </div>
             </div>
@@ -677,8 +684,8 @@
             
             <div class="col-xl-3 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Amount to Invest (USD)</label>
-                <input type="number" class="form-control fund_to_raise" id="accountAddress" name="fund[]" placeholder="Amount to Invest (USD)"  />
+                <label class="form-label" for="helperText"><?php echo lang("translation.Amount to Invest (USD)") ?></label>
+                <input type="number" class="form-control fund_to_raise" id="accountAddress" name="fund[]" placeholder=""  />
 
                 
               </div>
@@ -699,8 +706,8 @@
              </div>
               <div class="col-12" >
               <button type="submit" class="btn btn-primary EventBtnFile float-end mt-3 me-sm-2 mb-2 investBtn" <?php if(empty($investorFile[0]['photo']) || empty($investorFile[0]['ids']) || empty($investorFile[0]['address'])){  ?>
- style="display:none;" <?php }  ?>>Submit</button>
-              <button class="btn btn-secondary float-end mt-3 me-sm-2 mb-2 mb-sm-0 btnPrev investBtn2" style="display:none">Previous</button>
+ style="display:none;" <?php }  ?>><?php echo lang('translation.Submit') ?></button>
+              <button class="btn btn-secondary float-end mt-3 me-sm-2 mb-2 mb-sm-0 btnPrev investBtn2" style="display:none"><?php echo lang('translation.Previous') ?></button>
                 <!-- <button  class="btn btn-primary" data-bs-target="#editUser" data-bs-toggle="modal">Discuss further with GFA</button> -->
                 <p class="displayActionFile"></p>
               </div>
@@ -747,7 +754,7 @@ $(document).ready(function() {
      var getInvest = $(this).attr('investType'); //hideDirectInvest
      $('.getinvest').val(getInvest);
     $('.showInvest').html(getInvest);
-    $('.showMore').attr('placeholder','More infomation on '+getInvest);
+    $('.showMore').attr('placeholder','More information on '+getInvest);
 
     if(getInvest == "Direct Investment"){
       $('.hideDirectInvest').hide(); 
@@ -800,22 +807,25 @@ $(document).ready(function() {
       </div>
       <div class="modal-body pb-5 px-sm-5 pt-50">
         <div class="text-center mb-2">
-         <span><i data-feather="users" class="font-large-2 me-sm-2 mb-2 mb-sm-0"></i></span><h1 class="mb-1">Schedule a call</h1>
+         <span><i data-feather="users" class="font-large-2 me-sm-2 mb-2 mb-sm-0"></i></span><h1 class="mb-1"><?php echo lang('translation.Schedule a call') ?></h1>
           
          <form action="#" id="#EventForm" class="form EventForm" enctype="multipart/form-data">
             <div class="row">
             <div class="col-md-12 mb-1">
                 <select class="form-select"  name="subject_ext" >
 
-                <option value="">Subject</option> 
-                <option value="Yearly Revenue">Yearly Revenue</option>
-                <option value="Pitch deck presentation">Pitch deck presentation</option>
+                <option value=""><?php echo lang('translation.Subject') ?></option> 
+                <option value="Yearly Revenue"><?php echo lang('translation.Yearly Revenue') ?></option>
+                <option value="Request for a Partnership">Sollicitation pour un partenariat</option>
+                <option value="Request for Experience Sharing">Sollicitation pour un partage d’expérience</option>
+                <option value="Request for Coaching/Mentorship">Sollicitation pour un coaching/Mentorat</option>
+                <option value="Pitch Presentation">Présentation de pitch</option>
               </select>
               </div>
               <div class="col-12">
                   <input type="hidden" name="id" class="form-control" value="<?php echo $id ?>" />
                 <div class="mb-2">
-                  <input type="text" name="subject" class="form-control" placeholder="Other subject required" />
+                  <input type="text" name="subject" class="form-control" placeholder="<?php echo lang('translation.Other subject required') ?>" />
                 </div>
               </div>
               
@@ -833,7 +843,7 @@ $(document).ready(function() {
         <div class="col-md-12 mb-1">
                 <select class="form-select"  name="time_zone" >
 
-                <option value="">Time Zone</option> 
+                <option value=""><?php echo lang('translation.Time Zone') ?></option> 
                 <option value="WAT">WAT</option>
                 <option value="EAT">EAT</option>
                 <option value="EAT">EAT</option>
@@ -847,16 +857,16 @@ $(document).ready(function() {
         <div class="col-12">
                   
                 <div class="mb-2">
-                  <input type="text" name="meeting_link" class="form-control" placeholder="Meting link if available e.g zoom, teams, meet etc" />
+                  <input type="text" name="meeting_link" class="form-control" placeholder="<?php echo lang('translation.Meting link if available e.g zoom, teams, meet etc') ?>" />
                 </div>
               </div>
         
               <div class="col-12">
-                <textarea class="form-control mb-2" name="more_info" required rows="4" placeholder="More infomation"></textarea>
+                <textarea class="form-control mb-2" name="more_info" required rows="4" placeholder="<?php echo lang('translation.More information') ?>"></textarea>
               </div>
              
               <div class="col-12">
-                <button type="submit" class="btn btn-primary EventBtn">Submit</button><br><span class="displayAction"></span>
+                <button type="submit" class="btn btn-primary EventBtn"><?php echo lang('translation.Submit') ?></button><br><span class="displayAction"></span>
               </div>
             </div>
           </form>
@@ -918,7 +928,7 @@ $(document).ready(function() {
         
 	 $(".displayAction").html(data);  
 	   //$(".saveBtn").html(data); 
-		 $(".EventBtn").prop('disabled', true);
+		 $(".EventBtn").prop('disabled', false);
 
       }
     });

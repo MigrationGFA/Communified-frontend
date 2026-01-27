@@ -15,7 +15,7 @@
 
 <!--The industries the investor invests in -->
 <i data-feather="list" class="user-timeline-title-icon"></i>
-            <h4 class="card-title">Startup Details</h4>
+            <h4 class="card-title"><?php echo lang('translation.Startup Details') ?></h4>
 <!--The size of cheques the investor writes -->
 
 
@@ -57,7 +57,7 @@
               </span>
               <div class="ms-75">
                 <h4 class="mb-0"></h4>
-                <small>Invested</small>
+                <small><?php echo lang('translation.Invested') ?></small>
               </div>
             </div>
             <div class="d-flex align-items-start">
@@ -66,11 +66,11 @@
               </span>
               <div class="ms-75">
                 <h4 class="mb-0"></h4>
-                <small>Completed</small>
+                <small><?php echo lang('translation.Completed') ?></small>
               </div>
             </div>
           </div>
-          <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
+          <h4 class="fw-bolder border-bottom pb-50 mb-1"><?php echo lang('translation.Details') ?></h4>
           <div class="info-container">
             <ul class="list-unstyled">
               <!--<li class="mb-75">-->
@@ -78,45 +78,45 @@
               <!--  <span>violet.dev</span>-->
               <!--</li>-->
               <li class="mb-75">
-                <span class="fw-bolder me-25"> Email:</span>
+                <span class="fw-bolder me-25"> <?php echo lang('translation.Email') ?>:</span>
                 <span><?php echo $row[0]['Contact_Email']; ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25"> Address:</span>
+                <span class="fw-bolder me-25"> <?php echo lang('translation.Address') ?>:</span>
                 <span><?php echo $row[0]['CountryHQ']; ?></span>
               </li>
                <li class="mb-75">
-                <span class="fw-bolder me-25"> Company Category:</span>
+                <span class="fw-bolder me-25"> <?php echo lang('translation.Company Category') ?>:</span>
                 <span><?php echo $row[0]['PrimaryBusinessIndustry']; ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25">Status:</span>
-                <span class="badge bg-light-success">Active</span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Status') ?>:</span>
+                <span class="badge bg-light-success"><?php echo lang('translation.Active') ?></span>
               </li>
               
                <li class="mb-75">
-                <span class="fw-bolder me-25">Phone:</span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Phone') ?>:</span>
                 <span><?php echo $row[0]['Phones']; ?></span>
               </li>
               
               <li class="mb-75">
-                <span class="fw-bolder me-25">Business Model:</span>
-                <span><?php echo $rowArray[0]['Startup_Model']; ?></span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.Business Model') ?>:</span>
+                <span><?php echo lang("translation.{$rowArray[0]['Startup_Model']}"); ?></span>
               </li>
               <li class="mb-75">
                 <span class="fw-bolder me-25">Business Solution:</span>
-                <span><?php echo $rowArray[0]['Solution_Corperate']; ?></span>
+                <span><?php echo lang("translation.{$rowArray[0]['Solution_Corperate']}"); ?></span>
               </li>
               <li class="mb-75">
                 <span class="fw-bolder me-25">Core Interest Corporate</span>
-                <span><?php echo $rowArray[0]['Core_Interest_Corporate']; ?></span>
+                <span><?php echo lang("translation.{$rowArray[0]['Core_Interest_Corporate']}"); ?></span>
               </li>
               <li class="mb-75">
                 <span class="fw-bolder me-25">Solution Ownership</span>
-                <span><?php echo $rowArray[0]['Solution_Ownership']; ?></span>
+                <span><?php echo lang("translation.{$rowArray[0]['Solution_Ownership']}"); ?></span>
               </li>
               <li class="mb-75">
-                <span class="fw-bolder me-25">LinkedIn:</span>
+                <span class="fw-bolder me-25"><?php echo lang('translation.LinkedIn') ?>:</span>
                 <span><?php echo $row[0]['LinkedIn']; ?></span>
               </li>
              
@@ -132,9 +132,9 @@
              
             <!--</div>-->
             <div class="demo-inline-spacing justify-content-center">
-            <button type="button" class="btn btn-primary" data-bs-target="#checkProfile" data-bs-toggle="modal" actionMsg="Schedule a call">Schedule a call</button>
+            <button type="button" class="btn btn-primary" data-bs-target="#checkProfile" data-bs-toggle="modal" actionMsg="Schedule a call"><?php echo lang('translation.Schedule a call') ?></button>
             
-            <button type="button" class="btn btn-dark" data-bs-target="#referEarnModal" data-bs-toggle="modal" actionMsg="invest">Invest</button>
+            <button type="button" class="btn btn-dark" data-bs-target="#referEarnModal" data-bs-toggle="modal" actionMsg="invest"><?php echo lang('translation.Invest') ?></button>
           </div>
           </div>
         </div>

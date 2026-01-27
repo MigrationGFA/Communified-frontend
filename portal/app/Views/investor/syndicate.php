@@ -8,12 +8,12 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Syndicate Form</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang("translation.Syndicate Form") ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/syndicate_info">Syndicate Information</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/syndicate_info"><?php echo lang("translation.Syndicate Information") ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#<?php echo base_url(); ?>gfa/syndicate_manage">Manage Syndicate</a>
+                    <!--<li class="breadcrumb-item"><a href="#<?php echo base_url(); ?>gfa/syndicate_manage">Manage Syndicate</a>-->
                     </li>
                     
                     
@@ -38,12 +38,12 @@
  <!-- Company Table Card -->
     <div class="col-lg-12 col-12">
 
-  
+ 
     <div class="row">
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Lead Information</h4>
+          <h4 class="card-title"><?php echo lang("translation.Lead Information") ?></h4>
         </div>
         <div class="card-body">
           <form class="founderForm" action="" method="post" enctype="multipart/form-data"> 
@@ -52,7 +52,7 @@
             
             <div class="col-xl-6 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="basicInput">Accredited Investor Status </label>
+                <label class="form-label" for="basicInput"><?php echo lang("translation.Accredited Investor Status") ?> </label>
                 <select id="country" name="accredited_investor" class="form-select current_stage">
                 <option value="I am an accredited investor">I am an accredited investor</option>  
                 <option value="I am not an accredited investor">I am not an accredited investor</option>
@@ -62,24 +62,25 @@
             </div>
             <div class="col-xl-6 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="disabledInput">Expected Dealflow</label>
+                <label class="form-label" for="disabledInput"><?php echo lang("translation.Expected Dealflow") ?></label>
                 <select id="country" name="expected_deal" class="form-select Implementation_stage">
-                <option value="More than 20 deals per year">More than 20 deals per year</option>  
-                <option value="Between 5 and 20 deals per year">Between 5 and 20 deals per year</option> 
-                <option value="Fewer than 5 deals per year">Fewer than 5 deals per year</option> 
-                <option value="I only want to run 1 deal now">I only want to run 1 deal now</option> 
+                <option value="More than 20 deals per year">Plus de 20 transactions par an</option>  
+<option value="Between 5 and 20 deals per year">Between 5 and 20 deals per year</option> 
+<option value="Fewer than 5 deals per year">Fewer than 5 deals per year</option> 
+<option value="I only want to run 1 deal now">I only want to run 1 deal now</option> 
              
                  </select>  
               </div>
             </div>
+
             <div class="col-xl-6 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="disabledInput">Fundraising Experience: <br>How much have you previously raised from LPs? </label>
+                <label class="form-label" for="disabledInput"><?php echo lang("translation.Fundraising Experience") ?>: <br><?php echo lang("translation.How much have you previously raised from Limited Partners") ?>? </label>
                 <select id="country" name="fund_exp" class="form-select Implementation_stage">
-                <option value="I raised more than $1M">I raised more than $1M</option>  
-                <option value="I raised between $100k and $1M">I raised between $100k and $1M</option> 
-                <option value="I raised less than $100k">I raised less than $100k</option> 
-                <option value="I haven't raised money from LPs">I haven't raised money from LPs</option> 
+                <option value="I have raised more than 600 million XOF">I have raised more than 600 million XOF</option>  
+                <option value="I have raised between 60 million and 600 million XOF">I have raised between 60 million and 600 million XOF</option> 
+                <option value="I have raised less than 60 million XOF">I have raised less than 60 million XOF</option> 
+                <option value="I have not raised funds from LPs">I have not raised funds from LPs</option>
              
                  </select>  
               </div>
@@ -87,29 +88,29 @@
              
             <div class="col-xl-6 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="disabledInput">Existing LP Network<br>How many LPs do you have to invest in your deals?</label>
+                <label class="form-label" for="disabledInput"><?php echo lang("translation.Existing Limited Partner Network") ?><br><?php echo lang("translation.How many Limited Partners do you have to invest in your deals") ?>?</label>
                 <select id="country" name="lp_network" class="form-select Implementation_stage">
-                <option value="I have enough LPs to fill my deals">I have enough LPs to fill my deals</option>  
+                <option value="I have enough LPs to fill my deals">I have sufficient LPs to fill my deals</option>  
                 <option value="I have some LPs, not enough to fill my deals">I have some LPs, not enough to fill my deals</option> 
-                <option value="I don't have any LPs">I don't have any LPs</option> 
-                
+                <option value="I don't have any LPs">I don't have any LPs</option>
+                                
              
                  </select>  
               </div>
             </div>
             <div class="col-xl-6 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="basicInput">Syndicate Type</label>
+                <label class="form-label" for="basicInput"><?php echo lang("translation.Syndicate Type") ?></label>
                 <select id="country" name="syn_type" class="form-select current_stage">
-                <option value="deals">Syndicate Deals</option>  
-                <option value="fund">Syndicate Fund</option>
+                <option value="deals">Syndicated transactions</option>  
+                <option value="fund">Syndicated fund</option>
                   
                   </select>
               </div>
             </div>
             <!-- <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Investment size (USD)</label>
+                <label class="form-label" for="helperText">Investment size (XOF)</label>
                 <input type="number" class="form-control fund_to_raise" id="accountAddress" name="fund_to_raise" placeholder="Name" value="<?php echo $this->gfa_model->getStartUpDetails($email)[0]['Next_Funding_Round_Target_Sought'];  ?>" />
 
                 
@@ -126,8 +127,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Syndicate Profile</h4>
-        </div>
+          <h4 class="card-title"><?php echo lang("translation.Syndicate Profile") ?></h4> 
         <div class="card-body">
          
           <div class="row">
@@ -135,8 +135,8 @@
             
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Syndicate Name  </label>
-                <input type="text" class="form-control fund_to_raise" id="accountAddress" name="syn_name" placeholder="Syndicate Name" value="" />
+                <label class="form-label" for="helperText"><?php echo lang("translation.Syndicate Name") ?>  </label>
+                <input type="text" class="form-control fund_to_raise" id="accountAddress" name="syn_name" placeholder="<?php echo lang('translation.Syndicate Name') ?>" value="" />
                 <input type="hidden" class=""  name="startup_id"  value="<?php echo $startup_id ?>" />
 
                 
@@ -144,16 +144,16 @@
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Syndicate Tagline </label>
-                <input type="text" class="form-control fund_to_raise" id="accountAddress" name="syn_tag" placeholder="Syndicate Tagline" value="" />
+                <label class="form-label" for="helperText"><?php echo lang("translation.Syndicate Tagline") ?> </label>
+                <input type="text" class="form-control fund_to_raise" id="accountAddress" name="syn_tag" placeholder="<?php echo lang('translation.Syndicate Tagline') ?>" value="" />
 
                 
               </div>
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Syndicate Logo</label>
-                <input type="file" class="form-control fund_to_raise" id="accountAddress" name="file[]" placeholder="Syndicate Logo" value="" />
+                <label class="form-label" for="helperText"><?php echo lang("translation.Syndicate Logo") ?></label>
+                <input type="file" class="form-control fund_to_raise" id="accountAddress" name="file[]" placeholder="<?php echo lang('translation.Syndicate Logo') ?>" value="" />
 
                 
               </div>
@@ -168,7 +168,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Add Team Members</h4>
+          <h4 class="card-title"><?php echo lang("translation.Add Team Members") ?></h4>
         </div>
         <div class="card-body">
         
@@ -180,13 +180,13 @@
                 <div class="row d-flex align-items-end">
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemname">Name</label>
+                      <label class="form-label" for="itemname"><?php echo lang("translation.Name") ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemname"
                         aria-describedby="itemname"
-                        placeholder="Name"
+                        placeholder="<?php echo lang('translation.Name') ?>"
                         name="founderName[]"
                         
                       />
@@ -195,13 +195,13 @@
 
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemcost">Email</label>
+                      <label class="form-label" for="itemcost"><?php echo lang("translation.Email") ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemcost"
                         aria-describedby="itemcost"
-                        placeholder="Email"
+                        placeholder="<?php echo lang('translation.Email') ?>"
                         name="founderGender[]"
                         
                       />
@@ -210,13 +210,13 @@
 
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemquantity">Designation</label>
+                      <label class="form-label" for="itemquantity"><?php echo lang("translation.Designation") ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemquantity"
                         aria-describedby="itemquantity"
-                        placeholder="Designation"
+                        placeholder="<?php echo lang('translation.Designation') ?>"
                         name="founderDesignation[]"
                        
                       />
@@ -224,13 +224,13 @@
                   </div>
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemquantity">Phone</label>
+                      <label class="form-label" for="itemquantity"><?php echo lang("translation.Phone") ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemquantity"
                         aria-describedby="itemquantity"
-                        placeholder="Phone"
+                        placeholder="<?php echo lang('translation.Phone') ?>"
                         name="founderLinkedin[]"
                         
                       />
@@ -249,7 +249,7 @@
               <div class="col-12">
                 <button class="btn btn-icon btn-primary mt-1 me-1 add_field_button_ot" type="button">
                   <i data-feather="plus" class="me-25"></i>
-                  <span>+ Add more</span>
+                  <span>+ <?php echo lang("translation.Add more") ?></span>
                 </button>
                 
               
@@ -269,7 +269,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Privacy </h4>
+          <h4 class="card-title"><?php echo lang("translation.Privacy") ?> </h4>
         </div>
         <div class="card-body">
           
@@ -287,9 +287,10 @@
 "
                 
               />
-              <label class="form-check-label" for="inlineRadio1">Public: Investors on our platform can discover and apply to back your syndicate 
 
-<br>Choose this if you want to grow your LP network  </label>
+              <label class="form-check-label" for="inlineRadio1"><?php echo lang("translation.Public: Investors on our platform can discover and apply to back your syndicate") ?> 
+
+<br><?php echo lang("translation.Choose this if you want to grow your LP network") ?>  </label>
             </div>
             <div class="form-check form-check-inline mb-1">
               <input
@@ -299,14 +300,14 @@
                 id="inlineRadio2"
                 value="Only people with a link can view your syndicate profile"
               />
-              <label class="form-check-label" for="inlineRadio2">Only people with a link can view your syndicate profile 
+              <label class="form-check-label" for="inlineRadio2"><?php echo lang("translation.Only people with a link can view your syndicate profile") ?> 
 
-<br>Choose this if you want to limit your LP network to people you know </label>
+<br><?php echo lang("translation.Choose this if you want to limit your LP network to people you know") ?> </label>
             </div>
             </div>
             <div class="col-xl-12 col-md-6 col-12">
               <div class="mb-1">
-                <label class="form-label" for="helperText">Syndicate Description <br> Explain to LPs what kind of deals you have and why they should back your syndicate </label>
+                <label class="form-label" for="helperText"><?php echo lang("translation.Syndicate Description") ?> <br> <?php echo lang("translation.Explain to LPs what kind of deals you have and why they should back your syndicate") ?> </label>
                 <textarea
                   class="form-control"
                   id="exampleFormControlTextarea1"
@@ -319,7 +320,7 @@
             <div class="col-12">
                 <button type="submit" class="btn btn-icon btn-primary mt-1 me-1 saveBtn">
                   
-                  <span>Submit</span>
+                  <span><?php echo lang("translation.Submit") ?></span>
                 </button>
                 
               <div class="displayActionF"></div>

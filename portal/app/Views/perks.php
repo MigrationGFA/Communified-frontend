@@ -11,24 +11,9 @@
           <div class="content-body"><!-- E-commerce Content Section Starts -->
      <?php     if(!empty($this->gfa_model->getCurrentSub($email,'Business Funding','active'))){ echo ''; }else{ ?>
           <div class="alert alert-info" role="alert">
-              <h4 class="alert-heading">Perks Redeemption Details:</h4>
+              <h4 class="alert-heading"><?php echo lang('translation.Perks Redemption Details') ?>:</h4>
               <div class="alert-body">
     
-
-<ul>
-<?php if(empty($this->gfa_model->getCurrentSub($email,'Basic Funding','active')) || empty($this->gfa_model->getCurrentSub($email,'Premium Funding','active')) || empty($this->gfa_model->getCurrentSub($email,'Business Funding','active')) ){ ?>
-<li>You are currently on our free plan subscription. Available Perks <?php detectCurrency(); ?><?php echo  detectCurrencyAmount($this->gfa_model->getPerksSub('free')); ?></li>
-
-<li>Monthly Subscription. <?php detectCurrency(); ?><?php echo  detectCurrencyAmount($this->gfa_model->getPerksSub('monthly')); ?> worth of free perks available. <a href="<?php echo base_url('gfa/subscribe'); ?>">Subscribe Now to Redeem</a></li>
-<li>Annual Subscription. <?php detectCurrency(); ?><?php echo  detectCurrencyAmount($this->gfa_model->getPerksSub('yearly')); ?> worth of free perks available. <a href="<?php echo base_url('gfa/subscribe'); ?>">Subscribe Now to Redeem</a></li>
-<?php }  ?>
-<?php  if(!empty($this->gfa_model->getCurrentSub($email,'Premium Funding','active'))){ ?>
-  <li>Free Available Perks:  <?php detectCurrency(); ?><?php echo  detectCurrencyAmount($this->gfa_model->getPerksSub('free')); ?></li>
-
-<li>You are currently on our monthly plan subscription. Available Perks. <?php detectCurrency(); ?><?php echo  detectCurrencyAmount($this->gfa_model->getPerksSub('monthly')); ?>.</li>
-<li>Annual Subscription. <?php detectCurrency(); ?><?php echo  detectCurrencyAmount($this->gfa_model->getPerksSub('yearly')); ?> worth of free perks available. <a href="<?php echo base_url('gfa/subscribe'); ?>">Subscribe Now to Redeem</a></li>
-  <?php }  ?>
-</ul>
               </div>
             </div>
 <?php }  ?>
@@ -78,7 +63,7 @@
               </div>
               <span class="text-success mb-1"><?php echo $rowArray['tags'] ?></span>
               <div class="item-quantity">
-                <span class="quantity-title">Qty:</span>
+                <span class="quantity-title"><?php echo lang('translation.Qty') ?>:</span>
                 <div class="quantity-counter-wrapper">
                   <div class="input-group">
                     <input type="text" class="quantity-counter" name="quantity" value="1" />
@@ -86,20 +71,20 @@
                 </div>
               </div>
               <span class="delivery-date text-muted"><?php echo $rowArray['note'] ?></span>
-              <span class="text-success">1 offers per startup</span>
+              <span class="text-success"><?php echo lang('translation.1 offers per startup') ?></span>
             </div>
             <div class="item-options text-center">
               <div class="item-wrapper">
                 <div class="item-cost">
                   <h4 class="item-price"><?php if($rowArray['value_1'] !=''){echo $rowArray['value_1']; }else{ echo '$'.$rowArray['value_2']; } ?></h4>
                   <p class="card-text shipping">
-                    <span class="badge rounded-pill badge-light-success">Avaliable</span>
+                    <span class="badge rounded-pill badge-light-success"><?php echo lang('translation.Avaliable') ?></span>
                   </p>
                 </div>
               </div>
               <button type="button" class="btn btn-light mt-1 detailsBtn"  data-bs-toggle="modal" data-bs-target="#gfa700">
                 <!-- <i data-feather="x" class="align-middle me-25"></i> -->
-                <span>Details</span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
+                <span><?php echo lang('translation.Details') ?></span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
               </button>
               <?php if(!empty($this->gfa_model->getCurrentSub($email,'Business Funding','active')) && ($rowArray['sub_type'] == 'Free' || $rowArray['sub_type'] == 'Monthly' || $rowArray['sub_type'] == 'Annual' )){ ?>
                 
@@ -112,7 +97,7 @@
                <?php }  ?>
                type="button">
                 <i data-feather="heart" class="align-middle me-25"></i>
-                <span class="text-truncate">Redeem</span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
+                <span class="text-truncate"><?php echo lang('translation.Redeem') ?></span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
               </a>
 
                 <?php }else{
@@ -127,7 +112,7 @@
                <?php }  ?>
                type="button">
                 <i data-feather="heart" class="align-middle me-25"></i>
-                <span class="text-truncate"> Redeem</span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
+                <span class="text-truncate"><?php echo lang('translation.Redeem') ?></span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
               </a>
                 <?php }else{ if($rowArray['sub_type'] == 'Free'){ ?>
               <a <?php if($rowArray['perks_type'] == 'gfa'){ ?> 
@@ -139,12 +124,12 @@
                <?php }  ?>
                type="button">
                 <i data-feather="heart" class="align-middle me-25"></i>
-                <span class="text-truncate"> Redeem</span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
+                <span class="text-truncate"> <?php echo lang('translation.Redeem') ?></span><p style="display: none;"><?php echo $rowArray['id'] ?></p>
               </a>
               <?php }else{ ?>
               <a href="<?php echo base_url(); ?>gfa/subscribe"  type="button" class="btn btn-primary btn-cart ">
                 <i data-feather="heart" class="align-middle me-25"></i>
-                <span class="text-truncate">Subscribe to Redeem</span>
+                <span class="text-truncate"><?php echo lang('translation.Subscribe to Redeem') ?></span>
               </a>
               
               <?php }}} ?>
@@ -184,7 +169,7 @@
         if(data != 1){
         window.open(data, "_self");
         }else{
-          getClicked.html('Enquiry Pending'); 
+          getClicked.html('Enquête en attente'); 
         }
 	
        }
@@ -261,14 +246,14 @@
 
       <!-- Brands starts -->
       <div class="brands">
-        <h6 class="filter-title">Categories</h6>
+        <h6 class="filter-title"><?php echo lang('translation.Categories') ?></h6>
         <ul class="list-unstyled brand-list formPerks">
         <form class="formPerksValue"  method="post" action="#"  enctype="multipart/form-data" >
     <?php $row = $this->gfa_model->getAllPerksCategoryInOrder(); foreach($row as $rowArray){ ?>
           <li>
             <div class="form-check">
             <input type="checkbox" class="form-check-input" name="category[]" id="productBrand1" value="<?php echo $rowArray['category'] ?>" />
-              <label class="form-check-label" for="productBrand1"><?php echo $rowArray['category'] ?></label>
+              <label class="form-check-label" for="productBrand1"><?php echo lang("translation.{$rowArray['category']}") ?></label>
             </div>
             <span><?php echo $this->gfa_model->countPerksPostedByCategory($rowArray['category']); ?></span>
           </li>
@@ -282,7 +267,7 @@
       <!-- Clear Filters Starts -->
       <div id="clear-filters">
       <form class="founderForm"  method="post" action="#"  enctype="multipart/form-data" >
-        <button type="submit" class="btn w-100 btn-primary loadAllPerks">All Perks</button>
+        <button type="submit" class="btn w-100 btn-primary loadAllPerks"><?php echo lang('translation.All Perks') ?></button>
         <span class="displayAction"></span>
 </form>
       </div>
@@ -322,7 +307,7 @@
                                    //
                                   //$(".displayAction").html("Successfully Saved!"); 
                                     $(".checkout-items").html(result);  
-                                    $(".loadAllPerks").html('All Perks');  
+                                    $(".loadAllPerks").html('Tous les avantages');  
                                  
                                 }                      
                               });
@@ -341,14 +326,14 @@
        //
 		  //$(".displayAction").html("Successfully Saved!"); 
         $(".checkout-items").html(result);  
-	      $(".loadAllPerks").html('All Perks');  
+	      $(".loadAllPerks").html('Tous les avantages');  
 	   
     }                      
   });
  
   
       }
-    
+     
 
                          });
           
@@ -363,7 +348,7 @@
         var form_data = new FormData();
         //form_data.append("organisation_type", value)
         $.ajax({
-            url: "<?php echo base_url(); ?>gfa/loadperks",
+            url: "<?php echo base_url("gfa/loadperks"); ?>",
             method: 'POST',
             data: form_data,
             processData: false,
@@ -375,7 +360,7 @@
        //
 		  //$(".displayAction").html("Successfully Saved!"); 
         $(".checkout-items").html(result);  
-	      $(".loadAllPerks").html('All Perks');  
+	      $(".loadAllPerks").html('Tous les avantages');  
 	   
 	  
 	
@@ -408,7 +393,7 @@
               <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-center" style="text-align:center;" id="zydiiLabel">Perks Details</h1>
+                    <h1 class="modal-title fs-5 text-center" style="text-align:center;" id="zydiiLabel"><?php echo lang('translation.Perks Details') ?></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -417,7 +402,7 @@
 
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><?php echo lang('translation.Close') ?></button>
 
                     <!-- <a href="<?php //echo base_url(); ?>gfa/subscribe" target="_self" type="button" class="btn btn-primary">Subscribe to Redeem</a> -->
                   </div>
@@ -430,4 +415,4 @@
 
 
 
-<!-- End modal Boubid -->SimpleBks
+<!-- End modal Boubid -->

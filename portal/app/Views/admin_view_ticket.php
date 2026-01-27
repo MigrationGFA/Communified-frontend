@@ -1,6 +1,5 @@
 <?php 
   $this->gfa_model = model('App\Models\GfaModel');
-  $this->admin_model = model('App\Models\AdminModel');
    ?>
 <div class="app-content content">
       <div class="content-overlay"></div>
@@ -26,11 +25,11 @@
           <div class="content-body">
             <!-- Blog Detail -->
     <div class="blog-detail-wrapper">
-        <?php 
-            $this->gfa_model = model('App\Models\GfaModel');
+        <?php
             $getOneTicket = $this->gfa_model->getOneTicket($id);
             $t_id = $getOneTicket[0]['ticket_id'];
             $getViewTickets = $this->gfa_model->getViewTickets($t_id);
+			$getTicketRole = $this->gfa_model->getTicketRole($t_id);
         ?>
 
         <div class="d-flex justify-content-between align-items-center">
@@ -43,7 +42,7 @@
         </div>
 
         <?php if ($getOneTicket[0]['status'] == 1) { ?>
-        <div class="alert alert-secondary text-center p-1" role="alert">
+        <div class="alert alert-danger text-center p-1" role="alert">
         This ticket is closed.
         </div>
         <?php } ?>
@@ -66,7 +65,7 @@
                                     <textarea name="message" class="form-control" rows="2" required></textarea>
                                     </div>
                                     <input type="hidden" name="ticket_id" value="<?= $t_id?>">
-                                    <input type="hidden" name="role" value="Admin">
+                                    <input type="hidden" name="role" value="<?= $getTicketRole == 'Guest' ? $getTicketRole : 'Admin'; ?>">
                                 </div>
                                 <div class="col-12 mt-2">
                                     <button type="submit" class="btn btn-success EventBtn mb-2">Send</button><span class="displayAction"></span>
@@ -81,8 +80,8 @@
 
         <?php foreach ($getViewTickets as $rowArray) { ?>
         <div class="card border-secondary mt-3">
-            <div class="card-header py-1 <?= $rowArray['role'] == 'User' ? 'bg-primary' : 'bg-info' ?> text-white">
-                <h6 class="py-0 my-0 text-white"><i data-feather="user"></i> <?= $rowArray['role']?></h6>
+            <div class="card-header py-1 <?= $rowArray['role'] == 'Admin' ? 'bg-info' : 'bg-warning' ?> text-white">
+                <h6 class="py-0 my-0 text-white"><i data-feather="user"></i> <?= $rowArray['role'] == 'Admin' ? 'Admin' : ucfirst($rowArray['role']) . " User"; ?></h6>
 
                 <?= $rowArray['date_updated']?>
             </div>

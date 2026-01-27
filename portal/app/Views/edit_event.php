@@ -6,12 +6,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Update Event</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Update Event') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/all_events'); ?>">All Events</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/all_events'); ?>"><?php echo lang('translation.All Events') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/manage_event'); ?>">Manage Events</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('gfa/manage_event'); ?>"><?php echo lang('translation.Manage Events') ?></a>
                     </li>
                     
                     
@@ -37,36 +37,36 @@
             <div class="row">
             <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <select  class="form-select" name="event_type" placeholder="Free">
+                  <select  class="form-select" name="event_type" placeholder="<?php echo lang('translation.Free') ?>">
                   <option value="<?php echo $updateEvent[0]['event_type'];?>"><?php echo $updateEvent[0]['event_type']; ?></option>    
-                 <option value="Online">Online</option>
-                  <option value="Physical">Physical</option> 
-                  <option value="Hybrid">Hybrid</option> 
+                 <option value="Online"><?php echo lang('translation.Online') ?></option>
+                  <option value="Physical"><?php echo lang('translation.') ?></option> 
+                  <option value="Hybrid"><?php echo lang('translation.Hybrid') ?></option> 
                     </select>
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <select  class="form-select selectPay" name="ticket" placeholder="Free">
+                  <select  class="form-select selectPay" name="ticket" placeholder="<?php echo lang('translation.Free') ?>">
                   <option value="<?php echo $updateEvent[0]['ticket'];?>"><?php echo $updateEvent[0]['ticket']; ?></option>    
-                 <option value="Free">Free</option>
-                  <!-- <option value="Paid">Paid</option>  -->
+                 <option value="Free"><?php echo lang('translation.Free') ?></option>
+                  <option value="Paid"><?php echo lang('translation.Paid') ?></option> 
                     </select>
                 </div>
               </div>
               <hr class="mb-2" />
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" name="title" class="form-control" required placeholder="Title" value="<?php echo $updateEvent[0]['title']; ?>" />
+                  <input type="text" name="title" class="form-control" required placeholder="<?php echo lang('translation.Title') ?>" value="<?php echo $updateEvent[0]['title']; ?>" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="venue" placeholder="Venue" value="<?php echo $updateEvent[0]['venue']; ?>" />
+                  <input type="text" class="form-control" name="venue" placeholder="<?php echo lang('translation.Venue') ?>" value="<?php echo $updateEvent[0]['venue']; ?>" />
                 </div>
               </div>
                <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">Start Date</label>
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.Start Date') ?></label>
           <input
             type="text"
             id="fp-date-time"
@@ -77,7 +77,7 @@
           />
         </div>
          <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">End Date</label>
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.End Date') ?></label>
           <input
             type="text"
             id="fp-date-time"
@@ -93,34 +93,36 @@
                
                <div class="col-sm-6 col-12" style="display:none;">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="amount" placeholder="Amount" value="<?php echo $updateEvent[0]['amount']; ?>"/>
+                  <input type="text" class="form-control" name="amount" placeholder="<?php echo lang('translation.Amount') ?>" value="<?php echo $updateEvent[0]['amount']; ?>"/>
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                   <label>Event Cover Picture </label>
                 <div class="mb-2">
-                  <input type="file" name="file[]" class="form-control"  placeholder="Event Cover Picture" />
+                  <input type="file" name="file[]" class="form-control"  placeholder="<?php echo lang('translation.Event Cover Picture') ?>" />
                   <input type="hidden" class="form-control" name='getfile[]' value="<?php echo $updateEvent[0]['picture'] ?>"  />
                   <input type="hidden" class="form-control" name='id' value="<?php echo $id ?>"  />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
-              <label>Event Meeting Link </label>
+              <label><?php echo lang('translation.Event Meeting Link') ?> </label>
                 <div class="mb-2">
                   <input type="text" class="form-control" name="meeting_link" placeholder="Zoom, Microsoft Teams,Google Meet etc." value="<?php echo $updateEvent[0]['meeting_link']; ?>" />
                 </div>
               </div>
-              <!-- <div class="col-sm-6 col-12">
+              <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <select  class="form-select" name="currency" placeholder="Currency" >
+                  <select  class="form-select" name="currency" placeholder="<?php echo lang('translation.Currency') ?>" >
                   <option value="<?php echo $updateEvent[0]['currency']; ?>" selected="selected" ><?php echo $updateEvent[0]['currency']; ?></option>
-                  <option value=""  >CURRENCY</option>    
+                  <option value=""  ><?php echo lang('translation.CURRENCY') ?></option>    
                 <option value="USD">USD</option>
     <option value="EUR" label="Euro">EUR</option>
-    <option value="JPY" label="Japanese yen">JPY</option>
-    <option value="GBP" label="Pound sterling">GBP</option>
-    <option value="NGN" label="Nigerian naira">NGN</option> -->
+     <option value="XOF" label="West African CFA franc">XOF</option>
+    
+    <option value="NGN" label="Nigerian naira">NGN</option> 
     <!-- <option disabled>──────────</option>
+      <option value="JPY" label="Japanese yen">JPY</option>
+    <option value="GBP" label="Pound sterling">GBP</option>
     <option value="AED" label="United Arab Emirates dirham">AED</option>
     <option value="AFN" label="Afghan afghani">AFN</option>
     <option value="ALL" label="Albanian lek">ALL</option>
@@ -275,14 +277,14 @@
     <option value="WST" label="Samoan tālā">WST</option>
     <option value="XAF" label="Central African CFA franc">XAF</option>
     <option value="XCD" label="Eastern Caribbean dollar">XCD</option>
-    <option value="XOF" label="West African CFA franc">XOF</option>
+   
     <option value="XPF" label="CFP franc">XPF</option>
     <option value="ZAR" label="South African rand">ZAR</option>
     <option value="ZMW" label="Zambian kwacha">ZMW</option>
     <option value="ZWB" label="Zimbabwean bonds">ZWB</option> -->
-                    <!-- </select>
+                    </select>
                 </div>
-              </div> -->
+              </div> 
               <div id="full-wrapper col-12">
                 <div id="full-container" class="mb-2">
                   <div class="editor eventDoc textData" style="height:100px;">
@@ -293,7 +295,7 @@
               <div class="col-12 showPay" style="display:none">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Pass Categories(Payment)</h4>
+          <h4 class="card-title"><?php echo lang("translation.Pass Categories(Payment)") ?></h4>
         </div>
        
            
@@ -308,29 +310,29 @@
                 <div class="row d-flex align-items-end">
                  <div class="col-md-4 col-12">
               <div class="mb-1">
-                   <label class="form-label" for="staticprice">Payment Categories</label>
+                   <label class="form-label" for="staticprice"><?php echo lang('translation.Payment Categories') ?></label>
               <select id="country" name="paymentCat[]" class="form-select" value="<?php  echo $getPayment['paymentCat'] ?>" >
                 
-                 <option value="Regular">Regular</option>
-                  <option value="VIP">VIP</option>
-                  <option value="VVIP">VVIP</option>
+                 <option value="Regular"><?php echo lang('translation.Regular') ?></option>
+                  <option value="VIP"><?php echo lang('translation.VIP') ?></option>
+                  <option value="VVIP"><?php echo lang('translation.VVIP') ?></option>
                 </select>
                 </div>
             </div>
             <div class="col-md-4 col-12">
               <div class="mb-1">
-                   <label class="form-label" for="staticprice">Payment Tag</label>
+                   <label class="form-label" for="staticprice"><?php echo lang('translation.Payment Tag') ?></label>
               <select id="country" name="paymentTag[]" class="form-select">
                     <option value="<?php  echo $getPayment['paymentTag'] ?>"><?php  echo $getPayment['paymentTag'] ?></option>
-                 <option value="">None</option>
-                  <option value="Best">Best</option>
-                  <option value="Recommended">Recommended</option>
+                 <option value=""><?php echo lang('translation.None') ?></option>
+                  <option value="Best"><?php echo lang('translation.Best') ?></option>
+                  <option value="Recommended"><?php echo lang('translation.Recommended') ?></option>
                 </select>
                 </div>
             </div>
                   <div class="col-md-4 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemname">Amount</label>
+                      <label class="form-label" for="itemname"><?php echo lang('translation.Amount') ?></label>
                       <input
                         type="text"
                         class="form-control"
@@ -345,7 +347,7 @@
                   
                   <div class="col-md-4 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemname">Description</label>
+                      <label class="form-label" for="itemname"><?php echo lang('translation.Description') ?></label>
              
               <textarea
                   
@@ -383,7 +385,7 @@
               <div class="col-12">
                 <button class="btn btn-icon btn-success mt-1 me-1 add_field_button_otx" type="button">
                   <i data-feather="plus" class="me-25"></i>
-                  <span>Add more pass</span>
+                  <span><?php echo lang('translation.Add more pass') ?></span>
                 </button>
                 <!-- <button type="submit" class="btn btn-primary mt-1 me-1 saveFounders">Send Invite</button> -->
               <!--<button type="reset" class="btn btn-outline-secondary mt-1">Discard</button>-->
@@ -403,7 +405,7 @@
               <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Speakers/Host Profile</h4>
+          <h4 class="card-title"><?php echo lang('translation.Speakers/Host Profile') ?></h4>
         </div>
         <div class="card-body">
             <!--invoice-repeater -->
@@ -418,13 +420,13 @@
                 <div class="row d-flex align-items-end">
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemname">Name</label>
+                      <label class="form-label" for="itemname"><?php echo lang('translation.Speaker Name') ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemname"
                         aria-describedby="itemname"
-                        placeholder="Speaker Name"
+                        placeholder=""
                         name="speakerName[]"
                         value="<?php echo $getSpeaker['speakerName']; ?>"
                       />
@@ -435,13 +437,13 @@
 
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemquantity">Designation</label>
+                      <label class="form-label" for="itemquantity"><?php echo lang('translation.Designation') ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemquantity"
                         aria-describedby="itemquantity"
-                        placeholder="CEO"
+                        placeholder=""
                         name="speakerDesignation[]"
                         value="<?php echo $getSpeaker['speakerDesignation']; ?>"
                       />
@@ -449,13 +451,13 @@
                   </div>
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="itemquantity">Linkedin</label>
+                      <label class="form-label" for="itemquantity"><?php echo lang('translation.LinkedIn Url') ?></label>
                       <input
                         type="text"
                         class="form-control"
                         id="itemquantity"
                         aria-describedby="itemquantity"
-                        placeholder="url"
+                        placeholder=""
                         name="speakerLinkedin[]"
                         value="<?php echo $getSpeaker['speakerLinkedin']; ?>"
                       />
@@ -464,13 +466,13 @@
 
                   <div class="col-md-3 col-12">
                     <div class="mb-1">
-                      <label class="form-label" for="staticprice">Picture</label>
+                      <label class="form-label" for="staticprice"><?php echo lang('translation.Picture') ?></label>
                        <input
                         type="file"
                         class="form-control"
                         id="itemquantity"
                         aria-describedby="itemquantity"
-                        placeholder="Picture"
+                        placeholder=""
                         name="file[]"
                         
                       />
@@ -486,7 +488,7 @@
                   class="form-control"
                   id="textarea-counter"
                   rows="4"
-                  placeholder="Brief about this Speaker/Co-speaker"
+                  placeholder="<?php echo lang('translation.Brief about this Speaker/Co-speaker') ?>"
                   style="height: 100px"
 				    name="speakerAbout[]"
 
@@ -513,7 +515,7 @@
               <div class="col-12">
                 <button class="btn btn-icon btn-secondary mt-1 me-1 add_field_button_ot" type="button">
                   <i data-feather="plus" class="me-25"></i>
-                  <span>Add more speaker</span>
+                  <span><?php echo lang('translation.Add more speaker') ?></span>
                 </button>
                 <!-- <button type="submit" class="btn btn-primary mt-1 me-1 savespeakers">Save Speakers Profile</button> -->
               <!--<button type="reset" class="btn btn-outline-secondary mt-1">Discard</button>-->
@@ -532,7 +534,7 @@
     </div>
     <input type="hidden" class="ref_id" name="ref_id" value="<?php echo $updateEvent[0]['ref_id']; ?>">
             <div class="col-12">
-                <button type="submit" class="btn btn-primary storyBtn">Update Event</button><span class="displayAction"></span>
+                <button type="submit" class="btn btn-primary storyBtn"><?php echo lang('translation.Update Event') ?></button><span class="displayAction"></span>
               </div>
             </div>
           </form>
@@ -653,8 +655,8 @@ $(wrapperx).append('<div class="removeMoreot"><div data-repeater-item><div class
         var formData = new FormData(form);
         var textData = $('.textData').html();
         var ref_id = $('.ref_id').val();
-    $.ajax({
-     data:formData,
+    $.ajax({s
+     data:formData,s
      type: "POST",
      url: "<?php echo base_url('gfa/updateEventpostpro'); ?>",
 	 error:function() {$(".displayAction").html('Error')},

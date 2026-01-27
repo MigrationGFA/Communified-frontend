@@ -43,7 +43,7 @@
 				<tbody>
 				<?php 
 				$n = 1;
-				$row = $admin_model->getAllVentureBuilding();  foreach($row as $rowArray){  
+				$row = $admin_model->getOnboardingNews();  foreach($row as $rowArray){  
 				// 	$subType = $admin_model->getSubPayX($rowArray[0]['email'],'Investor Readiness Cohort'); 
 				// 	$profile_request = $admin_model->getUser($rowArray['email']);  
 				

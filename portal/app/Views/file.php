@@ -5,28 +5,7 @@
      <!-- BEGIN: Content-->
     <div class="app-content content file-manager-application">
        
-        <?php  
         
-
-        if($this->gfa_model->countProfileDocs($email) == 2){ echo ''; } else {
-                ?>
-       <div class="alert alert-info" role="alert">
-              <h4 class="alert-heading">Note</h4>
-              <div class="alert-body">
-                  <?php 
-        		         
-        		        $loginkey = $this->gfa_model->getWpCred($email);
-        		   ?>
-               
-You must upload two important files to your profile before uploading files to the rest of the folders in the Dealroom.
-
-<br>1. Upload maximum of five minutes video pitch introduing your Startup in mp4 format, <a href="https://www.youtube.com/watch?v=N9N7f3Cj0hQ">click here for sample video</a> or contact <a href="mailto:media@getfundedafrica.com">media@getfundedafrica.com</a> to tell your story.
-
-<br>2. Upload your Pitch deck in pdf or powerpoint format, <a href="https://estore.getfundedafrica.com/product/blockchain-desk/">click here</a> to download sample pitch deck from our estore or <a href="https://estore.getfundedafrica.com/product/pitchdeck-development/">click here</a> to order for a pitch deck development from our team.
-<br>3. All files uploaded into your dealroom will be reviewed by GFA team before its allowed in your dealroom.
-              </div>
-            </div>
-            <?php }  ?>
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
       <div class="content-area-wrapper container-xxl p-0">
@@ -563,19 +542,16 @@ You must upload two important files to your profile before uploading files to th
               <label class="form-label" for="country">Select Folder</label>
               <select name="File_Type" id="country" class="select2 form-select fileTypex">
 
-<?php
-               
-                if($this->gfa_model->countProfileDocs($email) != 2){
-                ?>
+
                 <option value="Profile">Profile</option>
-                <?php }else{  ?>
+               
 <option value="Finance">Finance</option>
 <option value="Legal_Doc">Legal Document</option>
 <option value="Pitch_Deck">Pitch Deck</option>
 <option value="Proposal">Proposal</option>
 <option value="Partnership">Partnership</option>
 <option value="Videos">Videos</option>
-<?php }  ?>
+
               </select>
             </div> 
             
@@ -597,7 +573,7 @@ You must upload two important files to your profile before uploading files to th
               <input
                 type="file"
                 class="form-control"
-                id="<?php  if($this->gfa_model->countProfileDocs($email) != 2){ echo 'FilUploader'; }else { echo '';  } ?>"
+                id=""
                 name="file[]"
                 placeholder="File"
                
@@ -607,7 +583,7 @@ You must upload two important files to your profile before uploading files to th
             <span class="showFileType"></span>
             
             <div class="col-12 col-sm-12 mb-1">
-              <label class="form-label" for="accountAddress">Description of File Uploaded  </label>
+              <label class="form-label" for="accountAddress">Description of File Uploaded</label>
               <textarea
                   
                   class="form-control char-textarea"

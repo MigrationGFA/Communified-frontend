@@ -261,7 +261,7 @@
                       <!--<span class="font-small-2 text-muted">in 24 hours</span>-->
                     </div>
                   </td>
-                  <td>$<?php if($rowArrays['Next_Funding_Round_Target_Sought']=='0' || $rowArrays['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $rowArrays['Next_Funding_Round_Target_Sought'] ;} ?></td>
+                  <td>XOF<?php if($rowArrays['Next_Funding_Round_Target_Sought']=='0' || $rowArrays['Next_Funding_Round_Target_Sought']==''){ echo 0; }else{ echo $rowArrays['Next_Funding_Round_Target_Sought'] ;} ?></td>
                   <td>
                     
 					  <a href="<?php echo base_url(); ?>gfa/investor_startup_details/<?php echo $rowArrays['STUP_ID'] ; ?>" class="btn btn-primary getStartup">Connect <span style="display: none;"><?php echo $rowArrays['STUP_ID'] ?></span></a>

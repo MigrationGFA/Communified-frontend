@@ -18,7 +18,7 @@
 
 <!--The industries the investor invests in -->
 <i data-feather="list" class="user-timeline-title-icon"></i>
-            <h4 class="card-title">Manage Stories Posted</h4>
+            <h4 class="card-title"><?php echo lang('translation.Manage Stories Posted') ?></h4>
 <!--The size of cheques the investor writes -->
 
 <!--The investment stage -->
@@ -27,7 +27,7 @@
  <!-- Company Table Card -->
     <div class="col-lg-12 col-12 ">
         <div class="col-lg-12 text-center mb-2">
-        <a href="<?php echo base_url(); ?>gfa/add_story" class="btn btn-primary btn-next" style="float:auto;">+ Add Story</a>
+        <a href="<?php echo base_url(); ?>gfa/add_story" class="btn btn-primary btn-next" style="float:auto;">+ <?php echo lang('translation.Add Story') ?></a>
         </div>
       <div class="card card-company-table">
         <div class="card-body p-0">
@@ -57,9 +57,9 @@
               </td>
               </tr>
                 <tr>
-                  <th>Job Title </th>
-                  <th>Ending Date</th>
-                  <th class="locationChange">Status</th>
+                  <th><?php echo lang('translation.JOB TITLE') ?> </th>
+                  <th><?php echo lang('translation.ENDING DATE') ?></th>
+                  <th class="locationChange"><?php echo lang('translation.STATUS') ?></th>
                   
                   <th></th>
                 </tr>
@@ -84,7 +84,7 @@
                     <div class="d-flex align-items-center">
                       <div class="avatar rounded">
                         <div class="avatar-content">
-                          <img src="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/icons/toolbox.svg" alt="Toolbar svg" />
+                          
                         </div>
                       </div>
                       <div>

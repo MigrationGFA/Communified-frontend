@@ -655,7 +655,7 @@ $(wrapperx).append('<div class="removeMoreot"><div data-repeater-item><div class
      type: "POST",
      url: "<?php echo base_url('gfa/Eventpostpro'); ?>",
 	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".displayAction").html('Submiting Event...'); $(".EventBtn").prop('disabled', true);},
+	 beforeSend:function() {$(".displayAction").html('Submiting Event...'); $(".EventBtn").prop('disabled', false);},
 	 processData: false,
     contentType: false,
       success: function(data) {

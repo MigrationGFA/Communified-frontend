@@ -21,6 +21,20 @@ class GfaModel extends Model
 
         return $dowMap[$day];
     }
+    
+    public function insertPageViewEvent($data)
+    {       
+        $query = $this->db->table('page_view_events')->insert($data);
+        
+        if ($query)
+        {
+            return $this->db->affectedRows();
+        }
+        else
+        {
+            return 0;
+        }
+    }
 
     function creditPointScore($email){
     if(!empty($this->getStartUpDetailsExt($email)[0]['Country_Incorporate'])){
@@ -36,7 +50,7 @@ class GfaModel extends Model
             $point_2 = 5;
             $credit_2 = 1;
             }else{
-                $point_2 = 0;
+                $point_2 = 0; 
                 $credit_2 = 0;
             }
             if(!empty($this->getStartUpDetails($email)[0]['PrimaryBusinessIndustry'])){
@@ -276,236 +290,759 @@ class GfaModel extends Model
        
     return $pointScore;
 }
+#=======================Resources================================
+public function checkEmail($email)
+{           
+        $builder = $this->db->table('login');
+        $builder->orderBy('id', 'desc');
+        $builder->where('email', $email);
+        $query = $builder->get();
 
-
-public function timeAgo($timestamp) {
-    $currentTimestamp = time();
-    $difference = $currentTimestamp - $timestamp;
-    $seconds = $difference;
-    $minutes = round($difference / 60);
-    $hours = round($difference / 3600);
-    $days = round($difference / 86400);
-    $weeks = round($difference / 604800);
-    $months = round($difference / 2628000);
-    $years = round($difference / 31536000);
-
-    if ($seconds <= 60) {
-        return "Just now";
-    } elseif ($minutes == 1) {
-        return "1 minute ago";
-    } elseif ($minutes > 1 && $minutes < 60) {
-        return "$minutes minutes ago";
-    } elseif ($hours == 1) {
-        return "1 hour ago";
-    } elseif ($hours > 1 && $hours < 24) {
-        return "$hours hours ago";
-    } elseif ($days == 1) {
-        return "1 day ago";
-    } elseif ($days > 1 && $days < 7) {
-        return "$days days ago";
-    } elseif ($weeks == 1) {
-        return "1 week ago";
-    } elseif ($weeks > 1 && $weeks < 4.33) {
-        return "$weeks weeks ago";
-    } elseif ($months == 1) {
-        return "1 month ago";
-    } elseif ($months > 1 && $months < 12) {
-        return "$months months ago";
-    } elseif ($years == 1) {
-        return "1 year ago";
-    } else {
-        return "$years years ago";
-    }
-}
-
-public function sendMailApi($Contact_Email,$message,$subject){
-
-//sendMail($Contact_Email, $message_ak,$subject_ak);
-$url = 'https://getfundedafrica.com/api/sendmail.php';
- 
-// Data to be sent in the POST request
-// $recipient_email, $message,$subject,$fromName
-$postData = array(
-    'recipient_email' => "{$Contact_Email}",
-    'message' => "{$message}",
-	'subject' => "{$subject}",
-    'fromName' => "GFA Technologies"
-);
- 
-// Initialize cURL session
-$ch = curl_init($url);
- 
-// Set cURL options
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return the response as a string
-curl_setopt($ch, CURLOPT_POST, true); // Set as POST request
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postData); // Set POST data
- 
-// Include SSL options
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true); // Verify the peer's SSL certificate
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2); // Check that the common name exists and matches the hostname
- 
-// Execute cURL session and fetch the result
-$response = curl_exec($ch);
- 
-// Check for cURL errors
-if (curl_errno($ch)) {
-    echo 'cURL error: ' . curl_error($ch);
-}
- 
-// Close cURL session
-curl_close($ch);
-
-}
-
-public function userCourseDetails($email)
-{  
-    $query = $this->db->table('Startups_Inv')
-        ->join('user_ext_info', 'user_ext_info.email = Startups_Inv.Contact_Email', 'left')
-        ->where('Startups_Inv.Contact_Email', $email)
-        ->where('user_ext_info.email', $email)
-        ->orderBy("Startups_Inv.STUP_ID", "desc")
-        ->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return []; // Return an empty array instead of 0 when there are no results
-    }
-}
-
-#==========================Procedure================================================
-public function GetUserProgressSoftSkills($email){
-$query = $this->db->query("CALL GetUserProgressSoftSkills(?)", [$email]);
-   
-   return $query->getResultArray();
-}
-public function CountUsersWhoConsentedToAccountOpening($batch){
-$query = $this->db->query("CALL CountUsersWhoConsentedToAccountOpening(?)", [$batch]);
-   
-   return $query->getResultArray();
-}
-public function UsersWhoConsentedToAccountOpening($batch){
-$query = $this->db->query("CALL UsersWhoConsentedToAccountOpening(?)", [$batch]);
-   
-   return $query->getResultArray();
-}
-public function GetUsersHaveStartedLearningCourses($email) {
-
-    $query = $this->db->query("CALL GetUsersHaveStartedLearningCourses(?)", [$email]);
-   
-   return $query->getResultArray(); 
-   
-   }
-
-   public function GetUsersHaveNotStartedLearningCourses($email) {
-
-    $query = $this->db->query("CALL GetUsersHaveNotStartedLearningCourses(?)", [$email]);
-   
-   return $query->getResultArray(); 
-   
-   }
-public function  GetCompletedLessons($userEmail,$course){
-
-$query = $this->db->query("CALL GetCompletedLessons(?,?)", [$userEmail,$course]);
-
-// Check if the query was successful
-if ($query) {
-    // Retrieve the result set
-    $result = $query->getResultArray();
-    // Free the result set
-    $query->freeResult();
-    return $result;
-} else {
-    // Handle the error
-    return null;
-}
-
-}
-
-public function  GetPendingLessons($userEmail,$course){
-
-$query = $this->db->query("CALL GetPendingLessons(?,?)", [$userEmail,$course]);
-
-// Check if the query was successful
-if ($query) {
-    // Retrieve the result set
-    $result = $query->getResultArray();
-    // Free the result set
-    $query->freeResult();
-    return $result;
-} else {
-    // Handle the error
-    return null;
-}
-
-}
-
-public function  GetUserProgressAssignedCourses($userEmail){
-
-$query = $this->db->query("CALL GetUserProgressAssignedCourses(?)", [$userEmail]);
-
-// Check if the query was successful
-if ($query) {
-    // Retrieve the result set
-    $result = $query->getResultArray();
-    // Free the result set
-    $query->freeResult();
-    return $result;
-} else {
-    // Handle the error
-    return null;
-}
-
-}
-
-public function applicationByCategory($batch) {
-
-    $query = $this->db->query("CALL InterestFundRaiseByBatch(?)", [$batch]);
-
-return $query->getResultArray(); 
-
-}
-
-public function TotalRegistrationExt($batch) {
-
- $query = $this->db->query("CALL TotalRegistrationByBatch(?)", [$batch]);
-
-return $query->getResultArray(); 
-
-}
-
-public function ApplicationByLocationAndBatch($batch) {
-
- $query = $this->db->query("CALL ApplicationByLocationAndBatch(?)", [$batch]);
-
-return $query->getResultArray(); 
-
-}
-
-public function ApplicationByGenderAndBatch($batch) {
-
- $query = $this->db->query("CALL ApplicationByGenderAndBatch(?)", [$batch]);
-
-return $query->getResultArray(); 
-
-}
-
-
-public function UsersAnalytics($batch) {
-
- $query = $this->db->query("CALL UserAnalyticsByBatch(?)",[$batch]);
-
-return $query->getResultArray(); 
-
-}
-
-//=======================Course Management===========================
-#------------------------ Course Analytics --------------------------
-// course_group
-public function countStudentsAccessToDashboard(){
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return 0;
+        }
     
-    $builder = $this->db->table('course_group');
-   // $builder->where('UserAction',"dashboard");
+            
+}
+public function insertProfileSub($data)
+{       
+    $query = $this->db->table('unleash_register')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+public function insertUnleahSub($data)
+{       
+    $query = $this->db->table('unleash_sub')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+public function insertClickedDownlaodResource($data)
+{       
+    $query = $this->db->table('downloaded_resources')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+public function insertCommentsResource($data)
+{       
+    $query = $this->db->table('comments_resource')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+public function getUnleashifiedSub($ref, $status){
+    
+        $builder = $this->db->table('unleash_sub');
+        $builder->where('ref', $ref);
+        $builder->where('status', $status);
+        $builder->orderBy('id', 'asc');
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+public function getUnleashifiedProfile($email){
+    
+        $builder = $this->db->table('unleash_register');
+        $builder->where('email', $email);
+        $builder->orderBy('id', 'asc');
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+public function getCommentsResource($id){
+    
+        $builder = $this->db->table('comments_resource');
+        $builder->where('resource_id', $id);
+        $builder->orderBy('id', 'asc');
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+public function getFileType($target_file){
+
+     	$tmp = explode(".",$target_file);
+	switch ($tmp[count($tmp)-1]) {
+  case "pdf": $ctype="application/pdf"; break;
+  case "exe": $ctype="application/octet-stream"; break;
+  case "zip": $ctype="application/zip"; break;
+  case "docx":
+  case "doc": $ctype="application/vnd.openxmlformats-officedocument.wordprocessingml.document"; break;
+  case "csv":
+  case "xls":
+  case "xlsx": $ctype="application/vnd.ms-excel"; break;
+  case "ppt": $ctype="application/vnd.ms-powerpoint"; break;
+  case "gif": $ctype="image/gif"; break;
+  case "png": $ctype="image/png"; break;
+  case "jpeg":
+  case "jpg": $ctype="image/jpg"; break;
+  case "tif":
+  case "tiff": $ctype="image/tiff"; break;
+  case "psd": $ctype="image/psd"; break;
+  case "bmp": $ctype="image/bmp"; break;
+  case "ico": $ctype="image/vnd.microsoft.icon"; break;
+  default: $ctype="application/force-download";
+}
+
+header("Content-Transfer-Encoding: BINARY");
+		header('Content-Description: File Transfer');
+     	header("Content-length: ".filesize($target_file));
+		header("Content-type: $ctype");
+    	 header("Content-disposition: attachment; filename=\"".basename($target_file)."\"");
+     	readfile($target_file);	
+}
+public function getResouceById($id){
+    
+        $builder = $this->db->table('resource');
+        $builder->where('id', $id);
+        $builder->orderBy('id', 'desc');
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+
+public function getResouceCategoryId($id){
+    
+        $builder = $this->db->table('resource_category');
+        $builder->where('id', $id);
+        $builder->orderBy('id', 'desc');
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+
+public function getResouceByCategoryId($categoryId){
+    
+        $builder = $this->db->table('resource');
+        $builder->where('category_id', $categoryId);
+        $builder->orderBy('id', 'desc');
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+
+
+#========================End Resouce================================
+
+
+
+
+// ================== Beginning of Tickets ==========================
+
+public function getTicketMaxId()
+{
+    $query = $this->db->table('support_tickets')->selectMax('id')->get();
+    $row = $query->getRow();
+    
+    return $row->id;
+}
+
+public function getGuestTicketEmail($ticket_id)
+{           
+        $builder = $this->db->table('support_tickets');
+        $builder->where('ticket_id', $ticket_id);
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+            
+}
+
+public function getTicketRole($ticket_id)
+{           
+        $builder = $this->db->table('support_tickets_msg');
+        $builder->where('ticket_id', $ticket_id);
+		$builder->orderBy('date_updated', "desc");
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray()[0]['role'];
+        }
+        else
+        {
+            return 0;
+        }
+            
+}
+
+public function getAllUserTickets($created_by)
+{           
+    $query = $this->db->query("CALL GetAllUserTickets(?)", [$created_by]);
+    
+    return $query->getResultArray();
+    
+}
+
+public function getAllTickets()
+{           
+    $query = $this->db->query("CALL GetAllUniqueTickets()");
+    
+    return $query->getResultArray();
+    
+}
+
+public function getOneTicket($id)
+{           
+    $query = $this->db->query("CALL GetOneTicket(?)", [$id]);
+    
+    return $query->getResultArray();
+    
+}
+public function getViewTickets($t_id)
+{           
+    $query = $this->db->query("CALL GetViewTickets(?)", [$t_id]);
+    
+    return $query->getResultArray();
+    
+}
+public function getTicketLastUpdate($ticket_id)
+{           
+    $query = $this->db->query("CALL GetTicketLastUpdate(?)", [$ticket_id]);
+    
+    return $query->getResultArray()[0]['date_updated'];
+            
+}
+
+public function updateTicketStatus($columnName, $value, $id)
+{
+    $this->db->table('support_tickets')
+        ->set($columnName, $value)
+        ->where('ticket_id', $id)
+        ->update();
+
+    return $this->db->affectedRows();
+}
+
+public function insertCustomerQuote($data)
+{       
+    $query = $this->db->table('get_quote')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+public function insertConsultationRequest($data)
+{       
+    $query = $this->db->table('unleashified_consultations')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+public function insertCustomerContact($data)
+{       
+    $query = $this->db->table('unleash_contact')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+public function insertNewsletter($data)
+{       
+    $query = $this->db->table('unleash_newsletter')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+public function insertSTicket($data)
+{       
+    $query = $this->db->table('support_tickets')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+public function insertSMTicket($data)
+{       
+    $query = $this->db->table('support_tickets_msg')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+// ================== End of Tickets ==========================
+
+
+
+
+#============================SME====================================
+
+public function countAllSME()
+{			
+    $query = $this->db->table('login')
+    ->whereIn('account_type', ['startup','individual'])
+    ->get();
+
+    $count_row = $query->getNumRows();
+
+    if ($count_row > 0) {
+        return $count_row;
+    } else {
+        return 0;
+    }
+                
+}
+
+public function countAllUsersIndividuals()
+{			
+    $builder = $this->db->table('login');
+
+    $builder->where('account_type', 'individual')
+            ->orWhere('account_type', null);
+			//->get();
+ 	$query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    if ($count_row > 0) {
+        return $count_row;
+    } else {
+        return 0;
+    }
+			
+}
+
+#======================Procedure==================================
+public function GetUserDashboard($email){
+
+    $query = $this->db->query("CALL GetUserDashboard(?)", [$email]);
+   
+   return $query->getResultArray(); 
+}
+
+public function getTotalPerksBySubType($sub_type){
+
+    $query = $this->db->query("CALL getTotalPerksBySubType(?)", [$sub_type]);
+   
+   return $query->getResultArray(); 
+}
+public function countAllConnByEmail($email){
+
+    $query = $this->db->query("CALL countAllConnByEmail(?)", [$email]);
+   
+   return $query->getResultArray(); 
+}
+public function GetCounts(){
+
+    $query = $this->db->query("CALL GetCounts()");
+   
+   return $query->getResultArray(); 
+}
+public function getStartupCount(){
+
+    $query = $this->db->query("CALL getStartupCount()");
+   
+   return $query->getResultArray(); 
+}
+
+#======================End of SME=================================
+#==================Notication and Inbox Model==================
+public function getStartUpDetailsCompose()
+{           
+        $builder = $this->db->table('startups_inv');
+        $builder->orderBy('STUP_ID', "desc");  
+        $builder->limit(10); 
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray(); 
+        }
+        else
+        {
+            return 0;
+        }
+            
+}
+public function getAllRegisteredName($account_type,$email){
+    if($account_type == 'startup' || $account_type == 'individual' || $account_type == 'accelerator'){
+        return $this->getStartUpDetails($email)[0]['Startup_Company_Name'];
+        }
+
+        
+    elseif($account_type == 'investor'){
+       return $this->getInvestorDetails($email)[0]['Contact_Name']; 
+    }
+    
+    elseif($account_type == 'mentorship'){
+    return $this->getMentorDetails($email)[0]['Company'];   
+    }else{
+        
+        return "Admin";
+    }
+   
+//getCorperateDetails($email)
+}
+
+public function updateCSR($data, $id)
+{
+    $this->db->table('csr')
+             ->where('csr_id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+public function updatedConnection($data, $id)
+{
+    $this->db->table('all_connections')
+             ->where('id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+public function updatedClickedNotify($data, $ref_id)
+{
+    $this->db->table('notify')
+             ->where('ref_id', $ref_id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+public function getNotificationBoxRef($ref_id){
+    
+        $builder = $this->db->table('notify_inbox');
+        $builder->where('ref_id', $ref_id);
+        $builder->orderBy('id', 'desc');
+        //$builder->limit('id', 'desc');
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+
+
+public function getNotificationSummary($email) {
+
+    $query = $this->db->query("CALL getNotificationSummary(?)", [$email]);
+   
+   return $query->getResultArray(); 
+   
+   }
+
+public function getContactNameByEmail($email) {
+
+    $query = $this->db->query("CALL getContactNameByEmail(?)", [$email]);
+   
+   return $query->getResultArray(); 
+   
+   }
+
+
+public function getNotificationBoxSave($sender,$status) {
+
+    $query = $this->db->query("CALL getNotificationBoxSave(?,?)", [$sender,$status]);
+   
+   return $query->getResultArray(); 
+   
+   }
+
+
+
+public function getNotificationBox($recipient,$status) {
+
+    $query = $this->db->query("CALL getNotificationBox(?,?)", [$recipient,$status]);
+   
+   return $query->getResultArray(); 
+   
+   }
+
+
+public function getCurrentNotification($email){
+    
+        $builder = $this->db->table('notify');
+        $builder->where('email', $email);
+        $builder->where('status', 'new');
+        $builder->orderBy('id', 'desc');
+        $builder->limit(1);
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+public function getNotification($email){
+    
+        $builder = $this->db->table('notify');
+        $builder->where('email', $email);
+        $builder->where('status', 'new');
+        $builder->limit(5);
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+public function allNotificationBoxReply($subject,$message, $sender, $recipient,$ref_id,$reply_ref_id){
+        
+	   
+	    $time_submit = date("Y-m-d H:i:s",time());
+	    $notify_data = array(
+	        
+	        'sender'=>$sender,
+	        'recipient'=>$recipient,
+	        'subject'=>$subject,
+	        'content' =>$message,
+	        'status' => 'inbox',
+	        'extra_staus' =>'',
+	        'ref_id' =>$ref_id,
+	        'reply_id' =>$reply_ref_id,
+	        'time_submit' => $time_submit,
+	        
+	        
+	        ); 
+	        if($recipient == "favicon.png"){ echo ''; }else{
+	        $this->insertNotifyInbox($notify_data);
+	        }
+}
+public function allNotificationSave($subject,$message, $sender, $recipient,$ref_id){ 
+        
+       
+        $time_submit = date("Y-m-d H:i:s",time());
+        $notify_data = array(
+            
+            'sender'=>$sender,
+            'recipient'=>$recipient,
+            'reply_id' =>'',
+            'subject'=>$subject,
+            'content' =>$message,
+            'status' => 'save',
+            'extra_staus' =>'',
+            'ref_id' =>$ref_id,
+            'time_submit' => $time_submit,
+            
+            
+            ); 
+            if($recipient == "favicon.png"){ echo ''; }else{
+            $this->insertNotifyInbox($notify_data);
+            }
+}
+public function allNotificationBox($subject,$message, $sender, $recipient,$ref_id){ 
+        
+	   
+	    $time_submit = date("Y-m-d H:i:s",time());
+	    $notify_data = array(
+	        
+	        'sender'=>$sender,
+	        'recipient'=>$recipient,
+	        'reply_id' =>'',
+	        'subject'=>$subject,
+	        'content' =>$message,
+	        'status' => 'inbox',
+	        'extra_staus' =>'',
+	        'ref_id' =>$ref_id,
+	        'time_submit' => $time_submit,
+	        
+	        
+	        ); 
+	        if($recipient == "favicon.png"){ echo ''; }else{
+	        $this->insertNotifyInbox($notify_data);
+	        }
+}
+public function allNotification($email_notifier, $subject, $ref_id){
+        
+	    
+	    $time_submit = date("Y-m-d H:i:s",time());
+	    $notify_data = array(
+	        
+	        'email'=>$email_notifier,
+	        'subject'=>$subject,
+	        'ref_id' =>$ref_id,
+	        'status' =>'new',
+	        'time_submit' => $time_submit
+	        
+	        ); 
+	        if($email_notifier == "favicon.png"){ echo ''; }else{
+	        $this->insertNotify($notify_data);
+	        }
+}
+public function insertNotifyInbox($data)
+{       
+    $query = $this->db->table('notify_inbox')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+public function insertNotify($data)
+{       
+    $query = $this->db->table('notify')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+public function getNotifySentByYou($email) {
+
+    $query = $this->db->query("CALL getNotifySentByYou(?)", [$email]);
+   
+   return $query->getResultArray(); 
+   
+   }
+
+public function getNotifySentByYouD($email){
+    
+   $builder = $this->db->table('notify_inbox');
+   $builder->where('sender',$email);
+   $builder->whereNotIn('status', ['save', 'delete']); 
+   $builder->orderBy('time_submit', 'desc'); 
+   $query = $builder->get(); 
+   if($query->getNumRows() > 0 )
+   {
+       return $query->getResultArray();
+   }
+   else
+   {
+       return 0;
+   }
+}
+public function countNotifySavedByYou($email){
+    
+   $builder = $this->db->table('notify_inbox');
+   $builder->where('sender',$email);
+   $builder->where('status',"save");
+   $builder->orderBy('time_submit', 'desc'); 
    $query = $builder->get(); 
    if($query->getNumRows() > 0 )
    {
@@ -516,83 +1053,12 @@ public function countStudentsAccessToDashboard(){
        return 0;
    }
 }
-public function countStudentsCompletedAtLeastOneCourse()
-{
-    $builder = $this->db->table('user_activity');
-    $builder->select('UserEmail, COUNT(*) as count');
-    $builder->where('UserAction =', 'quiz_result');
-    $builder->where('UserEmail !=', '');
-    $builder->where('UserEmail !=', 'admin@getfundedafrica.com');
-    $builder->groupBy('UserEmail');
 
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getNumRows();
-    } else {
-        return 0;
-    }
-}
-
-public function countStudentsCompletedCoursePassedQuiz()
-{
-    $builder = $this->db->table('quiz_attempted');
-    $builder->select('email, COUNT(*) as count');
-    $builder->where('score >=',80);
-    $builder->where('email !=', '');
-    $builder->where('email !=', 'admin@getfundedafrica.com');
-    $builder->groupBy('email');
-
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getNumRows();
-    } else {
-        return 0;
-    }
-}
-public function countStudentsCompletedCourse()
-{
-    $builder = $this->db->table('user_activity');
-    $builder->select('UserEmail, COUNT(*) as count');
-    $builder->whereNotIn('UserAction', ['dashboard', 'signinAction', 'profile_details', 'group_members', 'signoutAction', 'chat', 'Quiz', '', 'Assessment', 'quiz_result']);
-    $builder->where('UserEmail !=', '');
-    $builder->where('UserEmail !=', 'admin@getfundedafrica.com');
-    $builder->groupBy('UserEmail');
-    $builder->having('count >=', 22); // Adjust the count condition based on your requirement
-
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getNumRows();
-    } else {
-        return [];
-    }
-}
-
-
-
-public function countStudentsbyLessonFar()
-{
-    $builder = $this->db->table('user_activity');
-    $builder->select('UserEmail, COUNT(*) as count');
-    $builder->whereNotIn('UserAction', ['dashboard', 'signinAction', 'profile_details', 'group_members', 'signoutAction', 'chat', 'Quiz', '']);
-    $builder->where('UserEmail !=', '');
-    $builder->where('UserEmail !=', 'admin@getfundedafrica.com');
-    $builder->groupBy('UserEmail');
-
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getNumRows();
-    } else {
-        return [];
-    }
-}
-public function countStudentsLogin(){
+public function countNotifySentByYou($email){
     
-    $builder = $this->db->table('user_activity');
-   $builder->where('UserAction',"dashboard");
+   $builder = $this->db->table('notify_inbox');
+   $builder->where('sender',$email);
+   $builder->whereNotIn('status', ['save', 'delete']);  
    $query = $builder->get(); 
    if($query->getNumRows() > 0 )
    {
@@ -603,6 +1069,51 @@ public function countStudentsLogin(){
        return 0;
    }
 }
+public function countNotifyAllByEmail($email)
+{
+    $builder = $this->db->table('notify_inbox');
+    $builder->where('recipient', $email)
+            ->orWhere('sender', $email);
+    $query = $builder->get(); 
+
+    return $query->getNumRows();
+}
+
+
+public function countNotifyInboxByEmail($email,$status){
+    
+    $builder = $this->db->table('notify_inbox');
+   $builder->where('recipient',$email);
+   $builder->where('status',$status);
+   $query = $builder->get(); 
+   if($query->getNumRows() > 0 )
+   {
+       return $query->getNumRows();
+   }
+   else
+   {
+       return 0;
+   }
+}
+
+public function countNotifyByEmail($email,$status){
+    
+    $builder = $this->db->table('notify');
+   $builder->where('email',$email);
+   $builder->where('status',$status);
+   $query = $builder->get(); 
+   if($query->getNumRows() > 0 )
+   {
+       return $query->getNumRows();
+   }
+   else
+   {
+       return 0;
+   }
+}
+
+#==================End Notication and Inbox Model=====================
+
 #-------------------------End Course Analytics--------------------------------------------
 #-------------------------Next and Previous Records----------------------
 
@@ -749,6 +1260,67 @@ public function countQuizQuestion($ref_id){
    }
 }
 
+public function updatePerksData($data, $ref_id)
+{
+    
+    $this->db->table('perks_data')
+             ->where('ref_id', $ref_id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+public function updatePerksRedeem($data, $id)
+{
+    
+    $this->db->table('perks_redeem')
+             ->where('id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+public function updatePostData($data, $ref_id)
+{
+    
+    $this->db->table('post_data')
+             ->where('ref_id', $ref_id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+public function updatePerks($data, $id)
+{
+    
+    $this->db->table('perks')
+             ->where('id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+public function updateEvent($data, $id)
+{
+
+        $this->db->table('event')
+             ->where('event_id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+public function updateStory($data, $id)
+{
+    
+        $this->db->table('story')
+             ->where('story_id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+
 public function updateTaskQues($data, $id)
 {
     $this->db->table('task_questions')
@@ -864,108 +1436,6 @@ public function insertComments($data)
     }
 }
 
-
-
-
-// ================== Beginning of Tickets ==========================
-
-public function getTicketMaxId()
-{
-    $query = $this->db->table('support_tickets')->selectMax('id')->get();
-    $row = $query->getRow();
-    
-    return $row->id;
-}
-
-public function getAllUserTickets($created_by)
-{           
-    $query = $this->db->query("CALL GetAllUserTickets(?)", [$created_by]);
-    
-    return $query->getResultArray();
-    
-}
-
-public function getAllTickets()
-{           
-    $query = $this->db->query("CALL GetAllUniqueTickets()");
-    
-    return $query->getResultArray();
-    
-}
-
-public function getOneTicket($id)
-{           
-    $query = $this->db->query("CALL GetOneTicket(?)", [$id]);
-    
-    return $query->getResultArray();
-    
-}
-public function getViewTickets($t_id)
-{           
-    $query = $this->db->query("CALL GetViewTickets(?)", [$t_id]);
-    
-    return $query->getResultArray();
-    
-}
-public function getTicketLastUpdate($ticket_id)
-{           
-    $query = $this->db->query("CALL GetTicketLastUpdate(?)", [$ticket_id]);
-    
-    return $query->getResultArray()[0]['date_updated'];
-            
-}
-
-public function updateTicketStatus($columnName, $value, $id)
-{
-    $this->db->table('support_tickets')
-        ->set($columnName, $value)
-        ->where('ticket_id', $id)
-        ->update();
-
-    return $this->db->affectedRows();
-}
-
-public function insertSTicket($data)
-{       
-    $query = $this->db->table('support_tickets')->insert($data);
-    
-    if ($query)
-    {
-        return $this->db->affectedRows();
-    }
-    else
-    {
-        return 0;
-    }
-}
-
-public function insertSMTicket($data)
-{       
-    $query = $this->db->table('support_tickets_msg')->insert($data);
-    
-    if ($query)
-    {
-        return $this->db->affectedRows();
-    }
-    else
-    {
-        return 0;
-    }
-}
-
-
-// ================== End of Tickets ==========================
-
-public function updateIsOline($email, $data)
-{
-    $this->db->table('startups_inv')
-             ->where('Contact_Email', $email)
-             ->update($data);
-
-    return $this->db->affectedRows();
-}
-
-
 public function insertTaskQues($data)
 {       
     $query = $this->db->table('task_questions')->insert($data);
@@ -1059,7 +1529,7 @@ public function getAllComments(){
         $builder = $this->db->table('comments');
        $builder->where('email !=','');
 		$builder->orderBy('id', 'desc');
-       $builder->limit(1000);
+       $builder->limit(5000);
        $query = $builder->get(); 
        if($query->getNumRows() > 0 )
        {
@@ -1158,7 +1628,9 @@ public function getQuizTitle($ref_id){
        }
 }
 
-public function getRecFgnAlatSkills($coursetitleArray)
+
+
+public function getRecFgnAlatSkills($main_cat, $coursetitleArray)
 {           
 
 	 if (empty($coursetitleArray)) {
@@ -1166,7 +1638,7 @@ public function getRecFgnAlatSkills($coursetitleArray)
     }
 
     $builder = $this->db->table('courses');
-    //$builder->where('learningpath', $main_cat); 
+    $builder->where('learningpath', $main_cat); 
     $builder->whereIn('coursetitle', $coursetitleArray);
     $builder->orderBy('id', 'asc');
     $query = $builder->get(); 
@@ -1572,37 +2044,6 @@ public function getCourseById($id){
             return 0;
         }
 }
-
-public function getContactByEmail($email){
-    
-     $builder = $this->db->table('contact');
-        $builder->where('email',$email);
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-}
-
-public function getContactByRefId($ref_id){
-    
-        $builder = $this->db->table('contact');
-        $builder->where('ref_id',$ref_id);
-        $builder->orderBy('id', "desc");
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-}
 public function getSectionByCourseId($course_id){
     
      $builder = $this->db->table('course_section');
@@ -1697,22 +2138,6 @@ public function getAllLesson()
             
 }
 
-public function getContactList()
-{           
-        $builder = $this->db->table('contact_list');
-        $builder->orderBy('id', "desc");
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
 public function getAllCourses()
 {           
         $builder = $this->db->table('courses');
@@ -1729,9 +2154,199 @@ public function getAllCourses()
             
 }
 
+public function getEmailByCourse($course)
+{           
+        $builder = $this->db->table('user_ext_info');
+        $builder->where('profile_extra', $course);
+        $query = $builder->get();
 
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return 0;
+        }
+    
+            
+}
+
+public function timeAgo($timestamp) {
+    $currentTimestamp = time();
+    $difference = $currentTimestamp - $timestamp;
+    $seconds = $difference;
+    $minutes = round($difference / 60);
+    $hours = round($difference / 3600);
+    $days = round($difference / 86400);
+    $weeks = round($difference / 604800);
+    $months = round($difference / 2628000);
+    $years = round($difference / 31536000);
+
+    if ($seconds <= 60) {
+        return "Just now";
+    } elseif ($minutes == 1) {
+        return "1 minute ago";
+    } elseif ($minutes > 1 && $minutes < 60) {
+        return "$minutes minutes ago";
+    } elseif ($hours == 1) {
+        return "1 hour ago";
+    } elseif ($hours > 1 && $hours < 24) {
+        return "$hours hours ago";
+    } elseif ($days == 1) {
+        return "1 day ago";
+    } elseif ($days > 1 && $days < 7) {
+        return "$days days ago";
+    } elseif ($weeks == 1) {
+        return "1 week ago";
+    } elseif ($weeks > 1 && $weeks < 4.33) {
+        return "$weeks weeks ago";
+    } elseif ($months == 1) {
+        return "1 month ago";
+    } elseif ($months > 1 && $months < 12) {
+        return "$months months ago";
+    } elseif ($years == 1) {
+        return "1 year ago";
+    } else {
+        return "$years years ago";
+    }
+}
+
+
+public function getTotalNoOfCourses()
+{
+
+$builder = $this->db->table('courses');
+$query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getNumRows();
+    } else {
+        return 0;
+    }
+
+}
+
+public function getCoursesByMainCategoryNextDayNot($main_cat)
+{
+    // Get the current date
+    $currentDate = date('Y-m-d');
+
+    // Get the date of the next day
+    $nextDate = date('Y-m-d', strtotime($currentDate . ' + 1 day'));
+
+    // Build the query
+    $builder = $this->db->table('courses');
+    $builder->where('learningpath', $main_cat);
+    $builder->where("start_date >= '$nextDate'"); // Assuming 'date_column' is the column with the date
+    $builder->orderBy('start_date', 'asc');
+    $builder->limit(1); // Limit to 1 record
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+public function getCoursesByMainCategoryPrevious($main_cat)
+{
+    // Get the current date
+    $currentDate = date('Y-m-d');
+    //$builder->where('DATE(start_date)=', $currentDate);
+    // Build the query
+    $builder = $this->db->table('courses');
+    $builder->where('learningpath', $main_cat);
+    $builder->where("DATE(start_date) <", $currentDate);
+    $builder->where("DATE(start_date) !=" , $currentDate); // Exclude today's records
+    $builder->orderBy('start_date', 'asc'); // Order by start date in ascending order
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+public function getCoursesByMainCategoryUpcoming($main_cat)
+{
+    // Get the current date
+    $currentDate = date('Y-m-d');
+    //$builder->where('DATE(start_date)=', $currentDate);
+    // Build the query
+    $builder = $this->db->table('courses');
+    $builder->where('learningpath', $main_cat);
+    $builder->where("DATE(start_date) >", $currentDate);
+    $builder->where("DATE(start_date) !=" , $currentDate); // Exclude today's records
+    $builder->orderBy('start_date', 'asc'); // Order by start date in ascending order
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+public function getCoursesByMainCategoryNextDay($main_cat)
+{
+    // Get the current date
+    $currentDate = date('Y-m-d');
+
+    // Get the date of the next day
+    $nextDate = date('Y-m-d', strtotime($currentDate . ' + 1 day'));
+
+    // Build the query
+    $builder = $this->db->table('courses');
+    $builder->where('learningpath', $main_cat);
+    $builder->where("start_date >= '$nextDate'"); // Assuming 'date_column' is the column with the date
+    $builder->orderBy('start_date', 'asc');
+    $builder->limit(1); // Limit to 1 record
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+public function getCoursesByMainCategoryToday($main_cat)
+{
+        $currentDate = date('Y-m-d');
+        $builder = $this->db->table('courses');
+        $builder->where('learningpath', $main_cat); 
+        $builder->where('DATE(start_date)=', $currentDate);
+        $builder->orderBy('start_date', "asc");
+        $builder->limit(1);
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+}
+
+
+public function getCoursesByMainCategory($main_cat)
+{           
+        $builder = $this->db->table('courses');
+        $builder->where('learningpath', $main_cat); 
+        $builder->orderBy('id', "asc");
+        $query = $builder->get(); 
+        if($query->getNumRows() > 0 )
+        {
+            return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+            
+}
 //=====================End Course Management===========================
-
 
     public function getPayment($data)
     {
@@ -1740,42 +2355,9 @@ public function getAllCourses()
         return $this->db->affectedRows() > 0 ? $this->db->affectedRows() : 0;
     }
 
-    public function insertContactList($data)
-    {
-        $this->db->table('contact_list')->insert($data);
-
-        if ($this->db->affectedRows() > 0) {
-            return $this->db->affectedRows();
-        } else {
-            return 0;
-        }
-    }
-
-    public function insertContact($data)
-    {
-        $this->db->table('contact')->insert($data);
-
-        if ($this->db->affectedRows() > 0) {
-            return $this->db->affectedRows();
-        } else {
-            return 0;
-        }
-    }
-
     public function insertPromoSub($data)
     {
         $this->db->table('promo_reg')->insert($data);
-
-        if ($this->db->affectedRows() > 0) {
-            return $this->db->affectedRows();
-        } else {
-            return 0;
-        }
-    }
-    
-    public function insertCourseGroup($data)
-    {
-        $this->db->table('course_group')->insert($data);
 
         if ($this->db->affectedRows() > 0) {
             return $this->db->affectedRows();
@@ -1996,6 +2578,35 @@ function insertCSR($data)
         }
 }
 
+public function getCsrByTitle($title)
+{
+    $builder = $this->db->table('csr');
+    $builder->orderBy('csr_id', 'desc');
+    $builder->where('title', $title);
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+public function getCsrById($email, $id)
+{
+    $builder = $this->db->table('csr');
+    $builder->where('csr_id', $id);
+    $builder->where('email', $email);
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+
 function insertEvent($data)
 {
         $this->db->table('event')->insert($data);
@@ -2129,9 +2740,22 @@ function insertInvestorProfile($data)
             return 0;
         }
 }
+function insertInvConOnbStatus($data)
+{       
+        $this->db->table('investor_connect_onb')->insert($data);
+        
+        if($this->db->affectedRows() > 0 )
+        {
+            return $this->db->affectedRows();
+        }
+        else
+        {
+            return 0;
+        }
+}
 function insertStartupProfileExt($data)
 {       
-        $this->db->table('Startups_Inv_Ext')->insert($data);
+        $this->db->table('startups_inv_ext')->insert($data);
         
         if($this->db->affectedRows() > 0 )
         {
@@ -2155,9 +2779,35 @@ function insertCorperateProfile($data)
             return 0;
         }
 }
+public function insertAppReg($data)
+{       
+        $this->db->table('app_register')->insert($data);
+        
+        if($this->db->affectedRows() > 0 )
+        {
+            return $this->db->affectedRows();
+        }
+        else
+        {
+            return 0;
+        }
+}
+public function insertAppLog($data)
+{       
+        $this->db->table('app_log')->insert($data);
+        
+        if($this->db->affectedRows() > 0 )
+        {
+            return $this->db->affectedRows();
+        }
+        else
+        {
+            return 0;
+        }
+}
 function insertStartupProfile($data)
 {       
-        $this->db->table('Startups_Inv')->insert($data);
+        $this->db->table('startups_inv')->insert($data);
         
         if($this->db->affectedRows() > 0 )
         {
@@ -2223,7 +2873,7 @@ function insertProfileFile($data)
 }
 public function insertProfilePhoto($data)
 {       
-    $query = $this->db->table('Profile_Photo')->insert($data);
+    $query = $this->db->table('profile_photo')->insert($data);
     
     if ($query)
     {
@@ -2492,100 +3142,6 @@ public function getFileUploadedById($id)
     }
 }
 
-public function get_need_wema_acct_no_bvn_nin()
-{
-    $builder = $this->db->table('user_ext_info');
-    $builder->where('assist_wema', 1);
-    //$builder->groupStart(); // Start a group for OR conditions
-    $builder->where('nin =', "");
-   
-    //$builder->orGroupStart(); // Start a group for the second OR condition
-    $builder->where('bvn =', "");
-    
-    // $builder->groupEnd(); // End the second OR group
-    // $builder->groupEnd(); // End the main OR group
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-
-public function get_need_wema_acct_with_bvn_nin()
-{
-    $builder = $this->db->table('user_ext_info');
-    $builder->where('assist_wema', 1);
-    $builder->groupStart(); // Start a group for OR conditions
-    $builder->where('nin !=', "");
-    $builder->where('CHAR_LENGTH(nin) =', 11);
-    $builder->orGroupStart(); // Start a group for the second OR condition
-    $builder->where('bvn !=', "");
-    $builder->where('CHAR_LENGTH(bvn) =', 11);
-    $builder->groupEnd(); // End the second OR group
-    $builder->groupEnd(); // End the main OR group
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-public function get_need_wema_acct_with_bvn_nin_limit() 
-{
-    $builder = $this->db->table('user_ext_info');
-    $builder->where('assist_wema', 1);
-    $builder->limit(10); 
-    $builder->groupStart(); // Start a group for OR conditions
-    $builder->where('nin !=', "");
-    $builder->where('CHAR_LENGTH(nin) =', 11);
-    $builder->orGroupStart(); // Start a group for the second OR condition
-    $builder->where('bvn !=', "");
-    $builder->where('CHAR_LENGTH(bvn) =', 11);
-    $builder->groupEnd(); // End the second OR group
-    $builder->groupEnd(); // End the main OR group
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-public function regAllBatch()
-{
-	 $builder = $this->db->table('reg_batch');
-	$builder ->where('Batch !=', 'providus');
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-public function getNgStatesLga($state)
-{
-    $builder = $this->db->table('lga');
-    $builder->select('*')
-            ->where('state', $state) // Add the where clause to filter by state
-            ->orderBy('lga', 'asc');
-
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
 public function getNgStates()
 {
     $builder = $this->db->table('ng_states');
@@ -2600,6 +3156,22 @@ public function getNgStates()
         return 0;
     }
 }
+
+// public function checkInvConOnbStatus($email)
+// 	{	
+// 		$builder =$this->db->table('investor_connect_onb');
+// 		$builder->where('Email',$email);
+// 		$query = $builder->get();
+// 		 if ($query->getNumRows() > 0) 
+//          {
+		
+// 			return 1;
+// 		}
+// 		else
+// 		{
+// 			return 0;
+// 		}	
+// 	}
 
 public function countRegBVNX()
 {
@@ -2625,17 +3197,17 @@ public function countRegNINX()
 
 public function countRegBVN()
 {
-     $builder = $this->db->table('user_ext_info');
-    $builder->where('assist_wema', 1);
-    $builder->groupStart(); // Start a group for the AND conditions
-    $builder->where('nin', ""); // Check if 'nin' is empty
-    $builder->where('bvn', ""); // Check if 'bvn' is empty
-    $builder->groupEnd(); // End the AND group
-    $query = $builder->get();
+    //  $builder = $this->db->table('user_ext_info');
+    // $builder->where('assist_wema', 1);
+    // $builder->groupStart(); // Start a group for the AND conditions
+    // $builder->where('nin', ""); // Check if 'nin' is empty
+    // $builder->where('bvn', ""); // Check if 'bvn' is empty
+    // $builder->groupEnd(); // End the AND group
+    // $query = $builder->get();
 
-    $count_row = $query->getNumRows();
-    return $count_row;
-    //return $this->countNeedAccount() -  $this->countRegNIN();
+    // $count_row = $query->getNumRows();
+    // return $count_row;
+    return $this->countNeedAccount() -  $this->countRegNIN();
 }
 
 
@@ -2688,7 +3260,7 @@ public function countAccountInterest($que)
 }
 public function countRegistrationTotal()
 {
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     //$builder->where('Interest_Fund_Raise', $reg_type);
     $query = $builder->get();
 
@@ -2702,7 +3274,7 @@ public function countRegistrationTotal()
 
 public function countGenderByState($gender, $state)
 {
-    $builder = $this->db->table('Startups_Inv'); 
+    $builder = $this->db->table('startups_inv'); 
     $builder->where('Gender', $gender);
     $builder->where('State', $state);
     $query = $builder->get();
@@ -2712,29 +3284,13 @@ public function countGenderByState($gender, $state)
         return $count_row;
     } else {
         return 0;
-    }
-}
-
-public function countGenderByStateLga($gender, $lga)
-{  
-    $query = $this->db->table('Startups_Inv')
-        ->join('user_ext_info', 'user_ext_info.email = Startups_Inv.Contact_Email', 'left')
-        ->where('Startups_Inv.Gender', $gender)
-        ->where('user_ext_info.lga_of_origin', $lga)
-        //->orderBy("Startups_Inv.STUP_ID", "desc")
-        ->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getNumRows();
-    } else {
-        return []; // Return an empty array instead of 0 when there are no results
     }
 }
 
 
 public function countGender($gender)
 {
-    $builder = $this->db->table('Startups_Inv'); 
+    $builder = $this->db->table('startups_inv'); 
     $builder->where('Gender', $gender);
     $query = $builder->get();
 
@@ -2746,23 +3302,28 @@ public function countGender($gender)
     }
 }
 
-public function countRegistrationLocationLga($lga)
+public function countStudentsbyLessonFarByEmail($email)
 {
-    $builder = $this->db->table('user_ext_info');
-    $builder->where('lga_of_origin', $lga);
+    $builder = $this->db->table('user_activity');
+    $builder->select('UserEmail, COUNT(*) as count');
+    $builder->whereNotIn('UserAction', ['dashboard', 'signinAction', 'profile_details', 'group_members', 'signoutAction', 'chat', 'Quiz', 'course', 'lesson', 'course']);
+    $builder->where('UserEmail !=', '');
+    $builder->where('UserEmail !=', 'admin@getfundedafrica.com');
+    $builder->where('UserEmail',$email);
+
     $query = $builder->get();
 
-    $count_row = $query->getNumRows();
-    if ($count_row > 0) {
-        return $count_row;
+    if ($query->getNumRows() > 0) {
+        return $query->getNumRows();
     } else {
-        return 0;
+        return [];
     }
 }
 
+
 public function countRegistrationLocation($state)
 {
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     $builder->where('State', $state);
     $query = $builder->get();
 
@@ -2774,26 +3335,9 @@ public function countRegistrationLocation($state)
     }
 }
 
-
-public function countRegistrationStateLga($reg_type, $lga)
-{  
-    $query = $this->db->table('Startups_Inv')
-        ->join('user_ext_info', 'user_ext_info.email = Startups_Inv.Contact_Email', 'left')
-        ->where('Startups_Inv.Interest_Fund_Raise', $reg_type)
-        ->where('user_ext_info.lga_of_origin', $lga)
-        //->orderBy("Startups_Inv.STUP_ID", "desc")
-        ->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getNumRows();
-    } else {
-        return []; // Return an empty array instead of 0 when there are no results
-    }
-}
-
 public function countRegistrationState($reg_type, $state)
 {
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     $builder->where('Interest_Fund_Raise', $reg_type);
     $builder->where('State', $state);
     $query = $builder->get();
@@ -2806,229 +3350,10 @@ public function countRegistrationState($reg_type, $state)
     }
 }
 
-public function  GetUserEndProgress($userEmail){
-
-$query = $this->db->query("CALL GetUserEndProgress(?)", [$userEmail]);
-
-// Check if the query was successful
-if ($query) {
-    // Retrieve the result set
-    $result = $query->getResultArray();
-    // Free the result set
-    $query->freeResult();
-    return $result;
-} else {
-    // Handle the error
-    return null;
-}
-
-}
-
-public function CertificatesListByBatch($batch) {
-
-    $query = $this->db->query("CALL CertificatesListByBatch(?)", [$batch]);
-   
-   return $query->getResultArray(); 
-   
-   }
-
-public function GetEachUserCourseList($email) {
-
-    $query = $this->db->query("CALL GetEachUserCourseList(?)", [$email]);
-   
-   return $query->getResultArray(); 
-   
-   }
-
-public function GetCertificateEligibleSoftSkills($email) {
-
-    $query = $this->db->query("CALL GetCertificateEligibleSoftSkills(?)", [$email]);
-   
-   return $query->getResultArray(); 
-   
-   }
-public function GetCertificateEligibleAssignedCourse($email) {
-
-    $query = $this->db->query("CALL GetCertificateEligibleAssignedCourse(?)", [$email]);
-   
-   return $query->getResultArray(); 
-   
-   }
-
-public function getCertificateEmailCourseRef($ref){
-    $builder = $this->db->table('certificate');
-  $builder->where('ref',$ref);
-  $query = $builder->get(); 
-  if($query->getNumRows() > 0 )
-  {
-      return $query->getResultArray();
-  }
-  else
-  {
-      return 0;
-  }
-}
-
-
-public function getCertificateEmailSoft($email){
-    $builder = $this->db->table('certificate');
-  $builder->where('email',$email);
-  $builder->where('cert_type',"fgn-alat-soft");
-  $query = $builder->get(); 
-  if($query->getNumRows() > 0 )
-  {
-      return $query->getResultArray();
-  }
-  else
-  {
-      return 0;
-  }
-}
-
-
-public function getCertificateEmailCourse($email){
-         $builder = $this->db->table('certificate');
-       $builder->where('email',$email);
-       $builder->where('cert_type',"fgn-alat-course");
-       $query = $builder->get(); 
-       if($query->getNumRows() > 0 )
-       {
-           return $query->getResultArray();
-       }
-       else
-       {
-           return 0;
-       }
-}
-
-
-public function getRegBatchSet($batch)
-{           
-        $builder = $this->db->table('reg_batch');
-        //$builder->orderBy('id', "desc");
-		$builder->where('Batch', $batch);
-		$builder->where('Batch !=', 'providus');
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-public function getRegBatch()
-{           
-        $builder = $this->db->table('reg_batch');
-		$builder->where('Batch !=', 'providus');
-        $builder->orderBy('id', "desc");
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-
-public function countCourseSubCatByCategory($skill_name)
-{
-    $builder = $this->db->table('user_ext_info');
-    $builder->where('profile_extra', $skill_name); 
-    $query = $builder->get();
-
-    $count_row = $query->getNumRows();
-    if ($count_row > 0) {
-        return $count_row;
-    } else {
-        return 0;
-    }
-} 
-
-
 public function countRegistration($reg_type)
 {
-    $builder = $this->db->table('Startups_Inv');
-    $builder->where('Interest_Fund_Raise', $reg_type); 
-    $query = $builder->get();
-
-    $count_row = $query->getNumRows();
-    if ($count_row > 0) {
-        return $count_row;
-    } else {
-        return 0;
-    }
-}
-
-public function getCohortDetails($email)
-{           
-        $builder = $this->db->table('Startups_Inv');
-        $builder->where('Contact_Email', $email); 
-		$builder->where('cohort', '2');
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-
-public function getStartUpDetailsCourseCat($reg_type)
-{           
-        $builder = $this->db->table('Startups_Inv');
-        $builder->where('Interest_Fund_Raise', $reg_type); 
-        $builder->orderBy('STUP_ID', "desc");
-        $builder->limit(1000); 
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-public function countCourseCategoryEx($reg_type)
-{
-    $builder = $this->db->table('user_ext_info');
-    $builder->select('user_ext_info.*, Startups_Inv.Startup_Implementation_Stage as startup_stage'); // Use alias for clarity
-    $builder->join('Startups_Inv', 'Startups_Inv.Contact_Email = user_ext_info.email', 'inner'); // Join with user_ext_info table on email column
-    $builder->where('Startups_Inv.Startup_Implementation_Stage', 'Development'); // Additional condition for Startup_Implementation_Stage
-    // $builder->where('Interest_Fund_Raise', "Business Owner");
-    $builder->where('user_ext_info.profile_extra', $reg_type);
-    
-    $query = $builder->get();
-
-    $count_row = $query->getNumRows();
-    if ($count_row > 0) {
-        return $count_row;
-    } else {
-        return 0;
-    }
-}
-
-
-
-public function countCourseCateegory($reg_type)
-{
-    $builder = $this->db->table('Startups_Inv');
-    $builder->where('Startup_Implementation_Stage', $reg_type);
-    //$builder->where('Interest_Fund_Raise', "Business Owner");
+    $builder = $this->db->table('startups_inv');
+    $builder->where('Interest_Fund_Raise', $reg_type);
     $query = $builder->get();
 
     $count_row = $query->getNumRows();
@@ -3247,253 +3572,10 @@ public function deleteFile($id)
 
     //     return $query->getNumRows() > 0 ? $query->getResultArray() : 0;
     // }
-     public function skillsBySubCat($courseCat)
+public function getLoginDetailsById($id)
 {           
-        $builder = $this->db->table('skills');
-        $builder->orderBy('id', 'desc');
-        $builder->where('category', $courseCat);
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-            
-}
-
-public function getEmailByCourseLimit($course)
-{           
-        $builder = $this->db->table('user_ext_info');
-        $builder->where('profile_extra', $course);
-        $builder->limit(10);
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-            
-}
-
-public function displayCourseGroupMemberAPI($course, $stateRd)
-{  
-    $query = $this->db->table('Startups_Inv')
-        ->join('user_ext_info', 'user_ext_info.email = Startups_Inv.Contact_Email', 'left')
-        ->where('Startups_Inv.State', $stateRd)
-        ->where('user_ext_info.profile_extra', $course)
-        ->orderBy("Startups_Inv.STUP_ID", "desc")
-        ->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return []; // Return an empty array instead of 0 when there are no results
-    }
-}
-
-public function displayCourseGroupMemberLimitOffset($email,$stateRd, $limit, $offset)
-{  
-     
-        $query = $this->db->table('Startups_Inv')
-                    ->where('Contact_Email', $email)
-        			->limit($limit)
-        			->offset($offset)
-                    ->where('State', $stateRd)
-                    ->orderBy("STUP_ID","desc")
-                    ->get();
-
-       if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-}
-
-public function displayCourseGroupMemberJoinLimitOffset($course, $stateRd, $limit, $offset)
-{  
-    $query = $this->db->table('Startups_Inv')
-        ->join('user_ext_info', 'user_ext_info.email = Startups_Inv.Contact_Email', 'left')
-        ->where('Startups_Inv.State', $stateRd)
-        ->where('user_ext_info.profile_extra', $course)
-        ->limit($limit)
-        ->offset($offset)
-        ->orderBy("Startups_Inv.STUP_ID", "desc")
-        ->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return []; // Return an empty array instead of 0 when there are no results
-    }
-}
-
-public function displayCourseGroupMemberJoin($course, $stateRd)
-{  
-    $query = $this->db->table('Startups_Inv')
-        ->join('user_ext_info', 'user_ext_info.email = Startups_Inv.Contact_Email', 'left')
-        ->where('Startups_Inv.State', $stateRd)
-        ->where('user_ext_info.profile_extra', $course)
-        ->orderBy("Startups_Inv.STUP_ID", "desc")
-        ->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return []; // Return an empty array instead of 0 when there are no results
-    }
-}
-
-
-public function getEmailByCourseLimitOffset($course, $limit, $offset)
-{
-    $builder = $this->db->table('user_ext_info');
-    $builder->where('profile_extra', $course);
-    
-    if ($limit !== null) {
-        $builder->limit($limit);
-    }
-
-    if ($offset !== null) {
-        $builder->offset($offset);
-    }
-
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return []; // Return an empty array instead of 0 when there are no results
-    }
-}
-
-
-public function getEmailByCourse($course)
-{           
-        $builder = $this->db->table('user_ext_info');
-        $builder->where('profile_extra', $course);
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-            
-}
-
-public function displayCourseGroupMember($email,$stateRd)
-{  
-     
-        $query = $this->db->table('Startups_Inv')
-                    ->where('Contact_Email', $email)
-                    ->where('State', $stateRd)
-                    ->orderBy("STUP_ID","desc")
-                    ->get();
-
-       if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-}
-
-
-public function displayCourseGroupMemberLimit($email,$stateRd)
-{  
-     
-        $query = $this->db->table('Startups_Inv')
-                    ->where('Contact_Email', $email)
-                    ->where('State', $stateRd)
-                    ->limit(5)
-                    ->orderBy("STUP_ID","desc")
-                    ->get();
-
-       if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-}
-
-public function displayTotalCourseMember($email,$stateRd)
-{  
-     
-        $query = $this->db->table('Startups_Inv')
-                    ->where('Contact_Email', $email)
-                    ->where('State', $stateRd)
-                    ->get();
-
-        return $query->getNumRows();
-    
-}
-    
-    
-    public function getSubCatViaCourse($course)
-{           
-        $builder = $this->db->table('skills');
-        $builder->orderBy('id', 'desc');
-        $builder->where('skill_name', $course);
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-            
-}
-
-public function checkGroupHead($group_head,$state,$course,$email)
-{           
-        $builder = $this->db->table('course_group');
-        $builder->orderBy('id', 'asc');
-        $builder->where('group_head', $group_head);
-        $builder->where('state', $state);
-        $builder->where('course', $course);
-		$builder->where('email', $email);
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 1;
-        }
-    
-            
-}
-
- public function verifyGroupHead($group_head,$state,$course)
-{           
-        $builder = $this->db->table('course_group');
-        $builder->orderBy('id', 'asc');
-        $builder->where('group_head', $group_head);
-        $builder->where('state', $state);
-        $builder->where('course', $course);
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return 0;
-        }
-    
-            
-}
-    
-     public function verifyFirstLogin($email)
-{           
-        $builder = $this->db->table('course_group');
-        $builder->orderBy('id', 'desc');
-        $builder->where('email', $email);
+        $builder = $this->db->table('login');
+        $builder->where('id', $id);
         $query = $builder->get();
 
         if ($query->getNumRows() > 0) {
@@ -3508,7 +3590,7 @@ public function checkGroupHead($group_head,$state,$course,$email)
     public function getLoginDetails($email)
 {           
         $builder = $this->db->table('login');
-        $builder->orderBy('id', 'asc');
+        $builder->orderBy('id', 'desc');
         $builder->where('email', $email);
         $query = $builder->get();
 
@@ -3551,65 +3633,6 @@ public function getSubsription($email)
             return 0;
         }
             
-}
-public function countMyReferral($ref)
-{
-    
-
-    // Select all the rows from the `pms_ref_link` table where the `email` column matches the email address passed to the function.
-    $query = $this->db->table('pms_ref_link')->where('ref', $ref)->orderBy('id', 'desc')->get();
-
-    // If there are any rows returned, return an array of the rows.
-    if ($query->getNumRows() > 0) {
-        return $query->getNumRows();
-    } else {
-        // Otherwise, return 0.
-        return 0;
-    }
-}
-public function getStartupsInvWithEmail($email) {
-    $builder = $this->db->table('Startups_Inv');
-	//$builder->select('Startups_Inv.*');
-    $builder->join('login', 'login.email = Startups_Inv.Contact_Email','left');
-	$builder->where('Startups_Inv.Contact_Email',$email);
-    $query = $builder->get();
-
-    return $query->getResultArray();
-}
-
-public function checkUsersWithEmailAndLastLogin($ref,$email) {
-    $builder = $this->db->table('pms_ref_link');
-    $builder->join('login', 'pms_ref_link.email = login.email');
-    $builder->where('login.last_login !=',null);
-	$builder->where('pms_ref_link.ref',$ref);
-	$builder->where('login.email',$email);
-
-    return $builder->countAllResults();
-}
-public function countUsersWithEmailAndLastLogin($ref) {
-    $builder = $this->db->table('pms_ref_link');
-    $builder->join('login', 'pms_ref_link.email = login.email');
-    $builder->where('login.last_login !=',null);
-	$builder->where('pms_ref_link.ref',$ref);
-
-    return $builder->countAllResults();
-}
-
-
-public function getMyReferral($ref)
-{
-    
-
-    // Select all the rows from the `pms_ref_link` table where the `email` column matches the email address passed to the function.
-    $query = $this->db->table('pms_ref_link')->where('ref', $ref)->orderBy('id', 'desc')->get();
-
-    // If there are any rows returned, return an array of the rows.
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        // Otherwise, return 0.
-        return 0;
-    }
 }
 
 public function getAllDcdtByEmailRef(string $email)
@@ -3721,210 +3744,133 @@ public function getStartUpOtherInfo()
             
 }
 
-public function getStartUpDetailsByDate($startDateTime)
+public function getNoOfMentees($email)
 {
-    //$startDateTime = '2023-11-06 15:09:15';
-    $endDateTime = date('Y-m-d H:i:s');
-
-    $builder = $this->db->table('login');
-    $builder->where('date >=', $startDateTime);
-    $builder->where('date <=', $endDateTime);
-    $builder->where('account_type', 'startup');
-    $builder->orderBy('id', 'asc');
-    
+    $builder = $this->db->table('mentor_info');
+    $builder->select('Mentee_No');
+    $builder->where('Email', $email);
     $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
+    if($query->getNumRows() > 0 )
+    {
+        return $query->getResultArray()[0]['Mentee_No'];
+    }
+    else
+    {
         return 0;
     }
 }
+
+public function getAllStartUpsById($id)
+    {
+        $builder = $this->db->table('startups_inv')
+                        ->where('STUP_ID', $id);
+                        // ->get()
+                        // ->getResultArray();
+        $query = $builder->get();
+        $countRows = $query->getNumRows();
+ 
+        if ($countRows > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+
+public function getStartUpDetailsRegAllCalendar()
+{
+    $builder = $this->db->table('startups_inv');
+    $builder->select('Primary_Contact_Name, Startup_Company_Name, Contact_Email');
+    $builder->orderBy('STUP_ID', "desc");  
+    // $builder->limit($limit);
+    $query = $builder->get(); 
+    if($query->getNumRows() > 0 )
+    {
+        return $query->getResultArray();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+public function getStartUpDetailsForCalendar()
+{
+    $builder = $this->db->table('startups_inv');
+    $builder->select('Primary_Contact_Name AS user_name, Contact_Email AS user_email, Startup_Company_Name');
+    $query = $builder->get();
+    return $query->getNumRows() > 0 ? $query->getResultArray() : 0;
+}
+public function getAcceleratorDetailsForCalendar()
+{
+    $builder = $this->db->table('accelerator');
+    $builder->select('Contact_Name AS user_name, Contact_Email AS user_email');
+    $query = $builder->get();
+    return $query->getNumRows() > 0 ? $query->getResultArray() : 0;
+}
+public function getMentorDetailsForCalendar()
+{
+    $builder = $this->db->table('mentor_info');
+    $builder->select('Mentor_name AS user_name, Email AS user_email');
+    $query = $builder->get();
+    return $query->getNumRows() > 0 ? $query->getResultArray() : 0;
+}
+public function getInvestorDetailsForCalendar()
+{
+    $builder = $this->db->table('investor');
+    $builder->select('Contact_Name AS user_name, Contact_Email AS user_email');
+    $query = $builder->get();
+    return $query->getNumRows() > 0 ? $query->getResultArray() : 0;
+}
+public function getCorporateDetailsForCalendar()
+{
+    $builder = $this->db->table('cooperate_info');
+    $builder->select('Corporate_Name AS user_name, Need_contact_email AS user_email');
+    $query = $builder->get();
+    return $query->getNumRows() > 0 ? $query->getResultArray() : 0;
+}
+
+public function getAllUserDetails()
+    {
+        $startUpDetails = $this->getStartUpDetailsForCalendar();
+        $acceleratorDetails = $this->getAcceleratorDetailsForCalendar();
+        $mentorDetails = $this->getMentorDetailsForCalendar();
+        $investorDetails = $this->getInvestorDetailsForCalendar();
+        $corporateDetails = $this->getCorporateDetailsForCalendar();
+
+        // Merge all results into one array
+        $allDetails = array_merge(
+            $startUpDetails ?: [],
+            $acceleratorDetails ?: [],
+            $mentorDetails ?: [],
+            $investorDetails ?: [],
+            $corporateDetails ?: []
+        );
+
+        // Remove duplicates based on user_name and user_email
+        $uniqueDetails = [];
+        $seen = [];
+
+        foreach ($allDetails as $user) {
+            // Create a unique key based on user_name and user_email
+            $key = $user['user_name'] . $user['user_email'];
+
+            if (!isset($seen[$key])) {
+                // If not seen before, add to the result
+                $seen[$key] = true;
+                $uniqueDetails[] = $user;
+            }
+        }
+
+        return $uniqueDetails;
+    }
 
 
 public function getStartUpDetailsRegAll()
 {           
-        $builder = $this->db->table('Startups_Inv');
-        $builder->orderBy('STUP_ID', "desc");  
-        //$builder->limit(10); 
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray(); 
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-public function getStartUpDetailsRegByState($state)
-{           
-        $builder = $this->db->table('Startups_Inv');
-        $builder->where('State',$state);
-        $builder->orderBy('STUP_ID', "desc");  
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-
-public function getStartUpDetailsRegAllLimitByState($state)
-{           
-        $builder = $this->db->table('Startups_Inv');
-        $builder->where('State',$state);
+        $builder = $this->db->table('startups_inv');
         $builder->orderBy('STUP_ID', "desc");  
         $builder->limit(1000); 
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-
-
-public function getStartUpDetailsRegAllLimit()
-{           
-        $builder = $this->db->table('Startups_Inv');
-        $builder->orderBy('STUP_ID', "desc");  
-        $builder->limit(1000); 
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-            
-}
-
-public function getCoursesByMainCategoryNextDayNot($main_cat)
-{
-    // Get the current date
-    $currentDate = date('Y-m-d');
-
-    // Get the date of the next day
-    $nextDate = date('Y-m-d', strtotime($currentDate . ' + 1 day'));
-
-    // Build the query
-    $builder = $this->db->table('courses');
-    $builder->where('learningpath', $main_cat);
-    $builder->where("start_date >= '$nextDate'"); // Assuming 'date_column' is the column with the date
-    $builder->orderBy('start_date', 'asc');
-    $builder->limit(1); // Limit to 1 record
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-public function getCoursesByMainCategoryPrevious($main_cat)
-{
-    // Get the current date
-    $currentDate = date('Y-m-d');
-    //$builder->where('DATE(start_date)=', $currentDate);
-    // Build the query
-    $builder = $this->db->table('courses');
-    $builder->where('learningpath', $main_cat);
-    $builder->where("DATE(start_date) <", $currentDate);
-    $builder->where("DATE(start_date) !=" , $currentDate); // Exclude today's records
-    $builder->orderBy('start_date', 'asc'); // Order by start date in ascending order
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-public function getCoursesByMainCategoryUpcoming($main_cat)
-{
-    // Get the current date
-    $currentDate = date('Y-m-d');
-    //$builder->where('DATE(start_date)=', $currentDate);
-    // Build the query
-    $builder = $this->db->table('courses');
-    $builder->where('learningpath', $main_cat);
-    $builder->where("DATE(start_date) >", $currentDate);
-    $builder->where("DATE(start_date) !=" , $currentDate); // Exclude today's records
-    $builder->orderBy('start_date', 'asc'); // Order by start date in ascending order
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-public function getCoursesByMainCategoryNextDay($main_cat)
-{
-    // Get the current date
-    $currentDate = date('Y-m-d');
-
-    // Get the date of the next day
-    $nextDate = date('Y-m-d', strtotime($currentDate . ' + 1 day'));
-
-    // Build the query
-    $builder = $this->db->table('courses');
-    $builder->where('learningpath', $main_cat);
-    $builder->where("start_date >= '$nextDate'"); // Assuming 'date_column' is the column with the date
-    $builder->orderBy('start_date', 'asc');
-    $builder->limit(1); // Limit to 1 record
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return 0;
-    }
-}
-
-public function getCoursesByMainCategoryToday($main_cat)
-{
-        $currentDate = date('Y-m-d');
-        $builder = $this->db->table('courses');
-        $builder->where('learningpath', $main_cat); 
-        $builder->where('DATE(start_date)=', $currentDate);
-        $builder->orderBy('start_date', "asc");
-        $builder->limit(1);
-        $query = $builder->get(); 
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-}
-
-
-public function getCoursesByMainCategory($main_cat)
-{           
-        $builder = $this->db->table('courses');
-        $builder->where('learningpath', $main_cat); 
-        $builder->orderBy('id', "asc");
         $query = $builder->get(); 
         if($query->getNumRows() > 0 )
         {
@@ -3939,7 +3885,7 @@ public function getCoursesByMainCategory($main_cat)
 
 public function getStartUpDetailsReg($reg_type)
 {           
-        $builder = $this->db->table('Startups_Inv');
+        $builder = $this->db->table('startups_inv');
         $builder->where('Interest_Fund_Raise', $reg_type); 
         $builder->orderBy('STUP_ID', "desc");
         $builder->limit(1000); 
@@ -3955,10 +3901,9 @@ public function getStartUpDetailsReg($reg_type)
             
 }
 
-
 public function getStartUpDetails($email)
 {           
-        $builder = $this->db->table('Startups_Inv');
+        $builder = $this->db->table('startups_inv');
         $builder->where('Contact_Email', $email);  
         $query = $builder->get(); 
         if($query->getNumRows() > 0 )
@@ -4022,7 +3967,7 @@ public function getAllDcdtByEmail($email)
 
 public function getSortedUserData($email)
 {
-    $builder_startup = $this->db->table('Startups_Inv_Ext');
+    $builder_startup = $this->db->table('startups_inv_ext');
     $builder_startup->where('Email', $email);
     $startups_query = $builder_startup->get();
     
@@ -4296,10 +4241,29 @@ public function getCorperateStartupReg($ref)
     }
 }
 
+function saveInvestorProfile($email,$data)
+{       
+
+         $this->db->table('investor')
+             ->where('Contact_Email', $email)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+function saveInvestorFile($email,$data)
+{       
+        
+        $this->db->table('investor_file')
+             ->where('email', $email)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
 
 public function saveCreditPoint($email, $data)
 {
-    $this->db->table('Startups_Inv')
+    $this->db->table('startups_inv')
              ->where('Contact_Email', $email)
              ->update($data);
 
@@ -4371,7 +4335,7 @@ public function getCorporateDetails($email)
             
 }
 
-    function getWpCred($email)
+function getWpCred($email)
     {
         $builder =$this->db->table('wp_sso_cred');
         $builder->where('Email',$email); 
@@ -4420,7 +4384,7 @@ public function getCorporateDetails($email)
 
 public function getStartUpDetailsExt($email)
 {           
-        $builder = $this->db->table('Startups_Inv_Ext');
+        $builder = $this->db->table('startups_inv_ext');
         $builder->where('Email', $email); 
         $query=$builder->get(); 
         if($query->getNumRows() > 0 )
@@ -4436,7 +4400,7 @@ public function getStartUpDetailsExt($email)
 
 public function getLogoUploaded($email)
 {           
-        $builder=$this->db->table('Profile_Photo');
+        $builder=$this->db->table('profile_photo');
         $builder->where('Email',$email);
         $builder->where('Upload_Type','logo');
         $builder->orderBy('Photo_id', 'DESC');    
@@ -4454,7 +4418,7 @@ public function getLogoUploaded($email)
 
 public function getPhotoUploaded($email)
 {           
-        $builder=$this->db->table('Profile_Photo');
+        $builder=$this->db->table('profile_photo');
         $builder->where('Email',$email);
         $builder->where('Upload_Type !=','logo');
         $builder->orderBy('Photo_id', 'DESC');    
@@ -4488,7 +4452,20 @@ public function getPaidSubscriber($email)
             
 }
 
+public function getAllRequestConnections($email)
+{
+    $builder = $this->db->table('all_connections');
+    $builder->where('email', $email);
+    $builder->where('status', 'pending');
+    $builder->orderBy('id', 'ASC');
+    $query = $builder->get();
 
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
 
 public function countStartupConnect($email,$connect)
 {           
@@ -4517,6 +4494,23 @@ public function getMentorDetails($email)
                 if($query->getNumRows() > 0 )
         {
             return $query->getResultArray();
+        }
+        else
+        {
+            return 0;
+        }
+            
+}
+
+public function countResourceUploded()
+{           
+        $builder=$this->db->table('resource');
+        // $builder->where('Email', $email);
+        $query=$builder->get();  
+        $count_row = $query->getNumRows();
+        if($query->getNumRows() > 0 )
+        {
+            return $count_row;
         }
         else
         {
@@ -4588,6 +4582,36 @@ public function getEventByEmailLimit($limit)
     }
 }
 
+public function getEventPass($id)
+{
+    $builder = $this->db->table('event');
+    $builder->where('event_id', $id);
+
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+public function getEventPayRef($pay_ref)
+{
+    $builder = $this->db->table('wp_event');
+    $builder->where('pay_ref', $pay_ref);
+
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+
 public function getEventByIdAttend($id)
 {        
         $builder=$this->db->table('event');   
@@ -4612,7 +4636,7 @@ public function mysqlCheck($input)
 
 public function saveStartupProfileExt($email, $data)
 {
-    $this->db->table('Startups_Inv_Ext')
+    $this->db->table('startups_inv_ext')
         ->where('Email', $email)
         ->update($data);
 
@@ -4649,22 +4673,10 @@ public function saveCorperateProfile($email, $data)
     }
 }
 
-public function saveParticipantsProfile($email, $data)
-{
-    $this->db->table('user_ext_info')
-        ->where('email', $email)
-        ->update($data);
-
-    if ($this->db->affectedRows() > 0) {
-        return $this->db->affectedRows();
-    } else {
-        return 0;
-    }
-}
 
 public function saveStartupProfile($email, $data)
 {
-    $this->db->table('Startups_Inv')
+    $this->db->table('startups_inv')
         ->where('Contact_Email', $email)
         ->update($data);
 
@@ -4879,32 +4891,24 @@ public function getEvent($email)
 
 public function getWpEvent($email, $event_id)
 {
+    // Check if the email is empty early on
+    if (empty($email)) {
+        return 0;
+    }
+
     $builder = $this->db->table('wp_event');
     $builder->orderBy('id', 'desc');
     $builder->where('email', $email);
     $builder->where('wp_id', $event_id);
     $query = $builder->get();
-    $count_row = $query->getNumRows();
-    if ($query->getNumRows() > 0 && !empty($email)) {
+
+    if ($query->getNumRows() > 0) {
         return $query->getResultArray();
     } else {
         return 0;
     }
 }
 
-public function getEventPass($id)
-{
-    $builder = $this->db->table('event');
-    $builder->where('event_id', $id);
-
-    $query = $builder->get();
-
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return [];
-    }
-}
 
 
 public function getEventByRef($ref_id)
@@ -4916,6 +4920,20 @@ public function getEventByRef($ref_id)
     if ($query->getNumRows() > 0) {
         return $query->getResultArray();
     } else {
+        return 0;
+    }
+}
+
+public function insertSubPackageUnleashified($data)
+{
+    $query = $this->db->table('package_sub_unleash')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
         return 0;
     }
 }
@@ -5002,21 +5020,7 @@ public function getPerksSearchByCategory($data)
     }
 }
 
-public function getUserAccountExtLga($lga)
-{
-    $builder = $this->db->table('user_ext_info');
-    $builder->like('lga_of_origin', $lga);
-	$builder->orLike('city', $lga);
-    $builder->orderBy('id', 'DESC');
-    
-    $query = $builder->get();
 
-    if ($query->getNumRows() > 0) {
-        return $query->getResultArray();
-    } else {
-        return [];
-    }
-}
 public function getUserAccountExt($email)
 {
     $builder = $this->db->table('user_ext_info');
@@ -5143,7 +5147,7 @@ public function getAllPerks()
 {
     $builder = $this->db->table('perks');
     $builder->orderBy('id', 'desc');
-    $builder->where('status', 'Active');
+    //$builder->where('status', 'Active');
     $query = $builder->get();
     if ($query->getNumRows() > 0) {
         return $query->getResultArray();
@@ -5162,6 +5166,34 @@ public function getPerksByRedeemId($id)
     } else {
         return 0;
     }
+}
+
+// public function getPerksByRef($ref_id)
+// {			
+// 		$builder = $this->db->table('perks_data');
+// 		$builder->orderBy('id','desc');
+// 		$builder->where('ref_id',$ref_id);	
+// 		 $query = $builder->get();
+// 		if ($query->getNumRows() > 0) {
+//         return $query->getResultArray();
+//     } else {
+//         return 0;
+//     }
+			
+// }
+
+public function getPerksByIdDetails($id) 
+{			
+			
+			$builder = $this->db->table('perks');
+		 $builder->where('id',$id);
+ 		 $query = $builder->get();
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+			
 }
 
 public function getPerksByEmailRedeem($email)
@@ -5190,6 +5222,60 @@ public function getPerksByEmail($email)
     }
 }
 
+public function getPerksById($email, $id)
+{
+    if (empty($email) || empty($id)) {
+        return 0; // Return early if email or id is empty
+    }
+
+    $builder = $this->db->table('perks');
+    $builder->where('id', $id);
+    $builder->where('email', $email);
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+
+public function getEventById($email, $id)
+{
+    if (empty($email) || empty($id)) {
+        return 0; // Return early if email or id is empty
+    }
+
+    $builder = $this->db->table('event');
+    $builder->where('event_id', $id);
+    $builder->where('email', $email);
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+public function getTellYourStoryById($email, $id)
+{
+    if (empty($email) || empty($id)) {
+        return 0; // Return early if email or id is empty
+    }
+
+    $builder = $this->db->table('story');
+    $builder->where('story_id', $id);
+    $builder->where('email', $email);
+    $query = $builder->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
 
 
 public function getAllCsrByEmail($email)
@@ -5250,20 +5336,6 @@ public function checkInvConOnbStatus($email)
     }
 }
 
-public function insertCertificate($data)
-{       
-    $query = $this->db->table('certificate')->insert($data);
-    
-    if ($query)
-    {
-        return $this->db->affectedRows();
-    }
-    else
-    {
-        return 0;
-    }
-}
-
     function insertUserActivity($data) {
         $builder = $this->db->table('user_activity');
         $query = $builder->insert($data);
@@ -5288,78 +5360,6 @@ public function insertCertificate($data)
         else
         {
             return 0;
-        }
-    }
-
-    function createWpCred($data)
-	{		
-        $builder = $this->db->table('wp_sso_cred');
-        $query = $builder->insert($data);
-
-        if ($builder->resultID->num_rows > 0) {
-            return true; 
-        } else {
-            return false;
-        }
-	}
-
-    public function check_enrolled_course($email, $course_id)
-	{		
-        $builder = $this->db->table('course_status');
-        $builder->where('Email', $email);
-		$builder->where('CourseID',$course_id);	
-
-        $query = $builder->get();
-		if($query->getNumRows() > 0)
-		{
-			return 1;
-		}
-		else
-		{
-			return 0;
-		}	
-	}
-
-    function insertRoleStatus($data){	
-        $builder = $this->db->table('course_status');
-        $query = $builder->insert($data);
-
-        if ($builder->resultID->num_rows > 0) {
-            return true; 
-        } else {
-            return false;
-        }
-	}
-
-    function checkssocred($data)
-    {
-        $builder =$this->db->table('wp_sso_cred');
-        $builder->where('Email',$data['email']); 
-        $builder->where('Website',$data['source']); 
-        $builder->where('LoginKey',$data['token']); 
-        $query = $builder->get();  
-        if($query->getNumRows() > 0 )
-        {
-            return $query->getResultArray();
-        }
-        else
-        {
-            return 0;
-        }
-    }
-
-    public function getAllCourse()
-    {
-        $builder = $this->db->table('course_section');
-        
-        
-        
-        $query = $builder->get(); 
-
-        if ($query->getNumRows() > 0) {
-            return $query->getResultArray();
-        } else {
-            return []; // Return an empty array instead of 0 when there are no results
         }
     }
 

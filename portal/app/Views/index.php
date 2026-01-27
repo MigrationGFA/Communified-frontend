@@ -13,8 +13,7 @@
           <div class="auth-wrapper auth-cover">
             <div class="auth-inner row m-0">
               <!-- Brand logo-->
-                <img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
-              
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
               <!-- /Brand logo-->
               <!-- Left Text-->
               <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
@@ -24,7 +23,7 @@
               <!-- Login-->
               <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                  <h2 class="card-title fw-bold mb-1">Welcome to GFA</h2>
+                  <h2 class="card-title fw-bold mb-1">Welcome to GFA123</h2>
                   <p class="card-text mb-2"> <?php if(!empty($message)){ echo $message; }else{ echo "Please sign-in to your account and start the adventure";} ?></p>
                   <form class="auth-login-form mt-2" action="<?php echo base_url(); ?>gfa/signinAction" method="POST">
                     <div class="mb-1">

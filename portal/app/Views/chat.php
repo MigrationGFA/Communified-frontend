@@ -1,412 +1,239 @@
-<?php 
-  $getPhoto = $this->gfa_model->getPhotoUploaded($email);
-  if(empty($getPhoto)){
-      $showPhoto = "public/assets/images/uploads/default-avatar.jpg";
-  }else{
-     $showPhoto = "uploads/onboarding/".$getPhoto[0]['Photo_name']; 
-      
-  }
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact " dir="ltr" data-theme="theme-default" data-assets-path="<?= base_url('public/assets-new')?>/" data-template="vertical-menu-template">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Chat App</title>    
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 5" />
+    <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
+  
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="<?php echo base_url("public/assets/app-assets/images/ico/apple-icon-120.html"); ?>">
+    <link rel="icon" type="image/x-icon" href="https://getfundedafrica.com/sme/images/favicon.png">
 
-?>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;ampdisplay=swap" rel="stylesheet">
 
-<!-- BEGIN: Content-->
-<div class="app-content content chat-application" onmouseover="initializeChatApplication()">
-    <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
-    <div class="content-area-wrapper container-xxl p-0">
-      <div class="sidebar-left">
-        <div class="sidebar">
-          <!-- Admin user profile area -->
-          <div class="chat-profile-sidebar">
-            <header class="chat-profile-header">
-              <span class="close-icon">
-                <i data-feather="x"></i>
-              </span>
-              <!-- User Information -->
-              <div class="header-profile-sidebar">
-                <div class="avatar box-shadow-1 avatar-xl avatar-border">
-                  <img src="<?php echo base_url($showPhoto) ?>" alt="user_avatar" />
-                  <span class="avatar-status-online avatar-status-xl"></span>
-                </div>
-                <h4 class="chat-user-name">John Doe</h4>
-                <span class="user-post">Admin</span>
-              </div>
-              <!--/ User Information -->
-            </header>
-            <!-- User Details start -->
-            <div class="profile-sidebar-area">
-              <h6 class="section-label mb-1">About</h6>
-              <div class="about-user">
-                <textarea data-length="120" class="form-control char-textarea" id="textarea-counter" rows="5"
-                  placeholder="About User">
-Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.</textarea>
-                <small class="counter-value float-end"><span class="char-count">108</span> / 120 </small>
-              </div>
-              <!-- To set user status -->
-              <h6 class="section-label mb-1 mt-3">Status</h6>
-              <ul class="list-unstyled user-status">
-                <li class="pb-1">
-                  <div class="form-check form-check-success">
-                    <input type="radio" id="activeStatusRadio" name="userStatus" class="form-check-input" value="online"
-                      checked />
-                    <label class="form-check-label ms-25" for="activeStatusRadio">Active</label>
-                  </div>
+    <!-- Icons -->
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/fonts/tabler-icons.css"/>
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/css/demo.css" />
+    
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/libs/typeahead-js/typeahead.css" /> 
+    <link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.css" />
+
+    <!-- Page CSS -->	
+	<link rel="stylesheet" href="<?= base_url('public/assets-new')?>/vendor/css/pages/app-chat.css">
+	
+        <!-- Helpers -->
+        <script src="<?= base_url('public/assets-new')?>/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <!--<script src="<?= base_url('public/assets-new')?>/vendor/js/template-customizer.js"></script>-->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="<?= base_url('public/assets-new')?>/js/config.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <style>
+    .btn-xs {
+        font-size: 0.92rem;
+        padding: 0.25rem 0.5rem;
+        /* line-height: 1.2; */
+    }
+</style>
+</head>
+<body>
+    <!-- ?PROD Only: Google Tag Manager (noscript) (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DDHKGP" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+ 
+    <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" onclick="goBack()">
+                        <i class="ti ti-arrow-left ti-md text-primary"></i> 
+                        <span class="text-primary"><?php echo lang('translation.Back') ?></span>
+                    </a>
                 </li>
-                <li class="pb-1">
-                  <div class="form-check form-check-danger">
-                    <input type="radio" id="dndStatusRadio" name="userStatus" class="form-check-input" value="busy" />
-                    <label class="form-check-label ms-25" for="dndStatusRadio">Do Not Disturb</label>
-                  </div>
-                </li>
-                <li class="pb-1">
-                  <div class="form-check form-check-warning">
-                    <input type="radio" id="awayStatusRadio" name="userStatus" class="form-check-input" value="away" />
-                    <label class="form-check-label ms-25" for="awayStatusRadio">Away</label>
-                  </div>
-                </li>
-                <li class="pb-1">
-                  <div class="form-check form-check-secondary">
-                    <input type="radio" id="offlineStatusRadio" name="userStatus" class="form-check-input"
-                      value="offline" />
-                    <label class="form-check-label ms-25" for="offlineStatusRadio">Offline</label>
-                  </div>
-                </li>
-              </ul>
-              <!--/ To set user status -->
-
-              <!-- User settings -->
-              <h6 class="section-label mb-1 mt-2">Settings</h6>
-              <ul class="list-unstyled">
-                <li class="d-flex justify-content-between align-items-center mb-1">
-                  <div class="d-flex align-items-center">
-                    <i data-feather="check-square" class="me-75 font-medium-3"></i>
-                    <span class="align-middle">Two-step Verification</span>
-                  </div>
-                  <div class="form-check form-switch me-0">
-                    <input type="checkbox" class="form-check-input" id="customSwitch1" checked />
-                    <label class="form-check-label" for="customSwitch1"></label>
-                  </div>
-                </li>
-                <li class="d-flex justify-content-between align-items-center mb-1">
-                  <div class="d-flex align-items-center">
-                    <i data-feather="bell" class="me-75 font-medium-3"></i>
-                    <span class="align-middle">Notification</span>
-                  </div>
-                  <div class="form-check form-switch me-0">
-                    <input type="checkbox" class="form-check-input" id="customSwitch2" />
-                    <label class="form-check-label" for="customSwitch2"></label>
-                  </div>
-                </li>
-                <li class="mb-1 d-flex align-items-center cursor-pointer">
-                  <i data-feather="user" class="me-75 font-medium-3"></i>
-                  <span class="align-middle">Invite Friends</span>
-                </li>
-                <li class="d-flex align-items-center cursor-pointer">
-                  <i data-feather="trash" class="me-75 font-medium-3"></i>
-                  <span class="align-middle">Delete Account</span>
-                </li>
-              </ul>
-              <!--/ User settings -->
-
-              <!-- Logout Button -->
-              <div class="mt-3">
-                <button class="btn btn-primary">
-                  <span>Logout</span>
-                </button>
-              </div>
-              <!--/ Logout Button -->
-            </div>
-            <!-- User Details end -->
-          </div>
-          <!--/ Admin user profile area -->
-
-          <!-- Chat Sidebar area -->
-          <div class="sidebar-content">
-            <span class="sidebar-close-icon">
-              <i data-feather="x"></i>
-            </span>
-            <!-- Sidebar header start -->
-            <div class="chat-fixed-search">
-              <div class="d-flex align-items-center w-100">
-                <!-- <div class="sidebar-profile-toggle"> -->
-                <div>
-                  <div class="avatar avatar-border">
-                    <img src="<?php echo base_url($showPhoto) ?>" alt="user_avatar" height="42"
-                      width="42" />
-                    <span class="avatar-status-online"></span>
-                  </div>
-                </div>
-                <div class="input-group input-group-merge ms-1 w-100">
-                  <input type="hidden" id="message_status">
-                  <input type="hidden" id="receiver">
-                  <span class="input-group-text round"><i data-feather="search" class="text-muted"></i></span>
-                  <input type="text" class="form-control round" id="chat-search"
-                    placeholder="Search or start a new chat" aria-label="Search..." aria-describedby="chat-search" />
-                </div>
-              </div>
-            </div>
-            <!-- Sidebar header end -->
-
-            <!-- Sidebar Users start -->
-            <div id="users-list" class="chat-user-list-wrapper list-group">
-              <h4 class="chat-list-title">Recent Chats</h4>
-              <ul class="chat-users-list chat-list media-list">
-
-              <?php if(count($recent_chats) < 1) { ?>
-                <li class="">
-                  <h6 class="mb-0">No Chats Found</h6>
-                </li>
-              <?php } else { ?>
-                <?php foreach($recent_chats as $recent_chat){ ?>
-                  <?php
-                    $getReceiverPhoto = $this->gfa_model->getPhotoUploaded($recent_chat['other_user_email']);
-                    $showReceiverPhoto = empty($getReceiverPhoto) ? "public/assets/images/uploads/default-avatar.jpg" : "uploads/onboarding/".$getPhoto[0]['Photo_name'];
-                  ?>
-                    <li onclick="get_message('<?php echo $recent_chat['other_user_email']; ?>')">
-                      <span class="avatar"><img src="<?php echo base_url($showReceiverPhoto) ?>" height="42"
-                          width="42" alt="User Photo" />
-                        <span class="avatar-status-offline"></span>
-                      </span>
-                      <div class="chat-info flex-grow-1">
-                        <h5 class="mb-0"><?php  echo strtoupper($this->gfa_model->getStartUpDetails($recent_chat['other_user_email'])[0]['Primary_Contact_Name']); ?></h5>
-                        <p class="card-text text-truncate">
-                        <?php echo $recent_chat['last_message_content']; ?>
-                        </p>
-                      </div>
-                      <div class="chat-meta text-nowrap">
-                        <?php
-                          $dateTime = new DateTime($recent_chat['last_message_timestamp']);
-                        ?>
-                        <small class="float-end mb-25 chat-time"><?php echo $dateTime->format('h:i:s A'); ?></small>
-                        <!-- <span class="badge bg-danger rounded-pill float-end">0</span> -->
-                      </div>
-                    </li>
-                <?php } ?>
-              <?php } ?>
-                <li class="no-results">
-                  <h6 class="mb-0">No Chats Found</h6>
-                </li>
-              </ul>
-              <h4 class="chat-list-title">Explore Contacts</h4>
-              <div id="contact_list">
-                <ul class="chat-users-list contact-list media-list" >
-
-                  <?php 
-
-                      // $suggested_contacts = [
-                      //   [
-                      //     'email' => "webthinkers@gmail.com",
-                      //   ],
-                      //   [
-                      //     'email' => "toluadekunte@gmail.com",
-                      //   ]
-                      // ];
-
-
-                  ?>
-
-                  <?php foreach($suggested_contacts as $suggested_contact){ ?>
-
-                    <?php
-                      $suggested_contact = $suggested_contact['email'];
-                      $getContactPhoto = $this->gfa_model->getPhotoUploaded($suggested_contact);
-                      $showContactPhoto = empty($getContactPhoto) ? "public/assets/images/uploads/default-avatar.jpg" : "uploads/onboarding/".$getPhoto[0]['Photo_name'];
-                    ?>
-
-                    <li onclick="get_message('<?php print_r($suggested_contact); ?>')">
-                      <span class="avatar"><img src="<?php echo base_url($showContactPhoto); ?>" height="42"
-                          width="42" alt="User Photo" />
-                        <span class="avatar-status-offline"></span>
-                      </span>
-                      <div class="chat-info flex-grow-1">
-                        <h5 class="mb-0"><?php echo !empty($this->gfa_model->getStartUpDetails($suggested_contact)[0]['Primary_Contact_Name']) ? strtoupper($this->gfa_model->getStartUpDetails($suggested_contact)[0]['Primary_Contact_Name']) : strtoupper($this->gfa_model->getStartUpDetails($suggested_contact)[0]['Startup_Company_Name']); ?></h5>
-                        <p class="card-text text-truncate">
-                          
-                        </p>
-                      </div>
-                    </li>
-                  <?php } ?>
-                  <li class="no-results">
-                    <h6 class="mb-0">No Contacts Found</h6>
-                  </li>
-
-
-                </ul>
-              </div>
-            </div>
-            <!-- Sidebar Users end -->
-          </div>
-          <!--/ Chat Sidebar area -->
-
+            </ul>
         </div>
-      </div>
-      <div class="content-right">
-        <div class="content-wrapper container-xxl p-0">
-          <div class="content-header row">
-          </div>
-          <div class="content-body">
-            <div class="body-content-overlay"></div>
-            <!-- Main chat area -->
-            <section class="chat-app-window">
-              <!-- To load Conversation -->
-              <div class="start-chat-area">
-                <div class="mb-1 start-chat-icon">
-                  <i data-feather="message-square"></i>
-                </div>
-                <h4 class="sidebar-toggle start-chat-text">Start Conversation</h4>
-              </div>
-              <!--/ To load Conversation -->
-
-              <!-- Active Chat -->
-              <div class="active-chat d-none">
-                <!-- Chat Header -->
-                <div class="chat-navbar">
-                  <header class="chat-header">
-                    <div class="d-flex align-items-center">
-                      <div class="sidebar-toggle d-block d-lg-none me-1">
-                        <i data-feather="menu" class="font-medium-5"></i>
-                      </div>
-                      <!-- <div class="avatar avatar-border user-profile-toggle m-0 me-1"> -->
-                      <div class="avatar avatar-border m-0 me-1">
-                        <img src="<?php echo base_url($showPhoto) ?>" alt="avatar" height="36"
-                          width="36" />
-                        <span class="avatar-status-offline"></span>
-                      </div>
-                      <h6 class="mb-0" id="user_name"></h6>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <!-- <i data-feather="phone-call" class="cursor-pointer d-sm-block d-none font-medium-2 me-1"></i>
-                      <i data-feather="video" class="cursor-pointer d-sm-block d-none font-medium-2 me-1"></i>
-                      <i data-feather="search" class="cursor-pointer d-sm-block d-none font-medium-2"></i> -->
-                      <div class="dropdown">
-                        <button class="btn-icon btn btn-transparent hide-arrow btn-sm dropdown-toggle" type="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i data-feather="more-vertical" id="chat-header-actions" class="font-medium-2"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="chat-header-actions">
-                          <a class="dropdown-item" href="#">View Contact</a>
-                          <!-- <a class="dropdown-item" href="#">Mute Notifications</a>
-                          <a class="dropdown-item" href="#">Block Contact</a>
-                          <a class="dropdown-item" href="#">Clear Chat</a>
-                          <a class="dropdown-item" href="#">Report</a> -->
+    </nav>
+    <!-- Content wrapper -->
+    <div class="content-wrapper">      
+        <input type="hidden" id="getBaseUrl" value="<?=base_url()?>">
+        <input type="hidden" id="SenderName" value="<?=$name?>">
+        <input type="hidden" id="SenderAcct" value="<?=session()->get('account_type')?>">
+    	<!-- <input type="hidden" id="SenderCompany" value="<?//=$company?>"> -->
+        <!-- Content -->
+        <div class="container-xxl flex-grow-1 container-p-y pt-5 mt-5">        
+            <div class="app-chat card overflow-hidden">
+                <div class="row g-0">
+                    <!-- Chat & Contacts -->
+                    <div class="col app-chat-contacts app-sidebar flex-grow-0 overflow-hidden border-end" id="app-chat-contacts">
+                    <div class="sidebar-header">
+                        
+                        <div class="d-flex align-items-center me-3 me-lg-0">
+                        <div class="flex-shrink-0 avatar me-3" data-bs-toggle="sidebar" data-overlay="app-overlay-ex" data-target="#app-chat-sidebar-left">
+                            <img class="user-avatar rounded-circle cursor-pointer" src="<?= base_url('public/assets-new')?>/img/avatars/default-img.jpg" alt="Avatar">
                         </div>
-                      </div>
+                        <div class="flex-grow-1 input-group input-group-merge rounded-pill">
+                            <span class="input-group-text search-icon" id="basic-addon-search31"><i class="ti ti-search"></i></span>
+                            <input type="text" class="form-control chat-search-input" id="searchInput" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31">
+                        </div>
+                        <span class="text-primary" id="loadFromDb"></span>
+                        </div>
+                        <!-- <i class="ti ti-x cursor-pointer d-lg-none d-block position-absolute mt-2 me-1 top-0 end-0" data-overlay data-bs-toggle="sidebar" data-target="#app-chat-contacts"></i> -->
+                        <i id="sidebarCloseToggle" class="ti ti-x cursor-pointer d-lg-none d-block position-absolute mt-2 me-1 top-0 end-0" data-overlay data-bs-toggle="sidebar" data-target="#app-chat-contacts"></i>
+                        <div>
+                            <small class="text-muted text-capitalize"><?=session()->get('account_type')?></small>
+                        </div>
                     </div>
-                  </header>
-                </div>
-                <!--/ Chat Header -->
+                    <hr class="container-m-nx m-0">
+                    <div class="sidebar-body">
+                        <ul class="nav nav-pills card-header-pills py-2" role="tablist">
+                            <!-- Chats -->
+                            <li class="nav-item">
+                                <button id="recentChatsTab" type="button" class="nav-link active  btn btn-xs" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-tab-home" aria-controls="navs-pills-tab-home" aria-selected="true"><?php echo lang('translation.Recent Chats') ?></button>
+                            </li>
+                            <!-- Contacts -->
+                            <li class="nav-item">
+                                <button id="allContactsTab" type="button" class="nav-link  btn btn-xs" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-tab-profile" aria-controls="navs-pills-tab-profile" aria-selected="false"><?php echo lang('translation.All Contacts') ?></button>
+                            </li>
+                        </ul>
+                        <div class="tab-content p-0">
+                          <!-- Chats -->
+                          <div class="tab-pane fade show active" id="navs-pills-tab-home" role="tabpanel">
+                            <ul class="list-unstyled chat-contact-list" id="chat-list">
+                                <!-- Chat items here -->
+                            </ul>
+                          </div>
+                          <!-- Contacts -->
+                          <div class="tab-pane fade" id="navs-pills-tab-profile" role="tabpanel">
+                            <ul class="list-unstyled chat-contact-list" id="contact-list">
+                                <!-- Contact items here -->
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- /Chat contacts -->
 
-                <!-- User Chat messages -->
-                <div class="user-chats">
-                  <div class="chats" id="chats">
-                    
-                    <!-- <div class="divider">
-                      <div class="divider-text">Yesterday</div>
-                    </div> -->
-                  </div>
-                </div>
-                <!-- User Chat messages -->
+                    <!-- Chat History -->
+                    <div class="col app-chat-history bg-body">
+                        <div class="chat-history-wrapper">
+                            <div class="chat-history-header border-bottom">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex overflow-hidden align-items-center">
+                                <!-- <i class="ti ti-menu-2 ti-sm cursor-pointer d-lg-none d-block me-2" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-contacts"></i> -->
+                                <i id="sidebarToggle" class="ti ti-menu-2 ti-sm cursor-pointer d-lg-none d-block me-2" data-bs-toggle="collapse" data-bs-target="#app-chat-contacts"></i>
 
-                <!-- Submit Chat form -->
-                <form class="chat-app-form" action="javascript:void(0);" onsubmit="enterChat();">
-                  <div class="input-group input-group-merge me-1 form-send-message">
-                    <span class="speech-to-text input-group-text"><i data-feather="mic"
-                        class="cursor-pointer"></i></span>
-                    <input type="text" class="form-control message"
-                      placeholder="Type your message or use speech to text" />
-                    <span class="input-group-text">
-                      <label for="attach-doc" class="attachment-icon form-label mb-0">
-                        <i data-feather="image" class="cursor-pointer text-secondary"></i>
-                        <input type="file" id="attach-doc" hidden /> </label></span>
-                  </div>
-                  <button type="button" class="btn btn-primary send" onclick="enterChat();">
-                    <i data-feather="send" class="d-lg-none"></i>
-                    <span class="d-none d-lg-block">Send</span>
-                  </button>
-                </form>
-                <!--/ Submit Chat form -->
-              </div>
-              <!--/ Active Chat -->
-            </section>
-            <!--/ Main chat area -->
 
-            <!-- User Chat profile right area -->
-            <div class="user-profile-sidebar">
-              <header class="user-profile-header">
-                <span class="close-icon">
-                  <i data-feather="x"></i>
-                </span>
-                <!-- User Profile image with name -->
-                <div class="header-profile-sidebar">
-                  <div class="avatar box-shadow-1 avatar-border avatar-xl">
-                    <img src="<?php echo base_url($showPhoto) ?>" alt="user_avatar" height="70"
-                      width="70" />
-                    <span class="avatar-status-busy avatar-status-lg"></span>
-                  </div>
-                  <h4 class="chat-user-name">Kristopher Candy</h4>
-                  <span class="user-post">UI/UX Designer 👩🏻‍💻</span>
+                                <div class="flex-shrink-0 avatar">
+                                    <img src="<?= base_url('public/assets-new')?>/img/avatars/default-img.jpg" alt="Avatar" class="rounded-circle" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-right">
+                                </div>
+                                <div class="chat-contact-info flex-grow-1 ms-2">
+                                    <h6 class="m-0" id="currentReceiverName"> </h6>
+    								<small class="user-status text-muted" id="currentReceiverAcct"> </small>
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                <!-- <i class="ti ti-search cursor-pointer d-sm-block d-none me-3" id="searchIcon"></i> -->
+                                </div>
+                            </div>
+                            </div>
+                            <div class="chat-history-body bg-body">
+                            <ul class="list-unstyled chat-history" id="chat-history">
+                                <!-- Chat messages will be dynamically loaded here -->
+                            </ul>
+                            </div>
+                            <!-- Chat message form -->
+                            <div class="chat-history-footer shadow-sm">
+                                <form class="form-send-message d-flex justify-content-between align-items-center ">
+                                    <input class="form-control message-input border-0 me-3 shadow-none" placeholder="<?php echo lang('translation.Type your message here') ?>">
+                                    <div class="message-actions d-flex align-items-center">
+                                        <button class="btn btn-primary d-flex send-msg-btn">
+                                            <i class="ti ti-send me-md-1 me-0"></i>
+                                            <span class="align-middle d-md-inline-block d-none"><?php echo lang('translation.Send') ?></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Chat History -->
+        
+                    <div class="app-overlay"></div>
                 </div>
-                <!--/ User Profile image with name -->
-              </header>
-              <div class="user-profile-sidebar-area">
-                <!-- About User -->
-                <h6 class="section-label mb-1">About</h6>
-                <p>Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop.</p>
-                <!-- About User -->
-                <!-- User's personal information -->
-                <div class="personal-info">
-                  <h6 class="section-label mb-1 mt-3">Personal Information</h6>
-                  <ul class="list-unstyled">
-                    <li class="mb-1">
-                      <i data-feather="mail" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">kristycandy@email.com</span>
-                    </li>
-                    <li class="mb-1">
-                      <i data-feather="phone-call" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">+1(123) 456 - 7890</span>
-                    </li>
-                    <li>
-                      <i data-feather="clock" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">Mon - Fri 10AM - 8PM</span>
-                    </li>
-                  </ul>
-                </div>
-                <!--/ User's personal information -->
-
-                <!-- User's Links -->
-                <div class="more-options">
-                  <h6 class="section-label mb-1 mt-3">Options</h6>
-                  <ul class="list-unstyled">
-                    <li class="cursor-pointer mb-1">
-                      <i data-feather="tag" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">Add Tag</span>
-                    </li>
-                    <li class="cursor-pointer mb-1">
-                      <i data-feather="star" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">Important Contact</span>
-                    </li>
-                    <li class="cursor-pointer mb-1">
-                      <i data-feather="image" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">Shared Media</span>
-                    </li>
-                    <li class="cursor-pointer mb-1">
-                      <i data-feather="trash" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">Delete Contact</span>
-                    </li>
-                    <li class="cursor-pointer">
-                      <i data-feather="slash" class="font-medium-2 me-50"></i>
-                      <span class="align-middle">Block Contact</span>
-                    </li>
-                  </ul>
-                </div>
-                <!--/ User's Links -->
-              </div>
             </div>
-            <!--/ User Chat profile right area -->
-
-          </div>
         </div>
-      </div>
+        <!-- / Content -->
+        <div class="content-backdrop fade"></div>
     </div>
-  </div>
-  <!-- END: Content-->
+    <!-- Content wrapper -->
+    <div class="drag-target"></div>
+   
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const sidebarToggle = document.getElementById("sidebarToggle");
+        const sidebarCloseToggle = document.getElementById("sidebarCloseToggle");
+        const sidebar = document.querySelector("#app-chat-contacts");
+
+        sidebarToggle.addEventListener("click", function() {
+            const sidebarCollapsed = sidebar.classList.contains("collapse");
+            if (sidebarCollapsed) {
+                sidebar.classList.remove("show");
+            } else {
+                sidebar.classList.add("show");
+            }
+        });
+
+        sidebarCloseToggle.addEventListener("click", function() {
+            const sidebarCollapsed = sidebar.classList.contains("show");
+            if (sidebarCollapsed) {
+                sidebar.classList.remove("show");
+            } else {
+                sidebar.classList.add("show");
+            }
+        });
+    });
+    </script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/jquery/jquery.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/popper/popper.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/js/bootstrap.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/hammer/hammer.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/i18n/i18n.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="<?= base_url('public/assets-new')?>/vendor/js/menu.js"></script>
+    
+    <!-- endbuild -->
+    
+    <!-- Vendors JS -->
+    <script src="<?= base_url('public/assets-new')?>/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <!-- Main JS -->
+    <script src="<?= base_url('public/assets-new')?>/js/main.js"></script>
+    <!-- Page JS -->
+    <script src="<?= base_url('public/assets-new')?>/js/app-chat.js" defer></script>
+    
+</body>
+
+</html>

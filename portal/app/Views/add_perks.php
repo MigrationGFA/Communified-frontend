@@ -302,9 +302,9 @@ $(wrapperx).append('<div class="removeMoreot"><div data-repeater-item><div class
     $.ajax({
      data:formData,
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/Perkspostpro",
+     url: "<?php echo base_url("gfa/Perkspostpro"); ?>",
 	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".displayAction").html('Uploading Perks...'); $(".EventBtn").prop('disabled', true);},
+	 beforeSend:function() {$(".displayAction").html('Uploading Perks...'); },
 	 processData: false,
     contentType: false,
       success: function(data) {

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?php if(!empty($page_title)){ echo $page_title; } ?></title>
-    <link rel="apple-touch-icon" href="<?php echo base_url('public/assets/app-assets/images/ico/apple-icon-120.html'); ?>">
-    <link rel="icon" href="https://getfundedafrica.com/images/fav.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png">
+    <link rel="icon" href="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" sizes="32x32" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
 
@@ -55,7 +55,7 @@ table, th, td {
      <div class="col-lg-1">
      <a class="brand-logo" href="<?php echo base_url(); ?>">
      
-      <img src="<?php echo base_url('public/assets/images/gfa-logo.png'); ?>">
+<img src="<?php echo base_url('public/assets/images/communified-logo.png'); ?>">
     </a>
     </div>-->
     <br><!--

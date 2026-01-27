@@ -1,3 +1,8 @@
+<?php 
+                $this->gfa_model = model('App\Models\GfaModel');
+                $this->admin_model = model('App\Models\AdminModel');
+           ?>
+
 <div class="app-content content">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
@@ -47,7 +52,7 @@
           <form action="#" id="#EventForm" class="form EventForm" enctype="multipart/form-data">
             <div class="row">
             <?php   
-                    $updatePerks =  $this->gfa_model->getPerksById($email,$id);   ?>
+                    $updatePerks =  $this->gfa_model->getPerksByIdDetails($id);   ?>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
                   <select  class="form-select" name="sub_type" placeholder="Subscription Type">
@@ -313,9 +318,9 @@ $(wrapperx).append('<div class="removeMoreot"><div data-repeater-item><div class
     $.ajax({
      data:formData,
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/updatePerkspostpro",
+     url: "<?php echo base_url("gfa/updatePerkspostpro"); ?>",
 	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".displayAction").html('Updating Perks...'); $(".EventBtn").prop('disabled', true);},
+	 beforeSend:function() {$(".displayAction").html('Updating Perks...'); },
 	 processData: false,
     contentType: false,
       success: function(data) {
@@ -333,7 +338,7 @@ $(wrapperx).append('<div class="removeMoreot"><div data-repeater-item><div class
     $.ajax({
      data:{textData:textData,ref_id:ref_id},
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/updatePerkspostpro_ext",
+     url: "<?php echo base_url("gfa/updatePerkspostpro_ext"); ?>",
       success: function(data) {
         
 	  $(".displayActionx").html(data);  

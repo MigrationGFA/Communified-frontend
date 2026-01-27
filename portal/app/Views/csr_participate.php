@@ -13,11 +13,11 @@
                 <h2 class="content-header-title float-start mb-0">CRS</h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/dashboard"); ?>">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/dashboard"); ?>"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Community Social Responsibilty</a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Community Social Responsibilty') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/report"); ?>">Weekly Report</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/report"); ?>"><?php echo lang('translation.Weekly Report') ?></a>
                     </li>
                     
                   </ol>
@@ -86,7 +86,7 @@ $row =  $this->gfa_model->getAllCsr(); foreach($row as $rowStoryArray){ ?>
                 <!--<span class="text-body fw-bold">76 Comments</span>-->
               </div>
             </a>
-            <a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>" class="fw-bold">Read More</a>
+            <a href="<?php echo base_url()?>gfa/csr/<?php echo $rowStoryArray['title']; ?>" class="fw-bold"><?php echo lang('translation.Read More') ?></a>
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@ $row =  $this->gfa_model->getAllCsr(); foreach($row as $rowStoryArray){ ?>
   <!-- Search bar -->
   <div class="blog-search">
     <div class="input-group input-group-merge">
-      <input type="text" class="form-control" placeholder="Search here" />
+      <input type="text" class="form-control" placeholder="<?php echo lang('translation.Search here') ?>" />
       <span class="input-group-text cursor-pointer">
         <i data-feather="search"></i>
       </span>
@@ -139,7 +139,7 @@ $row =  $this->gfa_model->getAllCsr(); foreach($row as $rowStoryArray){ ?>
 
   <!-- Recent Posts -->
    <div class="blog-recent-posts mt-3">
-    <h6 class="section-label">Posted Events</h6>
+    <h6 class="section-label"><?php echo lang('translation.POSTED EVENTS') ?></h6>
     <div class="mt-75">
 <?php 
 

@@ -10,12 +10,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Add CSR</h2>
+                <h2 class="content-header-title float-start mb-0"><?php echo lang('translation.Add CSR') ?></h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/dashboard"); ?>">Home</a>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url("gfa/corporate_dashboard"); ?>"><?php echo lang('translation.Home') ?></a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Corperate Social Responsibility</a>
+                    <li class="breadcrumb-item"><a href="#"><?php echo lang('translation.Corporate Social Responsibility') ?></a>
                     </li>
                     
                     
@@ -39,32 +39,32 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" name="title" class="form-control" required placeholder="Title" />
+                  <input type="text" name="title" class="form-control" required placeholder="<?php echo lang('translation.Title') ?>" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="venue" placeholder="City/State/Country" />
+                  <input type="text" class="form-control" name="venue" placeholder="<?php echo lang('translation.City/State/Country') ?>" />
                 </div>
               </div>
-               <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">Start Date</label>
+        <div class="col-md-6 mb-1">
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.Start Date') ?></label>
           <input
             type="text"
             id="fp-date-time"
             class="form-control flatpickr-date-time"
             name="start_date"
-            placeholder="YYYY-MM-DD HH:MM"
+            placeholder="JJ-MM-AAAA HH:MM"
           />
         </div>
          <div class="col-md-6 mb-1">
-          <label class="form-label" for="fp-date-time">End Date</label>
+          <label class="form-label" for="fp-date-time"><?php echo lang('translation.End Date') ?></label>
           <input
             type="text"
-            id="fp-date-time"
+            id="fp-date-time2"
             name="end_date"
             class="form-control flatpickr-date-time"
-            placeholder="YYYY-MM-DD HH:MM"
+            placeholder="JJ-MM-AAAA HH:MM"
           />
           
           
@@ -73,8 +73,8 @@
                 <div class="mb-2">
                   <select  class="form-control" name="ticket" placeholder="Free">
                      
-                 <option value="Free">Free</option>
-                  <option value="Paid">Paid</option> 
+                 <option value="Free"><?php echo lang('translation.Free') ?></option>
+                  <option value="Paid"><?php echo lang('translation.Paids') ?></option> 
                     </select>
                 </div>
               </div>
@@ -83,8 +83,8 @@
                 <div class="mb-2">
                   <select  class="form-control" name="startup_view" placeholder="Availabilty">
                      
-                 <option value="all">All</option>
-                  <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Event']; ?>">Organisation(<?php echo strtoupper($this->gfa_model->getCorperateDetails($email)[0]['Event']) ?>)</option> 
+                 <option value="all"><?php echo lang('translation.All') ?></option>
+                  <option value="<?php echo $this->gfa_model->getCorperateDetails($email)[0]['Event']; ?>"><?php echo lang('translation.Organisation') ?>(<?php echo strtoupper($this->gfa_model->getCorperateDetails($email)[0]['Event']) ?>)</option> 
                     </select>
                 </div>
               </div>
@@ -94,24 +94,24 @@
               <!--  </div>-->
               <!--</div>-->
               <div class="col-sm-6 col-12">
-                  <label>CSR Cover Picture </label>
+                  <label><?php echo lang('translation.CSR Cover Picture') ?> </label>
                 <div class="mb-2">
-                  <input type="file" name="file[]" class="form-control" required placeholder="Event Cover Picture" />
+                  <input type="file" name="file[]" class="form-control" required placeholder="<?php echo lang('translation.Event Cover') ?> Picture" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="mb-2">
-                  <input type="text" class="form-control" name="videourl" placeholder="Video Url (youtube, vimeo e.t.c" />
+                  <input type="text" class="form-control" name="videourl" placeholder="<?php echo lang("translation.Video url (youtube, vimeo e.t.c)") ?>" />
                 </div>
               </div>
               
               
               <div class="col-12">
-                <textarea class="form-control mb-2" name="event" required rows="4" placeholder="Startup Event"></textarea>
+                <textarea class="form-control mb-2" name="event" required rows="4" placeholder="<?php echo lang("translation.Startup Event") ?>"></textarea>
               </div>
              
               <div class="col-12">
-                <button type="submit" class="btn btn-primary EventBtn">Post CSR</button><span class="displayAction"></span>
+                <button type="submit" class="btn btn-primary EventBtn"><?php echo lang("translation.Posted CSR") ?></button><span class="displayAction"></span>
               </div>
             </div>
           </form>
@@ -120,13 +120,16 @@
     </div>
     <!--/ Blog -->
     
-    <script>
+    <script>      
       $(function(){
+        
+      flatpickr(".flatpickr-date-time", {
+        enableTime: true,
+        dateFormat: "d-m-Y H:i", // French format: day-month-year hour:minute
+        locale: "fr", // Set locale to French
+      });
           
-          
-          
-          
-           $(".EventForm").submit(function(e) {
+    $(".EventForm").submit(function(e) {
     //---------------^---------------
     e.preventDefault();
 	//$(".saveFile3").html('Finish Uploading');
@@ -138,7 +141,7 @@
      type: "POST",
      url: "<?php echo base_url("gfa/Csrpostpro"); ?>",
 	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".displayAction").html('Submiting Event...'); $(".EventBtn").prop('disabled', true);},
+	 beforeSend:function() {$(".displayAction").html("Soumission de l'événement..."); $(".EventBtn").prop('disabled', true);},
 	 processData: false,
     contentType: false,
       success: function(data) {
@@ -176,7 +179,7 @@
   <!-- Search bar -->
   <div class="blog-search">
     <div class="input-group input-group-merge">
-      <input type="text" class="form-control" placeholder="Search here" />
+      <input type="text" class="form-control" placeholder="<?php echo lang("translation.Search here") ?>" />
       <span class="input-group-text cursor-pointer">
         <i data-feather="search"></i>
       </span>
@@ -186,7 +189,7 @@
 
   <!-- Recent Posts -->
   <div class="blog-recent-posts mt-3">
-    <h6 class="section-label">Your Posted CSR</h6>
+    <h6 class="section-label"><?php echo lang("translation.Posted CSR") ?></h6>
     <div class="mt-75">
 <?php 
 

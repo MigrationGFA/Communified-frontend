@@ -18,7 +18,7 @@
 
 <!--The industries the investor invests in -->
 <i data-feather="list" class="user-timeline-title-icon"></i>
-            <h4 class="card-title">Manage Admin</h4>
+            <h4 class="card-title"><?php echo lang('translation.Manage Admin') ?></h4>
 <!--The size of cheques the investor writes -->
 
 <!--The investment stage -->
@@ -29,12 +29,12 @@
         <div class="col-lg-12 text-center mb-2">
             <?php  
         if($account_type == 'corperate'){  ?>
-        <a href="<?php echo base_url("gfa/invite_user"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ Add User</a>
+        <a href="<?php echo base_url("gfa/invite_user"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ <?php echo lang('translation.Add User') ?></a>
         <?php } 
          if($account_type == 'startup'){  
              
         ?>
-                <a href="<?php echo base_url("gfa/invite_user"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ Add User</a>
+                <a href="<?php echo base_url("gfa/invite_user"); ?>" class="btn btn-primary btn-next" style="float:auto;">+ <?php echo lang('translation.Add User') ?></a>
                 <?php }  ?>
         </div>
       <div class="card card-company-table">
@@ -65,9 +65,9 @@
               </td>
               </tr>
                 <tr>
-                  <th>Profile </th>
-                  <th>Email</th>
-                  <th>Admin Status</th>
+                  <th><?php echo lang('translation.Profile') ?> </th>
+                  <th><?php echo lang('translation.Email') ?></th>
+                  <th><?php echo lang('translation.Admin Status') ?></th>
                   
                   <th></th>
                 </tr>
@@ -97,7 +97,7 @@
                       </div>
                       <div>
                         <div class="fw-bolder"><?php echo $rowArray['Name'] ?></div>
-                        <div class="font-small-2 text-muted"><?php echo $rowArray['Position'] ; ?></div>
+                        <div class="font-small-2 text-muted"><?php echo lang("translation.{$rowArray['Position']}") ; ?></div>
                         <div class="font-small-2 text-muted"><?php echo $rowArray['Phone'] ; ?></div>
                       </div>
                     </div>
@@ -115,7 +115,7 @@
                       <div class="avatar bg-light-primary me-1">
                         
                       </div>
-                      <span><?php echo str_replace("?","",$rowArray['Admin']); ?></span>
+                      <span><?php echo str_replace("?","",lang("translation.{$rowArray['Admin']}")); ?></span>
                     </div>
                   </td>
                   
@@ -149,7 +149,7 @@
                 $("tr").on('click','.deletebtn',function() {
     var id = $(this).find('span').text();
     //$(".showDataDel").val(id);
-  var choice = confirm('Do you really want to delete this record?');
+  var choice = confirm('Voulez-vous vraiment supprimer cet enregistrement ?');
     if(choice === true) {
   $(this).closest('tr').remove();
         //$('tr.myTable').remove();

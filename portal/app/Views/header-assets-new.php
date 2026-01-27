@@ -13,7 +13,7 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Investor Finder App">
     <meta property="og:description" content="Find the right investors for your startup. Connect with angel investors, venture capitalists, and more.">
-    <meta property="og:image" content="https://investorsfinder.getfundedafrica.com/public/assets-new/img/gfa-logo.png">
+    <meta property="og:image" content="https://labelpme.cipme.ci/public/assets/img/logo/favicon.ico">
     <meta property="og:url" content="https://investorsfinder.getfundedafrica.com/">
     <meta property="og:type" content="website">
         <!-- Canonical SEO -->
@@ -21,8 +21,8 @@
     
     
     <!-- Favicon -->
-    <link rel="icon" href="https://getfundedafrica.com/images/fav.png" sizes="16x16" type="image/png">
-
+    <link rel="apple-touch-icon" href="<?php echo base_url('public/favicon-nora.png') ?>">
+    <link rel="icon" href="<?php echo base_url('public/favicon-nora.png') ?>" sizes="32x32" type="image/png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -150,17 +150,5 @@
 			display: block;
 			text-align: center;
 		}
- /* CSS to disable text selection */
-        body {
-            -webkit-user-select: none; /* Safari */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Standard */
-        }
     </style>
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
     </head>

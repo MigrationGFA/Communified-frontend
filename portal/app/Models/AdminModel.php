@@ -10,6 +10,287 @@ class AdminModel extends Model
   protected $table = 'payment';
 	 
 //GENERAL
+public function sendMailApi($recipient_email, $message,$subject){
+
+$mail = new PHPMailer;
+        
+        $mail->isSMTP();                            // Set mailer to use SMTP
+        $mail->Host = "mail.smtp2go.com";//"smtp.googlemail.com"; //'smtp.gmail.com';//'smtp.gmail.com';             // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                     // Enable SMTP authentication
+        $mail->Username = "cipme.ci";         
+        $mail->Password ="R4Qz93FHdRIL2FvN"; 
+        $mail->SMTPSecure = 'ssl';                  
+        $mail->Port =465;                         
+        $mail->From ="info@cipme.ci";                    
+        // $mail->Username = "cipme.ci";
+        // $mail->Password ="R4Qz93FHdRIL2FvN"; 
+        // $mail->SMTPSecure = 'ssl';                 
+        // $mail->Port =465; 
+        $mail->FromName ="CIPME";
+        //$mail->addReplyTo('info@trixpmedia.com');
+        $mail->addAddress($recipient_email);
+        //$mail->addBCC('bcc@example.com');
+        
+        $mail->isHTML(true);  // Set email format to HTML
+        
+        $bodyContent = $message;
+        
+        
+        $mail->Subject =$subject;
+        $mail->Body    = $message;
+        
+        if(!$mail->send()) {
+           // echo '1';
+            return '1';
+        } else {
+           return '2';
+        }
+
+}
+#=========================Blog Post ======================================
+public function insertBlogPost($data)
+{       
+    $query = $this->db->table('blogpost')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+public function countAllBlog()
+{
+    return $this->db->table('blogpost')
+        ->countAllResults();
+}
+
+public function getLimitBlogExt()
+    {
+        $query = $this->db->table('blogpost')
+                         ->orderBy('id', 'desc')
+        				->where('status =','Active')
+        				->limit(4)
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+public function getLimitBlog()
+    {
+        $query = $this->db->table('blogpost')
+                         ->orderBy('id', 'desc')
+        				->where('status =','Active')
+        				->limit(3)
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+public function get_blog_post($id)
+    {
+        $query = $this->db->table('blogpost')
+                         ->where('id', $id)
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+public function blog_post()
+    {
+        $query = $this->db->table('blogpost')
+                         ->orderBy('id', 'desc')
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+public function blog_post_exist($sub_type)
+    {
+        $query = $this->db->table('blogpost')
+                         ->where('title', $title)
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+    
+    public function updateBlogPost($data, $id)
+{
+    $this->db->table('blogpost')
+             ->where('id', $id)
+             ->update($data);
+
+    if ($this->db->affectedRows() > 0) {
+        return $this->db->affectedRows();
+    } else {
+        return 0;
+    }
+}
+
+public function deleteBlog($id)
+{
+    $this->db->table('blogpost')->where('id', $id)->delete();
+}
+
+#=======================Admin Update======================================
+public function countResourceDownloadById($resource_id)
+    {
+        $query = $this->db->table('downloaded_resources')
+                         ->where('resource_id', $resource_id) 
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getNumRows();
+        } else {
+            return 0;
+        }
+    }
+public function getAllResourceCategory()
+    {
+        $query = $this->db->table('resource_category')
+                         ->orderBy('id', 'desc')
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+
+public function getAllResource()
+    {
+        $query = $this->db->table('resource')
+                         ->orderBy('id', 'desc')
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+    
+    public function getResourceCategoryById($id)
+    {
+        $query = $this->db->table('resource_category')
+                         ->where('id', $id)
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+    
+    public function getResourceById($id)
+    {
+        $query = $this->db->table('resource')
+                         ->where('id', $id)
+                         ->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+    }
+    
+    public function updateReourceCategory($data, $id)
+    {
+        $this->db->table('resource_category')
+             ->where('id', $id)
+             ->update($data);
+
+            return $this->db->affectedRows();
+    }
+    
+    public function updateReource($data, $id)
+    {
+        $this->db->table('resource')
+             ->where('id', $id)
+             ->update($data);
+
+            return $this->db->affectedRows();
+    }
+
+public function insertReourceCategory($data)
+{       
+    $query = $this->db->table('resource_category')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+public function insertSubAdmin($data)
+{       
+    $query = $this->db->table('admin')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+public function insertReource($data)
+{       
+    $query = $this->db->table('resource')->insert($data);
+    
+    if ($query)
+    {
+        return $this->db->affectedRows();
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+public function deleteResourceCategory($id)
+    {
+            $builderCourses = $this->db->table('resource_category');  
+            $builderCourses->where('id', $id);
+            $builderCourses->delete();
+
+    }
+public function deleteResource($id)
+    {
+            $builderCourses = $this->db->table('resource');  
+            $builderCourses->where('id', $id);
+            $builderCourses->delete();
+
+    }
+#=====================End Admin Update====================================
 
 public function getAdminByEmail($email)
     {
@@ -24,11 +305,12 @@ public function getAdminByEmail($email)
         }
     }
 
+
+
 public function matchAllStartup($PrimaryBusinessIndustry, $CurrentInvestmentStage, $Startup_Implementation_Stage, $CountryHQ, $Next_Funding_Round_Target_Sought)
     {
-        $builder = $this->db->table('Startups_Inv')
-            ->where('Next_Funding_Round_Target_Sought >=', $Next_Funding_Round_Target_Sought);
-
+        $builder = $this->db->table('startups_inv')
+        ->where('Next_Funding_Round_Target_Sought >=', $Next_Funding_Round_Target_Sought); 
         if (!empty($CurrentInvestmentStage)) {
             $builder->like('CurrentInvestmentStage', $CurrentInvestmentStage, 'both');
         }
@@ -63,15 +345,239 @@ public function matchAllStartup($PrimaryBusinessIndustry, $CurrentInvestmentStag
         }
         
     }
+
+    public function matchAllInvestor($Industry_Focus,$Investor_Name,$Min_Cheque)
+    {
+        $builder = $this->db->table('investor');
+        
+        if (!empty($Investor_Name)) {
+            $builder->like('Investor_Name', $Investor_Name, 'both');
+        }
+
+        if (!empty($Min_Cheque)) {
+            $builder->where('Min_Cheque >=', $Min_Cheque,);
+        }
+
+       
+
+        if (!empty($Industry_Focus)) {
+            $builder->groupStart();
+            foreach ($Industry_Focus as $key => $industry) {
+                if ($key === 0) {
+                    $builder->like('Industry_Focus', $industry, 'both');
+                } else {
+                    $builder->orLike('Industry_Focus', $industry, 'both');
+                }
+            }
+            $builder->groupEnd();
+        }
+
+        $query = $builder->get();
+        $countRows = $query->getNumRows();
+
+        if ($countRows > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+        
+    }
+    public function matchAllCorporate($Need_service,$Solution_Corperate)
+    {
+        $builder = $this->db->table('cooperate_info');
+        
+        if (!empty($Need_service)) {
+            $builder->like('Need_service', $Need_service, 'both');
+        }
+
+        if (!empty($Solution_Corperate)) {
+            $builder->like('Solution_Corperate', $Solution_Corperate, 'both');
+        }
+
+       $query = $builder->get();
+        $countRows = $query->getNumRows();
+
+        if ($countRows > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+        
+    }
+
+        
+    public function matchAllMentor($IndustryArray,$Mentor_name,$Mentor_focus)
+    {
+        $builder = $this->db->table('mentor_info');
+        
+        if (!empty($Mentor_name)) {
+            $builder->like('Mentor_name', $Mentor_name, 'both');
+        }
+
+        if (!empty($Mentor_focus)) {
+            $builder->like('Mentors_focus', $Mentor_focus, 'both');
+        }
+
+       
+
+        if (!empty($IndustryArray)) {
+            $builder->groupStart();
+            foreach ($IndustryArray as $key => $industry) {
+                if ($key === 0) {
+                    $builder->like('Industry', $industry, 'both');
+                } else {
+                    $builder->orLike('Industry', $industry, 'both');
+                }
+            }
+            $builder->groupEnd();
+        }
+
+        $query = $builder->get();
+        $countRows = $query->getNumRows();
+
+        if ($countRows > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+        
+    }
+public function matchAllSme($PrimaryBusinessIndustry, $Primary_Contact_Name, $Startup_Implementation_Stage)
+    {
+        $builder = $this->db->table('startups_inv');
+        
+        if (!empty($Primary_Contact_Name)) {
+            $builder->like('Primary_Contact_Name', $Primary_Contact_Name, 'both');
+        }
+
+        if (!empty($Startup_Implementation_Stage)) {
+            $builder->like('Startup_Implementation_Stage', $Startup_Implementation_Stage, 'both');
+        }
+
+       
+
+        if (!empty($PrimaryBusinessIndustry)) {
+            $builder->groupStart();
+            foreach ($PrimaryBusinessIndustry as $key => $industry) {
+                if ($key === 0) {
+                    $builder->like('PrimaryBusinessIndustry', $industry, 'both');
+                } else {
+                    $builder->orLike('PrimaryBusinessIndustry', $industry, 'both');
+                }
+            }
+            $builder->groupEnd();
+        }
+
+        $query = $builder->get();
+        $countRows = $query->getNumRows();
+
+        if ($countRows > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+        
+    }
+#==================================== Mentor_Startups=================================================
+public function matchAllMentorStartup($PrimaryBusinessIndustry, $Mentorship, $Startup_Implementation_Stage)
+    {
+        $builder = $this->db->table('startups_inv');
+        
+        
+        if (!empty($Mentorship)) {
+            $builder->groupStart();
+            foreach ($Mentorship as $key => $mentor) {
+                if ($key === 0) {
+                    $builder->like('Mentorship', $mentor, 'both');
+                } else {
+                    $builder->orLike('Mentorship', $mentor, 'both');
+                }
+            }
+            $builder->groupEnd();
+        }
+
+        if (!empty($Startup_Implementation_Stage)) {
+            $builder->like('Startup_Implementation_Stage', $Startup_Implementation_Stage, 'both');
+        }
+
+       
+
+        if (!empty($PrimaryBusinessIndustry)) {
+            $builder->groupStart();
+            foreach ($PrimaryBusinessIndustry as $key => $industry) {
+                if ($key === 0) {
+                    $builder->like('PrimaryBusinessIndustry', $industry, 'both');
+                } else {
+                    $builder->orLike('PrimaryBusinessIndustry', $industry, 'both');
+                }
+            }
+            $builder->groupEnd();
+        }
+
+        $query = $builder->get();
+        $countRows = $query->getNumRows();
+
+        if ($countRows > 0) {
+            return $query->getResultArray();
+        } else {
+            return [];
+        }
+        
+    }
+public function countMentorConnect($email,$connectionType)
+{           
+        $builder = $this->db->table('all_connections');
+        $builder->where('email', $email);
+        $builder->where('connection', $connectionType);
+        $query = $builder->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getNumRows();
+        } else {
+            return 0;
+        }
+    
+            
+}
+public function countMentorStartup($primaryBusinessIndustry, $mentorForcus, $startupImplementationStage)
+{
+    return $this->db->table('startups_inv')
+       
+        ->groupStart()
+            ->like("PrimaryBusinessIndustry", $primaryBusinessIndustry ?? '', 'both', '!', true)
+            ->orLike("CurrentInvestmentStage", $startupImplementationStage ?? '', 'both', '!', true)
+            ->orLike("Startup_Implementation_Stage", $startupImplementationStage ?? '', 'both', '!', true)
+            ->orLike("Mentorship", $mentorForcus ?? '', 'both', '!', true)
+        ->groupEnd()
+        ->get()
+        ->getNumRows();
+}
+public function matchMentorStartup($primaryBusinessIndustry, $mentorForcus, $startupImplementationStage)
+{
+    return $this->db->table('startups_inv')
+       
+        ->groupStart()
+            ->like("PrimaryBusinessIndustry", $primaryBusinessIndustry ?? '', 'both', '!', true)
+            // ->orLike("CurrentInvestmentStage", $startupImplementationStage ?? '', 'both', '!', true)
+            ->orLike("Startup_Implementation_Stage", $startupImplementationStage ?? '', 'both', '!', true)
+            ->orLike("Mentorship", $mentorForcus ?? '', 'both', '!', true)
+        ->groupEnd()
+        ->get()
+        ->getResultArray();
+}
+
+#=====================================End Mentor_Startups ============================================
+//edit-investor 1
+
 public function matchStartupDefault($primaryBusinessIndustry, $currentInvestmentStage, $startupImplementationStage, $countryHQ, $nextFundingRoundTargetSought)
 {
-    return $this->table('Startups_Inv')
-        ->where("Next_Funding_Round_Target_Sought >=", $nextFundingRoundTargetSought)
+    return $this->db->table('startups_inv')
+        ->where("Next_Funding_Round_Target_Sought >=", $nextFundingRoundTargetSought ?? '')
         ->groupStart()
-            ->like("PrimaryBusinessIndustry", $primaryBusinessIndustry, 'both', '!', true)
-            ->orLike("CurrentInvestmentStage", $currentInvestmentStage, 'both', '!', true)
-            ->orLike("Startup_Implementation_Stage", $startupImplementationStage, 'both', '!', true)
-            ->orLike("CountryHQ", $countryHQ, 'both', '!', true)
+            ->like("PrimaryBusinessIndustry", $primaryBusinessIndustry ?? '', 'both', '!', true)
+            // ->orLike("CurrentInvestmentStage", $currentInvestmentStage ?? '', 'both', '!', true)
+            ->orLike("Startup_Implementation_Stage", $startupImplementationStage ?? '', 'both', '!', true)
+            ->orLike("CountryHQ", $countryHQ ?? '', 'both', '!', true)
         ->groupEnd()
         ->get()
         ->getResultArray();
@@ -80,16 +586,18 @@ public function matchStartupDefault($primaryBusinessIndustry, $currentInvestment
 
 public function countMatchStartupDefault($primaryBusinessIndustry, $currentInvestmentStage, $startupImplementationStage, $countryHQ, $nextFundingRoundTargetSought)
 {
-    $builder = $this->table('Startups_Inv')
-        ->like('PrimaryBusinessIndustry', $primaryBusinessIndustry, 'both', '!', true)
-        ->orLike('CountryHQ', $countryHQ, 'both', '!', true)
-        ->orLike('Startup_Implementation_Stage', $startupImplementationStage, 'both', '!', true)
-        ->orLike('CurrentInvestmentStage', $currentInvestmentStage, 'both', '!', true)
-        ->where('Next_Funding_Round_Target_Sought >=', $nextFundingRoundTargetSought);
+    $builder = $this->db->table('startups_inv')
+        ->like('PrimaryBusinessIndustry', $primaryBusinessIndustry ?? '', 'both', '!', true)
+        ->orLike('CountryHQ', $countryHQ ?? '', 'both', '!', true)
+        ->orLike('Startup_Implementation_Stage', $startupImplementationStage ?? '', 'both', '!', true)
+        ->orLike('CurrentInvestmentStage', $currentInvestmentStage ?? '', 'both', '!', true)
+        ->where('Next_Funding_Round_Target_Sought >=', $nextFundingRoundTargetSought ?? '');
 
     $query = $builder->get();
     return $query->getNumRows();
 }
+
+//edit-investor 1 end
 
 public function getAllJobsBySearch($searchJobs)
 {
@@ -127,6 +635,50 @@ public function applyEventCheck($event_id)
 {
     $builder = $this->db->table('wp_event')
         ->where('id', $event_id);
+
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    if ($count_row > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+public function getSubAdminId($id)
+{
+    $builder = $this->db->table('admin')
+        ->where('id', $id);
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    if ($count_row > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+public function getAllSubAdmin($login_type)
+{
+    $builder = $this->db->table('admin')
+        ->where('login_type', $login_type);
+
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    if ($count_row > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+public function checkSubAdmin($email)
+{
+    $builder = $this->db->table('admin')
+        ->where('email', $email);
 
     $query = $builder->get();
     $count_row = $query->getNumRows();
@@ -269,15 +821,20 @@ public function countAllConnectionsByAdmin()
 
 public function countAllConnections($email)
 {
-    return $this->db->table('all_connections')
-        ->where('email', $email)
-        ->countAllResults();
+    
+	$builder = $this->db->table('all_connections')
+        ->where('email', $email);
+
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    return $count_row;
 }
 
 public function countAllJobs()
 {
     return $this->db->table('jobpost')
-        ->countAllResults();
+        ->getNumRows();
 }
 
 public function countMatchCandidateApp($country, $industry)
@@ -399,6 +956,42 @@ public function countStoryPostByStartup($ref)
     // You can uncomment the following line if you want to include additional conditions.
     // ->orWhere('connection', 'mentor-startup');
 
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    return $count_row;
+}
+
+public function count_unleash_quote()
+{
+    $builder = $this->db->table('get_quote')
+        ->where('email !=', '');
+        //->where('connection', $connect);
+    
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    return $count_row;
+}
+
+public function count_unleash_contact()
+{
+    $builder = $this->db->table('unleash_contact')
+        ->where('email !=', '');
+        //->where('connection', $connect);
+    
+    $query = $builder->get();
+    $count_row = $query->getNumRows();
+
+    return $count_row;
+}
+
+public function count_unleash_newsletter()
+{
+    $builder = $this->db->table('unleash_newsletter')
+        ->where('email !=', '');
+        //->where('connection', $connect);
+    
     $query = $builder->get();
     $count_row = $query->getNumRows();
 
@@ -652,7 +1245,7 @@ public function countMatchCorperateStartup($Solution_Corperate, $Core_Interest_C
 {
     $Core_Interest_Corporate = str_replace("'", '', $Core_Interest_Corporate);
 
-    $builder = $this->db->table('Startups_Inv_Ext')
+    $builder = $this->db->table('startups_inv_ext')
         ->where('Email !=', ''); // Assuming you want to exclude rows where Email is empty
 
     if (!empty($Solution_Corperate)) {
@@ -677,7 +1270,7 @@ public function MatchCorperateStartup($Solution_Corperate, $Core_Interest_Corpor
 {
     $Core_Interest_Corporate = str_replace("'", '', $Core_Interest_Corporate);
 
-    $builder = $this->db->table('Startups_Inv_Ext')
+    $builder = $this->db->table('startups_inv_ext')
         ->where('Email !=', ''); // Assuming you want to exclude rows where Email is empty
 
     if (!empty($Solution_Corperate)) {
@@ -702,12 +1295,12 @@ public function MatchMicrosftStartup($Solution_Corperate, $Core_Interest_Corpora
 {
     $Core_Interest_Corporate = str_replace("'", '', $Core_Interest_Corporate);
 
-    $builder = $this->db->table('Startups_Inv_Ext')
+    $builder = $this->db->table('startups_inv_ext')
         ->where('Email !=', '') // Assuming you want to exclude rows where Email is empty
         ->where('Event', 'Kenya_Microsoft')
         ->groupStart()
-        ->like('Solution_Corperate', $Solution_Corperate, 'both')
-        ->orLike('Core_Interest_Corporate', $Core_Interest_Corporate, 'both')
+        ->like('Solution_Corperate', $Solution_Corperate ??'', 'both')
+        ->orLike('Core_Interest_Corporate', $Core_Interest_Corporate ??'', 'both')
         ->groupEnd();
 
     $query = $builder->get();
@@ -911,30 +1504,23 @@ public function countMatchInvestorDefaultApp($Industry_Focus,$Investment_Stage_F
 }
 
 public function countAllStartup($Solution_Corperate, $Core_Interest_Corporate)
-{	
-    $this->db->like('Solution_Corperate', $Solution_Corperate, 'both');
-    $this->db->orLike('Core_Interest_Corporate', $Core_Interest_Corporate, 'both');
-    $query = $this->db->get('Startups_Inv_Ext');
-    $count_row = $query->getNumRows();
-    if ($count_row > 0 && $Solution_Corperate != '') {
-        return $count_row;
-    } else {
-        return 0;
-    }
+{   
+    $builder = $this->db->table('startups_inv_ext');
+    $builder->like('Solution_Corperate', $Solution_Corperate ?? '', 'both');
+    $builder->orLike('Core_Interest_Corporate', $Core_Interest_Corporate ?? '', 'both');
+    $count_row = $builder->countAllResults(); // Count the number of results
+    return $count_row;
 }
 
 public function countMatchCooperateDefaultApp($Solution_Corperate, $Core_Interest_Corporate)
-{	
-    $this->db->like('Solution_Corperate', $Solution_Corperate, 'both');
-    $this->db->orLike('Core_Interest_Corporate', $Core_Interest_Corporate, 'both');
-    $query = $this->db->get('cooperate_info');
-    $count_row = $query->getNumRows();
-    if ($count_row > 0) {
-        return $count_row;
-    } else {
-        return 0;
-    }
+{   
+    $builder = $this->db->table('cooperate_info');
+    $builder->like('Solution_Corperate', $Solution_Corperate ?? '', 'both');
+    $builder->orLike('Core_Interest_Corporate', $Core_Interest_Corporate ?? '', 'both');
+    $count_row = $builder->countAllResults(); // Count the number of results
+    return $count_row;
 }
+
 
 public function countMatchMentorDefaultApp($Industry_Focus,$MentorshipFocus,$Implementation_Stage_Focus)
 {           
@@ -1039,7 +1625,7 @@ public function searchStartupsNNN($minCheque)
 {		
     $min = 0;
     $this->db->like('Startup_Implementation_Stage', $minCheque, 'before | after | both');
-    $query = $this->db->get('Startups_Inv');
+    $query = $this->db->get('startups_inv');
     $count_row = $query->getNumRows();
     if ($query->num_rows() > 0) {
         return $query->getResultArray();
@@ -1064,7 +1650,7 @@ public function searchInvestorNNN($minCheque)
 public function searchStartupsNNIS($queryEntered)
 {
     $this->db->like('Startup_Implementation_Stage', $queryEntered, 'before | after | both');
-    $query = $this->db->get('Startups_Inv');
+    $query = $this->db->get('startups_inv');
     $count_row = $query->getNumRows();
     if ($query->num_rows() > 0) {
         return $query->getResultArray();
@@ -1076,7 +1662,7 @@ public function searchStartupsNNIS($queryEntered)
 public function searchStartupsNN($queryEntered)
 {
     $this->db->like('CountryHQ', $queryEntered, 'before | after | both');
-    $query = $this->db->get('Startups_Inv');
+    $query = $this->db->get('startups_inv');
     $count_row = $query->getNumRows();
     if ($query->num_rows() > 0) {
         return $query->getResultArray();
@@ -1112,7 +1698,7 @@ public function searchInvestorNN($queryEntered)
 public function searchStartupsNS($queryEntered)
 {
     $this->db->like('CurrentInvestmentStage', $queryEntered, 'before | after | both');
-    $query = $this->db->get('Startups_Inv');
+    $query = $this->db->get('startups_inv');
     $count_row = $query->getNumRows();
     if ($query->num_rows() > 0) {
         return $query->getResultArray();
@@ -1124,7 +1710,7 @@ public function searchStartupsNS($queryEntered)
 public function searchStartupsN($queryEntered)
 {
     $this->db->like('PrimaryBusinessIndustry', $queryEntered, 'before | after | both');
-    $query = $this->db->get('Startups_Inv');
+    $query = $this->db->get('startups_inv');
     $count_row = $query->getNumRows();
     if ($query->num_rows() > 0) {
         return $query->getResultArray();
@@ -1189,7 +1775,7 @@ public function searchIndustry($queryEntered)
 
 public function implementationStageByCode($stages)
 {
-    $query = $this->db->table('Implementation_Stages')
+    $query = $this->db->table('implementation_stages')
                       ->where('Stages', $stages)
                       ->get();
 
@@ -1201,7 +1787,7 @@ public function implementationStageByCode($stages)
 }
 public function implementationStage()
 {
-    $query = $this->db->table('Implementation_Stages')
+    $query = $this->db->table('implementation_stages')
                       ->orderBy('id', 'ASC')
                       ->get();
 
@@ -1286,7 +1872,7 @@ public function countWebinarAttendance($event)
 
 public function countFreshworksStartup()
 {			
-	$builder = $this->db->table('Startups_Inv_Ext');
+	$builder = $this->db->table('startups_inv_ext');
     $builder->where('Event', 'Freshworks');
     
     $query = $builder->get();
@@ -1302,7 +1888,7 @@ public function countFreshworksStartup()
 
 public function countMicrosoftStartup($Event)
 {			
-	$builder = $this->db->table('Startups_Inv_Ext');
+	$builder = $this->db->table('startups_inv_ext');
 
     $builder->where('Event', $Event);
     $query = $builder->get();
@@ -1351,8 +1937,9 @@ public function countAllUsersIndividuals()
 
     $builder->where('account_type', 'individual')
             ->orWhere('account_type', null);
-
-    $count_row = $builder->countAllResults();
+			//->get();
+ 	$query = $builder->get();
+    $count_row = $query->getNumRows();
 
     if ($count_row > 0) {
         return $count_row;
@@ -1377,7 +1964,7 @@ public function countAllUsers()
 public function countOnboardingFunding()
 {			
 
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     $builder->where('Interest_Fund_Raise', 'Fund Raising');
     $query = $builder->get();
     $count_row = $query->getNumRows();
@@ -1394,7 +1981,7 @@ public function countOnboardingFunding()
 public function countOnboardingStartups()
 {			
 		
-	$query = $this->db->table('Startups_Inv')->get();
+	$query = $this->db->table('startups_inv')->get();
     $count_row = $query->getNumRows();
 
     if ($count_row > 0) {
@@ -1417,10 +2004,10 @@ public function countOnboardingMentors()
     }
 }
 
-public function countOnboardingAccelerators()
+public function countOnboardingaccelerators()
 {			
 		
-	$query = $this->db->table('Accelerator')->get(); // Retrieve data from the 'Accelerator' table
+	$query = $this->db->table('accelerator')->get(); // Retrieve data from the 'accelerator' table
     $count_row = $query->getNumRows(); // Get the number of rows
 
     if ($count_row > 0) {
@@ -1505,8 +2092,8 @@ public function countActiveSubcribers()
 
     $builder->where('subscription !=', 'Investor Readiness Cohort');
     $builder->where('status', 'active');
-
-    $count_row = $builder->countAllResults();
+	$query = $builder->get();
+    $count_row = $query->getNumRows();
 
     if ($count_row > 0) {
         return $count_row;
@@ -1520,7 +2107,8 @@ public function countOnboardingInsight()
 		
 	$builder = $this->db->table('onboard_individual');
     $builder->where('interest_insight_report', 'Insight Report');
-    $count_row = $builder->countAllResults();
+	$query = $builder->get();
+    $count_row = $query->getNumRows();
 
     if ($count_row > 0) {
         return $count_row;
@@ -1596,6 +2184,22 @@ public function countOnboardingGfaMax()
     }
 			
 }
+public function getOnboardingNews()
+{			
+		
+	$query = $this->db->table('onboard_update')
+	->where('interest_update', 'Get Update')
+	->get();
+
+	$count_row = $query->getNumRows();
+
+	if ($count_row > 0) {
+	return $query->getResultArray();
+	} else {
+	return 0;
+	}
+			
+}
 public function countOnboardingNews()
 {			
 		
@@ -1628,10 +2232,48 @@ public function countOnboardingOldStartups()
 public function countSubmittedApp()
 {
     $query = $this->db->table('application');
-    $count_row = $query->countAllResults();
+    $count_row = $query->getNumRows();
     return $count_row;
 }
 
+public function getAllUnleashifiedNewsletter()
+{
+    $query = $this->db->table('unleash_newsletter')
+        ->orderBy('id', 'desc')
+        ->get();
+    $count_row = $query->getNumRows();
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+public function getAllUnleashifiedQuote()
+{
+    $query = $this->db->table('get_quote')
+        ->orderBy('id', 'desc')
+        ->get();
+    $count_row = $query->getNumRows();
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
+
+public function getAllUnleashifiedContact()
+{
+    $query = $this->db->table('unleash_contact')
+        ->orderBy('id', 'desc')
+        ->get();
+    $count_row = $query->getNumRows();
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return 0;
+    }
+}
 public function getAllCustomerInfoByRef($ref_id)
 {
     $query = $this->db->table('users')
@@ -1701,7 +2343,7 @@ public function getAllInvestorById($id)
         return [];
     }
 }
-
+ 
 public function getAllMentors()
 {
     $query = $this->db->table('mentor_info')
@@ -1780,8 +2422,25 @@ public function getAllFreeSub($package)
 public function getAllLoginUsers()
 {
     $query = $this->db->table('login')
+        
+        ->orderBy('id', 'desc')
+        ->get();
+
+    $countRows = $query->getNumRows();
+
+    if ($countRows > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
+
+public function getAllLoginUsersStartups()
+{
+    $query = $this->db->table('login')
         ->where('account_type', 'startup')
-        ->limit(1000)
+        ->limit(100)
         ->orderBy('id', 'desc')
         ->get();
 
@@ -2035,7 +2694,7 @@ public function getFile($email)
 
 public function getInvestmentStage()
 {
-    $builder = $this->db->table('Investment_Stages');
+    $builder = $this->db->table('investment_stages');
     $builder->orderBy('Stages', 'ASC');
     $query = $builder->get();
 
@@ -2095,18 +2754,18 @@ public function getAllInvestorN()
                     ->getResultArray();
 }
 
-public function getAllAcceleratorById($id)
+public function getAllacceleratorById($id)
 {
-    return $this->db->table('Accelerator')
-                    ->orderBy('Accelerator_ID', $id)
+    return $this->db->table('accelerator')
+                    ->orderBy('accelerator_ID', $id)
                     ->get()
                     ->getResultArray();
 }
 
-public function getAllAccelerator()
+public function getAllaccelerator()
 {
-    return $this->db->table('Accelerator')
-                    ->orderBy('Accelerator_ID', 'DESC')
+    return $this->db->table('accelerator')
+                    ->orderBy('accelerator_ID', 'DESC')
                     ->get()
                     ->getResultArray();
 }
@@ -2135,8 +2794,8 @@ public function getAllCorporate()
 
 public function getAllInvestor()
 {
-    $query = $this->db->table('investors')
-                      ->orderBy('id', 'DESC')
+    $query = $this->db->table('investor')
+                      ->orderBy('Investor_ID', 'DESC')
                       ->get();
 
     if ($query->getNumRows() > 0) {
@@ -2383,7 +3042,7 @@ public function getSumOfHiredByWeekly($company)
 
 public function getSumOfHiredByCompany()
 {			
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     $builder->selectSum('NoOfEmployees');
     $result = $builder->get()->getRow();
     
@@ -2603,11 +3262,11 @@ public function getAllLearning()
 }
 public function getAllInsight()
 {
-    $this->table('onboard_individual')
+     $query = $this->db->table('onboard_individual')
         ->where('interest_insight_report', 'Insight Report')
-        ->orderBy('id', 'DESC');
-
-    $query = $this->get();
+        ->orderBy('id', 'DESC')
+        ->get();
+    //$query = $this->get();
 
     if ($query->getNumRows() > 0) {
         return $query->getResultArray();
@@ -2618,7 +3277,7 @@ public function getAllInsight()
 
 public function getAllVentureBuilding()
 {
-    $query = $this->table('onboard_individual')
+    $query = $this->db->table('onboard_individual')
         ->where('interest_business_growth', 'Business Growth')
         ->orderBy('id', 'DESC')
         ->get();
@@ -2692,6 +3351,19 @@ public function getAllCohortById($id)
     }
 }
 
+public function getOnboardIndividualById($id)
+{
+    $query = $this->db->table('onboard_individual')
+        ->where('id', $id)
+        ->get();
+
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+    } else {
+        return [];
+    }
+}
+
 public function getOnboardIndividual($email)
 {
     $query = $this->db->table('onboard_individual')
@@ -2744,7 +3416,7 @@ public function getAllCohortByEmail($email)
 
 public function getAllStartUpByEmailExt($Email)
 {
-    $builder = $this->db->table('Startups_Inv_Ext');
+    $builder = $this->db->table('startups_inv_ext');
     $builder->orderBy('Id', 'DESC');
     $builder->where('Email', $Email);
     $query = $builder->get();
@@ -2810,7 +3482,7 @@ public function countEventsTypes($type)
     $builder = $this->db->table('event');
     $builder->orderBy('event_id', 'DESC');
     $builder->where('event_type', $type);
-    $count_row = $builder->countAllResults();
+    $count_row = $builder->getNumRows();
 
     if ($count_row > 0) {
         return $count_row;
@@ -2822,7 +3494,7 @@ public function countEventsTypes($type)
 public function countEventAttenders()
 {
     $builder = $this->db->table('wp_event');
-    $count_row = $builder->countAllResults();
+    $count_row = $builder->getNumRows();
 
     if ($count_row > 0) {
         return $count_row;
@@ -2860,7 +3532,7 @@ public function getEventsPost($event_type)
 
 public function getAllStartUpNByEmailExtX($email)
 {
-    $builder = $this->db->table('Startups_Inv_Ext');
+    $builder = $this->db->table('startups_inv_ext');
     $builder->where('Email', $email);
     $builder->orderBy('Id', 'DESC');
     
@@ -2874,7 +3546,7 @@ public function getAllStartUpNByEmailExtX($email)
 }
 public function getAllStartUpNByEmailExt($id)
     {
-        $builder = $this->table('Startups_Inv_Ext');
+        $builder = $this->db->table('startups_inv_ext');
         $builder->orderBy('Id', 'DESC');
         $builder->where('Id', $id);
         $query = $builder->get();
@@ -2887,7 +3559,7 @@ public function getAllStartUpNByEmailExt($id)
     }
 public function allStartupDefault()
 {
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     $builder->orderBy('STUP_ID', 'DESC');
 
     $query = $builder->get();
@@ -2901,7 +3573,7 @@ public function allStartupDefault()
 
 public function getAllStartUpNById($id)
 {
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     $builder->orderBy('STUP_ID', 'DESC');
     $builder->where('STUP_ID', $id);
 
@@ -2915,7 +3587,7 @@ public function getAllStartUpNById($id)
 }
 public function getStartupMicrosoft()
 {
-    $builder = $this->db->table('Startups_Inv_Ext');
+    $builder = $this->db->table('startups_inv_ext');
     $builder->where('Event', 'Kenya_Microsoft');
     $builder->orderBy('Id', 'DESC');
 
@@ -3053,7 +3725,7 @@ public function getCorperateByEmail($email)
 
     public function getStartupMicrosoftByEmailExt($email)
     {
-        return $this->db->table('Startups_Inv_Ext')
+        return $this->db->table('startups_inv_ext')
             ->where('Email', $email)
             ->orderBy('Id', 'DESC')
             ->get()
@@ -3071,7 +3743,7 @@ public function getCorperateByEmail($email)
 
     public function getStartupById($id)
     {
-        return $this->db->table('Startups_Inv')
+        return $this->db->table('startups_inv')
             ->where('STUP_ID', $id)
             ->orderBy('STUP_ID', 'DESC')
             ->get()
@@ -3080,7 +3752,7 @@ public function getCorperateByEmail($email)
 
     public function getStartupMicrosoftByEmail($email)
     {
-        return $this->db->table('Startups_Inv')
+        return $this->db->table('startups_inv')
             ->where('Contact_Email', $email)
             ->orderBy('STUP_ID', 'DESC')
             ->get()
@@ -3089,7 +3761,7 @@ public function getCorperateByEmail($email)
 
 public function getAllStartUpNByEmailExtXY($email)
     {
-        return $this->db->table('Startups_Inv_Ext')
+        return $this->db->table('startups_inv_ext')
             ->where('Email', $email)
             ->orderBy('Id', 'DESC')
             ->get()
@@ -3098,7 +3770,7 @@ public function getAllStartUpNByEmailExtXY($email)
 
     public function getAllStartUpMicrosoft()
     {
-        return $this->db->table('Startups_Inv')
+        return $this->db->table('startups_inv')
             ->where('Event', 'Kenya_Microsoft')
             ->orderBy('STUP_ID', 'DESC')
             ->get()
@@ -3107,7 +3779,7 @@ public function getAllStartUpNByEmailExtXY($email)
 
 public function getAllStartUpNByEmailMicrosoft($email)
 {	
-	$builder = $this->db->table('Startups_Inv');
+	$builder = $this->db->table('startups_inv');
     $builder->where('Event', 'Kenya_Microsoft');
     $builder->where('Contact_Email', $email);	
     $builder->orderBy('STUP_ID', 'DESC');
@@ -3127,7 +3799,7 @@ public function getAllStartUpNByEmailMicrosoft($email)
 
 public function getAllStartUpNByEmail($email)
 {
-    $builder = $this->db->table('Startups_Inv');
+    $builder = $this->db->table('startups_inv');
     $builder->select('*');
     $builder->where('Contact_Email', $email);
     $builder->orderBy('STUP_ID', 'DESC');
@@ -3141,7 +3813,7 @@ public function getAllStartUpNByEmail($email)
 }
 public function getAllFunding()
 {
-    $query = $this->db->table('Startups_Inv')
+    $query = $this->db->table('startups_inv')
         ->where('Interest_Fund_Raise', 'Fund Raising')
         ->orderBy('STUP_ID', 'DESC')
         ->get();
@@ -3187,7 +3859,7 @@ public function getAllWebinarReg($event)
 
 public function getAllStartUpFreshworks()
     {
-        return $this->db->table('Startups_Inv_Ext')
+        return $this->db->table('startups_inv_ext')
             ->where('Event', 'Freshworks')
             ->orderBy('Id', 'DESC')
             ->get()
@@ -3196,7 +3868,7 @@ public function getAllStartUpFreshworks()
 
     public function getAllStartUpNMicrosft($Event)
     {
-        return $this->db->table('Startups_Inv_Ext')
+        return $this->db->table('startups_inv_ext')
             ->where('Event', $Event)
             ->orderBy('Id', 'DESC')
             ->get()
@@ -3206,9 +3878,9 @@ public function getAllStartUpFreshworks()
 
 public function getAllStartUpN()
 {
-    $query = $this->db->table('Startups_Inv')
+    $query = $this->db->table('startups_inv')
         ->orderBy('STUP_ID', 'DESC')
-        ->limit(1000)
+        ->limit(100)
         ->get();
 
     if ($query->getNumRows() > 0) {
@@ -3242,7 +3914,7 @@ public function getStartUp($email)
 
 public function getProfile($email)
 {
-		$this->table = 'personal_info';
+		$this->db->table = 'personal_info';
         return $this->where('email', $email)
                     ->get()
                     ->getResultArray();
@@ -3250,7 +3922,7 @@ public function getProfile($email)
 
     public function getFund($email)
     {
-        $this->table = 'fund_info';
+        $this->db->table = 'fund_info';
 
         return $this->where('email', $email)
                     ->get()
@@ -3259,7 +3931,7 @@ public function getProfile($email)
 
     public function getBusiness($email)
     {
-        $this->table = 'business_info';
+        $this->db->table = 'business_info';
 
         return $this->where('email', $email)
                     ->get()
@@ -3375,6 +4047,25 @@ public function updateFileInvestorStatus($data, $id)
             return 0;
         }
     }
+    public function updateUserProfile($data, $id)
+{
+    $this->db->table('login')
+             ->where('id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
+
+    public function updateSubAdmin($data, $id)
+{
+    $this->db->table('admin')
+             ->where('id', $id)
+             ->update($data);
+
+    return $this->db->affectedRows();
+}
+
 
     public function updateFileStatus($data, $id)
     {
@@ -3428,6 +4119,17 @@ public function updateFileInvestorStatus($data, $id)
     public function updateCohort($data, $id)
     {
         $this->db->table('Cohort')->where('Id', $id)->update($data);
+
+        if ($this->db->affectedRows() > 0) {
+            return $this->db->affectedRows();
+        } else {
+            return 0;
+        }
+    }
+
+	public function updateLoginStatus($data, $id)
+    {
+        $this->db->table('login')->where('id', $id)->update($data);
 
         if ($this->db->affectedRows() > 0) {
             return $this->db->affectedRows();
@@ -3565,7 +4267,7 @@ public function time_elapsed_string($datetime, $full = false) {
         $builder->where('send_to', $send_to);
         $builder->where('status', $status);
 
-        $count_row = $builder->countAllResults();
+        $count_row = $builder->getNumRows();
 
         if ($count_row > 0) {
             return $count_row;
@@ -3801,10 +4503,10 @@ public function getRecentFileUploadedXByEmail($Email)
     {
         $builder = $this->db->table('files');
         $builder->where('Email', $Email);
-        $builder->get();
+       $query =  $builder->get();
         
-        if ($builder->countAllResults() > 0) {
-            return $builder->getResultArray();
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
         } else {
             return 0;
         }
@@ -3814,10 +4516,10 @@ public function getRecentFileUploadedXByEmail($Email)
     {
         $builder = $this->db->table('files');
         $builder->where('File_Id', $File_Id);
-        $builder->get();
+        $query = $builder->get();
 
-        if ($builder->countAllResults() > 0) {
-            return $builder->getResultArray();
+        if ($query->getNumRows() > 0) {
+            return $query->getResultArray();
         } else {
             return 0;
         }
@@ -3831,7 +4533,7 @@ public function getRecentFileUploadedXByEmail($Email)
         $builder->orderBy('id', 'desc');
         $builder->get();
 
-        if ($builder->countAllResults() > 0) {
+        if ($builder->getNumRows() > 0) {
             return $builder->getResultArray();
         } else {
             return 0;
@@ -3845,7 +4547,7 @@ public function getRecentFileUploadedXByEmail($Email)
         $builder->orderBy('id', 'desc');
         $builder->get();
 
-        if ($builder->countAllResults() > 0) {
+        if ($builder->getNumRows() > 0) {
             return $builder->getResultArray();
         } else {
             return 0;
@@ -3858,7 +4560,7 @@ public function getRecentFileUploadedXByEmail($Email)
         $builder->where('id', $id);
         $builder->get();
 
-        if ($builder->countAllResults() > 0) {
+        if ($builder->getNumRows() > 0) {
             return $builder->getResultArray();
         } else {
             return 0;
@@ -3866,20 +4568,23 @@ public function getRecentFileUploadedXByEmail($Email)
     }
 
     public function getInvestorsConnectionBySearch($email, $deals)
-    {
-        $builder = $this->db->table('all_connections');
-        $builder->where('email', $email);
-        $builder->orderBy('id', 'desc');
-        $builder->like('status', $deals);
-        $builder->orLike('invest_type', $deals);
-        $builder->get();
+{
+    $builder = $this->db->table('all_connections');
+    $builder->where('email', $email);
+    $builder->orderBy('id', 'desc');
+    $builder->groupStart() // Start grouping the LIKE conditions
+            ->like('status', $deals)
+            ->orLike('invest_type', $deals)
+            ->groupEnd(); // End grouping
+    $query = $builder->get(); // Fetch the result
 
-        if ($builder->countAllResults() > 0) {
-            return $builder->getResultArray();
-        } else {
-            return 0;
-        }
+    if ($query->getNumRows() > 0) {
+        return $query->getResultArray(); // Return the result as an array
+    } else {
+        return 0; // Return 0 if no rows are found
     }
+}
+
 
 public function getInvestorsConnectionByEmail($email)
 {
@@ -3958,7 +4663,7 @@ public function getPhoto($id, $type)
     $builder->where('type', $type);
     $builder->get();
 
-    if ($builder->countAllResults() > 0) {
+    if ($builder->getNumRows() > 0) {
         return $builder->getResultArray();
     } else {
         return 0;
@@ -3972,7 +4677,7 @@ public function subCategory($category)
     $builder->groupBy('sub_cat');
     $builder->get();
 
-    if ($builder->countAllResults() > 0) {
+    if ($builder->getNumRows() > 0) {
         return $builder->getResultArray();
     } else {
         return 0;
@@ -4053,7 +4758,7 @@ public function getPoeInvestment()
     $builder->where('cohort_type', 'Botswana');
     $builder->orderBy('id', 'DESC');
     
-    $count_row = $builder->countAllResults();
+    $count_row = $builder->getNumRows();
     
     if ($count_row > 0) {
         return $count_row;
@@ -4123,7 +4828,7 @@ public function check_dcdt_email($email)
     $builder->where('ref', 'dcdt');
     $builder->where('email', $email);
 
-    $count_row = $builder->countAllResults();
+    $count_row = $builder->getNumRows();
     
     return ($count_row > 0) ? 1 : 0;
 }
@@ -4145,13 +4850,13 @@ public function countCohortPrograms($program)
     $builder = $this->db->table('startup_co');
     $builder->where('cohort_type', $program);
     
-    $count_row = $builder->countAllResults();
+    $count_row = $builder->getNumRows();
 
     return $count_row;
 }
 
 
-public function getDownloads($table_name, $column_name = null, $column_value = null)
+public function getDownloadsXYZ($table_name, $column_name = null, $column_value = null)
 {
     $builder = $this->db->table($table_name);
 
@@ -4163,6 +4868,47 @@ public function getDownloads($table_name, $column_name = null, $column_value = n
 
     return $results;
 }
+
+public function getDownloads($table_name)
+{
+    // Load the database table
+    $builder = $this->db->table($table_name);
+
+    // Get the results as an array
+    $results = $builder->get()->getResultArray();
+
+    // Check if the table is 'login' to mask or encrypt passwords
+    
+
+    return $results;
+    
+}
+
+public function getDownloadsLogin($table_name)
+{
+    // Load the database table
+    $builder = $this->db->table($table_name);
+
+    // Get the results as an array
+    $results = $builder->get()->getResultArray();
+
+    // Check if the table is 'login' to mask or encrypt passwords
+    if ($table_name === 'login') {
+        foreach ($results as &$row) {
+            if (isset($row['password'])) {
+                // Option 1: Hash the password (e.g., bcrypt)
+                // $row['password'] = password_hash($row['password'], PASSWORD_BCRYPT);
+
+                // Option 2: Mask the password (recommended for exporting)
+                $row['password'] = str_repeat('*', strlen($row['password']));
+            }
+        }
+    }
+
+    return $results;
+}
+
+
 
 
 
@@ -4192,27 +4938,5 @@ public function getDownloads($table_name, $column_name = null, $column_value = n
 // 		return $query->num_rows();
 // 	}
 
-    public function getfgnalat(){
-        $builder = $this->db->table('wp_sso_cred');
-        $builder->where('Website', 'remsana');
-        
-        $uniqueEmails = $builder->select('email')->get()->getResult();
 
-        if (!empty($uniqueEmails)) {
-            $emails = array_column($uniqueEmails, 'email');
-
-            $resultQuery = $this->db->table('Startups_Inv')
-                ->select('user_ext_info.middlename', 'user_ext_info.email')
-                ->join('user_ext_info', 'user_ext_info.email = Startups_Inv.Contact_Email', 'left')
-                ->whereIn('Startups_Inv.Contact_Email', $emails)
-                ->whereIn('user_ext_info.email', $emails)
-                ->get();
-
-            $results = $resultQuery->getResult();
-        }
-
-        return $results;
-    }
-
-
-}
+   }

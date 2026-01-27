@@ -5,7 +5,7 @@
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
       <div class="navbar-header">
-       <center><a href="<?php echo base_url('gfa/dashboard'); ?>gfa/dashboard"><img src="<?php echo base_url('public/assets/images/logo/GFA-Logo.png'); ?>" align="center"></a></center>
+       <center><a href="<?php echo base_url('gfa/dashboard'); ?>gfa/dashboard"><img src="<?php echo base_url('public/assets/images/logo/communified-logo.png'); ?>" align="center"></a></center>
         
     </div><br> <br> <br>
       <div class="shadow-bottom"></div>
@@ -19,11 +19,6 @@
          <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Admin </span><i data-feather="more-horizontal"></i>
          
           
-         
- 
-         
-          
-         
       <li class=" nav-item active"  style="margin-top:10px;"><a class="d-flex align-items-center" href="<?php echo base_url('admin/'); ?>">
            <i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Admin Dashboard</span></a>
        </li>
@@ -80,33 +75,18 @@
               <!--<li><a class="d-flex align-items-center" href="<?php echo base_url(); ?>gfa/course_quizz" alt="Quizz"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Quiz</span></a></li>-->
              </ul>
           </li>
-       
-           <li class=" nav-item"  style="margin-top:10px;"><a class="d-flex align-items-center" href="<?php echo base_url('gfa/manage_ticket'); ?>">
-            <i data-feather="settings"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Manage Tickets</span></a>
+
+          <li class=" nav-item"  style="margin-top:10px;"><a class="d-flex align-items-center" href="<?php echo base_url('gfa/manage_ticket'); ?>">
+            <i data-feather="settings"></i><span class="menu-title text-truncate" data-i18n="Help_Desk"><?php echo lang('translation.Manage Help Desk'); ?></span></a>
           </li>
-           
+       
           <li class=" nav-item"  style="margin-top:10px;"><a class="d-flex align-items-center" href="<?php echo base_url('gfa/signoutAction'); ?>">
            <i data-feather="settings"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Logout</span></a>
-       </li>
-         
+          </li>
            
-          
-         
-          
-           
-          
-          
-          
-           
-          
-         
-          
-         
            <!--<li class=" nav-item active"  style="margin-top:10px;"><a class="d-flex align-items-center" href="https://events.getfundedafrica.com" target="_blank">-->
            <!--<i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Events</span></a>-->
             
-          
-          
         </ul>
       </div>
     </div>

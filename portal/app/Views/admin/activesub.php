@@ -11,18 +11,16 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <form class="pull-right" method="POST" action="<?php echo base_url(); ?>download/export/package_sub/status">
-                <input type="hidden" name="column_value" value="active" >
-                  <button type="submit" name="submit" class="btn btn-primary" class="btn btn-info ">Export</button>
-                </form>
+            <a class="btn btn-primary pull-right btn btn-info" href="<?php echo base_url(); ?>download/export/package_sub/status">Export</a>
+                
                 <br><br>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>S/no</th>
                   <th>Profile</th>
-				  <th>Amount</th>
-				  <th>Payment</th>
+        				  <th>Amount</th>
+        				  <th>Payment</th>
                   <th>Status</th>
                   <th>Start Date</th>
                   <th>End Date</th>

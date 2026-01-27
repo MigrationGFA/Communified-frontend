@@ -9,7 +9,7 @@
     <!-- Brand logo-->
     <a class="brand-logo" href="<?php echo base_url(); ?>">
      
-      <img src="<?php echo base_url(); ?>assets/images/gfa-logo.png">
+<img src="<?php echo base_url(); ?>assets/images/communified-logo.png">
     </a>
     <!-- /Brand logo-->
 

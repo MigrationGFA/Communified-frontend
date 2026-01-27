@@ -4,22 +4,11 @@
 <!-- Footer -->
 <footer class="content-footer footer bg-footer-theme">
   <div class="container-xxl">
-    <div class="footer-container d-flex align-items-center justify-content-center py-2 flex-md-row flex-column">
+    <div class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
       <div>
-        © <script>
-        document.write(new Date().getFullYear())
-        </script>
-        , All rights resevered. Created with ❤️ by <a href="https://gfa-tech.com" target="_blank" class="fw-semibold">GFA Technologies Team</a>
+        <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25"><?php echo lang('translation.COPYRIGHT © 2024 CIPME, All rights Reserved') ?></span></p>
       </div>
-      <!-- <div>
-        
-        <a href="https://getfundedafrica.com/contact-us.php" class="footer-link me-4" target="_blank">Get in touch</a>
-        <a href="https://getfundedafrica.com/request-a-call.php" target="_blank" class="footer-link me-4">Request a call</a>
-        
-        <a href="https://getfundedafrica.com/privacy.php" target="_blank" class="footer-link me-4">Privacy</a>
-        
       
-      </div> -->
     </div>
   </div>
 </footer>

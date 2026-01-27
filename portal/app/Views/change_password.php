@@ -1,7 +1,3 @@
-<?php 
-                $this->gfa_model = model('App\Models\GfaModel');
-                $this->admin_model = model('App\Models\AdminModel');
-      ?>
 <div class="app-content content">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
@@ -13,10 +9,7 @@
                 <h2 class="content-header-title float-start mb-0">Change Password</h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/billing">Billing</a>
-                    </li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>gfa/subscribe">Subscription</a>
-                    </li>
+                    
                     
                     
                   </ol>
@@ -65,22 +58,22 @@
           <div class="row" bis_skin_checked="1">
             <div class="col-12" bis_skin_checked="1">
               <p class="card-text displayError" style="display:none">
-                 <code>Minimum of 8 characters</code> 
+                 <code><?php echo lang('translation.Minimum of 8 characters') ?></code> 
                 <!-- <code>.form-control-sm</code> for Large, Small input box. -->
               </p>
               <div class="mb-1" bis_skin_checked="1">
-                <label class="form-label" for="largeInput">Password</label>
+                <label class="form-label" for="largeInput"><?php echo lang('translation.Password') ?></label>
                 <input id="largeInput" class="form-control form-control-lg oldPassX" readonly type="text" placeholder="Old Password" value="<?php echo $profile_request[0]['password']; ?>">
                 <input  type="hidden" name="id"  value="<?php echo $profile_request[0]['id']; ?>">
 
             </div>
               <div class="mb-1" bis_skin_checked="1">
-                <label class="form-label" for="defaultInput">New Password</label>
-                <input id="defaultInput" class="form-control form-control-lg resetPass" name="password" required type="password" placeholder="New Password">
+                <label class="form-label" for="defaultInput"><?php echo lang('translation.New Password') ?></label>
+                <input id="defaultInput" class="form-control form-control-lg resetPass" name="password" required type="password" placeholder="<?php echo lang('translation.New Password') ?>">
               </div>
               <div bis_skin_checked="1">
-                <label class="form-label" for="smallInput">Confirm Password</label>
-                <input id="smallInput" class="form-control form-control-lg oldPass" readonly type="text" placeholder="Confirm Password">
+                <label class="form-label" for="smallInput"><?php echo lang('translation.Confirm Password') ?></label>
+                <input id="smallInput" class="form-control form-control-lg oldPass" readonly type="text" placeholder="<?php echo lang('translation.Confirm Password') ?>">
               </div>
             </div>
            
@@ -94,7 +87,7 @@
               
    
               <div class="col-12">
-                <button type="submit" class="btn btn-primary EventBtn mb-2">Update</button><span class="displayAction"></span>
+                <button type="submit" class="btn btn-primary EventBtn mb-2"><?php echo lang('translation.Update') ?></button><span class="displayAction"></span>
               </div>
             </div>
           </form>
@@ -118,18 +111,27 @@
           
         //var oldPass = $(".oldPass").val(); 
         
-        $(".resetPass").keyup(function(){
-            var newPass = $(".resetPass").val();  
-         var checkPass =    $(".oldPass").val(newPass);
-
-         if(newPass.length >= 8){
+        $(".resetPass").on('input', function(){
+        var newPass = $(this).val();  
+        
+        // Update the value of .oldPass if necessary
+        // Ensure that this behavior is intentional. Typically, .oldPass refers to the current password.
+        $(".oldPass").val(newPass);
+        
+        // Define the password strength criteria using a regular expression
+        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+        
+        // Test the new password against the regex
+        if(passwordRegex.test(newPass)){
+            // If password meets all criteria, hide the error message and enable the submit button
             $('.displayError').hide();
             $(".EventBtn").prop('disabled', false);
-         }else{
-            $('.displayError').show();
+        } else {
+            // If password does not meet criteria, show the error message and disable the submit button
+            $('.displayError').show().text('Password must be at least 8 characters long and include uppercase, lowercase, number, and symbol.');
             $(".EventBtn").prop('disabled', true);
-         }
-        });
+        }
+    });
           
            $(".EventForm").submit(function(e) {
     //---------------^---------------
@@ -143,12 +145,12 @@
      type: "POST",
      url: "<?php echo base_url("gfa/changepasspro"); ?>",
 	 error:function() {$(".displayAction").html('Error')},
-	 beforeSend:function() {$(".displayAction").html('Updating...'); $(".EventBtn").prop('disabled', true);},
+	 beforeSend:function() {$(".displayAction").html('Mise à jour en cours...'); $(".EventBtn").prop('disabled', true);},
 	 processData: false,
     contentType: false,
       success: function(data) {
         
-	 $(".displayAction").html("Successfully Updated");  
+	 $(".displayAction").html("Mise à jour réussie");  
 	//    $(".saveBtn").html(data); 
        $(".oldPassX").val(data);
 		 $(".EventBtn").prop('disabled', true);

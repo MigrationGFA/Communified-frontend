@@ -77,7 +77,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/plugins/forms/pickers/form-flat-pickr.min.css"); ?>">
      <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/vendors/css/pickers/pickadate/pickadate.css"); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/app-calendar.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/ssets/app-assets/css/pages/pagination.css"); ?>a">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/pagination.css"); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/plugins/forms/form-validation.css"); ?>">
     <!-- END: Page CSS-->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->

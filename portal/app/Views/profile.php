@@ -1,4 +1,10 @@
-      <!-- BEGIN: Content-->
+    <?php 
+  $this->gfa_model = model('App\Models\GfaModel');
+  $this->admin_model = model('App\Models\AdminModel');
+  
+  
+
+   ?>  <!-- BEGIN: Content-->
     <div class="app-content content ">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
@@ -76,7 +82,7 @@
       
       $getPhoto =  $this->gfa_model->getPhotoUploaded($email);  
       if(empty($getPhoto)){
-          $showPhoto = "assets/images/uploads/default-avatar.jpg";
+          $showPhoto = "public/assets/images/uploads/default-avatar.jpg";
       }else{
          
          $showPhoto = "uploads/onboarding/".$getPhoto[0]['Photo_name']; 
@@ -242,7 +248,7 @@ $(".fileInfox").submit(function(e) {
         <?php 
                   
                   
-                  $account_type= $this->encrypt->decode($this->session->userdata('account_type'));
+                  //$account_type= $this->encrypt->decode($this->session->userdata('account_type'));
                  if(empty($account_type)){
                      $nameArray = explode(" ", $this->gfa_model->getOldStartUpDetails($email)[0]['name']); 
                      $firsname = $nameArray[0];
@@ -309,7 +315,7 @@ $(".fileInfox").submit(function(e) {
                 name="email"
                 disabled
                 placeholder="Email"
-                value="<?php echo $this->encrypt->decode($this->session->userdata('email')) ; ?>"
+                value="<?php echo $email; //$this->encrypt->decode($this->session->userdata('email')) ; ?>"
               />
             </div>
             
@@ -382,7 +388,7 @@ $(".fileInfox").submit(function(e) {
 <option value="Congo">Congo, the Democratic Republic of the</option>
 <option value="Cook Islands">Cook Islands</option>
 <option value="Costa Rica">Costa Rica</option>
-<option value="Cota D'Ivoire">Cote d'Ivoire</option>
+<option value="Cote D'Ivoire">Cote d'Ivoire</option>
 <option value="Croatia">Croatia (Hrvatska)</option>
 <option value="Cuba">Cuba</option>
 <option value="Cyprus">Cyprus</option>
@@ -737,7 +743,7 @@ $(".fileInfox").submit(function(e) {
 <option value="Congo">Congo, the Democratic Republic of the</option>
 <option value="Cook Islands">Cook Islands</option>
 <option value="Costa Rica">Costa Rica</option>
-<option value="Cota D'Ivoire">Cote d'Ivoire</option>
+<option value="Cote D'Ivoire">Cote d'Ivoire</option>
 <option value="Croatia">Croatia (Hrvatska)</option>
 <option value="Cuba">Cuba</option>
 <option value="Cyprus">Cyprus</option>
@@ -1087,7 +1093,7 @@ $(".fileInfox").submit(function(e) {
 	 $.ajax({
      data:startupInfo,
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/checkProfileError",
+     url: "<?php echo base_url(); ?>gfa/checkProfileErrorDemo",
      error:function() {$(".showProfileError").html('Error');},
 	 beforeSend:function() {$(".showProfileError").html('');},
       success: function(data) {
@@ -1108,7 +1114,7 @@ $(".fileInfox").submit(function(e) {
 	 $.ajax({
      data:startupInfo,
      type: "POST",
-     url: "<?php echo base_url(); ?>gfa/checkProfileError",
+     url: "<?php echo base_url(); ?>gfa/checkProfileErrorDemo",
      error:function() {$(".showProfileError").html('Error');},
 	 beforeSend:function() {$(".showProfileError").html('');},
       success: function(data) {
