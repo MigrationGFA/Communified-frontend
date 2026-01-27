@@ -1,0 +1,40 @@
+CRITICAL - 2025-12-24 12:51:47 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-24 13:00:23 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-24 13:03:31 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-12-24 13:13:59 --> mysqli_sql_exception: Unknown column 'email' in 'where clause' in C:\xampp\htdocs\Gfa-tech\portal\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Gfa-tech\portal\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Gfa-tech\portal\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Gfa-tech\portal\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Gfa-tech\portal\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Gfa-tech\portal\app\Models\GfaModel.php(1580): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gfa-tech\portal\app\Controllers\Gfa.php(1506): App\Models\GfaModel->getContactByEmail('web20foru@gmail...')
+#6 C:\xampp\htdocs\Gfa-tech\portal\system\CodeIgniter.php(934): App\Controllers\Gfa->sendMailPro()
+#7 C:\xampp\htdocs\Gfa-tech\portal\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gfa))
+#8 C:\xampp\htdocs\Gfa-tech\portal\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gfa-tech\portal\index.php(70): CodeIgniter\CodeIgniter->run()
+#10 {main}

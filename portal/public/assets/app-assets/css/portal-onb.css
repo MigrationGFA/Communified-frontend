@@ -1,0 +1,97 @@
+.breakdown-body {
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+}
+
+/* index image */
+
+.indeximg{
+    width: 40px;
+}
+
+.test{
+    background: #c80d0d;
+}
+
+.iframe{
+    width: 100% !important ;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* .row{
+    height: 80vh !important;
+} */
+
+.step-box{
+    height: 60vh;
+}
+
+/* image on step 2 */
+.step2img{
+    width: 100%;
+}
+
+.idcard{
+    width: 40px;
+}
+
+/* step5 iframe */
+
+.step5iframe{
+    width: 100% !important ;
+    height: 100vh !important;
+    overflow: none  !important;
+}
+
+.head-text {
+    font-size: 20px;
+}
+
+.subhead-text {
+    font-size: 14px;
+}
+
+.breakdown-contain {
+    display: flex;
+}
+
+.breakdown-contain .text{
+    margin-left: 15px;
+}
+
+.breakdown-contain div h5 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.breakdown-contain div p {
+    font-size: 13px;
+}
+
+.continue-btn{
+    background: #151C8E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.back-btn{
+    background: #83c124;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cover-text p{
+    font-size: 13px !important;
+}
+
+.cover-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
