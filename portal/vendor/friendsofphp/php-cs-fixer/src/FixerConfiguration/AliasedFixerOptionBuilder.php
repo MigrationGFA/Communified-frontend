@@ -52,7 +52,7 @@ final class AliasedFixerOptionBuilder
     }
 
     /**
-     * @param non-empty-list<null|(callable(mixed): bool)|scalar> $allowedValues
+     * @param list<(callable(mixed): bool)|null|scalar> $allowedValues
      */
     public function setAllowedValues(array $allowedValues): self
     {

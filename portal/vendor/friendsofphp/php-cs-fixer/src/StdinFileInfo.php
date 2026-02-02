@@ -23,7 +23,6 @@ final class StdinFileInfo extends \SplFileInfo
 {
     public function __construct()
     {
-        parent::__construct(__FILE__);
     }
 
     public function __toString(): string
@@ -58,12 +57,9 @@ final class StdinFileInfo extends \SplFileInfo
         return '.php';
     }
 
-    /**
-     * @param null|class-string<\SplFileInfo> $class
-     */
-    public function getFileInfo($class = null): \SplFileInfo
+    public function getFileInfo($className = null): \SplFileInfo
     {
-        throw new \BadMethodCallException(\sprintf('Method "%s" is not implemented.', __METHOD__));
+        throw new \BadMethodCallException(sprintf('Method "%s" is not implemented.', __METHOD__));
     }
 
     public function getFilename(): string
@@ -108,12 +104,9 @@ final class StdinFileInfo extends \SplFileInfo
         return '';
     }
 
-    /**
-     * @param null|class-string<\SplFileInfo> $class
-     */
-    public function getPathInfo($class = null): \SplFileInfo
+    public function getPathInfo($className = null): \SplFileInfo
     {
-        throw new \BadMethodCallException(\sprintf('Method "%s" is not implemented.', __METHOD__));
+        throw new \BadMethodCallException(sprintf('Method "%s" is not implemented.', __METHOD__));
     }
 
     public function getPathname(): string
@@ -168,6 +161,14 @@ final class StdinFileInfo extends \SplFileInfo
 
     public function openFile($openMode = 'r', $useIncludePath = false, $context = null): \SplFileObject
     {
-        throw new \BadMethodCallException(\sprintf('Method "%s" is not implemented.', __METHOD__));
+        throw new \BadMethodCallException(sprintf('Method "%s" is not implemented.', __METHOD__));
+    }
+
+    public function setFileClass($className = null): void
+    {
+    }
+
+    public function setInfoClass($className = null): void
+    {
     }
 }

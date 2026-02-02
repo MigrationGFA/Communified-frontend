@@ -26,12 +26,24 @@ use PhpCsFixer\Tokenizer\TokensAnalyzer;
 
 final class LambdaNotUsedImportFixer extends AbstractFixer
 {
-    private ArgumentsAnalyzer $argumentsAnalyzer;
+    /**
+     * @var ArgumentsAnalyzer
+     */
+    private $argumentsAnalyzer;
 
-    private FunctionsAnalyzer $functionAnalyzer;
+    /**
+     * @var FunctionsAnalyzer
+     */
+    private $functionAnalyzer;
 
-    private TokensAnalyzer $tokensAnalyzer;
+    /**
+     * @var TokensAnalyzer
+     */
+    private $tokensAnalyzer;
 
+    /**
+     * {@inheritdoc}
+     */
     public function getDefinition(): FixerDefinitionInterface
     {
         return new FixerDefinition(
@@ -43,13 +55,16 @@ final class LambdaNotUsedImportFixer extends AbstractFixer
     /**
      * {@inheritdoc}
      *
-     * Must run before MethodArgumentSpaceFixer, NoSpacesInsideParenthesisFixer, SpacesInsideParenthesesFixer.
+     * Must run before MethodArgumentSpaceFixer, NoSpacesInsideParenthesisFixer.
      */
     public function getPriority(): int
     {
         return 31;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function isCandidate(Tokens $tokens): bool
     {
         return $tokens->isAllTokenKindsFound([T_FUNCTION, CT::T_USE_LAMBDA]);
@@ -99,8 +114,6 @@ final class LambdaNotUsedImportFixer extends AbstractFixer
     }
 
     /**
-     * @param array<string, int> $imports
-     *
      * @return array<string, int>
      */
     private function findNotUsedLambdaImports(Tokens $tokens, array $imports, int $lambdaUseCloseBraceIndex): array
@@ -227,12 +240,6 @@ final class LambdaNotUsedImportFixer extends AbstractFixer
         return $imports;
     }
 
-    /**
-     * @param array<string, int> $imports
-     * @param array<int, int>    $arguments
-     *
-     * @return array<string, int>
-     */
     private function countImportsUsedAsArgument(Tokens $tokens, array $imports, array $arguments): array
     {
         foreach ($arguments as $start => $end) {
@@ -276,11 +283,6 @@ final class LambdaNotUsedImportFixer extends AbstractFixer
         return $lambdaUseIndex;
     }
 
-    /**
-     * @param array<int, int> $arguments
-     *
-     * @return array<string, int>
-     */
     private function filterArguments(Tokens $tokens, array $arguments): array
     {
         $imports = [];

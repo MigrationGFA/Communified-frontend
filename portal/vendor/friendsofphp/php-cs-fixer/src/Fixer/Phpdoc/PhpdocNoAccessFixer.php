@@ -25,10 +25,13 @@ use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
  */
 final class PhpdocNoAccessFixer extends AbstractProxyFixer
 {
+    /**
+     * {@inheritdoc}
+     */
     public function getDefinition(): FixerDefinitionInterface
     {
         return new FixerDefinition(
-            '`@access` annotations must be removed from PHPDoc.',
+            '`@access` annotations should be omitted from PHPDoc.',
             [
                 new CodeSample(
                     '<?php
@@ -57,14 +60,13 @@ class Foo
         return parent::getPriority();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function createProxyFixers(): array
     {
         $fixer = new GeneralPhpdocAnnotationRemoveFixer();
-        $fixer->configure(
-            ['annotations' => ['access'],
-                'case_sensitive' => true,
-            ]
-        );
+        $fixer->configure(['annotations' => ['access']]);
 
         return [$fixer];
     }

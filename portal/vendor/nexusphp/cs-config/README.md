@@ -25,20 +25,20 @@ then you should add it as a development-time dependency:
 
 ## Configuration
 
-- Create a `.php-cs-fixer.dist.php` at the root of your project:
+* Create a `.php-cs-fixer.dist.php` at the root of your project:
 
 ```php
 <?php
 
 use Nexus\CsConfig\Factory;
-use Nexus\CsConfig\Ruleset\Nexus82;
+use Nexus\CsConfig\Ruleset\Nexus73;
 
-return Factory::create(new Nexus82())->forProjects();
+return Factory::create(new Nexus73())->forProjects();
 
 ```
 
-- Include the cache file in your `.gitignore`. By
-  default, the cache file will be saved in the project root.
+* Include the cache file in your `.gitignore`. By
+default, the cache file will be saved in the project root.
 
 ```diff
  vendor/
@@ -56,16 +56,15 @@ You can create a preformatted license header to all PHP files by using the publi
 instead of `forProjects()`. This method accepts two required arguments (the library name and author) and
 two optional arguments (the email address and starting year of license).
 
-- Scenario 1: Providing all arguments
-
+* Scenario 1: Providing all arguments
 ```diff
  <?php
 
  use Nexus\CsConfig\Factory;
- use Nexus\CsConfig\Ruleset\Nexus82;
+ use Nexus\CsConfig\Ruleset\Nexus73;
 
--return Factory::create(new Nexus82())->forProjects();
-+return Factory::create(new Nexus82())->forLibrary('My Library', 'John Doe', 'john@doe.com', 2020);
+-return Factory::create(new Nexus73())->forProjects();
++return Factory::create(new Nexus73())->forLibrary('My Library', 'John Doe', 'john@doe.com', 2020);
 ```
 
 This setting will configure a license header similar to below:
@@ -85,7 +84,7 @@ This setting will configure a license header similar to below:
 namespace Nexus\CsConfig;
 ```
 
-- Scenario 2: Providing only the required arguments
+* Scenario 2: Providing only the required arguments
 
 If you opted not to provide any of the optional arguments (i.e., email address, starting license year),
 these will not be shown on the license header allowing flexibility on the copyright portion.
@@ -94,10 +93,10 @@ these will not be shown on the license header allowing flexibility on the copyri
 <?php
 
  use Nexus\CsConfig\Factory;
- use Nexus\CsConfig\Ruleset\Nexus82;
+ use Nexus\CsConfig\Ruleset\Nexus73;
 
--return Factory::create(new Nexus82())->forProjects();
-+return Factory::create(new Nexus82())->forLibrary('My Library', 'John Doe');
+-return Factory::create(new Nexus73())->forProjects();
++return Factory::create(new Nexus73())->forLibrary('My Library', 'John Doe');
 ```
 
 This will give the following license header:
@@ -125,10 +124,10 @@ If you feel that a specific rule in the ruleset is not appropriate for you, you 
  <?php
 
  use Nexus\CsConfig\Factory;
- use Nexus\CsConfig\Ruleset\Nexus82;
+ use Nexus\CsConfig\Ruleset\Nexus73;
 
--return Factory::create(new Nexus82())->forProjects();
-+return Factory::create(new Nexus82(), [
+-return Factory::create(new Nexus73())->forProjects();
++return Factory::create(new Nexus73(), [
 +    'binary_operator_spaces' => false,
 +])->forProjects();
 
@@ -142,27 +141,28 @@ containing your desired options.
 
 **Options**
 
-| Key            |               Allowed Types                |               Default                |
-| -------------- | :----------------------------------------: | :----------------------------------: |
-| cacheFile      |                  `string`                  |        `.php-cs-fixer.cache`         |
-| customFixers   | `FixerInterface[], iterable, \Traversable` |                 `[]`                 |
-| finder         |     `iterable, string[], \Traversable`     | default `PhpCsFixer\Finder` instance |
-| format         |                  `string`                  |                `txt`                 |
-| hideProgress   |                   `bool`                   |               `false`                |
-| indent         |                  `string`                  |         `'    '` // 4 spaces         |
-| lineEnding     |                  `string`                  |                `"\n"`                |
-| isRiskyAllowed |                   `bool`                   |               `false`                |
-| usingCache     |                   `bool`                   |                `true`                |
-| customRules    |                  `array`                   |                 `[]`                 |
+| Key            | Allowed Types                            | Default                              |
+| -------------- | :--------------------------------------: | :----------------------------------: |
+| cacheFile      | `string`                                 | `.php-cs-fixer.cache`                |
+| customFixers   | `FixerInterface[], iterable, \Traversable` | `[]`                                 |
+| finder         | `iterable, string[], \Traversable`         | default `PhpCsFixer\Finder` instance |
+| format         | `string`                                 | `txt`                                |
+| hideProgress   | `bool`                                   | `false`                              |
+| indent         | `string`                                 | `'    '` // 4 spaces                 |
+| lineEnding     | `string`                                 | `"\n"`                               |
+| phpExecutable  | `null, string`                           | `null`                               |
+| isRiskyAllowed | `bool`                                   | `false`                              |
+| usingCache     | `bool`                                   | `true`                               |
+| customRules    | `array`                                  | `[]`                                 |
 
 ```diff
  <?php
 
  use Nexus\CsConfig\Factory;
- use Nexus\CsConfig\Ruleset\Nexus82;
+ use Nexus\CsConfig\Ruleset\Nexus73;
 
--return Factory::create(new Nexus82())->forProjects();
-+return Factory::create(new Nexus82(), [], [
+-return Factory::create(new Nexus73())->forProjects();
++return Factory::create(new Nexus73(), [], [
 +    'usingCache'  => false,
 +    'hideProgress => true,
 +])->forProjects();
@@ -194,7 +194,7 @@ final class MyCompany extends AbstractRuleset
       '@PSR2' => true,
       ...
     ];
-    $this->requiredPHPVersion = 80200;
+    $this->requiredPHPVersion = 70400;
     $this->autoActivateIsRiskyAllowed = true;
   }
 }

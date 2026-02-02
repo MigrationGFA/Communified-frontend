@@ -16,7 +16,7 @@ namespace PhpCsFixer\Runner;
 
 use PhpCsFixer\Cache\CacheManagerInterface;
 use PhpCsFixer\FileReader;
-use PhpCsFixer\Runner\Event\FileProcessed;
+use PhpCsFixer\FixerFileProcessedEvent;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Contracts\EventDispatcher\Event;
 
@@ -61,7 +61,7 @@ final class FileFilterIterator extends \FilterIterator
         $file = $this->current();
         if (!$file instanceof \SplFileInfo) {
             throw new \RuntimeException(
-                \sprintf(
+                sprintf(
                     'Expected instance of "\SplFileInfo", got "%s".',
                     get_debug_type($file)
                 )
@@ -89,7 +89,10 @@ final class FileFilterIterator extends \FilterIterator
             // file that does not need fixing due to cache
             || !$this->cacheManager->needFixing($file->getPathname(), $content)
         ) {
-            $this->dispatchEvent(FileProcessed::NAME, new FileProcessed(FileProcessed::STATUS_SKIPPED));
+            $this->dispatchEvent(
+                FixerFileProcessedEvent::NAME,
+                new FixerFileProcessedEvent(FixerFileProcessedEvent::STATUS_SKIPPED)
+            );
 
             return false;
         }

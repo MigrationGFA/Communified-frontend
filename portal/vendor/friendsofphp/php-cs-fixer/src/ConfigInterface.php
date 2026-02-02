@@ -25,14 +25,14 @@ interface ConfigInterface
     /**
      * Returns the path to the cache file.
      *
-     * @return null|non-empty-string Returns null if not using cache
+     * @return null|string Returns null if not using cache
      */
     public function getCacheFile(): ?string;
 
     /**
      * Returns the custom fixers to use.
      *
-     * @return list<FixerInterface>
+     * @return FixerInterface[]
      */
     public function getCustomFixers(): array;
 
@@ -50,14 +50,8 @@ interface ConfigInterface
      */
     public function getHideProgress(): bool;
 
-    /**
-     * @return non-empty-string
-     */
     public function getIndent(): string;
 
-    /**
-     * @return non-empty-string
-     */
     public function getLineEnding(): string;
 
     /**
@@ -71,10 +65,6 @@ interface ConfigInterface
 
     /**
      * Get configured PHP executable, if any.
-     *
-     * @deprecated
-     *
-     * @TODO 4.0 remove me
      */
     public function getPhpExecutable(): ?string;
 
@@ -102,14 +92,12 @@ interface ConfigInterface
      *
      * Name of custom fixer should follow `VendorName/rule_name` convention.
      *
-     * @param iterable<FixerInterface> $fixers
+     * @param FixerInterface[]|iterable|\Traversable $fixers
      */
     public function registerCustomFixers(iterable $fixers): self;
 
     /**
      * Sets the path to the cache file.
-     *
-     * @param non-empty-string $cacheFile
      */
     public function setCacheFile(string $cacheFile): self;
 
@@ -122,22 +110,12 @@ interface ConfigInterface
 
     public function setHideProgress(bool $hideProgress): self;
 
-    /**
-     * @param non-empty-string $indent
-     */
     public function setIndent(string $indent): self;
 
-    /**
-     * @param non-empty-string $lineEnding
-     */
     public function setLineEnding(string $lineEnding): self;
 
     /**
      * Set PHP executable.
-     *
-     * @deprecated
-     *
-     * @TODO 4.0 remove me
      */
     public function setPhpExecutable(?string $phpExecutable): self;
 

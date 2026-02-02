@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * This file is part of CodeIgniter 4 framework.
  *
@@ -14,11 +12,8 @@ declare(strict_types=1);
 namespace CodeIgniter\Database;
 
 /**
- * @template TConnection
- * @template TResult
- *
- * @property      false|object|resource $connID
- * @property-read string                $DBDriver
+ * @template TConnection of object|resource
+ * @template TResult of object|resource
  */
 interface ConnectionInterface
 {
@@ -32,7 +27,7 @@ interface ConnectionInterface
     /**
      * Connect to the database.
      *
-     * @return         false|object|resource
+     * @return false|object|resource
      * @phpstan-return false|TConnection
      */
     public function connect(bool $persistent = false);
@@ -40,7 +35,7 @@ interface ConnectionInterface
     /**
      * Create a persistent database connection.
      *
-     * @return         false|object|resource
+     * @return false|object|resource
      * @phpstan-return false|TConnection
      */
     public function persistentConnect();
@@ -59,7 +54,7 @@ interface ConnectionInterface
      * get that connection. If you pass either alias in and only a single
      * connection is present, it must return the sole connection.
      *
-     * @return         false|object|resource
+     * @return false|object|resource
      * @phpstan-return false|TConnection
      */
     public function getConnection(?string $alias = null);
@@ -67,7 +62,7 @@ interface ConnectionInterface
     /**
      * Select a specific database table to use.
      *
-     * @return bool
+     * @return mixed
      */
     public function setDatabase(string $databaseName);
 
@@ -103,9 +98,9 @@ interface ConnectionInterface
      * Should automatically handle different connections for read/write
      * queries if needed.
      *
-     * @param array|string|null $binds
+     * @param mixed ...$binds
      *
-     * @return         BaseResult|bool|Query
+     * @return BaseResult|bool|Query
      * @phpstan-return BaseResult<TConnection, TResult>|bool|Query
      */
     public function query(string $sql, $binds = null);
@@ -115,7 +110,7 @@ interface ConnectionInterface
      * is performed, nor are transactions handled. Simply takes a raw
      * query string and returns the database-specific result id.
      *
-     * @return         false|object|resource
+     * @return false|object|resource
      * @phpstan-return false|TResult
      */
     public function simpleQuery(string $sql);
@@ -132,7 +127,7 @@ interface ConnectionInterface
     /**
      * Returns the last query's statement object.
      *
-     * @return Query
+     * @return mixed
      */
     public function getLastQuery();
 
@@ -144,7 +139,7 @@ interface ConnectionInterface
      *
      * @param array|bool|float|int|object|string|null $str
      *
-     * @return         array|float|int|string
+     * @return array|float|int|string
      * @phpstan-return ($str is array ? array : float|int|string)
      */
     public function escape($str);
@@ -155,7 +150,7 @@ interface ConnectionInterface
      *
      * @param array ...$params
      *
-     * @return array|bool|float|int|object|resource|string|null
+     * @return mixed
      */
     public function callFunction(string $functionName, ...$params);
 

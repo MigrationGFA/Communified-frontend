@@ -1,2 +1,1 @@
-'use strict';
-document.getElementById('defaultCheck2').indeterminate = !0;
+"use strict";document.getElementById("defaultCheck2").indeterminate=!0;

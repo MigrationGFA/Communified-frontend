@@ -1,0 +1,66 @@
+CRITICAL - 2025-12-23 17:00:00 --> Class "PhpOffice\PhpSpreadsheet\Reader\Xlsx" not found
+in APPPATH\Controllers\Gfa.php on line 1406.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Gfa->uploadContacts()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gfa))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-23 18:20:17 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Views\email\index.php on line 61.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('email/index', [], true)
+ 3 APPPATH\Controllers\Email.php(41): view('email/index')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Email->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-23 18:53:21 --> Too few arguments to function App\Controllers\Gfa::sendMail(), 0 passed in C:\xampp\htdocs\Gfa-tech\portal\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\Gfa.php on line 7468.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Gfa->sendMail()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gfa))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-23 19:45:09 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-23 19:45:36 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-23 19:47:55 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-23 19:55:17 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-23 19:56:01 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Gfa.php on line 1504.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Gfa-tech\\portal\\app\\Controllers\\Gfa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gfa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gfa')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Gfa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(70): CodeIgniter\CodeIgniter->run()

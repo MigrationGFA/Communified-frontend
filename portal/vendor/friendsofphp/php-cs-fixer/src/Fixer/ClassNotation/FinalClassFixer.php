@@ -24,6 +24,9 @@ use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
  */
 final class FinalClassFixer extends AbstractProxyFixer
 {
+    /**
+     * {@inheritdoc}
+     */
     public function getDefinition(): FixerDefinitionInterface
     {
         return new FixerDefinition(
@@ -39,26 +42,19 @@ class MyApp {}
             .'If you want to subclass a class, mark the parent class as abstract and create two child classes, one empty if necessary: you\'ll gain much more fine grained type-hinting. '
             .'If you need to mock a standalone class, create an interface, or maybe it\'s a value-object that shouldn\'t be mocked at all. '
             .'If you need to extend a standalone class, create an interface and use the Composite pattern. '
-            .'If these rules are too strict for you, you can use `FinalInternalClassFixer` instead.',
+            .'If you aren\'t ready yet for serious OOP, go with FinalInternalClassFixer, it\'s fine.',
             'Risky when subclassing non-abstract classes.'
         );
     }
 
     /**
      * {@inheritdoc}
-     *
-     * Must run before ProtectedToPrivateFixer, SelfStaticAccessorFixer.
      */
-    public function getPriority(): int
-    {
-        return parent::getPriority();
-    }
-
     protected function createProxyFixers(): array
     {
         $fixer = new FinalInternalClassFixer();
         $fixer->configure([
-            'include' => [],
+            'annotation_include' => [],
             'consider_absent_docblock_as_internal_class' => true,
         ]);
 

@@ -6,13 +6,13 @@
  |--------------------------------------------------------------------------
  | Don't show ANY in production environments. Instead, let the system catch
  | it and display a generic error message.
- |
- | If you set 'display_errors' to '1', CI4's detailed error report will show.
  */
-error_reporting(E_ALL & ~E_DEPRECATED);
-// If you want to suppress more types of errors.
+// ini_set('display_errors', '0');
 // error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
-ini_set('display_errors', '0');
+ini_set('display_errors', '1');
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED & ~E_STRICT);
+// ini_set('display_errors', 0);
+// error_reporting(0);
 
 /*
  |--------------------------------------------------------------------------

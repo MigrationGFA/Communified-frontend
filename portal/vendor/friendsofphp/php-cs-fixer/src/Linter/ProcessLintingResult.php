@@ -35,6 +35,9 @@ final class ProcessLintingResult implements LintingResultInterface
         $this->path = $path;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function check(): void
     {
         if (!$this->isSuccessful()) {
@@ -45,33 +48,32 @@ final class ProcessLintingResult implements LintingResultInterface
 
     private function getProcessErrorMessage(): string
     {
-        $errorOutput = $this->process->getErrorOutput();
-        $output = strtok(ltrim('' !== $errorOutput ? $errorOutput : $this->process->getOutput()), "\n");
+        $output = strtok(ltrim($this->process->getErrorOutput() ?: $this->process->getOutput()), "\n");
 
         if (false === $output) {
             return 'Fatal error: Unable to lint file.';
         }
 
         if (null !== $this->path) {
-            $needle = \sprintf('in %s ', $this->path);
+            $needle = sprintf('in %s ', $this->path);
             $pos = strrpos($output, $needle);
 
             if (false !== $pos) {
-                $output = \sprintf('%s%s', substr($output, 0, $pos), substr($output, $pos + \strlen($needle)));
+                $output = sprintf('%s%s', substr($output, 0, $pos), substr($output, $pos + \strlen($needle)));
             }
         }
 
         $prefix = substr($output, 0, 18);
 
         if ('PHP Parse error:  ' === $prefix) {
-            return \sprintf('Parse error: %s.', substr($output, 18));
+            return sprintf('Parse error: %s.', substr($output, 18));
         }
 
         if ('PHP Fatal error:  ' === $prefix) {
-            return \sprintf('Fatal error: %s.', substr($output, 18));
+            return sprintf('Fatal error: %s.', substr($output, 18));
         }
 
-        return \sprintf('%s.', $output);
+        return sprintf('%s.', $output);
     }
 
     private function isSuccessful(): bool

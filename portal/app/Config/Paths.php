@@ -12,11 +12,6 @@ namespace Config;
  * share a system folder between multiple applications, and more.
  *
  * All paths are relative to the project's root folder.
- *
- * NOTE: This class is required prior to Autoloader instantiation,
- *       and does not extend BaseConfig.
- *
- * @immutable
  */
 class Paths
 {
@@ -42,6 +37,7 @@ class Paths
      *
      * @see http://codeigniter.com/user_guide/general/managing_apps.html
      */
+    // public string $appDirectory = __DIR__ . '/..';
     public string $appDirectory = __DIR__ . '/..';
 
     /**

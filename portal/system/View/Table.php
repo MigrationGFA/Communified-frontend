@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * This file is part of CodeIgniter 4 framework.
  *
@@ -19,29 +17,27 @@ use CodeIgniter\Database\BaseResult;
  * HTML Table Generating Class
  *
  * Lets you create tables manually or from database result objects, or arrays.
- *
- * @see \CodeIgniter\View\TableTest
  */
 class Table
 {
     /**
      * Data for table rows
      *
-     * @var list<array<string, string>>|list<list<array<string, string>>>
+     * @var array
      */
     public $rows = [];
 
     /**
      * Data for table heading
      *
-     * @var array<int, mixed>
+     * @var array
      */
     public $heading = [];
 
     /**
      * Data for table footing
      *
-     * @var array<int, mixed>
+     * @var array
      */
     public $footing = [];
 
@@ -62,7 +58,7 @@ class Table
     /**
      * Table layout template
      *
-     * @var array<string, string>
+     * @var array
      */
     public $template;
 
@@ -88,14 +84,9 @@ class Table
     public $function;
 
     /**
-     * Order each inserted row by heading keys
-     */
-    private bool $syncRowsWithHeading = false;
-
-    /**
      * Set the template from the table config file if it exists
      *
-     * @param array<string, string> $config (default: array())
+     * @param array $config (default: array())
      */
     public function __construct($config = [])
     {
@@ -108,8 +99,7 @@ class Table
     /**
      * Set the template
      *
-     * @param         array<string, string>        $template
-     * @phpstan-param array<string, string>|string $template
+     * @param array $template
      *
      * @return bool
      */
@@ -158,10 +148,10 @@ class Table
      * columns. This allows a single array with many elements to be
      * displayed in a table that has a fixed column count.
      *
-     * @param list<string> $array
-     * @param int          $columnLimit
+     * @param array $array
+     * @param int   $columnLimit
      *
-     * @return array<int, mixed>|false
+     * @return array|false
      */
     public function makeColumns($array = [], $columnLimit = 0)
     {
@@ -171,8 +161,7 @@ class Table
 
         // Turn off the auto-heading feature since it's doubtful we
         // will want headings from a one-dimensional array
-        $this->autoHeading         = false;
-        $this->syncRowsWithHeading = false;
+        $this->autoHeading = false;
 
         if ($columnLimit === 0) {
             return $array;
@@ -218,40 +207,7 @@ class Table
      */
     public function addRow()
     {
-        $tmpRow = $this->_prepArgs(func_get_args());
-
-        if ($this->syncRowsWithHeading && $this->heading !== []) {
-            // each key has an index
-            $keyIndex = array_flip(array_keys($this->heading));
-
-            // figure out which keys need to be added
-            $missingKeys = array_diff_key($keyIndex, $tmpRow);
-
-            // Remove all keys which don't exist in $keyIndex
-            $tmpRow = array_filter($tmpRow, static fn ($k) => array_key_exists($k, $keyIndex), ARRAY_FILTER_USE_KEY);
-
-            // add missing keys to row, but use $this->emptyCells
-            $tmpRow = array_merge($tmpRow, array_map(fn ($v) => ['data' => $this->emptyCells], $missingKeys));
-
-            // order keys by $keyIndex values
-            uksort($tmpRow, static fn ($k1, $k2) => $keyIndex[$k1] <=> $keyIndex[$k2]);
-        }
-        $this->rows[] = $tmpRow;
-
-        return $this;
-    }
-
-    /**
-     * Set to true if each row column should be synced by keys defined in heading.
-     *
-     * If a row has a key which does not exist in heading, it will be filtered out
-     * If a row does not have a key which exists in heading, the field will stay empty
-     *
-     * @return $this
-     */
-    public function setSyncRowsWithHeading(bool $orderByKey)
-    {
-        $this->syncRowsWithHeading = $orderByKey;
+        $this->rows[] = $this->_prepArgs(func_get_args());
 
         return $this;
     }
@@ -261,16 +217,14 @@ class Table
      *
      * Ensures a standard associative array format for all cell data
      *
-     * @param array<int, mixed> $args
-     *
-     * @return array<string, array<string, mixed>>|list<array<string, mixed>>
+     * @return array
      */
     protected function _prepArgs(array $args)
     {
         // If there is no $args[0], skip this and treat as an associative array
         // This can happen if there is only a single key, for example this is passed to table->generate
         // array(array('foo'=>'bar'))
-        if (isset($args[0]) && count($args) === 1 && is_array($args[0])) {
+        if (isset($args[0]) && count($args) === 1 && is_array($args[0]) && ! isset($args[0]['data'])) {
             $args = $args[0];
         }
 
@@ -300,7 +254,7 @@ class Table
     /**
      * Generate the table
      *
-     * @param array<int, mixed>|BaseResult|null $tableData
+     * @param array|BaseResult|null $tableData
      *
      * @return string
      */
@@ -308,7 +262,7 @@ class Table
     {
         // The table data can optionally be passed to this function
         // either as a database result object or an array
-        if ($tableData !== null && $tableData !== []) {
+        if (! empty($tableData)) {
             if ($tableData instanceof BaseResult) {
                 $this->_setFromDBResult($tableData);
             } elseif (is_array($tableData)) {
@@ -317,7 +271,7 @@ class Table
         }
 
         // Is there anything to display? No? Smite them!
-        if ($this->heading === [] && $this->rows === []) {
+        if (empty($this->heading) && empty($this->rows)) {
             return 'Undefined table data';
         }
 
@@ -338,7 +292,7 @@ class Table
         }
 
         // Is there a table heading to display?
-        if ($this->heading !== []) {
+        if (! empty($this->heading)) {
             $headerTag = null;
 
             if (preg_match('/(<)(td|th)(?=\h|>)/i', $this->template['heading_cell_start'], $matches) === 1) {
@@ -363,14 +317,14 @@ class Table
         }
 
         // Build the table rows
-        if ($this->rows !== []) {
+        if (! empty($this->rows)) {
             $out .= $this->template['tbody_open'] . $this->newline;
 
             $i = 1;
 
             foreach ($this->rows as $row) {
                 // We use modulus to alternate the row colors
-                $name = fmod($i++, 2) !== 0.0 ? '' : 'alt_';
+                $name = fmod($i++, 2) ? '' : 'alt_';
 
                 $out .= $this->template['row_' . $name . 'start'] . $this->newline;
 
@@ -386,7 +340,7 @@ class Table
                     $cell = $cell['data'] ?? '';
                     $out .= $temp;
 
-                    if ($cell === '') {
+                    if ($cell === '' || $cell === null) {
                         $out .= $this->emptyCells;
                     } elseif (isset($this->function)) {
                         $out .= ($this->function)($cell);
@@ -404,7 +358,7 @@ class Table
         }
 
         // Any table footing to display?
-        if ($this->footing !== []) {
+        if (! empty($this->footing)) {
             $footerTag = null;
 
             if (preg_match('/(<)(td|th)(?=\h|>)/i', $this->template['footing_cell_start'], $matches)) {
@@ -457,13 +411,11 @@ class Table
      * Set table data from a database result object
      *
      * @param BaseResult $object Database result object
-     *
-     * @return void
      */
     protected function _setFromDBResult($object)
     {
         // First generate the headings from the table column names
-        if ($this->autoHeading && $this->heading === []) {
+        if ($this->autoHeading && empty($this->heading)) {
             $this->heading = $this->_prepArgs($object->getFieldNames());
         }
 
@@ -475,25 +427,21 @@ class Table
     /**
      * Set table data from an array
      *
-     * @param array<int, mixed> $data
-     *
-     * @return void
+     * @param array $data
      */
     protected function _setFromArray($data)
     {
-        if ($this->autoHeading && $this->heading === []) {
+        if ($this->autoHeading && empty($this->heading)) {
             $this->heading = $this->_prepArgs(array_shift($data));
         }
 
         foreach ($data as &$row) {
-            $this->addRow($row);
+            $this->rows[] = $this->_prepArgs($row);
         }
     }
 
     /**
      * Compile Template
-     *
-     * @return void
      */
     protected function _compileTemplate()
     {
@@ -513,7 +461,7 @@ class Table
     /**
      * Default Template
      *
-     * @return array<string, string>
+     * @return array
      */
     protected function _defaultTemplate()
     {

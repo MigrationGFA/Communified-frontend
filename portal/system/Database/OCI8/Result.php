@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * This file is part of CodeIgniter 4 framework.
  *
@@ -15,7 +13,6 @@ namespace CodeIgniter\Database\OCI8;
 
 use CodeIgniter\Database\BaseResult;
 use CodeIgniter\Entity\Entity;
-use stdClass;
 
 /**
  * Result for OCI8
@@ -83,7 +80,7 @@ class Result extends BaseResult
      *
      * Overridden by driver classes.
      *
-     * @return array|false
+     * @return mixed
      */
     protected function fetchAssoc()
     {
@@ -95,7 +92,7 @@ class Result extends BaseResult
      *
      * Overridden by child classes.
      *
-     * @return Entity|false|object|stdClass
+     * @return bool|Entity|object
      */
     protected function fetchObject(string $className = 'stdClass')
     {
@@ -105,7 +102,7 @@ class Result extends BaseResult
             return $row;
         }
         if (is_subclass_of($className, Entity::class)) {
-            return (new $className())->injectRawData((array) $row);
+            return (new $className())->setAttributes((array) $row);
         }
 
         $instance = new $className();

@@ -1,0 +1,9 @@
+[28-Nov-2023 09:16:02 UTC] PHP Warning:  file_get_contents(/home/getfylig/fgnalat.getfundedafrica.com/portal/app/Config/Services.php): failed to open stream: No such file or directory in /home/getfylig/fgnalat.getfundedafrica.com/portal/system/Autoloader/FileLocator.php on line 115
+[28-Nov-2023 09:16:02 UTC] PHP Fatal error:  Uncaught Error: Class '' not found in /home/getfylig/fgnalat.getfundedafrica.com/portal/system/Config/BaseService.php:375
+Stack trace:
+#0 /home/getfylig/fgnalat.getfundedafrica.com/portal/system/Config/BaseService.php(261): CodeIgniter\Config\BaseService::buildServicesCache()
+#1 /home/getfylig/fgnalat.getfundedafrica.com/portal/system/Config/BaseService.php(246): CodeIgniter\Config\BaseService::serviceExists('codeigniter')
+#2 /home/getfylig/fgnalat.getfundedafrica.com/portal/public/index.php(54): CodeIgniter\Config\BaseService::__callStatic('codeigniter', Array)
+#3 {main}
+  thrown in /home/getfylig/fgnalat.getfundedafrica.com/portal/system/Config/BaseService.php on line 375
+[28-Nov-2023 09:16:02 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/getfylig/fgnalat.getfundedafrica.com/portal/vendor/kint-php/kint/init_helpers.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/getfylig/fgnalat.getfundedafrica.com/portal/vendor/kint-php/kint/init.php on line 71

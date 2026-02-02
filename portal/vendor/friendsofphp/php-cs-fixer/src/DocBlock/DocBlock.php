@@ -152,7 +152,9 @@ final class DocBlock
 
         $usefulLines = array_filter(
             $this->lines,
-            static fn (Line $line): bool => $line->containsUsefulContent()
+            static function (Line $line): bool {
+                return $line->containsUsefulContent();
+            }
         );
 
         if (1 < \count($usefulLines)) {
@@ -209,7 +211,7 @@ final class DocBlock
     {
         $index = $start;
 
-        while (($line = $this->getLine(++$index)) !== null) {
+        while ($line = $this->getLine(++$index)) {
             if ($line->containsATag()) {
                 // we've 100% reached the end of the description if we get here
                 break;

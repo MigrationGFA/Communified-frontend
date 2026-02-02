@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 // function getLocation($ip)
 //     {
 //         $ch = curl_init('http://ipwhois.app/json/' . $ip);
@@ -11,112 +11,81 @@ session_start();
 //         // Country code output, field "country_code"
 //         return $ipWhoIsResponse;
 //     }
-// require_once 'request.php';
+require_once 'request.php';
 
-// $requestModel = new Request();
-// $ip = $requestModel->getIpAddress();
-// $isValidIpAddress = $requestModel->isValidIpAddress($ip);
-// $geoLocationData = $requestModel->getLocation($ip);
-// //$geoLocationData['country'];
-// function getlocationX(){
-//     $requestModel = new Request();
-//   $ipx = $requestModel->getIpAddress();
-// $isValidIpAddress = $requestModel->isValidIpAddress($ipx);
-// $geoLocationDatax = $requestModel->getLocation($ipx);
+$requestModel = new Request();
+$ip = $requestModel->getIpAddress();
+$isValidIpAddress = $requestModel->isValidIpAddress($ip);
+$geoLocationData = $requestModel->getLocation($ip);
+//$geoLocationData['country'];
+function getlocationX(){
+    $requestModel = new Request();
+  $ipx = $requestModel->getIpAddress();
+$isValidIpAddress = $requestModel->isValidIpAddress($ipx);
+$geoLocationDatax = $requestModel->getLocation($ipx);
  
-//  return $geoLocationDatax['country'];  
+ return $geoLocationDatax['country'];  
     
-// }
+}
 
-function get_client_ip()
-{
+function get_client_ip() {
     $ipaddress = '';
-    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
-        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } elseif (isset($_SERVER['HTTP_X_FORWARDED'])) {
-        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-    } elseif (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
-        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-    } elseif (isset($_SERVER['HTTP_FORWARDED'])) {
-        $ipaddress = $_SERVER['HTTP_FORWARDED'];
-    } elseif (isset($_SERVER['REMOTE_ADDR'])) {
-        $ipaddress = $_SERVER['REMOTE_ADDR'];
-    } else {
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+       $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
         $ipaddress = 'UNKNOWN';
-    }
-
-    // Handle cases where there are multiple IPs (e.g., via proxies)
-    if (strpos($ipaddress, ',') !== false) {
-        $ipaddress = explode(',', $ipaddress)[0];
-    }
-
-    // Fallback for local testing
-    if ($ipaddress === '::1' || $ipaddress === '127.0.0.1') {
-        $ipaddress = file_get_contents('https://api.ipify.org');
-    }
-
     return $ipaddress;
 }
 
-function getCountrySess()
-{
+function getCountrySess(){
+        // if(!empty(session_start())){
+        //     session_start();
+        // }else{
 
-        
-     
-    // Check if the session variable 'country_name' is already set
-    if (empty($_SESSION["country_name"])) {
+        //     echo '';
+        // }
 
-        $url = 'https://gfa-tech.com/api/iploc.php';
-
-
-
-// Data to be sent in the POST request
-// $recipient_email, $message,$subject,$fromName
-$PublicIP = get_client_ip();
-
-
-
-$postData = array(
-'PublicIP' => "{$PublicIP}",
-
-);
-
-// Initialize cURL session
-$ch = curl_init($url);
-
-// Set cURL options
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return the response as a string
-curl_setopt($ch, CURLOPT_POST, true); // Set as POST request
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postData); // Set POST data
-
-// Include SSL options
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true); // Verify the peer's SSL certificate
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2); // Check that the common name exists and matches the hostname
-
-// Execute cURL session and fetch the result
-$response = curl_exec($ch);
-
-// Check for cURL errors
-if (curl_errno($ch)) {
-return 'cURL error: ' . curl_error($ch);
-}
-
-// Close cURL session
-curl_close($ch);
-
-// // Display the response
- $_SESSION["country_name"] = $response;
-
-return $response;
-        
-    } else {
-        // Return the country name from session
-        return $_SESSION["country_name"];
+    //   3111b3fd18c7a0859ad9b686ac6e8c1a 
+//b88368f3f6563a217a2d03b46e92201e
+// b7a9c8e708f655760465f1711ebebe95
+//7fba5a304c6c0cc5298d1f2713b508b6
+// b7a9c8e708f655760465f1711ebebe95
+// baa1497ff519803e9debddbcab97f3d7
+//7320fa538cb1938a61bee7284c7f97de
+//3e15bd4d2befd5ea2a4d664cec2c72ca
+// if($_SESSION["country_name"]==''){
+//  $PublicIP = get_client_ip();
+//   $json  = file_get_contents('https://api.snoopi.io/'.$PublicIP.'?apikey=3e15bd4d2befd5ea2a4d664cec2c72ca');
+//   $json  =  json_decode($json ,true);
+  
+  $country_name = 'Nigeria'; //$json['CountryName'];
+//xyUlO5DIh3w64Uoo89BdEbdMafJwe4EU   IgaCoCgdb7cyP4xYvLhcvyhXru7nPxQy
+        // $ch = curl_init('https://api.ip2loc.com/xyUlO5DIh3w64Uoo89BdEbdMafJwe4EU/'.$PublicIP);  
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $json = curl_exec($ch);
+        // curl_close($ch);
+        // // Decode JSON response
+        // $data = json_decode($json, true);
+        // // Country code output, field "country_code"
+        // $country_name = $data['location']['country']['name'];
+      //$country_name;
+//       $_SESSION["country_name"] = $country_name;
+//   return $_SESSION["country_name"];    
+// }else{
+//     return $_SESSION["country_name"]; 
+// }
+     return 'Nigeria';
     }
-}
-
 function getCountry(){
  return getCountrySess();     
 }
@@ -238,38 +207,37 @@ function detectCurrency(){
  if(getlocation()=='Nigeria'){
      
      echo "₦"; 
+  }elseif(getCountry()=='Ghana') {
+    echo "₵";
+  }elseif(getCountry()=='Kenya') {
+    echo "KSh";
+  }elseif(getCountry()=='South Africa') {
+    echo "R";
+  }elseif(getCountry()=='Morocco') {
+    echo "DH";
+  }elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
+  || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon' || getCountry()=='Senegal' || getCountry()=='Mali' 
+  || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau') { 
+    echo "F.CFA";
+  }elseif(getCountry()=='Egypt') {
+    echo "E£";
+  }elseif(getCountry()=='Guinea') {
+    echo "FG";
+  }elseif(getCountry()=='Malawi') {
+    echo "MK";
+  }elseif(getCountry()=='Rwanda') {
+    echo "R₣";
+  }elseif(getCountry()=='Sierra Leone') {
+    echo "Le";
+  }elseif(getCountry()=='São Tomé and Príncipe') {
+    echo "Db";
+  }elseif(getCountry()=='Tanzania') {
+    echo "Tsh";
+  }elseif(getCountry()=='Uganda') {
+    echo "Ush";
+  }elseif(getCountry()=='Zambia') {
+    echo "K";
   }
-  // elseif(getCountry()=='Ghana') {
-  //   echo "₵";
-  // }elseif(getCountry()=='Kenya') {
-  //   echo "KSh";
-  // }elseif(getCountry()=='South Africa') {
-  //   echo "R";
-  // }elseif(getCountry()=='Morocco') {
-  //   echo "DH";
-  // }elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
-  // || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon' || getCountry()=='Senegal' || getCountry()=='Mali' 
-  // || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau') { 
-  //   echo "F.CFA";
-  // }elseif(getCountry()=='Egypt') {
-  //   echo "E£";
-  // }elseif(getCountry()=='Guinea') {
-  //   echo "FG";
-  // }elseif(getCountry()=='Malawi') {
-  //   echo "MK";
-  // }elseif(getCountry()=='Rwanda') {
-  //   echo "R₣";
-  // }elseif(getCountry()=='Sierra Leone') {
-  //   echo "Le";
-  // }elseif(getCountry()=='São Tomé and Príncipe') {
-  //   echo "Db";
-  // }elseif(getCountry()=='Tanzania') {
-  //   echo "Tsh";
-  // }elseif(getCountry()=='Uganda') {
-  //   echo "Ush";
-  // }elseif(getCountry()=='Zambia') {
-  //   echo "K";
-  // }
   
   else {
       
@@ -283,69 +251,68 @@ function detectCurrencyAmount($amount){
      
   
    echo numFormat($amount); 
+  }elseif(getCountry()=='Ghana') {
+    $amount = $amount /40.75;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Kenya') {
+    $amount = $amount /3.43;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='South Africa') {
+    $amount = $amount /25.55;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Morocco') {
+    $amount = $amount /45.53;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
+  || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon' || getCountry()=='Senegal' || getCountry()=='Mali' 
+  || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau') {  
+    $amount = $amount /1.3;      
+    $amount = ceil($amount);
+    echo numFormat($amount);
+   }elseif(getCountry()=='Egypt') {
+    $amount = $amount /14.91;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Guinea') {
+    $amount = $amount /0.05;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Malawi') {
+    $amount = $amount /0.45;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Rwanda') {
+    $amount = $amount /0.42;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Sierra Leone') {
+    $amount = $amount /0.03;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='São Tomé and Príncipe') {
+    $amount = $amount /0.02;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Tanzania') {
+    $amount = $amount /0.2;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Uganda') {
+    $amount = $amount /0.12;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
+  }elseif(getCountry()=='Zambia') {
+    $amount = $amount /0.04;      
+   $amount = ceil($amount);
+   echo numFormat($amount);
   }
-// elseif(getCountry()=='Ghana') {
-//     $amount = $amount /40.75;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Kenya') {
-//     $amount = $amount /3.43;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='South Africa') {
-//     $amount = $amount /25.55;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Morocco') {
-//     $amount = $amount /45.53;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Cameroon' || getCountry()=='Central African Republic' || getCountry()=='Chad' || getCountry()=='DR Congo' 
-//   || getCountry()=='Equatorial Guinea' || getCountry()=='Gabon' || getCountry()=='Senegal' || getCountry()=='Mali' 
-//   || getCountry()=='Niger' || getCountry()=='Ivory Coast' || getCountry()=='Benin' || getCountry()=='Burkina Faso' || getCountry()=='Guinea-Bissau') {  
-//     $amount = $amount /1.3;      
-//     $amount = ceil($amount);
-//     echo numFormat($amount);
-//    }elseif(getCountry()=='Egypt') {
-//     $amount = $amount /14.91;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Guinea') {
-//     $amount = $amount /0.05;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Malawi') {
-//     $amount = $amount /0.45;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Rwanda') {
-//     $amount = $amount /0.42;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Sierra Leone') {
-//     $amount = $amount /0.03;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='São Tomé and Príncipe') {
-//     $amount = $amount /0.02;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Tanzania') {
-//     $amount = $amount /0.2;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Uganda') {
-//     $amount = $amount /0.12;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }elseif(getCountry()=='Zambia') {
-//     $amount = $amount /0.04;      
-//    $amount = ceil($amount);
-//    echo numFormat($amount);
-//   }
   else {
       
-    $amount = $amount / 1500;      
+    $amount = $amount / 460;      
    $amount = ceil($amount);
    echo numFormat($amount);  
   }
@@ -365,7 +332,7 @@ function detectCurrencyAmountx($amount){
   
   else {
       
-    $amount = $amount / 1500;      
+    $amount = $amount / 460;      
    $amount = ceil($amount);
    return numFormat($amount);  
   }

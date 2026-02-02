@@ -17,8 +17,6 @@ namespace PhpCsFixer\Linter;
 /**
  * @author Dariusz Rumiński <dariusz.ruminski@gmail.com>
  *
- * @readonly
- *
  * @internal
  */
 final class TokenizerLintingResult implements LintingResultInterface
@@ -30,11 +28,14 @@ final class TokenizerLintingResult implements LintingResultInterface
         $this->error = $error;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function check(): void
     {
         if (null !== $this->error) {
             throw new LintingException(
-                \sprintf('%s: %s on line %d.', $this->getMessagePrefix(), $this->error->getMessage(), $this->error->getLine()),
+                sprintf('%s: %s on line %d.', $this->getMessagePrefix(), $this->error->getMessage(), $this->error->getLine()),
                 $this->error->getCode(),
                 $this->error
             );

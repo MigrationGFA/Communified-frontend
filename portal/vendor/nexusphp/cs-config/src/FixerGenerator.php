@@ -15,6 +15,7 @@ namespace Nexus\CsConfig;
 
 use PhpCsFixer\Finder;
 use PhpCsFixer\Fixer\FixerInterface;
+use PhpCsFixer\Preg;
 use Symfony\Component\Finder\SplFileInfo;
 
 /**
@@ -24,15 +25,14 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 final class FixerGenerator implements \IteratorAggregate
 {
-    /**
-     * @var list<\IteratorAggregate<FixerInterface>>
-     */
-    private array $fixerIterators = [];
+    private string $path;
+    private string $vendor;
 
-    private function __construct(
-        private string $path,
-        private string $vendor,
-    ) {}
+    private function __construct(string $path, string $vendor)
+    {
+        $this->path = $path;
+        $this->vendor = $vendor;
+    }
 
     /**
      * @throws \RuntimeException
@@ -44,30 +44,18 @@ final class FixerGenerator implements \IteratorAggregate
         }
 
         if (! is_dir($path)) {
-            throw new \RuntimeException(\sprintf('Path "%s" is not a valid directory.', $path));
+            throw new \RuntimeException(sprintf('Path "%s" is not a valid directory.', $path));
         }
 
         if ('' === $vendor) {
             throw new \RuntimeException('Vendor namespace cannot be empty.');
         }
 
-        if (preg_match('/^[A-Z][a-zA-Z0-9\\\\]+$/', $vendor) !== 1) {
-            throw new \RuntimeException(\sprintf('Vendor namespace "%s" is not valid.', $vendor));
+        if (Preg::match('/^[A-Z][a-zA-Z0-9\\\\]+$/', $vendor) !== 1) {
+            throw new \RuntimeException(sprintf('Vendor namespace "%s" is not valid.', $vendor));
         }
 
         return new self($path, $vendor);
-    }
-
-    /**
-     * Merge other iterators that yield `FixerInterface` custom fixers.
-     *
-     * @param \IteratorAggregate<FixerInterface> ...$fixerIterators
-     */
-    public function mergeWith(\IteratorAggregate ...$fixerIterators): self
-    {
-        $this->fixerIterators = array_values($fixerIterators);
-
-        return $this;
     }
 
     /**
@@ -83,18 +71,9 @@ final class FixerGenerator implements \IteratorAggregate
             ->sortByName()
         ;
 
-        $otherFixers = [];
-
-        foreach ($this->fixerIterators as $fixerIterator) {
-            $otherFixers = array_merge(
-                $otherFixers,
-                iterator_to_array($fixerIterator->getIterator(), false),
-            );
-        }
-
-        $fixers = array_values(array_filter(array_map(
+        $fixers = array_filter(array_map(
             function (SplFileInfo $file): object {
-                $fixer = \sprintf(
+                $fixer = sprintf(
                     '%s\\%s%s%s',
                     trim($this->vendor, '\\'),
                     strtr($file->getRelativePath(), \DIRECTORY_SEPARATOR, '\\'),
@@ -105,8 +84,8 @@ final class FixerGenerator implements \IteratorAggregate
                 return new $fixer();
             },
             iterator_to_array($finder, false),
-        ), static fn(object $fixer): bool => $fixer instanceof FixerInterface));
+        ), static fn (object $fixer): bool => $fixer instanceof FixerInterface);
 
-        yield from array_merge($fixers, $otherFixers);
+        yield from $fixers;
     }
 }

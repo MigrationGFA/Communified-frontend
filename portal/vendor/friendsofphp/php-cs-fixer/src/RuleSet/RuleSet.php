@@ -15,14 +15,11 @@ declare(strict_types=1);
 namespace PhpCsFixer\RuleSet;
 
 use PhpCsFixer\ConfigurationException\InvalidFixerConfigurationException;
-use PhpCsFixer\Utils;
 
 /**
  * Set of rules to be used by fixer.
  *
  * @author Dariusz Rumiński <dariusz.ruminski@gmail.com>
- *
- * @readonly
  *
  * @internal
  */
@@ -31,10 +28,10 @@ final class RuleSet implements RuleSetInterface
     /**
      * Group of rules generated from input set.
      *
-     * The key is name of rule, value is configuration array or true.
+     * The key is name of rule, value is bool if the rule/set should be used.
      * The key must not point to any set.
      *
-     * @var array<string, array<string, mixed>|true>
+     * @var array<string, array<string, mixed>|bool>
      */
     private array $rules;
 
@@ -45,10 +42,12 @@ final class RuleSet implements RuleSetInterface
                 throw new \InvalidArgumentException('Rule/set name must not be empty.');
             }
 
+            // @phpstan-ignore-next-line
             if (\is_int($name)) {
-                throw new \InvalidArgumentException(\sprintf('Missing value for "%s" rule/set.', $value));
+                throw new \InvalidArgumentException(sprintf('Missing value for "%s" rule/set.', $value));
             }
 
+            // @phpstan-ignore-next-line
             if (!\is_bool($value) && !\is_array($value)) {
                 $message = str_starts_with($name, '@') ? 'Set must be enabled (true) or disabled (false). Other values are not allowed.' : 'Rule must be enabled (true), disabled (false) or configured (non-empty, assoc array). Other values are not allowed.';
 
@@ -60,18 +59,24 @@ final class RuleSet implements RuleSetInterface
             }
         }
 
-        $this->rules = $this->resolveSet($set);
+        $this->resolveSet($set);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function hasRule(string $rule): bool
     {
         return \array_key_exists($rule, $this->rules);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getRuleConfiguration(string $rule): ?array
     {
         if (!$this->hasRule($rule)) {
-            throw new \InvalidArgumentException(\sprintf('Rule "%s" is not in the set.', $rule));
+            throw new \InvalidArgumentException(sprintf('Rule "%s" is not in the set.', $rule));
         }
 
         if (true === $this->rules[$rule]) {
@@ -81,6 +86,9 @@ final class RuleSet implements RuleSetInterface
         return $this->rules[$rule];
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getRules(): array
     {
         return $this->rules;
@@ -90,10 +98,8 @@ final class RuleSet implements RuleSetInterface
      * Resolve input set into group of rules.
      *
      * @param array<string, array<string, mixed>|bool> $rules
-     *
-     * @return array<string, array<string, mixed>|true>
      */
-    private function resolveSet(array $rules): array
+    private function resolveSet(array $rules): void
     {
         $resolvedRules = [];
 
@@ -101,7 +107,7 @@ final class RuleSet implements RuleSetInterface
         foreach ($rules as $name => $value) {
             if (str_starts_with($name, '@')) {
                 if (!\is_bool($value)) {
-                    throw new \UnexpectedValueException(\sprintf('Nested rule set "%s" configuration must be a boolean.', $name));
+                    throw new \UnexpectedValueException(sprintf('Nested rule set "%s" configuration must be a boolean.', $name));
                 }
 
                 $set = $this->resolveSubset($name, $value);
@@ -112,12 +118,9 @@ final class RuleSet implements RuleSetInterface
         }
 
         // filter out all resolvedRules that are off
-        $resolvedRules = array_filter(
-            $resolvedRules,
-            static fn ($value): bool => false !== $value
-        );
+        $resolvedRules = array_filter($resolvedRules);
 
-        return $resolvedRules;
+        $this->rules = $resolvedRules;
     }
 
     /**
@@ -130,17 +133,7 @@ final class RuleSet implements RuleSetInterface
      */
     private function resolveSubset(string $setName, bool $setValue): array
     {
-        $ruleSet = RuleSets::getSetDefinition($setName);
-
-        if ($ruleSet instanceof DeprecatedRuleSetDescriptionInterface) {
-            $messageEnd = [] === $ruleSet->getSuccessorsNames()
-                ? 'No replacement available'
-                : \sprintf('Use %s instead', Utils::naturalLanguageJoin($ruleSet->getSuccessorsNames()));
-
-            Utils::triggerDeprecation(new \RuntimeException("Rule set \"{$setName}\" is deprecated. {$messageEnd}."));
-        }
-
-        $rules = $ruleSet->getRules();
+        $rules = RuleSets::getSetDefinition($setName)->getRules();
 
         foreach ($rules as $name => $value) {
             if (str_starts_with($name, '@')) {

@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * This file is part of CodeIgniter 4 framework.
  *
@@ -15,7 +13,6 @@ namespace CodeIgniter\Commands\Generators;
 
 use CodeIgniter\CLI\BaseCommand;
 use CodeIgniter\CLI\GeneratorTrait;
-use Config\Generators;
 
 /**
  * Generates a skeleton Cell and its view.
@@ -43,7 +40,7 @@ class CellGenerator extends BaseCommand
      *
      * @var string
      */
-    protected $description = 'Generates a new Controlled Cell file and its view.';
+    protected $description = 'Generates a new Cell file and its view.';
 
     /**
      * The Command's Usage
@@ -55,19 +52,20 @@ class CellGenerator extends BaseCommand
     /**
      * The Command's Arguments
      *
-     * @var array<string, string>
+     * @var array
      */
     protected $arguments = [
-        'name' => 'The Controlled Cell class name.',
+        'name' => 'The cell class name.',
     ];
 
     /**
      * The Command's Options
      *
-     * @var array<string, string>
+     * @var array
      */
     protected $options = [
         '--namespace' => 'Set root namespace. Default: "APP_NAMESPACE".',
+        '--suffix'    => 'Append the component title to the class name (e.g. User => UserCell).',
         '--force'     => 'Force overwrite existing file.',
     ];
 
@@ -76,32 +74,30 @@ class CellGenerator extends BaseCommand
      */
     public function run(array $params)
     {
-        $this->component = 'Cell';
-        $this->directory = 'Cells';
-
-        $params = array_merge($params, ['suffix' => null]);
-
-        $this->templatePath  = config(Generators::class)->views[$this->name]['class'];
+        // Generate the Class first
+        $this->component     = 'Cell';
+        $this->directory     = 'Cells';
         $this->template      = 'cell.tpl.php';
         $this->classNameLang = 'CLI.generator.className.cell';
 
         $this->generateClass($params);
 
-        $this->templatePath  = config(Generators::class)->views[$this->name]['view'];
-        $this->template      = 'cell_view.tpl.php';
+        // Generate the View
         $this->classNameLang = 'CLI.generator.viewName.cell';
 
-        $className = $this->qualifyClassName();
-        $viewName  = decamelize(class_basename($className));
-        $viewName  = preg_replace(
-            '/([a-z][a-z0-9_\/\\\\]+)(_cell)$/i',
-            '$1',
-            $viewName
-        ) ?? $viewName;
-        $namespace = substr($className, 0, strrpos($className, '\\') + 1);
+        // Form the view name
+        $segments = explode('\\', $this->qualifyClassName());
 
-        $this->generateView($namespace . $viewName, $params);
+        $view = array_pop($segments);
+        $view = str_replace('Cell', '', decamelize($view));
+        if (strpos($view, '_cell') === false) {
+            $view .= '_cell';
+        }
+        $segments[] = $view;
+        $view       = implode('\\', $segments);
 
-        return 0;
+        $this->template = 'cell_view.tpl.php';
+
+        $this->generateView($view, $params);
     }
 }

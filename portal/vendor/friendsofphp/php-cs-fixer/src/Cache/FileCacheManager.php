@@ -14,8 +14,6 @@ declare(strict_types=1);
 
 namespace PhpCsFixer\Cache;
 
-use PhpCsFixer\Hasher;
-
 /**
  * Class supports caching information about state of fixing files.
  *
@@ -34,8 +32,6 @@ use PhpCsFixer\Hasher;
  */
 final class FileCacheManager implements CacheManagerInterface
 {
-    public const WRITE_FREQUENCY = 10;
-
     private FileHandlerInterface $handler;
 
     private SignatureInterface $signature;
@@ -44,11 +40,10 @@ final class FileCacheManager implements CacheManagerInterface
 
     private DirectoryInterface $cacheDirectory;
 
-    private int $writeCounter = 0;
-
-    private bool $signatureWasUpdated = false;
-
-    private CacheInterface $cache;
+    /**
+     * @var CacheInterface
+     */
+    private $cache;
 
     public function __construct(
         FileHandlerInterface $handler,
@@ -66,9 +61,7 @@ final class FileCacheManager implements CacheManagerInterface
 
     public function __destruct()
     {
-        if (true === $this->signatureWasUpdated || 0 !== $this->writeCounter) {
-            $this->writeCache();
-        }
+        $this->writeCache();
     }
 
     /**
@@ -100,23 +93,17 @@ final class FileCacheManager implements CacheManagerInterface
 
     public function setFile(string $file, string $fileContent): void
     {
-        $this->setFileHash($file, $this->calcHash($fileContent));
-    }
-
-    public function setFileHash(string $file, string $hash): void
-    {
         $file = $this->cacheDirectory->getRelativePathTo($file);
+
+        $hash = $this->calcHash($fileContent);
 
         if ($this->isDryRun && $this->cache->has($file) && $this->cache->get($file) !== $hash) {
             $this->cache->clear($file);
-        } else {
-            $this->cache->set($file, $hash);
+
+            return;
         }
 
-        if (self::WRITE_FREQUENCY === ++$this->writeCounter) {
-            $this->writeCounter = 0;
-            $this->writeCache();
-        }
+        $this->cache->set($file, $hash);
     }
 
     private function readCache(): void
@@ -125,7 +112,6 @@ final class FileCacheManager implements CacheManagerInterface
 
         if (null === $cache || !$this->signature->equals($cache->getSignature())) {
             $cache = new Cache($this->signature);
-            $this->signatureWasUpdated = true;
         }
 
         $this->cache = $cache;
@@ -138,6 +124,6 @@ final class FileCacheManager implements CacheManagerInterface
 
     private function calcHash(string $content): string
     {
-        return Hasher::calculate($content);
+        return md5($content);
     }
 }

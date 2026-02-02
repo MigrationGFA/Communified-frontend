@@ -61,7 +61,7 @@ $foo = 2 + 2;
                 continue;
             }
 
-            if (!str_contains(strtolower($token->getContent()), strtolower('@var')) && !str_contains(strtolower($token->getContent()), strtolower('@type'))) {
+            if (false === stripos($token->getContent(), '@var') && false === stripos($token->getContent(), '@type')) {
                 continue;
             }
 

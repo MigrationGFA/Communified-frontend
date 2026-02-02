@@ -25,10 +25,13 @@ use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
  */
 final class PhpdocNoPackageFixer extends AbstractProxyFixer
 {
+    /**
+     * {@inheritdoc}
+     */
     public function getDefinition(): FixerDefinitionInterface
     {
         return new FixerDefinition(
-            '`@package` and `@subpackage` annotations must be removed from PHPDoc.',
+            '`@package` and `@subpackage` annotations should be omitted from PHPDoc.',
             [
                 new CodeSample(
                     '<?php
@@ -57,13 +60,13 @@ class Baz
         return parent::getPriority();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function createProxyFixers(): array
     {
         $fixer = new GeneralPhpdocAnnotationRemoveFixer();
-        $fixer->configure([
-            'annotations' => ['package', 'subpackage'],
-            'case_sensitive' => true,
-        ]);
+        $fixer->configure(['annotations' => ['package', 'subpackage']]);
 
         return [$fixer];
     }

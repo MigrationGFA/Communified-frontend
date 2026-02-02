@@ -17,8 +17,6 @@ namespace PhpCsFixer\Tokenizer\Analyzer\Analysis;
 /**
  * @author Kuba Werłos <werlos@gmail.com>
  *
- * @readonly
- *
  * @internal
  */
 final class CaseAnalysis

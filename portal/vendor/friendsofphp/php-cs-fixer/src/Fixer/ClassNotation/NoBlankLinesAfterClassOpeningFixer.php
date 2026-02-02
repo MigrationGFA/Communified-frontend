@@ -27,11 +27,17 @@ use PhpCsFixer\Tokenizer\Tokens;
  */
 final class NoBlankLinesAfterClassOpeningFixer extends AbstractFixer implements WhitespacesAwareFixerInterface
 {
+    /**
+     * {@inheritdoc}
+     */
     public function isCandidate(Tokens $tokens): bool
     {
         return $tokens->isAnyTokenKindsFound(Token::getClassyTokenKinds());
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getDefinition(): FixerDefinitionInterface
     {
         return new FixerDefinition(
@@ -55,13 +61,16 @@ final class Sample
     /**
      * {@inheritdoc}
      *
-     * Must run after OrderedClassElementsFixer, PhpUnitDataProviderMethodOrderFixer.
+     * Must run after OrderedClassElementsFixer.
      */
     public function getPriority(): int
     {
         return 0;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function applyFix(\SplFileInfo $file, Tokens $tokens): void
     {
         foreach ($tokens as $index => $token) {

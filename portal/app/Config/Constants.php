@@ -42,6 +42,13 @@ defined('MONTH')  || define('MONTH', 2_592_000);
 defined('YEAR')   || define('YEAR', 31_536_000);
 defined('DECADE') || define('DECADE', 315_360_000);
 
+
+// defined('ENVIRONMENT') || define('ENVIRONMENT', 'production');
+// if (ENVIRONMENT !== 'production') {
+//    error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+//     ini_set('display_errors', '1');
+// }
+
 /*
  | --------------------------------------------------------------------------
  | Exit Status Codes
@@ -77,6 +84,12 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7);     // invalid u
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8);       // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9);      // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest automatically-assigned error code
+// defined('ENVIRONMENT') || define('ENVIRONMENT', 'development');
+
+// if (ENVIRONMENT === 'development') {
+//     error_reporting(0);
+//     ini_set('display_errors', '0');
+// }
 
 /**
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_LOW instead.

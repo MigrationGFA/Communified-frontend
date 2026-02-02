@@ -21,7 +21,7 @@ class Encryption extends BaseConfig
      * You need to ensure it is long enough for the cipher and mode you plan to use.
      * See the user guide for more info.
      */
-    public string $key = '';
+    public string $key = '6efe7d91623e007f867eae7e6578eba5';
 
     /**
      * --------------------------------------------------------------------------
@@ -80,13 +80,4 @@ class Encryption extends BaseConfig
      * Set to 'authentication' for CI3 Encryption compatibility.
      */
     public string $authKeyInfo = '';
-
-    /**
-     * Cipher to use.
-     * This setting is only used by OpenSSLHandler.
-     *
-     * Set to 'AES-128-CBC' to decrypt encrypted data that encrypted
-     * by CI3 Encryption default configuration.
-     */
-    public string $cipher = 'AES-256-CTR';
 }

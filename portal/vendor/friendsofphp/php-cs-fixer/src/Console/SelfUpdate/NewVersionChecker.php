@@ -28,9 +28,9 @@ final class NewVersionChecker implements NewVersionCheckerInterface
     private VersionParser $versionParser;
 
     /**
-     * @var null|list<string>
+     * @var null|string[]
      */
-    private ?array $availableVersions = null;
+    private $availableVersions;
 
     public function __construct(GithubClientInterface $githubClient)
     {
@@ -38,6 +38,9 @@ final class NewVersionChecker implements NewVersionCheckerInterface
         $this->versionParser = new VersionParser();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getLatestVersion(): string
     {
         $this->retrieveAvailableVersions();
@@ -45,6 +48,9 @@ final class NewVersionChecker implements NewVersionCheckerInterface
         return $this->availableVersions[0];
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getLatestVersionOfMajor(int $majorVersion): ?string
     {
         $this->retrieveAvailableVersions();
@@ -60,6 +66,9 @@ final class NewVersionChecker implements NewVersionCheckerInterface
         return null;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function compareVersions(string $versionA, string $versionB): int
     {
         $versionA = $this->versionParser->normalize($versionA);
@@ -82,7 +91,9 @@ final class NewVersionChecker implements NewVersionCheckerInterface
             return;
         }
 
-        foreach ($this->githubClient->getTags() as $version) {
+        foreach ($this->githubClient->getTags() as $tag) {
+            $version = $tag['name'];
+
             try {
                 $this->versionParser->normalize($version);
 
@@ -94,9 +105,6 @@ final class NewVersionChecker implements NewVersionCheckerInterface
             }
         }
 
-        $versions = Semver::rsort($this->availableVersions);
-        \assert(array_is_list($versions)); // Semver::rsort provides soft `array` type, let's validate and ensure proper type for SCA
-
-        $this->availableVersions = $versions;
+        $this->availableVersions = Semver::rsort($this->availableVersions);
     }
 }

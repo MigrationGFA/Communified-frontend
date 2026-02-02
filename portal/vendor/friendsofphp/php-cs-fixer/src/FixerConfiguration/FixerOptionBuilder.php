@@ -21,7 +21,7 @@ final class FixerOptionBuilder
     private string $description;
 
     /**
-     * @var null|mixed
+     * @var mixed
      */
     private $default;
 
@@ -30,22 +30,27 @@ final class FixerOptionBuilder
     /**
      * @var null|list<string>
      */
-    private ?array $allowedTypes = null;
+    private $allowedTypes;
 
     /**
-     * @var null|non-empty-list<null|(callable(mixed): bool)|scalar>
+     * @var null|list<(callable(mixed): bool)|null|scalar>
      */
-    private ?array $allowedValues = null;
+    private $allowedValues;
 
-    private ?\Closure $normalizer = null;
+    /**
+     * @var null|\Closure
+     */
+    private $normalizer;
 
-    private ?string $deprecationMessage = null;
+    /**
+     * @var null|string
+     */
+    private $deprecationMessage;
 
     public function __construct(string $name, string $description)
     {
         $this->name = $name;
         $this->description = $description;
-        $this->default = null;
     }
 
     /**
@@ -74,7 +79,7 @@ final class FixerOptionBuilder
     }
 
     /**
-     * @param non-empty-list<null|(callable(mixed): bool)|scalar> $allowedValues
+     * @param list<(callable(mixed): bool)|null|scalar> $allowedValues
      *
      * @return $this
      */
