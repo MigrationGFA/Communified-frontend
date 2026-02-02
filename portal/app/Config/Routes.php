@@ -5,11 +5,13 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Gfa::index');
+$routes->get('/', 'Gfa::landing');
+$routes->get('portal', 'Gfa::index');
 $routes->get('gfa/', 'Gfa::index');
 
 // For routing to any method in Home controller with a dynamic segment
 $routes->add('gfa/(:any)', 'Gfa::$1');
+$routes->add('portal/gfa/(:any)', 'Gfa::$1');
 
 // For admin routes with dynamic segments
 $routes->get('admin', 'Admin::index');

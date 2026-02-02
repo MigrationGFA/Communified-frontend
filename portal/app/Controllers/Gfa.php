@@ -40,8 +40,12 @@ class Gfa extends BaseController {
         echo lang('translation.Welcome');
     }
 
+    public function landing() {
+        echo view('landing_page');
+    }
+
     public function index() {
-$data['page_title'] = "Login Communified";
+        $data['page_title'] = "Login Communified";
         echo view('header_home',$data);
         echo view('login');
         echo view('header_footer');
