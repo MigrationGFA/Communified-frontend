@@ -5,7 +5,8 @@
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
       <div class="navbar-header">
-       <center><a href="<?php echo base_url('gfa/dashboard'); ?>"><img src="https://communitified-test.azurewebsites.net/assets/images/communified-logo.png" width="120px" height="120px" align="center"></a></center>
+        
+       <center><a href="<?php echo base_url('gfa/dashboard'); ?>"><img src="<?php echo base_url('assets/images/communified-logo.png'); ?>" width="120px" height="120px" align="center" style="border-radius: 24px;"></a></center>
       </div><br> <br> <br>
       <div class="shadow-bottom"></div>
       <div class="main-menu-content"> 

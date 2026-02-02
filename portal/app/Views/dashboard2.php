@@ -12,8 +12,9 @@
             <div class="content-header row">
             </div>
            <input type="hidden" id="action_email" value="<?php echo $email; ?>">
-            <div class="content-body">
-                <!-- Dashboard Analytics Start -->
+           <!-- Dashboard Analytics Start -->
+            <div class="content-body bg-gradient-top-very-light-gray" style="border-radius: 20px; padding: 20px;">
+                
                 <section id="dashboard-analytics">
                     <div class="row match-height">
                        <!-- Current Notification -->
@@ -49,7 +50,7 @@
                                 <?php  //if(empty($this->gfa_model->getAllDcdtByEmail($email))){ echo ''; }else{ ?>
                                 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span><?php echo  $GetCounts[0]['startup_count'] ?>
@@ -79,7 +80,7 @@
                                 </div>
 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span><?php echo  $this->gfa_model->countWeeklyReport($email) ?>
@@ -109,7 +110,7 @@
                                 <?php   //}   ?>
                                 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span><?php echo lang('translation.Courses')?></span>
@@ -141,7 +142,7 @@
                                 </div>
 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span><?php echo lang('translation.Digital Services') ?></span>
@@ -174,7 +175,7 @@
                                 
                                 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span>
@@ -215,7 +216,7 @@
                                 </div>
                                 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span>
@@ -249,7 +250,7 @@
                                 </div>
 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span>
@@ -289,7 +290,7 @@
                                 
                                 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span><?php if($this->gfa_model->countFileUploded($email)==1 || $this->gfa_model->countFileUploded($email)==0  ){
@@ -330,7 +331,7 @@
                                 
 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span><?php if($GetCounts[0]['resource_count']==1 || $GetCounts[0]['resource_count']==0  ){
@@ -402,7 +403,7 @@
                                 
 
                                 <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="card">
+                                    <div class="card glass-effect hover-lift border-0 shadow-sm">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <span><?php if($this->gfa_model->countAllStory()==1 || $this->gfa_model->countAllStory()==0  ){
@@ -444,8 +445,8 @@
 
                         <!-- Timeline Card -->
                         <div class="col-lg-6 col-12">
-                            <div class="card card-user-timeline">
-                                <div class="card-header">
+                            <div class="card card-user-timeline glass-effect hover-lift border-0 shadow-sm">
+                                <div class="card-header border-bottom border-light">
                                     <div class="d-flex align-items-center">
                                         <i data-feather="list" class="user-timeline-title-icon"></i>
                                         <h4 class="card-title"><?php echo lang('translation.Latest News') ?></h4>
@@ -475,9 +476,9 @@
 
                         <!-- Developer Meetup Card -->
                         <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card card-developer-meetup">
+                            <div class="card card-developer-meetup glass-effect hover-lift border-0 shadow-sm">
                                 <div class="meetup-img-wrapper rounded-top text-center">
-                                    <img src="<?php echo base_url('public/assets/app-assets/images/eventgfa.jpg'); ?>" alt="Meeting Pic" height="170" />
+                                    <img src="<?php echo base_url('assets/app-assets/images/eventgfa.jpg'); ?>" alt="Meeting Pic" height="170" />
                                 </div>
 
                                 

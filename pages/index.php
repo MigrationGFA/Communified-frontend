@@ -1,5 +1,4 @@
-<?php include_once("../pages/ip.php");  ?>
-
+<?php include_once("ip.php");  ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
@@ -52,18 +51,21 @@
     data-at2x="../assets/images/communified-logo.png"
     alt=""
     class="default-logo"
+    style="border-radius: 24px;"
   />
   <img
     src="../assets/images/communified-logo.png"
     data-at2x="../assets/images/communified-logo.png"
     alt=""
     class="alt-logo"
+    style="border-radius: 24px;"
   />
   <img
     src="../assets/images/communified-logo.png"
     data-at2x="../assets/images/communified-logo.png"
     alt=""
     class="mobile-logo"
+    style="border-radius: 24px;"
   />
 </a>
           </div>

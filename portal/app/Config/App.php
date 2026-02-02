@@ -17,7 +17,8 @@ class App extends BaseConfig
      * http://localhost/Communified-frontend/portal/
      * E.g., http://example.com/
      */
-    public string $baseURL = 'https://communitified-test.azurewebsites.net/portal/';
+    // public string $baseURL = 'https://communitified-test.azurewebsites.net/portal/';
+    public string $baseURL = 'http://localhost:8081/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

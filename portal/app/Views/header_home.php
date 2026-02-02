@@ -11,33 +11,33 @@
 
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/app-assets/vendors/css/vendors.min.css'); ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/app-assets/vendors/css/forms/wizard/bs-stepper.min.css'); ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/vendors/css/forms/select/select2.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/app-assets/vendors/css/vendors.min.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/app-assets/vendors/css/forms/wizard/bs-stepper.min.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/vendors/css/forms/select/select2.min.css"); ?>">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/bootstrap.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/bootstrap-extended.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/colors.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/components.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/themes/dark-layout.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/themes/bordered-layout.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/app-assets/css/themes/semi-dark-layout.min.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/bootstrap.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/bootstrap-extended.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/colors.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/components.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/themes/dark-layout.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/themes/bordered-layout.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/app-assets/css/themes/semi-dark-layout.min.css'); ?>">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/core/menu/menu-types/vertical-menu.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/plugins/forms/form-validation.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/authentication.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/core/menu/menu-types/vertical-menu.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/plugins/forms/form-validation.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/pages/authentication.css"); ?>">
     <!-- END: Page CSS-->
     
      <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/plugins/forms/pickers/form-flat-pickr.min.css"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/app-calendar.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/plugins/forms/pickers/form-flat-pickr.min.css"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/pages/app-calendar.min.css"); ?>">
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("public/assets/app-assets/css/pages/style.css"); ?>">
-	 <script src="<?php echo base_url("public/assets/app-assets/vendors/js/vendors.min.js"); ?>"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/app-assets/css/pages/style.css"); ?>">
+	 <script src="<?php echo base_url("assets/app-assets/vendors/js/vendors.min.js"); ?>"></script>
     <!-- END: Custom CSS-->
     
     
@@ -55,7 +55,7 @@ table, th, td {
      <div class="col-lg-1">
      <a class="brand-logo" href="<?php echo base_url(); ?>">
      
-<img src="<?php echo base_url('public/assets/images/communified-logo.png'); ?>">
+<img src="<?php echo base_url('assets/images/communified-logo.png'); ?>">
     </a>
     </div>-->
     <br><!--

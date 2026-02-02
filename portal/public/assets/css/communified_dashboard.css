@@ -1,0 +1,141 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+/* variable */
+:root {
+  /* Primary Colors */
+  --base-color: #4a6cc4;
+  --primary-blue: #4a6cc4;
+  --primary-blue-dark: #3a5aae;
+  --primary-blue-light: #6b8bd4;
+
+  /* Accent Colors */
+  --accent-cyan: #5bbcdb;
+  --accent-indigo: #5b6ec4;
+
+  /* Neutral Colors */
+  --medium-gray: #7b7a7a;
+  --dark-gray: #1d1d1d;
+  --charcoal-blue: #1e2a47;
+  --bg-light-blue: #e8edf7;
+
+  /* Typography */
+  --alt-font: "Space Grotesk", sans-serif;
+  --primary-font: "Inter", sans-serif;
+}
+
+/* Force Global Styles */
+body, 
+.app-content, 
+.content-wrapper {
+  font-family: var(--primary-font) !important;
+  color: var(--dark-gray);
+}
+
+/* Force Background on Body and Content Areas */
+body, 
+html, 
+.app-content {
+  background-image: linear-gradient(
+    to right,
+    #e8edf7,
+    #f0f4fa,
+    #f5f7fc,
+    #fafbfe,
+    #ffffff
+  ) !important;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--alt-font) !important;
+  color: var(--charcoal-blue) !important;
+}
+
+/* Sidebar Styling */
+.main-menu.menu-light {
+    background: white;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.main-menu.menu-light .navigation > li.active > a {
+    background: linear-gradient(118deg, var(--primary-blue), var(--primary-blue-dark)) !important;
+    box-shadow: 0 0 10px 1px rgba(74, 108, 196, 0.7);
+    color: white !important;
+}
+
+.main-menu.menu-light .navigation > li > a {
+    color: var(--charcoal-blue);
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+
+.main-menu.menu-light .navigation > li > a:hover {
+    color: var(--primary-blue);
+    background-color: var(--bg-light-blue);
+}
+
+/* Glassmorphism Cards */
+.card.glass-effect {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1) !important;
+}
+
+/* Congratulations Card Specific Override */
+.card.card-congratulations {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan)) !important;
+    box-shadow: 0 8px 25px rgba(74, 108, 196, 0.4) !important;
+    color: white !important;
+}
+
+.card.card-congratulations h1,
+.card.card-congratulations p, 
+.card.card-congratulations a,
+.card.card-congratulations .text-white {
+    color: white !important;
+}
+
+.card.card-congratulations .avatar {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Hover Lift */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(74, 108, 196, 0.15) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue-dark) !important;
+    border-color: var(--primary-blue-dark) !important;
+}
+
+.btn-success {
+    background-color: var(--accent-cyan) !important;
+    border-color: var(--accent-cyan) !important;
+}
+
+/* Text Gradients */
+.text-gradient-primary {
+  background-image: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

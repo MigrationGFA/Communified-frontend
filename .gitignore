@@ -2,3 +2,7 @@
 .php_tmp
 .vscode
 fiveserver.config.js
+portal/writable/
+portal/vendor/
+node_modules/
+.env

@@ -1,4 +1,4 @@
- <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+ <body class="vertical-layout vertical-menu-modern navbar-floating footer-static bg-gradient-top-very-light-gray" data-open="click" data-menu="vertical-menu-modern" data-col="">
 
     <!-- BEGIN: Header-->
  <?php   
@@ -18,7 +18,7 @@
         <ul class="nav navbar-nav align-items-center ms-auto">
           
           <li class="nav-item">
-    <button id="backButton" class="btn btn-success btn-sm"> <i data-feather="circle"></i>< 
+    <button id="backButton" class="btn btn-primary btn-sm"> <i data-feather="circle"></i>< 
         <?php echo lang('translation.Back') ?>
     </button>
 </li>
@@ -72,7 +72,7 @@
      
         $getPhoto = $this->gfa_model->getPhotoUploaded($email);
       if(empty($getPhoto)){
-          $showPhoto = "public/assets/images/uploads/default-avatar.jpg";
+          $showPhoto = "assets/images/uploads/default-avatar.jpg";
       }else{
          
          $showPhoto = "uploads/onboarding/".$getPhoto[0]['Photo_name']; 

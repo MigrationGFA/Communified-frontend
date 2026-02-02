@@ -20,9 +20,9 @@
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="card card-congratulations">
                                 <div class="card-body text-center">
-                                    <img src="<?php echo base_url('public/assets/app-assets/images/elements/decore-left.png'); ?>"
+                                    <img src="<?php echo base_url('assets/app-assets/images/elements/decore-left.png'); ?>"
                                         class="congratulations-img-left" alt="card-img-left" />
-                                    <img src="<?php echo base_url('public/assets/app-assets/images/elements/decore-right.png'); ?>"
+                                    <img src="<?php echo base_url('assets/app-assets/images/elements/decore-right.png'); ?>"
                                         class="congratulations-img-right" alt="card-img-right" />
                                     <div class="avatar avatar-xl bg-primary shadow">
                                         <div class="avatar-content">
