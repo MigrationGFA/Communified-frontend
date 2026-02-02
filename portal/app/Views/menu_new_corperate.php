@@ -2,7 +2,7 @@
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
       <div class="navbar-header">
-       <center><a href="https://getfundedafrica.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center" style="border-radius: 24px;"></a></center>
+       <center><a href="https://getfundedafrica.com/portal/gfa/dashboard"><img src="<?php echo base_url(); ?>assets/images/logo/GFA-Logo.png" align="center" style="border-radius: 20%;"></a></center>
 		
     </div><br> <br> <br>
       <div class="shadow-bottom"></div>
