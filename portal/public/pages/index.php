@@ -89,29 +89,29 @@
             >
               <ul class="navbar-nav alt-font">
                 <li class="nav-item active">
-                  <a href="../" class="nav-link inner-link"
+                  <a href="javascript:void(0);" onclick="window.location.href='../'" class="nav-link inner-link"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item">
                   <a
-                    href="../#entrepreneurs"
+                    href="javascript:void(0);" onclick="window.location.href='../#entrepreneurs'"
                     class="nav-link inner-link"
                     >Entrepreneurs</a
                   >
                 </li>
                 <li class="nav-item dropdown dropdown-with-icon-style02">
-                  <a href="../#mentors" class="nav-link inner-link"
+                  <a href="javascript:void(0);" onclick="window.location.href='../#mentors'" class="nav-link inner-link"
                     >Mentors</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a href="../#investors" class="nav-link"
+                  <a href="javascript:void(0);" onclick="window.location.href='../#investors'" class="nav-link"
                     >Investors</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a href="../#organizations" class="nav-link">Organizations</a>
+                  <a href="javascript:void(0);" onclick="window.location.href='../#organizations'" class="nav-link">Organizations</a>
                 </li>
               </ul>
             </div>
@@ -205,11 +205,9 @@
                 </div>
                 <div class="pricing-action">
                  
-                    <a href="https://communitified-test.azurewebsites.net/portal/gfa/register">
-                         <button class="btn btn-outline-primary w-100 select-plan-btn">
+                  <button class="btn btn-outline-primary w-100 select-plan-btn" onclick="window.location.href='/portal/gfa/register'">
                             Get Started Free
                   </button>
-                    </a>
                     
                 </div>
               </div>
@@ -304,11 +302,9 @@
                 //$amount = totalAmount; 
                 ?>
                 <div class="pricing-action">
-                    <a href="https://communitified-test.azurewebsites.net/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(1125000); ?>/<?php echo $gateway ?>">
-                  <button class="btn btn-outline-primary w-100 select-plan-btn">
+                  <button class="btn btn-outline-primary w-100 select-plan-btn" onclick="window.location.href='/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(1125000); ?>/<?php echo $gateway ?>'">
                     Choose Plan
                   </button>
-                </a>
                 </div>
               </div>
             </div>
@@ -316,6 +312,18 @@
         </div>
       </section>
 </main>
+
+            <!-- start ad banner section -->
+            <section class="ad-banner">
+                <div class="container">
+                    <div class="ad-banner-content">
+                        <h2 class="ad-banner-title">Ready to accelerate your business growth?</h2>
+                        <p class="ad-banner-subtitle">Join Communified today and unlock unlimited access to entrepreneurs, investors, and organizations.</p>
+                        <a href="/portal/gfa/register" class="ad-banner-button clickAction" lsm="Pricing">Get Started</a>
+                    </div>
+                </div>
+            </section>
+            <!-- end ad banner section -->
 
  <!-- start footer -->
     <footer

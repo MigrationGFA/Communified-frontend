@@ -94,29 +94,29 @@
             >
               <ul class="navbar-nav alt-font">
                 <li class="nav-item active">
-                  <a href="#home" class="nav-link inner-link"
+                  <a href="javascript:void(0);" onclick="window.location.href='#home'" class="nav-link inner-link"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item dropdown dropdown-with-icon-style02">
                   <a
-                    href="#entrepreneurs"
+                    href="javascript:void(0);" onclick="window.location.href='#entrepreneurs'"
                     class="nav-link inner-link"
                     >Entrepreneurs</a
                   >
                 </li>
                 <li class="nav-item dropdown dropdown-with-icon-style02">
-                  <a href="#mentors" class="nav-link inner-link"
+                  <a href="javascript:void(0);" onclick="window.location.href='#mentors'" class="nav-link inner-link"
                     >Mentors</a
                   >
                 </li>
                 <li class="nav-item dropdown dropdown-with-icon-style02">
-                  <a href="#investors" class="nav-link"
+                  <a href="javascript:void(0);" onclick="window.location.href='#investors'" class="nav-link"
                     >Investors</a
                   >
                 </li>
                 <li class="nav-item dropdown dropdown-with-icon-style02">
-                  <a href="#organizations" class="nav-link">Organizations</a>
+                  <a href="javascript:void(0);" onclick="window.location.href='#organizations'" class="nav-link">Organizations</a>
                 </li>
               </ul>
             </div>
@@ -815,7 +815,7 @@
                     <div class="ad-banner-content">
                         <h2 class="ad-banner-title">Ready to accelerate your business growth?</h2>
                         <p class="ad-banner-subtitle">Join Communified today and unlock unlimited access to entrepreneurs, investors, and organizations.</p>
-                        <a href="./pages" class="ad-banner-button clickAction" lsm="Pricing">Get Started</a>
+                        <a href="/portal/gfa/register" class="ad-banner-button clickAction" lsm="Pricing">Get Started</a>
                     </div>
                 </div>
             </section>

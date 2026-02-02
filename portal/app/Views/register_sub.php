@@ -7,9 +7,9 @@
         <div class="content-body">
           <div class="auth-wrapper auth-cover">
             <div class="auth-inner row m-0">
-              <!-- Brand logo--><div class="brand-logo" href="<?php echo base_url(); ?>">
-                <img src="https://getfundedafrica.com/assets/images/get-funded-africa-logo.png" width="120px" height="120px">
-               </div>
+              <!-- Brand logo--><a class="brand-logo" href="<?php echo base_url(); ?>">
+                <img src="<?php echo base_url('frontend_assets/images/communified-logo.png'); ?>" width="120px" height="120px" style="border-radius: 20%;">
+               </a>
               <!-- /Brand logo-->
               <!-- Left Text-->
               <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
