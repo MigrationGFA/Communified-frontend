@@ -120,7 +120,7 @@
             <div class="header-icon">
               <div class="header-button">
                 <a
-                  href="https://communitified-test.azurewebsites.net/portal/"
+                  href="../portal/"
                   class="btn border-1 btn-transparent-light-gray btn-medium left-icon btn-switch-text"
                 >
                   <span>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="pricing-action">
                  
-                    <a href="https://communitified-test.azurewebsites.net/portal/gfa/register">
+                    <a href="../portal/gfa/register">
                          <button class="btn btn-outline-primary w-100 select-plan-btn">
                             Get Started Free
                   </button>
@@ -263,7 +263,7 @@
                 //$amount = totalAmount; 
                 ?>
                 <div class="pricing-action">
-                    <a href="https://communitified-test.azurewebsites.net/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(750000); ?>/<?php echo $gateway ?>">
+                    <a href="../portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(750000); ?>/<?php echo $gateway ?>">
                   <button class="btn btn-primary w-100 select-plan-btn">
                     Choose Plan
                   </button>
@@ -306,7 +306,7 @@
                 //$amount = totalAmount; 
                 ?>
                 <div class="pricing-action">
-                    <a href="https://communitified-test.azurewebsites.net/portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(1125000); ?>/<?php echo $gateway ?>">
+                    <a href="../portal/gfa/pricingsub/<?php echo $subscription; ?>/<?php echo $subType ?>/<?php detectCurrencyAmountGFA(1125000); ?>/<?php echo $gateway ?>">
                   <button class="btn btn-outline-primary w-100 select-plan-btn">
                     Choose Plan
                   </button>
