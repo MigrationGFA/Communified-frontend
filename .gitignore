@@ -13,6 +13,3 @@ portal/writable/session/*
 portal/writable/debugbar/*
 portal/writable/uploads/*
 !portal/writable/*/.gitkeep
-
-# Note: Tracking vendor/ because hosting server has no shell access
-# portal/vendor/
