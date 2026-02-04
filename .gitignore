@@ -14,5 +14,5 @@ portal/writable/debugbar/*
 portal/writable/uploads/*
 !portal/writable/*/.gitkeep
 
-# Composer vendor
-portal/vendor/
+# Note: Tracking vendor/ because hosting server has no shell access
+# portal/vendor/
