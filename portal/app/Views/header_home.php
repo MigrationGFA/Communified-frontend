@@ -40,6 +40,9 @@
 	 <script src="<?php echo base_url("assets/app-assets/vendors/js/vendors.min.js"); ?>"></script>
     <!-- END: Custom CSS-->
     
+    <!-- Communified Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/communified_dashboard.css"); ?>?v=<?php echo time(); ?>"">
+    
     
     
 	<style>

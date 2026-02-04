@@ -48,13 +48,13 @@
                     </div> -->
                     <div class="mb-1">
                       <div class="d-flex justify-content-between">
-                        <a href="<?php echo base_url('gfa/forgotpassword'); ?>"><?php echo lang('translation.Forgot Password'); ?></a>
-                        <a href="https://communitified-test.azurewebsites.net/ticket.php"><?php echo lang('translation.Help'); ?></a>
+                        <a href="<?php echo base_url('gfa/forgotpassword'); ?>" class="text-dark"><?php echo lang('translation.Forgot Password'); ?></a>
+                        <a href="https://communitified-test.azurewebsites.net/ticket.php" class="text-dark"><?php echo lang('translation.Help'); ?></a>
                       </div>
                     </div>
                     <button class="btn btn-primary w-100" tabindex="4"><?php echo lang('translation.Sign in'); ?></button>
                   </form>
-                   <p class="text-center mt-2"><a href="https://communitified-test.azurewebsites.net/register"><span><?php echo lang('translation.New on our platform?'); ?><br><?php echo lang('translation.Open an Account'); ?></span></a></p>
+                   <p class="text-center mt-2"><a href="https://communitified-test.azurewebsites.net/register" class="text-dark"><span><?php echo lang('translation.New on our platform?'); ?><br><?php echo lang('translation.Open an Account'); ?></span></a></p>
                   <!-- <div class="divider my-2">
                     <div class="divider-text">or</div>
                   </div> -->
