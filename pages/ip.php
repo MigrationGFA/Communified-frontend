@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 // function getLocation($ip)
 //     {
 //         $ch = curl_init('http://ipwhois.app/json/' . $ip);
@@ -389,4 +391,3 @@ function detectCurrencyAmountx($amount){
 function test(){
     echo 4234;
 }
-?>

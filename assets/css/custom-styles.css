@@ -254,7 +254,7 @@
   display: block;
   background: white;
   padding: 5px;
-  border-radius: 8px;
+  border-radius: 20%;
 }
 .top-section {
   margin-top: 100px;

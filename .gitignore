@@ -2,3 +2,14 @@
 .php_tmp
 .vscode
 fiveserver.config.js
+node_modules/
+.env
+env
+
+# CodeIgniter writable directory (runtime files)
+portal/writable/cache/*
+portal/writable/logs/*
+portal/writable/session/*
+portal/writable/debugbar/*
+portal/writable/uploads/*
+!portal/writable/*/.gitkeep
